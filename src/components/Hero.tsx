@@ -4,10 +4,6 @@ import { Button } from "@/components/ui/button";
 const Hero = () => {
   return (
     <section className="pt-32 pb-16 bg-white relative overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/lovable-uploads/4f5f799d-8b1c-4972-b2a2-36d18dccccea.png')] bg-cover bg-center opacity-100"></div>
-      </div>
-      
       <div className="container mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">

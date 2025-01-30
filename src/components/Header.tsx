@@ -6,9 +6,9 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50">
       <div className="container mx-auto">
         <div className="flex items-center h-16">
-          <div className="flex items-center space-x-12 w-full">
-            <a href="/" className="text-xl font-bold text-primary">Traced</a>
-            
+          <a href="/" className="text-xl font-bold text-primary">Traced</a>
+          
+          <div className="flex items-center justify-end space-x-8 w-full">
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">Home</a>
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">Industries</a>
@@ -16,7 +16,7 @@ const Header = () => {
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">About Us</a>
             </nav>
             
-            <Button className="hidden md:inline-flex bg-blue-500 hover:bg-blue-600 text-white rounded-md px-6">
+            <Button className="hidden md:inline-flex bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-6">
               Book Demo
             </Button>
           </div>
