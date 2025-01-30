@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
-    <section className="py-20 bg-accent">
+    <section className="py-20" style={{ backgroundColor: '#F2F1EE' }}>
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
