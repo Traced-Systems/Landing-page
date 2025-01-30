@@ -17,7 +17,7 @@ const LogoMarquee = () => {
               key={index}
               className="flex-shrink-0"
             >
-              <img src={logo.src} alt={logo.alt} className="h-8 w-auto" />
+              <img src={logo.src} alt={logo.alt} className="h-12 w-auto object-contain" />
             </div>
           ))}
         </div>
