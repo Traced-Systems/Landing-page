@@ -7,19 +7,19 @@ const Features = () => {
       id: 'textile-card',
       title: 'Textile',
       description: 'Sustainable Fashion',
-      image: '/lovable-uploads/cf27f368-89f4-4544-9e6b-74fd5cb37a8b.png',
+      image: '/lovable-uploads/7db51ad9-4f3d-4085-b9e9-2004e66476b4.png',
     },
     {
       id: 'batteries-card',
       title: 'Batteries',
       description: 'Electric Vehicle Solutions',
-      image: '/lovable-uploads/3e2d0683-8889-4971-9664-35f2d41a985a.png',
+      image: '/lovable-uploads/973d7c66-1d01-4e1e-89ce-2dee7a7c3dae.png',
     },
     {
       id: 'espr-card',
       title: 'ESPR Compliant',
       description: 'for all sectors',
-      image: '/lovable-uploads/e4138257-7864-41ca-be38-01d4409ac061.png',
+      image: '/lovable-uploads/a4205a69-444a-4317-be96-d4751706d608.png',
     },
   ];
 
