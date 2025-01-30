@@ -20,7 +20,7 @@ const About = () => {
           
           <div className="relative">
             <img
-              src="/placeholder.svg"
+              src="/lovable-uploads/beb0e791-c147-4bc1-8cb1-a5f6e1d1219d.png"
               alt="Analytics Dashboard"
               className="w-full rounded-2xl shadow-xl"
             />

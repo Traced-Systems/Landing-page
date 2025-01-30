@@ -35,7 +35,7 @@ const Features = () => {
             <div
               key={feature.id}
               id={feature.id}
-              className="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer [perspective:1000px]"
+              className="group relative h-[340px] rounded-2xl overflow-hidden cursor-pointer [perspective:1000px]"
             >
               <div className="relative w-full h-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                 {/* Front of Card */}
