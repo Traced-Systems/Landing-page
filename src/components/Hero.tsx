@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-16 bg-white relative overflow-hidden">
+    <section className="pt-32 pb-16 relative overflow-hidden" style={{ backgroundImage: 'url(/lovable-uploads/09f8b8ec-1461-47b8-9ceb-93d5feede36e.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="container mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
