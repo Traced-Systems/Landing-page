@@ -1,17 +1,42 @@
 import React from 'react';
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-16 bg-white relative overflow-hidden">
+    <section className="pt-32 pb-16 relative overflow-hidden" style={{ backgroundImage: 'url(/lovable-uploads/09f8b8ec-1461-47b8-9ceb-93d5feede36e.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="container mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col">
-            <h1 className="text-4xl font-bold text-primary">Welcome to Our Website</h1>
-            <p className="mt-4 text-lg text-gray-600">We provide the best solutions for your business needs.</p>
-            <a href="#" className="mt-6 inline-block bg-blue-500 text-white rounded-lg px-6 py-3">Get Started</a>
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary">
+                Traced Systems
+              </h1>
+              <h2 className="text-2xl md:text-3xl text-gray-700">
+                Digital Product Passport
+              </h2>
+              <p className="text-xl text-gray-600">
+                One Scan. Countless Impacts.
+              </p>
+            </div>
+            
+            <div className="flex gap-4">
+              <Button className="bg-white border-2 border-gray-200 text-gray-800 hover:bg-gray-50 rounded-full px-8">
+                Get in Touch
+              </Button>
+              <Button className="bg-[#F4A261] hover:bg-[#E76F51] text-white rounded-full px-8 border-none">
+                Book Demo
+              </Button>
+            </div>
           </div>
-          <div className="flex justify-center">
-            <img src="/path/to/hero-image.png" alt="Hero" className="w-full h-auto" />
+          
+          <div className="relative h-[500px]">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <img 
+                src="/lovable-uploads/1877a80a-f9e8-4d1d-a655-2711871907a1.png" 
+                alt="Product Mockup" 
+                className="w-full h-auto max-w-[400px]"
+              />
+            </div>
           </div>
         </div>
       </div>
