@@ -4,6 +4,17 @@ import { Button } from "@/components/ui/button";
 const Hero = () => {
   return (
     <section className="pt-32 pb-16 relative overflow-hidden">
+      {/* Wave gradient background */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url('/lovable-uploads/bcb17ba4-efdc-403f-bba9-d8815fa0c4b3.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      
       <div className="container mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">

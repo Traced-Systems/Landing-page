@@ -9,7 +9,7 @@ const LogoMarquee = () => {
   ];
   
   return (
-    <div className="py-12 bg-white overflow-hidden">
+    <div className="py-12 overflow-hidden" style={{ backgroundColor: 'rgba(242, 241, 238, 0.7)' }}>
       <div className="relative">
         <div className="flex space-x-16 animate-marquee whitespace-nowrap">
           {logos.concat(logos).map((logo, index) => (
