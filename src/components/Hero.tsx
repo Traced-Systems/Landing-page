@@ -6,12 +6,13 @@ const Hero = () => {
     <section className="pt-32 pb-16 relative overflow-hidden">
       {/* Wave gradient background */}
       <div 
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 h-[150vh]"
         style={{
           backgroundImage: `url('/lovable-uploads/bcb17ba4-efdc-403f-bba9-d8815fa0c4b3.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'top center',
+          backgroundRepeat: 'no-repeat',
+          transform: 'scale(1.1)',
         }}
       />
       

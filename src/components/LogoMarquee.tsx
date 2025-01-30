@@ -2,10 +2,10 @@ import React from 'react';
 
 const LogoMarquee = () => {
   const logos = [
-    { src: '/lovable-uploads/51535276-adfc-4349-815d-94303b5e8ce4.png', alt: 'BLK DNM' },
-    { src: '/lovable-uploads/e36c76f9-e669-41f2-a804-f6e6662d1182.png', alt: 'EBSI' },
-    { src: '/lovable-uploads/989e7920-294f-4d57-a9af-e085d1a26fd2.png', alt: 'Cling' },
-    { src: '/lovable-uploads/3f5b77a2-e9d4-473f-82b3-5c8432b02de1.png', alt: 'European Commission' }
+    { src: '/lovable-uploads/51535276-adfc-4349-815d-94303b5e8ce4.png', alt: 'BLK DNM', className: 'h-4' },
+    { src: '/lovable-uploads/e36c76f9-e669-41f2-a804-f6e6662d1182.png', alt: 'EBSI', className: 'h-8' },
+    { src: '/lovable-uploads/989e7920-294f-4d57-a9af-e085d1a26fd2.png', alt: 'Cling', className: 'h-8' },
+    { src: '/lovable-uploads/3f5b77a2-e9d4-473f-82b3-5c8432b02de1.png', alt: 'European Commission', className: 'h-8' }
   ];
   
   return (
@@ -17,7 +17,7 @@ const LogoMarquee = () => {
               key={index}
               className="flex-shrink-0"
             >
-              <img src={logo.src} alt={logo.alt} className="h-8 w-auto" />
+              <img src={logo.src} alt={logo.alt} className={logo.className} />
             </div>
           ))}
         </div>
