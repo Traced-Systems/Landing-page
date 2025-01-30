@@ -1,20 +1,25 @@
 import React from 'react';
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const Features = () => {
   const features = [
     {
-      title: 'Textile',
-      image: '/placeholder.svg',
-    },
-    {
-      title: 'Batteries',
-      image: '/placeholder.svg',
-    },
-    {
+      id: 'espr-card',
       title: 'ESPR Compliant',
-      image: '/placeholder.svg',
+      description: 'for all sectors',
+      image: '/lovable-uploads/e4138257-7864-41ca-be38-01d4409ac061.png',
+    },
+    {
+      id: 'batteries-card',
+      title: 'Batteries',
+      description: 'Electric Vehicle Solutions',
+      image: '/lovable-uploads/3e2d0683-8889-4971-9664-35f2d41a985a.png',
+    },
+    {
+      id: 'textile-card',
+      title: 'Textile',
+      description: 'Sustainable Fashion',
+      image: '/lovable-uploads/cf27f368-89f4-4544-9e6b-74fd5cb37a8b.png',
     },
   ];
 
@@ -26,25 +31,49 @@ const Features = () => {
         </h2>
         
         <div className="grid md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <div
-              key={index}
-              className="group bg-accent rounded-2xl p-6 transition-all hover:shadow-lg"
+              key={feature.id}
+              id={feature.id}
+              className="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer"
             >
-              <img
-                src={feature.image}
-                alt={feature.title}
-                className="w-full h-48 object-cover rounded-xl mb-6"
+              {/* Background Image */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-110"
+                style={{ backgroundImage: `url(${feature.image})` }}
               />
-              <div className="flex items-center justify-between">
-                <h3 className="text-xl font-semibold text-primary">{feature.title}</h3>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="group-hover:translate-x-1 transition-transform"
-                >
-                  <ArrowRight className="h-5 w-5" />
-                </Button>
+              
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/60 transition-all duration-300" />
+              
+              {/* Content Container */}
+              <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                {/* Icon Placeholder (visible on hover) */}
+                <div className="w-12 h-12 rounded-full bg-white/0 group-hover:bg-white/10 transition-all duration-300" />
+                
+                {/* Title and Description */}
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-semibold text-white">
+                    {feature.title}
+                  </h3>
+                  <p className="text-white/0 group-hover:text-white/90 transition-all duration-300">
+                    {feature.description}
+                  </p>
+                </div>
+                
+                {/* Button Area */}
+                <div className="flex justify-end">
+                  {/* Default Button (visible when not hovering) */}
+                  <div className="w-10 h-10 rounded-full bg-[#FEC6A1] flex items-center justify-center transition-all duration-300 group-hover:opacity-0 hover:scale-110 hover:shadow-lg">
+                    <ArrowRight className="w-5 h-5 text-white" />
+                  </div>
+                  
+                  {/* Hover Text (visible when hovering) */}
+                  <div className="absolute bottom-6 right-6 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center gap-2">
+                    Know More
+                    <ArrowRight className="w-5 h-5" />
+                  </div>
+                </div>
               </div>
             </div>
           ))}
