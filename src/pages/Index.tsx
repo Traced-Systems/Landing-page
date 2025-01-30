@@ -8,6 +8,7 @@ import Benefits from '@/components/Benefits';
 import Process from '@/components/Process';
 import Technologies from '@/components/Technologies';
 import Footer from '@/components/Footer';
+import DigitalPassport from '@/components/DigitalPassport';
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <main>
         <Hero />
         <LogoMarquee />
+        <DigitalPassport />
         <Features />
         <About />
         <Benefits />
