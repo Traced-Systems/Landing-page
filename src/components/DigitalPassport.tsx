@@ -8,8 +8,8 @@ const DigitalPassport = () => {
           <div className="relative w-full">
             <div className="w-[380px] mx-auto">
               <img 
-                src="/lovable-uploads/ee436d70-500d-4016-8489-0bc8c2ce4fcf.png" 
-                alt="Digital Product Passport Interface" 
+                src="/lovable-uploads/d79b81d9-46b1-42a6-bed4-357f36f911ab.png" 
+                alt="Digital Product Passport Interface showing a vintage denim jacket" 
                 className="w-full h-auto"
               />
             </div>
