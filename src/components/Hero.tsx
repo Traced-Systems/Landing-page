@@ -31,13 +31,11 @@ const Hero = () => {
           
           <div className="relative h-[500px]">
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-[300px] h-[600px] relative">
-                <div className="absolute inset-0 transform rotate-[-15deg]">
-                  <div className="absolute top-0 w-full h-full bg-white/30 backdrop-blur-lg rounded-3xl shadow-xl"></div>
-                  <div className="absolute top-4 w-full h-full bg-white/40 backdrop-blur-lg rounded-3xl shadow-xl"></div>
-                  <div className="absolute top-8 w-full h-full bg-white/50 backdrop-blur-lg rounded-3xl shadow-xl"></div>
-                </div>
-              </div>
+              <img 
+                src="/lovable-uploads/1877a80a-f9e8-4d1d-a655-2711871907a1.png" 
+                alt="Product Mockup" 
+                className="w-full h-auto max-w-[400px]"
+              />
             </div>
           </div>
         </div>

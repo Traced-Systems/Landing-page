@@ -6,7 +6,9 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50">
       <div className="container mx-auto">
         <div className="flex items-center h-16">
-          <a href="/" className="text-xl font-bold text-primary">Traced</a>
+          <a href="/" className="text-xl font-bold text-primary">
+            <img src="/lovable-uploads/a6fc62be-8ab6-4197-ba6d-369e7b06be53.png" alt="Traced Logo" className="h-8" />
+          </a>
           
           <div className="flex items-center justify-end space-x-8 w-full">
             <nav className="hidden md:flex items-center space-x-8">
