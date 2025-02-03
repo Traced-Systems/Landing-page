@@ -45,32 +45,47 @@ const Process = () => {
               key={index}
               onClick={() => handleCardClick(index)}
               className={cn(
-                "bg-white rounded-2xl p-6 cursor-pointer transition-all duration-300",
+                "bg-white rounded-2xl p-6 cursor-pointer transition-all duration-500 ease-in-out",
                 "hover:shadow-[4px_4px_10px_0px_rgba(0,0,0,0.1),-4px_-4px_10px_0px_rgba(255,255,255,0.9)]",
-                "shadow-[2px_2px_5px_0px_rgba(0,0,0,0.05),-2px_-2px_5px_0px_rgba(255,255,255,0.8)]"
+                "shadow-[2px_2px_5px_0px_rgba(0,0,0,0.05),-2px_-2px_5px_0px_rgba(255,255,255,0.8)]",
+                expandedCard === index ? "min-h-[400px]" : "min-h-[250px]"
               )}
             >
-              <div className="flex flex-col items-center">
-                <div className="w-20 h-20 mb-4">
+              <div className="flex flex-col items-center relative h-full">
+                <div 
+                  className={cn(
+                    "transition-all duration-500 ease-in-out",
+                    expandedCard === index 
+                      ? "w-12 h-12 absolute top-0 left-0" 
+                      : "w-20 h-20 mb-4"
+                  )}
+                >
                   <img 
                     src={step.icon} 
                     alt={step.title}
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-[#002A38] text-center mb-2">
+                <h3 
+                  className={cn(
+                    "text-xl font-semibold text-[#002A38] text-center transition-all duration-500",
+                    expandedCard === index ? "mt-0 ml-16" : "mt-4"
+                  )}
+                >
                   {step.title}
                 </h3>
                 <ChevronDown 
                   className={cn(
-                    "w-6 h-6 text-[#002A38] transition-transform duration-300",
+                    "w-6 h-6 text-[#002A38] transition-transform duration-500 mt-2",
                     expandedCard === index ? "transform rotate-180" : ""
                   )}
                 />
                 <div
                   className={cn(
-                    "overflow-hidden transition-all duration-300",
-                    expandedCard === index ? "max-h-96 mt-4" : "max-h-0"
+                    "overflow-hidden transition-all duration-500 ease-in-out",
+                    expandedCard === index 
+                      ? "opacity-100 max-h-[300px] mt-6" 
+                      : "opacity-0 max-h-0"
                   )}
                 >
                   <p className="text-gray-600 text-center">
