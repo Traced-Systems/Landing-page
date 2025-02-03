@@ -6,7 +6,7 @@ const Foundation = () => {
     <section className="w-full bg-[#f7f7f7] py-16">
       <div className="container mx-auto px-4">
         <Card className="p-8">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-evenly">
             <div className="text-center">
               <p className="mb-4 text-sm font-medium text-gray-600">Built by:</p>
               <img 
