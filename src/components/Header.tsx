@@ -21,7 +21,7 @@ const Header = () => {
       <div className="container mx-auto">
         <div className="flex items-center h-16">
           <a href="/" className="text-xl font-bold text-primary">
-            <img src="/lovable-uploads/a6fc62be-8ab6-4197-ba6d-369e7b06be53.png" alt="Traced Logo" className="h-[29.45px] w-[120px]" />
+            <img src="/lovable-uploads/adffe373-57b3-4ac5-a5db-d6d2f0fbff52.png" alt="Traced Logo" className="h-[29.45px] w-[120px]" />
           </a>
           
           <div className="flex items-center justify-end space-x-8 w-full">
