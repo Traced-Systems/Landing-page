@@ -3,13 +3,13 @@ import { Separator } from "@/components/ui/separator";
 
 const Foundation = () => {
   return (
-    <section className="py-16 px-4 bg-[#F1F1F1]">
+    <section className="py-16 px-4 bg-[#F1F1F1] w-full">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl font-semibold text-center mb-12 text-primary">
           The Foundation of Our Innovation
         </h2>
         
-        <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-8">
+        <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-8 w-full">
           <div className="flex flex-col md:flex-row items-center justify-between relative">
             {/* Left Section with Funded by */}
             <div className="mb-8 md:mb-0 flex-1">
