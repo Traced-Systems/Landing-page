@@ -16,7 +16,7 @@ const Foundation = () => {
               <img 
                 src="/lovable-uploads/2749a449-2417-480e-9ef7-a470c066694f.png" 
                 alt="ChromaWay" 
-                className="h-20 w-auto object-contain" // Changed to h-20 (5rem)
+                className="h-20 w-auto object-contain"
               />
             </div>
 
@@ -27,12 +27,12 @@ const Foundation = () => {
                 <img 
                   src="/lovable-uploads/0fd6c657-0b5d-4b83-9a2c-1974fc3e6532.png" 
                   alt="European Commission" 
-                  className="h-10 w-auto object-contain"
+                  className="h-20 w-auto object-contain"
                 />
                 <img 
                   src="/lovable-uploads/50df1d07-065b-49ab-89b0-30f54800fc2e.png" 
                   alt="EBSI" 
-                  className="h-10 w-auto object-contain"
+                  className="h-20 w-auto object-contain"
                 />
               </div>
             </div>
@@ -48,7 +48,7 @@ const Foundation = () => {
               <img 
                 src="/lovable-uploads/973d9db4-a05a-4a45-af13-2f7b06166f5b.png" 
                 alt="Chromia" 
-                className="h-10 w-auto object-contain"
+                className="h-20 w-auto object-contain"
               />
             </div>
           </div>
