@@ -10,6 +10,7 @@ import UseCases from '@/components/UseCases';
 import Technologies from '@/components/Technologies';
 import Footer from '@/components/Footer';
 import DigitalPassport from '@/components/DigitalPassport';
+import Foundation from '@/components/Foundation';
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
         <Hero />
         <LogoMarquee />
         <DigitalPassport />
+        <Foundation />
         <Features />
         <About />
         <Benefits />
