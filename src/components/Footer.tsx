@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 const Footer = () => {
   return (
     <footer 
-      className="relative text-[#EDE8DA] py-20"
+      className="relative text-[#f2f1ee] py-20"
       style={{
         backgroundImage: "url('/lovable-uploads/f7986a43-8f10-409f-a344-214e743189a1.png')",
         backgroundSize: 'cover',
@@ -37,14 +37,14 @@ const Footer = () => {
               <div className="flex space-x-4">
                 <a 
                   href="#" 
-                  className="hover:text-white/80 transition-colors"
+                  className="hover:text-[#f2f1ee]/80 transition-colors"
                   aria-label="Follow us on Twitter"
                 >
                   <Twitter className="w-5 h-5" />
                 </a>
                 <a 
                   href="#" 
-                  className="hover:text-white/80 transition-colors"
+                  className="hover:text-[#f2f1ee]/80 transition-colors"
                   aria-label="Follow us on LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
@@ -53,7 +53,7 @@ const Footer = () => {
             </div>
             <a 
               href="#" 
-              className="text-sm hover:text-white/80 transition-colors"
+              className="text-sm hover:text-[#f2f1ee]/80 transition-colors"
             >
               Privacy Policy
             </a>
