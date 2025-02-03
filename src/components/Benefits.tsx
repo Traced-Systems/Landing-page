@@ -24,7 +24,7 @@ const Benefits = () => {
   return (
     <section id="section-elevating-product-lifestyle" className="py-20 bg-[#f7f7f7]">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-start justify-between gap-12">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-16">
           {/* Left side - Image */}
           <div className="w-full md:w-5/12">
             <img 
@@ -36,11 +36,11 @@ const Benefits = () => {
 
           {/* Right side - content */}
           <div className="w-full md:w-7/12 text-left">
-            <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#002A38] mb-4">
+            <div className="mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#002A38] mb-6">
                 Elevating Product Lifecycle Management
               </h2>
-              <h3 className="text-2xl text-[#002A38] mb-6">
+              <h3 className="text-2xl text-[#002A38] mb-8">
                 with Digital Product Passports
               </h3>
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -49,10 +49,10 @@ const Benefits = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <div className="flex-shrink-0">
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 mt-1">
                     <div className="inline-flex items-center justify-center w-8 h-8 bg-[#D67F2F]/10 rounded-full">
                       <Check className="w-5 h-5 text-[#D67F2F]" />
                     </div>
