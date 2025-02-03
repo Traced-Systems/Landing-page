@@ -37,7 +37,7 @@ const Benefits = () => {
           <div className="w-full md:w-7/12 text-left">
             <div className="mb-16">
               <div className="inline-block">
-                <h3 className="text-3xl md:text-4xl font-bold text-[#002A38]">
+                <h3 className="text-2xl md:text-3xl font-bold text-[#002A38]">
                   Elevating Product Lifecycle Management
                 </h3>
                 <Separator className="my-4 h-1 bg-[#D4904E]" />
