@@ -45,10 +45,9 @@ const Process = () => {
               key={index}
               onClick={() => handleCardClick(index)}
               className={cn(
-                "bg-white rounded-2xl p-6 cursor-pointer transition-all duration-500 ease-in-out",
+                "bg-white rounded-2xl p-6 cursor-pointer transition-all duration-500 ease-in-out h-[300px]",
                 "hover:shadow-[4px_4px_10px_0px_rgba(0,0,0,0.1),-4px_-4px_10px_0px_rgba(255,255,255,0.9)]",
-                "shadow-[2px_2px_5px_0px_rgba(0,0,0,0.05),-2px_-2px_5px_0px_rgba(255,255,255,0.8)]",
-                expandedCard === index ? "min-h-[400px]" : "min-h-[250px]"
+                "shadow-[2px_2px_5px_0px_rgba(0,0,0,0.05),-2px_-2px_5px_0px_rgba(255,255,255,0.8)]"
               )}
             >
               <div className="flex flex-col items-center relative h-full">
@@ -66,29 +65,27 @@ const Process = () => {
                     className="w-full h-full object-contain"
                   />
                 </div>
+                
                 <h3 
                   className={cn(
-                    "text-xl font-semibold text-[#002A38] text-center transition-all duration-500",
-                    expandedCard === index ? "mt-0 ml-16" : "mt-4"
+                    "text-xl font-semibold text-[#002A38] transition-all duration-500",
+                    expandedCard === index 
+                      ? "opacity-0 absolute" 
+                      : "opacity-100 mt-4 text-center"
                   )}
                 >
                   {step.title}
                 </h3>
-                <ChevronDown 
-                  className={cn(
-                    "w-6 h-6 text-[#002A38] transition-transform duration-500 mt-2",
-                    expandedCard === index ? "transform rotate-180" : ""
-                  )}
-                />
+
                 <div
                   className={cn(
                     "overflow-hidden transition-all duration-500 ease-in-out",
                     expandedCard === index 
-                      ? "opacity-100 max-h-[300px] mt-6" 
-                      : "opacity-0 max-h-0"
+                      ? "opacity-100 mt-16 text-left" 
+                      : "opacity-0 absolute"
                   )}
                 >
-                  <p className="text-gray-600 text-center">
+                  <p className="text-gray-600">
                     {step.description}
                   </p>
                 </div>
