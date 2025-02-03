@@ -11,6 +11,7 @@ import Technologies from '@/components/Technologies';
 import Footer from '@/components/Footer';
 import DigitalPassport from '@/components/DigitalPassport';
 import Foundation from '@/components/Foundation';
+import CTA from '@/components/CTA';
 
 const Index = () => {
   return (
@@ -27,6 +28,7 @@ const Index = () => {
         <UseCases />
         <Technologies />
         <Foundation />
+        <CTA />
       </main>
       <Footer />
     </div>
