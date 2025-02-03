@@ -20,7 +20,7 @@ const Technologies = () => {
           
           <div className="relative">
             <img
-              src="/lovable-uploads/9621fc90-f1a7-4614-8942-50b1687d7511.png"
+              src="/lovable-uploads/3a4a0905-b1c8-426c-9e11-9192f1bc54da.png"
               alt="Chromia Technology"
               className="w-full rounded-2xl shadow-xl"
             />
