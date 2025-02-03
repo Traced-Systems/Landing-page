@@ -44,7 +44,7 @@ const Hero = () => {
           <div className="relative h-[500px]">
             <div className="absolute inset-0 flex items-center justify-center">
               <img 
-                src="/lovable-uploads/1877a80a-f9e8-4d1d-a655-2711871907a1.png" 
+                src="/lovable-uploads/f13aac64-15e3-4a2a-9838-a7f474b842e5.png" 
                 alt="Product Mockup" 
                 className="w-full h-auto max-w-[400px]"
               />
