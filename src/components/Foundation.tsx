@@ -4,7 +4,8 @@ import { Card } from '@/components/ui/card';
 const Foundation = () => {
   return (
     <section className="w-full bg-[#f7f7f7] py-16">
-      <div className="container mx-auto px-4 flex justify-center">
+      <div className="container mx-auto px-4 flex flex-col items-center">
+        <h2 className="text-3xl font-bold text-primary mb-8">The Foundation of Our Innovation</h2>
         <Card className="inline-block p-8">
           <div className="flex items-center justify-evenly gap-16">
             <div className="text-center">
