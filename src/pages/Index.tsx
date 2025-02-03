@@ -6,6 +6,7 @@ import Features from '@/components/Features';
 import About from '@/components/About';
 import Benefits from '@/components/Benefits';
 import Process from '@/components/Process';
+import UseCases from '@/components/UseCases';
 import Technologies from '@/components/Technologies';
 import Footer from '@/components/Footer';
 import DigitalPassport from '@/components/DigitalPassport';
@@ -22,6 +23,7 @@ const Index = () => {
         <About />
         <Benefits />
         <Process />
+        <UseCases />
         <Technologies />
       </main>
       <Footer />
