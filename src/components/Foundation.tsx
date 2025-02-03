@@ -16,17 +16,14 @@ const Foundation = () => {
               />
             </div>
             
-            <div className="flex gap-12">
-              <div className="text-center">
-                <p className="mb-4 text-sm font-medium text-gray-600">Funded by:</p>
+            <div className="flex flex-col items-center">
+              <p className="mb-4 text-sm font-medium text-gray-600">Funded by:</p>
+              <div className="flex gap-12">
                 <img 
                   src="/lovable-uploads/ff086cb2-38b6-4ca2-a158-69f69cf213ee.png" 
                   alt="EU" 
                   className="h-12 object-contain"
                 />
-              </div>
-              <div className="text-center">
-                <p className="mb-4 text-sm font-medium text-gray-600">Funded by:</p>
                 <img 
                   src="/lovable-uploads/e1307a99-b10d-4799-b274-47c5f4487c18.png" 
                   alt="EBSI" 
