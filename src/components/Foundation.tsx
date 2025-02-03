@@ -12,9 +12,9 @@ const Foundation = () => {
         <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-8">
           <div className="flex flex-col md:flex-row items-center justify-between relative">
             {/* Left Section with Funded by */}
-            <div className="mb-8 md:mb-0">
+            <div className="mb-8 md:mb-0 flex-1">
               <p className="text-sm text-gray-500 font-medium mb-6">Funded by</p>
-              <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+              <div className="flex flex-col md:flex-row items-center justify-start space-y-4 md:space-y-0 md:space-x-12">
                 <img 
                   src="/lovable-uploads/2749a449-2417-480e-9ef7-a470c066694f.png" 
                   alt="ChromaWay" 
@@ -39,7 +39,7 @@ const Foundation = () => {
             </div>
 
             {/* Right Section with Powered by */}
-            <div className="flex flex-col items-center space-y-6">
+            <div className="flex flex-col items-center space-y-6 flex-1">
               <p className="text-sm text-gray-500 font-medium">Powered by</p>
               <img 
                 src="/lovable-uploads/973d9db4-a05a-4a45-af13-2f7b06166f5b.png" 
