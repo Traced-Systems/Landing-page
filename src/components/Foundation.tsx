@@ -11,19 +11,15 @@ const Foundation = () => {
         
         <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-8">
           <div className="flex flex-col md:flex-row items-center justify-between relative">
-            {/* ChromaWay Logo (Left) */}
+            {/* Left Section with Funded by */}
             <div className="mb-8 md:mb-0">
-              <img 
-                src="/lovable-uploads/2749a449-2417-480e-9ef7-a470c066694f.png" 
-                alt="ChromaWay" 
-                className="h-8 object-contain"
-              />
-            </div>
-
-            {/* Middle Section with Funded by */}
-            <div className="flex flex-col items-center space-y-6 mb-8 md:mb-0">
-              <p className="text-sm text-gray-500 font-medium">Funded by</p>
+              <p className="text-sm text-gray-500 font-medium mb-6">Funded by</p>
               <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+                <img 
+                  src="/lovable-uploads/2749a449-2417-480e-9ef7-a470c066694f.png" 
+                  alt="ChromaWay" 
+                  className="h-8 object-contain"
+                />
                 <img 
                   src="/lovable-uploads/0fd6c657-0b5d-4b83-9a2c-1974fc3e6532.png" 
                   alt="European Commission" 

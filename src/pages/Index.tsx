@@ -20,13 +20,13 @@ const Index = () => {
         <Hero />
         <LogoMarquee />
         <DigitalPassport />
-        <Foundation />
         <Features />
         <About />
         <Benefits />
         <Process />
         <UseCases />
         <Technologies />
+        <Foundation />
       </main>
       <Footer />
     </div>
