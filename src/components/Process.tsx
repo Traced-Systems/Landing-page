@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils";
 
 const Process = () => {
@@ -65,16 +66,26 @@ const Process = () => {
                   />
                 </div>
                 
-                <h3 
-                  className={cn(
-                    "text-xl font-semibold text-[#002A38] transition-all duration-500 ease-in-out",
-                    expandedCard === index 
-                      ? "opacity-0 translate-y-2 scale-95" 
-                      : "opacity-100 mt-4 text-center"
+                <div className="flex items-center">
+                  <h3 
+                    className={cn(
+                      "text-xl font-semibold text-[#002A38] transition-all duration-500 ease-in-out",
+                      expandedCard === index 
+                        ? "opacity-0 translate-y-2 scale-95" 
+                        : "opacity-100 mt-4 text-center"
+                    )}
+                  >
+                    {step.title}
+                  </h3>
+                  {expandedCard !== index && (
+                    <ChevronDown 
+                      className={cn(
+                        "ml-2 text-gray-500 transition-transform duration-500",
+                        "transform hover:translate-y-1"
+                      )}
+                    />
                   )}
-                >
-                  {step.title}
-                </h3>
+                </div>
 
                 <div
                   className={cn(
