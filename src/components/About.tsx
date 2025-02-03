@@ -11,7 +11,10 @@ const About = () => {
               Who are we?
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              We are pioneering the future of product lifecycle management through innovative digital solutions. Our Digital Product Passport technology enables transparent, sustainable, and compliant supply chains.
+              Our journey began as part of a ChromaWay project with the European Blockchain Services Infrastructure (EBSI), an EU-led effort to explore the transformative potential of blockchain and distributed ledger technologies (DLTs). Since 2021, we have been deeply involved in shaping this vision, partnering with the EU in a multi-phased approach that combined rigorous research, technological development, and field testing.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Today, Traced Systems is more than just a digital record or a platform for tracking product lifecycles. We represent the culmination of years of dedicated research, cutting-edge technology, and a commitment to sustainability and compliance by leveraging the power of Chromia technology.
             </p>
             <Button variant="secondary" className="rounded-full">
               Know More
