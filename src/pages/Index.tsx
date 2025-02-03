@@ -10,7 +10,6 @@ import UseCases from '@/components/UseCases';
 import Technologies from '@/components/Technologies';
 import Footer from '@/components/Footer';
 import DigitalPassport from '@/components/DigitalPassport';
-import Foundation from '@/components/Foundation';
 
 const Index = () => {
   return (
@@ -26,7 +25,6 @@ const Index = () => {
         <Process />
         <UseCases />
         <Technologies />
-        <Foundation />
       </main>
       <Footer />
     </div>
