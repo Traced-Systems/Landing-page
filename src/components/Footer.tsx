@@ -5,12 +5,11 @@ import { Separator } from "@/components/ui/separator";
 const Footer = () => {
   return (
     <footer 
-      className="relative text-[#EDE8DA] pt-0 pb-20"
+      className="relative text-[#EDE8DA] py-20"
       style={{
         backgroundImage: "url('/lovable-uploads/f7986a43-8f10-409f-a344-214e743189a1.png')",
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundColor: '#1E4B56'
+        backgroundPosition: 'center'
       }}
     >
       <div className="container mx-auto px-4">
