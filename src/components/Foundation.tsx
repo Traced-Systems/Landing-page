@@ -18,7 +18,7 @@ const Foundation = () => {
             
             <div className="flex flex-col items-center">
               <p className="mb-4 text-sm font-medium text-gray-600">Funded by:</p>
-              <div className="flex gap-12">
+              <div className="flex gap-8">
                 <img 
                   src="/lovable-uploads/ff086cb2-38b6-4ca2-a158-69f69cf213ee.png" 
                   alt="EU" 
