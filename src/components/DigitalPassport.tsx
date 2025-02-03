@@ -41,10 +41,11 @@ const DigitalPassport = () => {
               </div>
               
               <div>
-                <h3 className="font-semibold text-lg mb-2">[A Subtitle]</h3>
+                <h3 className="font-semibold text-lg mb-2">Our Versatility</h3>
                 <p className="text-gray-600">
-                  A complete digital record that tracks a product's entire lifecycle, enhancing 
-                  transparency, sustainability, and compliance across key sectors like batteries and textile.
+                  A complete digital record that tracks a product's entire lifecycle, ensuring transparency, 
+                  sustainability, and compliance across multiple sectors, from batteries and textiles to 
+                  electronics, furniture, and beyond.
                 </p>
               </div>
             </div>
