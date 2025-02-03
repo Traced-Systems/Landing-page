@@ -88,6 +88,21 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-32rem - 3rem)); /* Width of 4 logos (32rem) plus their gap (3rem) */
+    }
+  }
+}
+
+@layer utilities {
+  .animate-infinite-scroll {
+    animation: infinite-scroll 20s linear infinite;
+  }
 }
 
 @layer base {
