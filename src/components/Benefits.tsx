@@ -31,7 +31,7 @@ const Benefits = () => {
           </div>
 
           {/* Right side - content */}
-          <div className="w-full md:w-7/12 text-right">
+          <div className="w-full md:w-7/12 text-left">
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-[#002A38] mb-4">
                 Elevating Product Lifecycle Management
@@ -47,7 +47,7 @@ const Benefits = () => {
             
             <div className="grid grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center justify-end space-x-3">
+                <div key={index} className="flex items-center space-x-3">
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-[#002A38] mb-1">
                       {benefit.title}
