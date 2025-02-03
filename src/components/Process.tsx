@@ -12,13 +12,13 @@ const Process = () => {
       description: 'Our solution is designed to enhance traceability and transparency across global supply chains, thus promoting visibility and circularity in the entire value chain within any industry.',
     },
     {
-      title: 'Enhancing Visibility Across the Value Chain',
-      icon: '/lovable-uploads/00622099-d906-411a-824b-e6f48bbe6201.png',
+      title: 'Value Chain Transparency',
+      icon: '/lovable-uploads/098369a9-7550-4c27-9737-ec59a6c5dfbd.png',
       description: 'Our service serves as a digital bridge, connecting all stakeholders in the supply chain ecosystem. By leveraging blockchain technology, we create an immutable and transparent record of every transaction, movement, and transformation of products as they journey from raw materials to finished goods.',
     },
     {
       title: 'Comprehensive Data Integration',
-      icon: '/lovable-uploads/b834432e-5eff-46b8-972e-507a351c4a60.png',
+      icon: '/lovable-uploads/46c4bffb-cd00-4a8a-97a8-49d50add74f6.png',
       description: 'We seamlessly integrate data from various sources through APIs, to create a holistic view of the entire supply chain.',
     },
   ];
