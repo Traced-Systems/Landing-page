@@ -46,7 +46,7 @@ const Hero = () => {
               <img 
                 src="/lovable-uploads/f13aac64-15e3-4a2a-9838-a7f474b842e5.png" 
                 alt="Product Mockup" 
-                className="w-full h-auto max-w-[400px]"
+                className="w-full h-auto max-w-[500px]"
               />
             </div>
           </div>
