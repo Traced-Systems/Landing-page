@@ -52,10 +52,15 @@ export default {
             transform: "translateY(0)",
           },
         },
+        "extend-line": {
+          "0%": { transform: "scaleX(0)", transformOrigin: "right" },
+          "100%": { transform: "scaleX(1)", transformOrigin: "right" }
+        }
       },
       animation: {
         marquee: 'marquee 25s linear infinite',
         "fade-up": "fade-up 0.5s ease-out",
+        "extend-line": "extend-line 1s ease-out forwards"
       },
     },
   },

@@ -1,8 +1,33 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Check } from 'lucide-react';
 import { Separator } from "@/components/ui/separator";
 
 const Benefits = () => {
+  const separatorRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-extend-line');
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    if (separatorRef.current) {
+      observer.observe(separatorRef.current);
+    }
+
+    return () => {
+      if (separatorRef.current) {
+        observer.unobserve(separatorRef.current);
+      }
+    };
+  }, []);
+
   const benefits = [
     {
       title: 'Flexibility',
@@ -40,7 +65,9 @@ const Benefits = () => {
                 <h3 className="text-3xl md:text-4xl font-bold text-[#002A38]">
                   Elevating Product Lifecycle Management
                 </h3>
-                <Separator className="my-4 h-1 bg-[#D4904E]" />
+                <div ref={separatorRef} className="w-full">
+                  <Separator className="my-4 h-1 bg-[#D4904E] transform scale-x-0" />
+                </div>
               </div>
               <h2 className="text-2xl md:text-3xl text-[#002A38] mb-8">
                 with Digital Product Passports
