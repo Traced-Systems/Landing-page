@@ -2,8 +2,8 @@ import React from 'react';
 
 const LogoMarquee = () => {
   const logos = [
-    { src: '/lovable-uploads/872f4e62-69fe-401b-9c71-a0c2074f0690.png', alt: 'BLK DNM', className: 'h-6' },
-    { src: '/lovable-uploads/53733f77-0c96-43ec-b9a3-8cfc7930500f.png', alt: 'Cling', className: 'h-6' },
+    { src: '/lovable-uploads/872f4e62-69fe-401b-9c71-a0c2074f0690.png', alt: 'BLK DNM', className: 'h-8' },
+    { src: '/lovable-uploads/53733f77-0c96-43ec-b9a3-8cfc7930500f.png', alt: 'Cling', className: 'h-8' },
     { src: '/lovable-uploads/447b6eb2-3642-4845-80fd-9da6b5535c71.png', alt: 'EBSI', className: 'h-8' },
     { src: '/lovable-uploads/bfe45d2d-c864-4265-9fd4-f2f7a5535d20.png', alt: 'European Commission', className: 'h-8' }
   ];
@@ -35,7 +35,7 @@ const LogoMarquee = () => {
             {logos.map((logo, index) => (
               <div
                 key={`first-${index}`}
-                className="flex items-center justify-center"
+                className="flex items-center justify-center w-32 h-16"
               >
                 <img 
                   src={logo.src} 
@@ -51,7 +51,7 @@ const LogoMarquee = () => {
             {logos.map((logo, index) => (
               <div
                 key={`second-${index}`}
-                className="flex items-center justify-center"
+                className="flex items-center justify-center w-32 h-16"
               >
                 <img 
                   src={logo.src} 
