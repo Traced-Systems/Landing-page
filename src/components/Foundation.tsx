@@ -16,7 +16,7 @@ const Foundation = () => {
               <img 
                 src="/lovable-uploads/2749a449-2417-480e-9ef7-a470c066694f.png" 
                 alt="ChromaWay" 
-                className="h-[9.2rem] w-auto object-contain" // Increased from h-8 by 15%
+                className="h-[8.28rem] w-auto object-contain" // Decreased from 9.2rem by 10%
               />
             </div>
 
