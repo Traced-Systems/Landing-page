@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils";
 
 const Process = () => {
@@ -66,14 +65,7 @@ const Process = () => {
                   />
                 </div>
                 
-                <h3 
-                  className={cn(
-                    "text-xl font-semibold text-[#002A38] transition-all duration-500",
-                    expandedCard === index 
-                      ? "opacity-0 absolute" 
-                      : "opacity-100 mt-4 text-center"
-                  )}
-                >
+                <h3 className="text-xl font-semibold text-[#002A38] mt-4 text-center">
                   {step.title}
                 </h3>
 
