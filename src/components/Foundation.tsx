@@ -5,8 +5,8 @@ const Foundation = () => {
   return (
     <section className="w-full bg-[#f7f7f7] py-16">
       <div className="container mx-auto px-4">
-        <Card className="p-8">
-          <div className="flex items-center justify-evenly">
+        <Card className="inline-block p-8 mx-auto">
+          <div className="flex items-center justify-evenly gap-16">
             <div className="text-center">
               <p className="mb-4 text-sm font-medium text-gray-600">Built by:</p>
               <img 
