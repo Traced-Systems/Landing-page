@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils";
 
 const Process = () => {
@@ -81,18 +80,10 @@ const Process = () => {
                   className={cn(
                     "overflow-hidden transition-all duration-500 ease-in-out",
                     expandedCard === index 
-                      ? "opacity-100 mt-16 text-left transform-none" 
+                      ? "opacity-100 mt-8 text-left transform-none" 
                       : "opacity-0 translate-y-2 scale-95 absolute"
                   )}
                 >
-                  <div className="flex items-start mb-4">
-                    <ChevronDown 
-                      className={cn(
-                        "text-gray-500 transition-transform duration-500",
-                        expandedCard === index ? "rotate-180" : ""
-                      )} 
-                    />
-                  </div>
                   <p className="text-gray-600">
                     {step.description}
                   </p>
