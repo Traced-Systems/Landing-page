@@ -29,10 +29,10 @@ const LogoMarquee = () => {
 
       {/* Logo marquee container */}
       <div className="relative py-12">
-        <div className="flex overflow-hidden">
-          {/* First set of logos */}
-          <div className="flex space-x-24 animate-marquee whitespace-nowrap">
-            {logos.map((logo, index) => (
+        <div className="flex space-x-12 overflow-hidden">
+          {/* Multiple sets of logos for continuous flow */}
+          <div className="flex space-x-12 animate-marquee whitespace-nowrap">
+            {[...logos, ...logos, ...logos].map((logo, index) => (
               <div
                 key={`first-${index}`}
                 className="flex items-center justify-center w-32 h-16"
@@ -46,9 +46,9 @@ const LogoMarquee = () => {
             ))}
           </div>
 
-          {/* Duplicate set of logos for seamless loop */}
-          <div className="flex space-x-24 animate-marquee whitespace-nowrap">
-            {logos.map((logo, index) => (
+          {/* Duplicate set for seamless loop */}
+          <div className="flex space-x-12 animate-marquee whitespace-nowrap">
+            {[...logos, ...logos, ...logos].map((logo, index) => (
               <div
                 key={`second-${index}`}
                 className="flex items-center justify-center w-32 h-16"
