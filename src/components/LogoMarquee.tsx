@@ -9,17 +9,32 @@ const LogoMarquee = () => {
   ];
   
   return (
-    <div className="py-12 overflow-hidden" style={{ backgroundColor: 'rgba(242, 241, 238, 0.7)' }}>
-      <div className="relative">
-        <div className="flex space-x-16 animate-marquee whitespace-nowrap">
-          {logos.concat(logos).map((logo, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0"
-            >
-              <img src={logo.src} alt={logo.alt} className={logo.className} />
-            </div>
-          ))}
+    <div className="relative">
+      {/* Connecting wave image */}
+      <div 
+        className="absolute top-0 left-0 w-full h-48 -mt-24"
+        style={{
+          backgroundImage: `url('/lovable-uploads/c2f90225-bc21-4eee-8b0c-5d0ba0e94791.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          zIndex: -1,
+        }}
+      />
+      
+      {/* Logo marquee section */}
+      <div className="py-12 overflow-hidden" style={{ backgroundColor: 'rgba(242, 241, 238, 0.7)' }}>
+        <div className="relative">
+          <div className="flex space-x-16 animate-marquee whitespace-nowrap">
+            {logos.concat(logos).map((logo, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0"
+              >
+                <img src={logo.src} alt={logo.alt} className={logo.className} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
