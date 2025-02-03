@@ -10,7 +10,7 @@ const Foundation = () => {
             <div className="text-center">
               <p className="mb-4 text-sm font-medium text-gray-600">Built by:</p>
               <img 
-                src="/lovable-uploads/989e7920-294f-4d57-a9af-e085d1a26fd2.png" 
+                src="/lovable-uploads/d05fb389-8a90-42a6-9fb2-580384106614.png" 
                 alt="Chromaway" 
                 className="h-12 object-contain"
               />
@@ -20,7 +20,7 @@ const Foundation = () => {
               <div className="text-center">
                 <p className="mb-4 text-sm font-medium text-gray-600">Funded by:</p>
                 <img 
-                  src="/lovable-uploads/973d7c66-1d01-4e1e-89ce-2dee7a7c3dae.png" 
+                  src="/lovable-uploads/ff086cb2-38b6-4ca2-a158-69f69cf213ee.png" 
                   alt="EU" 
                   className="h-12 object-contain"
                 />
@@ -28,7 +28,7 @@ const Foundation = () => {
               <div className="text-center">
                 <p className="mb-4 text-sm font-medium text-gray-600">Funded by:</p>
                 <img 
-                  src="/lovable-uploads/973d9db4-a05a-4a45-af13-2f7b06166f5b.png" 
+                  src="/lovable-uploads/e1307a99-b10d-4799-b274-47c5f4487c18.png" 
                   alt="EBSI" 
                   className="h-12 object-contain"
                 />
@@ -38,7 +38,7 @@ const Foundation = () => {
             <div className="text-center">
               <p className="mb-4 text-sm font-medium text-gray-600">Powered by:</p>
               <img 
-                src="/lovable-uploads/989e7920-294f-4d57-a9af-e085d1a26fd2.png" 
+                src="/lovable-uploads/6f62693e-d89e-4061-b259-b6e900dcc386.png" 
                 alt="Chromia" 
                 className="h-12 object-contain"
               />
