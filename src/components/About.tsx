@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 const About = () => {
   return (
@@ -10,6 +11,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary">
               Who are we?
             </h2>
+            <Separator className="my-4" />
             <p className="text-gray-600 leading-relaxed">
               Our journey began as part of a ChromaWay project with the European Blockchain Services Infrastructure (EBSI), an EU-led effort to explore the transformative potential of blockchain and distributed ledger technologies (DLTs). Since 2021, we have been deeply involved in shaping this vision, partnering with the EU in a multi-phased approach that combined rigorous research, technological development, and field testing.
             </p>
