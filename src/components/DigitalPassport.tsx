@@ -1,4 +1,5 @@
 import React from 'react';
+import { Separator } from "@/components/ui/separator";
 
 const DigitalPassport = () => {
   return (
@@ -18,8 +19,10 @@ const DigitalPassport = () => {
           <div className="space-y-8">
             <div className="space-y-2">
               <p className="text-sm text-gray-600">Traced Systems developed</p>
-              <h2 className="text-3xl font-bold text-[#1E293B]">Digital Product Passport</h2>
-              <div className="w-16 h-1 bg-[#0EA5E9] mt-4"></div>
+              <div className="inline-block">
+                <h2 className="text-3xl font-bold text-[#1E293B]">Digital Product Passport</h2>
+                <Separator className="my-4 h-1 bg-[#D4904E]" />
+              </div>
             </div>
             
             <div className="space-y-6">

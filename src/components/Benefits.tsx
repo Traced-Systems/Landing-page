@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check } from 'lucide-react';
+import { Separator } from "@/components/ui/separator";
 
 const Benefits = () => {
   const benefits = [
@@ -25,7 +26,6 @@ const Benefits = () => {
     <section id="section-elevating-product-lifestyle" className="py-20 bg-[#f7f7f7]">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-start justify-between gap-16">
-          {/* Left side - Image */}
           <div className="w-full md:w-5/12">
             <img 
               src="/lovable-uploads/83145e53-565d-473e-b0e3-62990415f253.png" 
@@ -34,12 +34,14 @@ const Benefits = () => {
             />
           </div>
 
-          {/* Right side - content */}
           <div className="w-full md:w-7/12 text-left">
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#002A38] mb-6">
-                Elevating Product Lifecycle Management
-              </h2>
+              <div className="inline-block">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#002A38]">
+                  Elevating Product Lifecycle Management
+                </h2>
+                <Separator className="my-4 h-1 bg-[#D4904E]" />
+              </div>
               <h3 className="text-2xl text-[#002A38] mb-8">
                 with Digital Product Passports
               </h3>

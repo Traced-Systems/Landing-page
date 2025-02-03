@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const Features = () => {
   const features = [
@@ -26,11 +27,14 @@ const Features = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
-          Digital Product Passport – Key Sectors
-        </h2>
+        <div className="inline-block text-center mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary">
+            Digital Product Passport – Key Sectors
+          </h2>
+          <Separator className="my-4 h-1 bg-[#D4904E]" />
+        </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mt-12">
           {features.map((feature) => (
             <div
               key={feature.id}
