@@ -28,7 +28,7 @@ const Process = () => {
   };
 
   return (
-    <section className="py-20 bg-[#f7f7f7]">
+    <section className="py-20 bg-[#f9f9f9]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#002A38] mb-4">
@@ -56,7 +56,7 @@ const Process = () => {
                     "transition-all duration-500 ease-in-out",
                     expandedCard === index 
                       ? "w-12 h-12 absolute top-0 left-0" 
-                      : "w-20 h-20 mb-4"
+                      : "w-16 h-16 mb-4"
                   )}
                 >
                   <img 
