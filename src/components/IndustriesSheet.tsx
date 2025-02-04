@@ -1,7 +1,5 @@
 import React from 'react';
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
 import IndustryCard from './IndustryCard';
 import EURegulationsSection from './EURegulationsSection';
 import CTASection from './CTASection';
@@ -24,20 +22,13 @@ const IndustriesSheet = () => {
               backgroundImage: 'url("/lovable-uploads/4187353b-b062-491f-b38c-eaae240654cd.png")',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
-              backgroundSize: 'contain'
+              backgroundSize: '50%'
             }}
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <h1 className="text-2xl font-semibold text-primary">Industries</h1>
               </div>
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                className="hover:bg-transparent absolute -left-12 top-4 bg-white rounded-full shadow-[4px_4px_10px_0px_rgba(0,0,0,0.1),-4px_-4px_10px_0px_rgba(255,255,255,0.9)]"
-              >
-                <ArrowLeft className="h-6 w-6" />
-              </Button>
             </div>
           </div>
 
