@@ -9,12 +9,19 @@ const IndustriesSheet = () => {
       <SheetTrigger asChild>
         <button className="text-gray-600 hover:text-primary transition-colors">Industries</button>
       </SheetTrigger>
-      <SheetContent side="right" className="w-full sm:w-[640px] overflow-y-auto bg-[#F7F7F5]">
+      <SheetContent 
+        side="right" 
+        className="w-[75vw] max-w-[1200px] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl"
+      >
         <div className="h-full flex flex-col">
           {/* Top Section */}
           <div className="flex items-center justify-between mb-8">
             <h1 className="text-2xl font-semibold text-primary">Industries</h1>
-            <Button variant="ghost" size="icon" className="hover:bg-transparent">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="hover:bg-transparent absolute -left-12 top-4 bg-white rounded-full shadow-[4px_4px_10px_0px_rgba(0,0,0,0.1),-4px_-4px_10px_0px_rgba(255,255,255,0.9)]"
+            >
               <ArrowLeft className="h-6 w-6" />
             </Button>
           </div>
