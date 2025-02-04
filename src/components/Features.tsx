@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { ArrowRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import TextilesSheet from './TextilesSheet';
+import BatteriesSheet from './BatteriesSheet';
 
 const Features = () => {
   const [isTextilesOpen, setIsTextilesOpen] = useState(false);
+  const [isBatteriesOpen, setIsBatteriesOpen] = useState(false);
 
   const features = [
     {
@@ -47,6 +49,8 @@ const Features = () => {
                 onClick={() => {
                   if (feature.id === 'textile-card') {
                     setIsTextilesOpen(true);
+                  } else if (feature.id === 'batteries-card') {
+                    setIsBatteriesOpen(true);
                   }
                 }}
               >
@@ -107,6 +111,13 @@ const Features = () => {
       <TextilesSheet 
         isOpen={isTextilesOpen}
         onClose={() => setIsTextilesOpen(false)}
+        onBack={() => setIsTextilesOpen(false)}
+      />
+
+      <BatteriesSheet 
+        isOpen={isBatteriesOpen}
+        onClose={() => setIsBatteriesOpen(false)}
+        onBack={() => setIsBatteriesOpen(false)}
       />
     </>
   );
