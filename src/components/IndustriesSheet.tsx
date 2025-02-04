@@ -11,7 +11,7 @@ const IndustriesSheet = () => {
       </SheetTrigger>
       <SheetContent 
         side="right" 
-        className="w-[75vw] max-w-[1200px] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl"
+        className="w-[75vw] max-w-none overflow-y-auto bg-[#F7F7F5] border-l shadow-xl"
       >
         <div className="h-full flex flex-col">
           {/* Top Section */}
