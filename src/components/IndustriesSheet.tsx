@@ -9,7 +9,7 @@ const IndustriesSheet = () => {
       <SheetTrigger asChild>
         <button className="text-gray-600 hover:text-primary transition-colors">Industries</button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-full sm:w-[640px] overflow-y-auto bg-[#F7F7F5]">
+      <SheetContent side="right" className="w-full sm:w-[640px] overflow-y-auto bg-[#F7F7F5]">
         <div className="h-full flex flex-col">
           {/* Top Section */}
           <div className="flex items-center justify-between mb-8">
