@@ -15,17 +15,17 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
     {
       title: "Lifecycle Traceability",
       content: "Our platform unites data and stakeholders at every stage from raw materials to recycling or resale offering actionable transparency. By integrating all touchpoints in the supply chain, we help businesses reduce waste, build trust, and make more informed decisions.",
-      iconSrc: "/lovable-uploads/transparency.png"
+      iconSrc: "/lovable-uploads/859fbae4-6beb-478f-8c68-b8afd2733b38.png"
     },
     {
       title: "Ensure Reliable Compliance",
       content: "Powered by secure blockchain, our solution provides tamper‐proof records to meet both internal and external standards. Data validation and sharing streamlined compliance, boost stakeholder confidence, and lay the groundwork for truly sustainable operations.",
-      iconSrc: "/lovable-uploads/compliance.png"
+      iconSrc: "/lovable-uploads/af862426-05dd-45c3-ac0a-40e68e59f5cc.png"
     },
     {
       title: "Enable Sustainable Growth",
       content: "We equip organizations to meet the rising demand for credible, eco‐friendly products whether in B2B or B2C markets. By verifying sustainability claims and improving transparency, our tool helps businesses stand out, reduce environmental impact, and foster profitable growth.",
-      iconSrc: "/lovable-uploads/growth-icon.png"
+      iconSrc: "/lovable-uploads/7e022afd-d192-4c0a-92fc-014012d85fb2.png"
     }
   ];
 
@@ -75,7 +75,7 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
             <IndustrySheetCTA 
               title="Drive Innovation in Textiles With the Experts Who Understand Your Industry"
               description="Ready to elevate your textile operations? Our passion for sustainable innovation and deep industry insight will empower you to stay ahead in a fast-paced market. Let's explore how we can help you deliver on your mission—book a demo today!"
-              imageSrc="/lovable-uploads/15f2e792-7fe5-4619-819b-467d5d6c282c.png"
+              imageSrc="/lovable-uploads/1be26ed1-0275-4ab9-8bed-108d8ad53a5f.png"
             />
           </div>
         </div>

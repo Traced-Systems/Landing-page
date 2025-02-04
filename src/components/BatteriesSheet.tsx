@@ -15,17 +15,17 @@ const BatteriesSheet = ({ isOpen, onClose, onBack }: BatteriesSheetProps) => {
     {
       title: "Lifecycle Traceability",
       content: "Our solution provides oversight of the entire battery lifecycle. Track raw material sourcing, manufacturing processes, in‑use performance, and eventual recycling or refurbishment. This helps you optimize operations, remain compliant with industry regulations, and confidently stand behind the integrity of your products.",
-      iconSrc: "/lovable-uploads/transparency.png"
+      iconSrc: "/lovable-uploads/859fbae4-6beb-478f-8c68-b8afd2733b38.png"
     },
     {
       title: "Blockchain-Secured Accuracy",
       content: "By harnessing blockchain technology, our platform guarantees that every data point ­­from material certifications to final inspection reports ­­is securely recorded and impossible to falsify. The result is higher stakeholder trust, streamlined compliance, and robust proof of quality throughout the battery supply chain.",
-      iconSrc: "/lovable-uploads/blockchain-secured-icon.png"
+      iconSrc: "/lovable-uploads/1db656b0-9049-4b94-bfe5-fe1dbab7669d.png"
     },
     {
       title: "Sustainable Performance",
       content: "Our solution equips you with the insights and tools needed to minimize waste, reduce carbon footprints, and meet evolving environmental standards. From resource optimization to responsible disposal, you can prove your commitment to green practices and position your organization as a leader in sustainable battery innovation.",
-      iconSrc: "/lovable-uploads/growth-icon.png"
+      iconSrc: "/lovable-uploads/7e022afd-d192-4c0a-92fc-014012d85fb2.png"
     }
   ];
 
@@ -75,7 +75,7 @@ const BatteriesSheet = ({ isOpen, onClose, onBack }: BatteriesSheetProps) => {
             <IndustrySheetCTA 
               title="Drive Innovation in Batteries With the Experts Who Understand Your Industry"
               description="Ready to elevate your battery operations? Our passion for sustainable innovation and deep industry insight will empower you to stay ahead in a fast-paced market. Let's explore how we can help you deliver on your mission—book a demo today!"
-              imageSrc="/lovable-uploads/15f2e792-7fe5-4619-819b-467d5d6c282c.png"
+              imageSrc="/lovable-uploads/1be26ed1-0275-4ab9-8bed-108d8ad53a5f.png"
             />
           </div>
         </div>
