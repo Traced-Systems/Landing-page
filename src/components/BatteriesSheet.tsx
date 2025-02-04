@@ -1,7 +1,6 @@
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import IndustrySheetHeader from './shared/IndustrySheetHeader';
 import IndustrySheetCard from './shared/IndustrySheetCard';
 import IndustrySheetCTA from './shared/IndustrySheetCTA';
 
@@ -16,17 +15,17 @@ const BatteriesSheet = ({ isOpen, onClose, onBack }: BatteriesSheetProps) => {
     {
       title: "Lifecycle Traceability",
       content: "Our solution provides oversight of the entire battery lifecycle. Track raw material sourcing, manufacturing processes, in‑use performance, and eventual recycling or refurbishment. This helps you optimize operations, remain compliant with industry regulations, and confidently stand behind the integrity of your products.",
-      icon: "/lovable-uploads/transparency.png"
+      iconSrc: "/lovable-uploads/transparency.png"
     },
     {
       title: "Blockchain-Secured Accuracy",
       content: "By harnessing blockchain technology, our platform guarantees that every data point ­­from material certifications to final inspection reports ­­is securely recorded and impossible to falsify. The result is higher stakeholder trust, streamlined compliance, and robust proof of quality throughout the battery supply chain.",
-      icon: "/lovable-uploads/blockchain-secured-icon.png"
+      iconSrc: "/lovable-uploads/blockchain-secured-icon.png"
     },
     {
       title: "Sustainable Performance",
       content: "Our solution equips you with the insights and tools needed to minimize waste, reduce carbon footprints, and meet evolving environmental standards. From resource optimization to responsible disposal, you can prove your commitment to green practices and position your organization as a leader in sustainable battery innovation.",
-      icon: "/lovable-uploads/growth-icon.png"
+      iconSrc: "/lovable-uploads/growth-icon.png"
     }
   ];
 
@@ -37,33 +36,12 @@ const BatteriesSheet = ({ isOpen, onClose, onBack }: BatteriesSheetProps) => {
         className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl z-[997]"
       >
         <div className="h-full flex flex-col pt-20">
-          <div className="flex items-center justify-between mb-12 relative bg-[#F9F9F9] p-8">
-            <Button 
-              variant="ghost" 
-              onClick={onBack}
-              className="absolute left-4 top-4"
-            >
-              <ArrowLeft className="mr-2" />
-              Back
-            </Button>
-            
-            <div className="w-full mt-12">
-              <h3 className="text-[#D4904E] text-lg mb-2">Industries</h3>
-              <div className="flex items-center justify-between">
-                <div>
-                  <h1 className="text-4xl font-bold text-primary mb-4">Batteries</h1>
-                  <p className="text-gray-600 max-w-xl">
-                    Traced Systems' Digital Product Passport streamlines battery management by enhancing transparency, ensuring compliance, and optimizing the full product lifecycle.
-                  </p>
-                </div>
-                <img 
-                  src="/lovable-uploads/973d7c66-1d01-4e1e-89ce-2dee7a7c3dae.png"
-                  alt="Battery technology"
-                  className="w-[522.87px] h-[315.8px] object-cover rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
+          <IndustrySheetHeader
+            title="Batteries"
+            description="Traced Systems' Digital Product Passport streamlines battery management by enhancing transparency, ensuring compliance, and optimizing the full product lifecycle."
+            imageSrc="/lovable-uploads/973d7c66-1d01-4e1e-89ce-2dee7a7c3dae.png"
+            onBack={onBack}
+          />
 
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary">
@@ -77,7 +55,7 @@ const BatteriesSheet = ({ isOpen, onClose, onBack }: BatteriesSheetProps) => {
                 key={index}
                 title={card.title}
                 content={card.content}
-                icon={card.icon}
+                iconSrc={card.iconSrc}
               />
             ))}
           </div>
