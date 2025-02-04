@@ -17,23 +17,33 @@ const IndustriesSheet = () => {
         className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl"
       >
         <div className="h-full flex flex-col">
-          {/* Top Section */}
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-4">
-              <img 
-                src="/lovable-uploads/da1c3072-d9ff-4e07-b36e-c838da0abbd0.png" 
-                alt="Industries flow diagram"
-                className="h-12 object-contain"
-              />
-              <h1 className="text-2xl font-semibold text-primary">Industries</h1>
+          {/* Top Section with Background */}
+          <div 
+            className="relative mb-8 py-8 px-4"
+            style={{
+              backgroundImage: 'url("/lovable-uploads/6f19510c-4518-4ebd-97e8-00ad88b05677.png")',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+              backgroundSize: 'contain'
+            }}
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <img 
+                  src="/lovable-uploads/da1c3072-d9ff-4e07-b36e-c838da0abbd0.png" 
+                  alt="Industries flow diagram"
+                  className="h-12 object-contain"
+                />
+                <h1 className="text-2xl font-semibold text-primary">Industries</h1>
+              </div>
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="hover:bg-transparent absolute -left-12 top-4 bg-white rounded-full shadow-[4px_4px_10px_0px_rgba(0,0,0,0.1),-4px_-4px_10px_0px_rgba(255,255,255,0.9)]"
+              >
+                <ArrowLeft className="h-6 w-6" />
+              </Button>
             </div>
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="hover:bg-transparent absolute -left-12 top-4 bg-white rounded-full shadow-[4px_4px_10px_0px_rgba(0,0,0,0.1),-4px_-4px_10px_0px_rgba(255,255,255,0.9)]"
-            >
-              <ArrowLeft className="h-6 w-6" />
-            </Button>
           </div>
 
           {/* Section Title */}
