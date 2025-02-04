@@ -22,7 +22,7 @@ const IndustriesSheet = () => {
               backgroundImage: 'url("/lovable-uploads/4187353b-b062-491f-b38c-eaae240654cd.png")',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
-              backgroundSize: '50%'
+              backgroundSize: 'cover'
             }}
           >
             <div className="flex items-center justify-between">
