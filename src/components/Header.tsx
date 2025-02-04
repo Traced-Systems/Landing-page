@@ -32,6 +32,7 @@ const Header = () => {
               <IndustriesSheet />
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">Use Cases</a>
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">About Us</a>
+              <a href="#" className="text-gray-600 hover:text-primary transition-colors">Blog</a>
             </nav>
             
             <Button className="hidden md:inline-flex bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-6">
