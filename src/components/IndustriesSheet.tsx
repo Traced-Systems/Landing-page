@@ -68,7 +68,7 @@ const IndustriesSheet = () => {
                 </p>
               </div>
               <img 
-                src="/lovable-uploads/f4dcfedb-41f9-4d19-9049-bef91e382d7a.png" 
+                src="/lovable-uploads/388a3ea5-e78d-4f2c-a979-646e50aa5de4.png" 
                 alt="EU Regulations" 
                 className="w-full md:w-1/3 rounded-lg"
               />
