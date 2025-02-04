@@ -54,7 +54,7 @@ const IndustriesSheet = () => {
           <CTASection />
           
           {/* Bottom Spacing */}
-          <div className="pb-[250px]"></div>
+          <div className="pb-[125px]"></div>
         </div>
       </SheetContent>
     </Sheet>
