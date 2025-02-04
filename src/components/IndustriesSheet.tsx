@@ -3,6 +3,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import IndustryCard from './IndustryCard';
 import EURegulationsSection from './EURegulationsSection';
 import CTASection from './CTASection';
+import { Button } from './ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const IndustriesSheet = () => {
   return (
@@ -22,7 +24,7 @@ const IndustriesSheet = () => {
               backgroundImage: 'url("/lovable-uploads/4187353b-b062-491f-b38c-eaae240654cd.png")',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
-              backgroundSize: 'cover'
+              backgroundSize: '85% auto'
             }}
           >
             <div className="flex items-center justify-between">
@@ -39,18 +41,35 @@ const IndustriesSheet = () => {
 
           {/* Industry Cards */}
           <div className="grid md:grid-cols-2 gap-6 mb-12 items-start">
-            <IndustryCard 
-              title="Textiles"
-              description="Traced Systems' Digital Product Passport tackles supply chain gaps, ensures ethical sourcing, and drives circularity across the textile lifecycle."
-              imageSrc="/lovable-uploads/2320cd7d-0e5e-4635-b26a-2d2eaeb0aa50.png"
-              imageAlt="Textiles"
-            />
-            <IndustryCard 
-              title="Batteries"
-              description="Traced Systems' Digital Product Passport streamlines battery management by enhancing transparency, ensuring compliance, and optimizing the full product lifecycle."
-              imageSrc="/lovable-uploads/efedcb76-b69e-4a52-8689-41020d02ede5.png"
-              imageAlt="Batteries"
-            />
+            <div className="space-y-4">
+              <IndustryCard 
+                title="Textiles"
+                description="Traced Systems' Digital Product Passport tackles supply chain gaps, ensures ethical sourcing, and drives circularity across the textile lifecycle."
+                imageSrc="/lovable-uploads/2320cd7d-0e5e-4635-b26a-2d2eaeb0aa50.png"
+                imageAlt="Textiles"
+              />
+              <Button 
+                variant="outline" 
+                className="w-full flex items-center justify-center gap-2"
+              >
+                Know More <ArrowRight className="h-4 w-4" />
+              </Button>
+            </div>
+            
+            <div className="space-y-4">
+              <IndustryCard 
+                title="Batteries"
+                description="Traced Systems' Digital Product Passport streamlines battery management by enhancing transparency, ensuring compliance, and optimizing the full product lifecycle."
+                imageSrc="/lovable-uploads/efedcb76-b69e-4a52-8689-41020d02ede5.png"
+                imageAlt="Batteries"
+              />
+              <Button 
+                variant="outline" 
+                className="w-full flex items-center justify-center gap-2"
+              >
+                Know More <ArrowRight className="h-4 w-4" />
+              </Button>
+            </div>
           </div>
 
           <EURegulationsSection />
