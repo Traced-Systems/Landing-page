@@ -4,14 +4,25 @@ import IndustryCard from './IndustryCard';
 import EURegulationsSection from './EURegulationsSection';
 import CTASection from './CTASection';
 import TextilesSheet from './TextilesSheet';
+import BatteriesSheet from './BatteriesSheet';
 
 const IndustriesSheet = () => {
   const [isTextilesOpen, setIsTextilesOpen] = useState(false);
+  const [isBatteriesOpen, setIsBatteriesOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
 
   const handleTextilesClick = () => {
     setIsTextilesOpen(true);
     setIsIndustriesOpen(false);
+  };
+
+  const handleBatteriesClick = () => {
+    setIsBatteriesOpen(true);
+    setIsIndustriesOpen(false);
+  };
+
+  const handleSheetClose = () => {
+    setIsIndustriesOpen(true);
   };
 
   return (
@@ -60,13 +71,14 @@ const IndustriesSheet = () => {
                 />
               </div>
               
-              {/* Batteries Card - Static */}
+              {/* Batteries Card - Interactive */}
               <div className="space-y-4">
                 <IndustryCard 
                   title="Batteries"
                   description="Traced Systems' Digital Product Passport streamlines battery management by enhancing transparency, ensuring compliance, and optimizing the full product lifecycle."
                   imageSrc="/lovable-uploads/efedcb76-b69e-4a52-8689-41020d02ede5.png"
                   imageAlt="Batteries"
+                  onClick={handleBatteriesClick}
                 />
               </div>
             </div>
@@ -83,6 +95,13 @@ const IndustriesSheet = () => {
       <TextilesSheet 
         isOpen={isTextilesOpen}
         onClose={() => setIsTextilesOpen(false)}
+        onBack={handleSheetClose}
+      />
+
+      <BatteriesSheet 
+        isOpen={isBatteriesOpen}
+        onClose={() => setIsBatteriesOpen(false)}
+        onBack={handleSheetClose}
       />
     </>
   );

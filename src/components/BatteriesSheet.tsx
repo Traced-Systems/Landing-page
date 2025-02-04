@@ -3,30 +3,30 @@ import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 
-interface TextileCard {
+interface BatteryCard {
   title: string;
   content: string;
 }
 
-interface TextilesSheetProps {
+interface BatteriesSheetProps {
   isOpen: boolean;
   onClose: () => void;
   onBack: () => void;
 }
 
-const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
-  const cards: TextileCard[] = [
+const BatteriesSheet = ({ isOpen, onClose, onBack }: BatteriesSheetProps) => {
+  const cards: BatteryCard[] = [
     {
-      title: "Deliver Lifecycle Transparency",
-      content: "Track and verify every step of your textile production journey with our comprehensive digital passport system."
+      title: "Lifecycle Traceability",
+      content: "Track and verify every stage of your battery's lifecycle with our comprehensive digital passport system."
     },
     {
-      title: "Ensure Reliable Compliance",
-      content: "Stay ahead of regulations with automated compliance tracking and verification systems."
+      title: "Blockchain-Secured Accuracy",
+      content: "Ensure data integrity and compliance with our blockchain-powered verification system."
     },
     {
-      title: "Enable Sustainable Growth",
-      content: "Drive sustainable practices while optimizing operational efficiency and reducing waste."
+      title: "Sustainable Performance",
+      content: "Optimize battery performance while maintaining sustainable practices throughout the value chain."
     }
   ];
 
@@ -54,10 +54,10 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
             </Button>
             
             <div className="flex items-center justify-between w-full mt-12">
-              <h1 className="text-4xl font-bold text-primary">Textiles</h1>
+              <h1 className="text-4xl font-bold text-primary">Batteries</h1>
               <img 
-                src="/lovable-uploads/36f60108-99d8-465a-81a4-e52c86799730.png"
-                alt="Cotton textile"
+                src="/lovable-uploads/973d7c66-1d01-4e1e-89ce-2dee7a7c3dae.png"
+                alt="Battery technology"
                 className="w-1/3 rounded-lg object-cover"
               />
             </div>
@@ -66,7 +66,7 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
           {/* Subtitle */}
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary">
-              How Traced Systems Elevates the Textile Industry
+              How Traced Systems Elevates the Battery Industry
             </h2>
           </div>
 
@@ -92,8 +92,8 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
             </h2>
             <p className="text-gray-600">
               Our digital passport system enables unprecedented transparency and traceability 
-              across your entire textile supply chain. From raw material sourcing to final product 
-              delivery, we help you track, verify, and optimize every step of the journey.
+              across your entire battery supply chain. From raw material sourcing to end-of-life 
+              recycling, we help you track, verify, and optimize every step of the journey.
             </p>
           </div>
 
@@ -101,7 +101,7 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
           <div className="bg-[#F1F0FB] rounded-xl p-8 flex items-center justify-between mt-auto">
             <div className="max-w-2xl">
               <h3 className="text-2xl font-bold text-primary mb-4">
-                Drive Innovation in Textiles With the Experts Who Understand Your Industry
+                Drive Innovation in Batteries With the Experts Who Understand Your Industry
               </h3>
               <Button className="bg-[#9b87f5] hover:bg-[#8b77e5] text-white">
                 Book Demo
@@ -119,4 +119,4 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
   );
 };
 
-export default TextilesSheet;
+export default BatteriesSheet;
