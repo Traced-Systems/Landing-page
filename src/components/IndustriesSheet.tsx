@@ -7,27 +7,27 @@ import TextilesSheet from './TextilesSheet';
 import BatteriesSheet from './BatteriesSheet';
 
 const IndustriesSheet = () => {
-  const [isTextilesOpen, setIsTextilesOpen] = useState(false);
-  const [isBatteriesOpen, setIsBatteriesOpen] = useState(false);
-  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const [activeSheet, setActiveSheet] = useState<'industries' | 'textiles' | 'batteries' | null>(null);
 
   const handleTextilesClick = () => {
-    setIsTextilesOpen(true);
-    setIsIndustriesOpen(false);
+    setActiveSheet('textiles');
   };
 
   const handleBatteriesClick = () => {
-    setIsBatteriesOpen(true);
-    setIsIndustriesOpen(false);
+    setActiveSheet('batteries');
   };
 
   const handleSheetClose = () => {
-    setIsIndustriesOpen(true);
+    setActiveSheet('industries');
+  };
+
+  const handleMainSheetToggle = (open: boolean) => {
+    setActiveSheet(open ? 'industries' : null);
   };
 
   return (
     <>
-      <Sheet open={isIndustriesOpen} onOpenChange={setIsIndustriesOpen}>
+      <Sheet open={activeSheet === 'industries'} onOpenChange={handleMainSheetToggle}>
         <SheetTrigger asChild>
           <button className="text-gray-600 hover:text-primary transition-colors">Industries</button>
         </SheetTrigger>
@@ -93,14 +93,14 @@ const IndustriesSheet = () => {
       </Sheet>
 
       <TextilesSheet 
-        isOpen={isTextilesOpen}
-        onClose={() => setIsTextilesOpen(false)}
+        isOpen={activeSheet === 'textiles'}
+        onClose={() => setActiveSheet(null)}
         onBack={handleSheetClose}
       />
 
       <BatteriesSheet 
-        isOpen={isBatteriesOpen}
-        onClose={() => setIsBatteriesOpen(false)}
+        isOpen={activeSheet === 'batteries'}
+        onClose={() => setActiveSheet(null)}
         onBack={handleSheetClose}
       />
     </>

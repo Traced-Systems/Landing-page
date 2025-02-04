@@ -5,8 +5,7 @@ import TextilesSheet from './TextilesSheet';
 import BatteriesSheet from './BatteriesSheet';
 
 const Features = () => {
-  const [isTextilesOpen, setIsTextilesOpen] = useState(false);
-  const [isBatteriesOpen, setIsBatteriesOpen] = useState(false);
+  const [activeSheet, setActiveSheet] = useState<'textiles' | 'batteries' | null>(null);
 
   const features = [
     {
@@ -29,6 +28,18 @@ const Features = () => {
     },
   ];
 
+  const handleCardClick = (id: string) => {
+    if (id === 'textile-card') {
+      setActiveSheet('textiles');
+    } else if (id === 'batteries-card') {
+      setActiveSheet('batteries');
+    }
+  };
+
+  const handleSheetClose = () => {
+    setActiveSheet(null);
+  };
+
   return (
     <>
       <section className="py-20 bg-white">
@@ -46,13 +57,7 @@ const Features = () => {
                 key={feature.id}
                 id={feature.id}
                 className="group relative h-[340px] rounded-2xl overflow-hidden cursor-pointer [perspective:1000px]"
-                onClick={() => {
-                  if (feature.id === 'textile-card') {
-                    setIsTextilesOpen(true);
-                  } else if (feature.id === 'batteries-card') {
-                    setIsBatteriesOpen(true);
-                  }
-                }}
+                onClick={() => handleCardClick(feature.id)}
               >
                 <div className="relative w-full h-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   {/* Front of Card */}
@@ -109,15 +114,15 @@ const Features = () => {
       </section>
 
       <TextilesSheet 
-        isOpen={isTextilesOpen}
-        onClose={() => setIsTextilesOpen(false)}
-        onBack={() => setIsTextilesOpen(false)}
+        isOpen={activeSheet === 'textiles'}
+        onClose={handleSheetClose}
+        onBack={handleSheetClose}
       />
 
       <BatteriesSheet 
-        isOpen={isBatteriesOpen}
-        onClose={() => setIsBatteriesOpen(false)}
-        onBack={() => setIsBatteriesOpen(false)}
+        isOpen={activeSheet === 'batteries'}
+        onClose={handleSheetClose}
+        onBack={handleSheetClose}
       />
     </>
   );

@@ -19,11 +19,11 @@ const IndustrySheetCTA = ({ title, description, imageSrc }: IndustrySheetCTAProp
           Book Demo
         </Button>
       </div>
-      <div className="w-1/3 min-w-[300px]">
+      <div className="w-1/3">
         <img 
-          src={imageSrc}
+          src="/lovable-uploads/1be26ed1-0275-4ab9-8bed-108d8ad53a5f.png"
           alt="David Dolhomut"
-          className="w-full h-auto rounded-lg shadow-lg"
+          className="w-full h-auto rounded-lg shadow-lg object-cover aspect-[3/4]"
         />
       </div>
     </div>
