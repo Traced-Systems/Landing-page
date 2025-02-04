@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
+import IndustriesSheet from './IndustriesSheet';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +28,7 @@ const Header = () => {
           <div className="flex items-center justify-end space-x-8 w-full">
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">Home</a>
-              <a href="#" className="text-gray-600 hover:text-primary transition-colors">Industries</a>
+              <IndustriesSheet />
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">Use Cases</a>
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">About Us</a>
             </nav>
