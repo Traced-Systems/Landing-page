@@ -18,12 +18,12 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
       iconSrc: "/lovable-uploads/859fbae4-6beb-478f-8c68-b8afd2733b38.png"
     },
     {
-      title: "Ensure Reliable Compliance",
+      title: "Reliable Compliance",
       content: "Powered by secure blockchain, our solution provides tamper‐proof records to meet both internal and external standards. Data validation and sharing streamlined compliance, boost stakeholder confidence, and lay the groundwork for truly sustainable operations.",
       iconSrc: "/lovable-uploads/af862426-05dd-45c3-ac0a-40e68e59f5cc.png"
     },
     {
-      title: "Enable Sustainable Growth",
+      title: "Sustainable Growth",
       content: "We equip organizations to meet the rising demand for credible, eco‐friendly products whether in B2B or B2C markets. By verifying sustainability claims and improving transparency, our tool helps businesses stand out, reduce environmental impact, and foster profitable growth.",
       iconSrc: "/lovable-uploads/7e022afd-d192-4c0a-92fc-014012d85fb2.png"
     }
