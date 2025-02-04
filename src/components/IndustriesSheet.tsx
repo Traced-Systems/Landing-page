@@ -14,7 +14,7 @@ const IndustriesSheet = () => {
       </SheetTrigger>
       <SheetContent 
         side="right" 
-        className="!w-[75vw] sm:!max-w-[75vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl"
+        className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl"
       >
         <div className="h-full flex flex-col">
           {/* Top Section */}
@@ -54,7 +54,7 @@ const IndustriesSheet = () => {
           <CTASection />
           
           {/* Bottom Spacing */}
-          <div className="h-[250px]"></div>
+          <div className="pb-[250px]"></div>
         </div>
       </SheetContent>
     </Sheet>
