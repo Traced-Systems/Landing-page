@@ -29,6 +29,11 @@ const IndustriesSheet = () => {
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
+                <img 
+                  src="/lovable-uploads/da1c3072-d9ff-4e07-b36e-c838da0abbd0.png" 
+                  alt="Industries flow diagram"
+                  className="h-12 object-contain"
+                />
                 <h1 className="text-2xl font-semibold text-primary">Industries</h1>
               </div>
               <Button 
