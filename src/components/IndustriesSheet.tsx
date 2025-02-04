@@ -7,9 +7,15 @@ import TextilesSheet from './TextilesSheet';
 
 const IndustriesSheet = () => {
   const [isTextilesOpen, setIsTextilesOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleTextilesClick = () => {
+    setIsTextilesOpen(true);
+    setIsOpen(false);
+  };
 
   return (
-    <Sheet>
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
         <button className="text-gray-600 hover:text-primary transition-colors">Industries</button>
       </SheetTrigger>
@@ -49,7 +55,7 @@ const IndustriesSheet = () => {
                 description="Traced Systems' Digital Product Passport tackles supply chain gaps, ensures ethical sourcing, and drives circularity across the textile lifecycle."
                 imageSrc="/lovable-uploads/2320cd7d-0e5e-4635-b26a-2d2eaeb0aa50.png"
                 imageAlt="Textiles"
-                onClick={() => setIsTextilesOpen(true)}
+                onClick={handleTextilesClick}
               />
             </div>
             
