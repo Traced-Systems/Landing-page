@@ -35,7 +35,7 @@ const IndustriesSheet = () => {
           </div>
 
           {/* Industry Cards */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 gap-6 mb-12 items-start">
             <IndustryCard 
               title="Textiles"
               description="Traced Systems' Digital Product Passport tackles supply chain gaps, ensures ethical sourcing, and drives circularity across the textile lifecycle."
@@ -52,6 +52,9 @@ const IndustriesSheet = () => {
 
           <EURegulationsSection />
           <CTASection />
+          
+          {/* Bottom Spacing */}
+          <div className="h-[250px]"></div>
         </div>
       </SheetContent>
     </Sheet>
