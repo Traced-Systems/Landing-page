@@ -19,7 +19,14 @@ const IndustriesSheet = () => {
         <div className="h-full flex flex-col">
           {/* Top Section */}
           <div className="flex items-center justify-between mb-8">
-            <h1 className="text-2xl font-semibold text-primary">Industries</h1>
+            <div className="flex items-center gap-4">
+              <h1 className="text-2xl font-semibold text-primary">Industries</h1>
+              <img 
+                src="/lovable-uploads/1bb1eac8-00bf-4ce4-9654-1e09c09c3ce3.png" 
+                alt="Industries flow diagram"
+                className="h-12 object-contain"
+              />
+            </div>
             <Button 
               variant="ghost" 
               size="icon" 
