@@ -21,7 +21,7 @@ const IndustriesSheet = () => {
           <div 
             className="relative mb-8 py-8 px-4"
             style={{
-              backgroundImage: 'url("/lovable-uploads/6f19510c-4518-4ebd-97e8-00ad88b05677.png")',
+              backgroundImage: 'url("/lovable-uploads/4187353b-b062-491f-b38c-eaae240654cd.png")',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
               backgroundSize: 'contain'
