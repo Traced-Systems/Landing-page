@@ -9,7 +9,7 @@ interface IndustryCardProps {
 
 const IndustryCard = ({ title, description, imageSrc, imageAlt }: IndustryCardProps) => {
   return (
-    <div className="bg-white rounded-xl p-6 shadow-[4px_4px_10px_0px_rgba(0,0,0,0.1),-4px_-4px_10px_0px_rgba(255,255,255,0.9)] h-[375px] flex flex-col">
+    <div className="bg-white rounded-xl p-6 shadow-[4px_4px_10px_0px_rgba(0,0,0,0.1),-4px_-4px_10px_0px_rgba(255,255,255,0.9)] md:w-[429.55px] md:h-[498.23px] w-full h-[375px] flex flex-col">
       <img 
         src={imageSrc}
         alt={imageAlt}
