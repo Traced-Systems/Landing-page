@@ -7,83 +7,84 @@ import TextilesSheet from './TextilesSheet';
 
 const IndustriesSheet = () => {
   const [isTextilesOpen, setIsTextilesOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
 
   const handleTextilesClick = () => {
     setIsTextilesOpen(true);
-    setIsOpen(false);
+    setIsIndustriesOpen(false);
   };
 
   return (
-    <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetTrigger asChild>
-        <button className="text-gray-600 hover:text-primary transition-colors">Industries</button>
-      </SheetTrigger>
-      <SheetContent 
-        side="right" 
-        className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl z-[998]"
-      >
-        <div className="h-full flex flex-col pt-20">
-          {/* Top Section with Background */}
-          <div 
-            className="relative mb-8 py-8 px-4"
-            style={{
-              backgroundImage: 'url("/lovable-uploads/4187353b-b062-491f-b38c-eaae240654cd.png")',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-              backgroundSize: '85% auto'
-            }}
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <h1 className="text-2xl font-semibold text-primary">Industries</h1>
+    <>
+      <Sheet open={isIndustriesOpen} onOpenChange={setIsIndustriesOpen}>
+        <SheetTrigger asChild>
+          <button className="text-gray-600 hover:text-primary transition-colors">Industries</button>
+        </SheetTrigger>
+        <SheetContent 
+          side="right" 
+          className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl z-[998]"
+        >
+          <div className="h-full flex flex-col pt-20">
+            {/* Top Section with Background */}
+            <div 
+              className="relative mb-8 py-8 px-4"
+              style={{
+                backgroundImage: 'url("/lovable-uploads/4187353b-b062-491f-b38c-eaae240654cd.png")',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                backgroundSize: '85% auto'
+              }}
+            >
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <h1 className="text-2xl font-semibold text-primary">Industries</h1>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Section Title */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary">Key Industries We Serve</h2>
-          </div>
-
-          {/* Industry Cards */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12 items-start">
-            {/* Textiles Card - Interactive */}
-            <div className="space-y-4">
-              <IndustryCard 
-                title="Textiles"
-                description="Traced Systems' Digital Product Passport tackles supply chain gaps, ensures ethical sourcing, and drives circularity across the textile lifecycle."
-                imageSrc="/lovable-uploads/2320cd7d-0e5e-4635-b26a-2d2eaeb0aa50.png"
-                imageAlt="Textiles"
-                onClick={handleTextilesClick}
-              />
+            {/* Section Title */}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-primary">Key Industries We Serve</h2>
             </div>
+
+            {/* Industry Cards */}
+            <div className="grid md:grid-cols-2 gap-6 mb-12 items-start">
+              {/* Textiles Card - Interactive */}
+              <div className="space-y-4">
+                <IndustryCard 
+                  title="Textiles"
+                  description="Traced Systems' Digital Product Passport tackles supply chain gaps, ensures ethical sourcing, and drives circularity across the textile lifecycle."
+                  imageSrc="/lovable-uploads/2320cd7d-0e5e-4635-b26a-2d2eaeb0aa50.png"
+                  imageAlt="Textiles"
+                  onClick={handleTextilesClick}
+                />
+              </div>
+              
+              {/* Batteries Card - Static */}
+              <div className="space-y-4">
+                <IndustryCard 
+                  title="Batteries"
+                  description="Traced Systems' Digital Product Passport streamlines battery management by enhancing transparency, ensuring compliance, and optimizing the full product lifecycle."
+                  imageSrc="/lovable-uploads/efedcb76-b69e-4a52-8689-41020d02ede5.png"
+                  imageAlt="Batteries"
+                />
+              </div>
+            </div>
+
+            <EURegulationsSection />
+            <CTASection />
             
-            {/* Batteries Card - Static */}
-            <div className="space-y-4">
-              <IndustryCard 
-                title="Batteries"
-                description="Traced Systems' Digital Product Passport streamlines battery management by enhancing transparency, ensuring compliance, and optimizing the full product lifecycle."
-                imageSrc="/lovable-uploads/efedcb76-b69e-4a52-8689-41020d02ede5.png"
-                imageAlt="Batteries"
-              />
-            </div>
+            {/* Bottom Spacing */}
+            <div className="pb-[125px]"></div>
           </div>
+        </SheetContent>
+      </Sheet>
 
-          <EURegulationsSection />
-          <CTASection />
-          
-          {/* Bottom Spacing */}
-          <div className="pb-[125px]"></div>
-        </div>
-
-        {/* TextilesSheet Component */}
-        <TextilesSheet 
-          isOpen={isTextilesOpen}
-          onClose={() => setIsTextilesOpen(false)}
-        />
-      </SheetContent>
-    </Sheet>
+      <TextilesSheet 
+        isOpen={isTextilesOpen}
+        onClose={() => setIsTextilesOpen(false)}
+      />
+    </>
   );
 };
 
