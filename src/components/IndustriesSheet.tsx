@@ -36,7 +36,7 @@ const IndustriesSheet = () => {
             {/* Textile Card */}
             <div className="bg-white rounded-xl p-6 shadow-[4px_4px_10px_0px_rgba(0,0,0,0.1),-4px_-4px_10px_0px_rgba(255,255,255,0.9)]">
               <img 
-                src="/lovable-uploads/9f97893f-ec06-486e-8c34-e09df56a1b5a.png" 
+                src="/lovable-uploads/2320cd7d-0e5e-4635-b26a-2d2eaeb0aa50.png" 
                 alt="Textiles" 
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
@@ -49,7 +49,7 @@ const IndustriesSheet = () => {
             {/* Battery Card */}
             <div className="bg-white rounded-xl p-6 shadow-[4px_4px_10px_0px_rgba(0,0,0,0.1),-4px_-4px_10px_0px_rgba(255,255,255,0.9)]">
               <img 
-                src="/lovable-uploads/71a02bbf-c3b3-47a3-8259-62871cf11762.png" 
+                src="/lovable-uploads/efedcb76-b69e-4a52-8689-41020d02ede5.png" 
                 alt="Batteries" 
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
