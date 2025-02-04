@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import IndustryCard from './IndustryCard';
 import EURegulationsSection from './EURegulationsSection';
 import CTASection from './CTASection';
-import { Button } from './ui/button';
-import { ArrowRight } from 'lucide-react';
+import TextilesSheet from './TextilesSheet';
 
 const IndustriesSheet = () => {
+  const [isTextilesOpen, setIsTextilesOpen] = useState(false);
+
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -41,21 +42,18 @@ const IndustriesSheet = () => {
 
           {/* Industry Cards */}
           <div className="grid md:grid-cols-2 gap-6 mb-12 items-start">
+            {/* Textiles Card - Interactive */}
             <div className="space-y-4">
               <IndustryCard 
                 title="Textiles"
                 description="Traced Systems' Digital Product Passport tackles supply chain gaps, ensures ethical sourcing, and drives circularity across the textile lifecycle."
                 imageSrc="/lovable-uploads/2320cd7d-0e5e-4635-b26a-2d2eaeb0aa50.png"
                 imageAlt="Textiles"
+                onClick={() => setIsTextilesOpen(true)}
               />
-              <Button 
-                variant="outline" 
-                className="w-full flex items-center justify-center gap-2"
-              >
-                Know More <ArrowRight className="h-4 w-4" />
-              </Button>
             </div>
             
+            {/* Batteries Card - Static */}
             <div className="space-y-4">
               <IndustryCard 
                 title="Batteries"
@@ -63,12 +61,6 @@ const IndustriesSheet = () => {
                 imageSrc="/lovable-uploads/efedcb76-b69e-4a52-8689-41020d02ede5.png"
                 imageAlt="Batteries"
               />
-              <Button 
-                variant="outline" 
-                className="w-full flex items-center justify-center gap-2"
-              >
-                Know More <ArrowRight className="h-4 w-4" />
-              </Button>
             </div>
           </div>
 
@@ -78,6 +70,12 @@ const IndustriesSheet = () => {
           {/* Bottom Spacing */}
           <div className="pb-[125px]"></div>
         </div>
+
+        {/* TextilesSheet Component */}
+        <TextilesSheet 
+          isOpen={isTextilesOpen}
+          onClose={() => setIsTextilesOpen(false)}
+        />
       </SheetContent>
     </Sheet>
   );
