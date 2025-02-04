@@ -10,8 +10,8 @@ const LogoMarquee = () => {
 
   return (
     <div className="relative overflow-hidden bg-white">
-      {/* Logo marquee container */}
-      <div className="relative py-12">
+      {/* Logo marquee container with higher z-index */}
+      <div className="relative py-12 z-10">
         <div className="flex overflow-hidden">
           {/* Single continuous row of logos */}
           <div 
@@ -36,11 +36,11 @@ const LogoMarquee = () => {
         </div>
       </div>
 
-      {/* Wave SVG */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden">
+      {/* Wave SVG - flipped 180 degrees and lower z-index */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden z-0">
         <svg
           viewBox="0 0 1440 320"
-          className="w-full h-auto transform translate-y-1"
+          className="w-full h-auto transform translate-y-1 rotate-180"
           preserveAspectRatio="none"
           style={{ 
             filter: 'drop-shadow(0 -2px 4px rgba(0,0,0,0.05))',
