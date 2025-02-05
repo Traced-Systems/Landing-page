@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { ArrowLeft } from 'lucide-react';
@@ -32,13 +33,18 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
             <ArrowLeft className="h-6 w-6" />
           </Button>
 
-          <div className="text-center mb-12">
-            <h1 className="text-3xl font-bold text-primary">Contact Us</h1>
+          <div className="text-center mb-12 relative">
+            <h1 className="text-3xl font-bold text-primary mb-2">Contact Us</h1>
+            <img 
+              src="/lovable-uploads/traced-lines.png" 
+              alt="Decorative lines" 
+              className="absolute left-1/2 -translate-x-1/2 top-full w-24 h-auto"
+            />
           </div>
 
           <div className="px-8 mb-12">
-            <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto">
-              <h2 className="text-2xl font-semibold mb-6">Book a Demo</h2>
+            <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto bg-[#f1f1f1] p-8 rounded-lg">
+              <h2 className="text-2xl font-semibold mb-6 text-center">Book a Demo</h2>
               
               <div>
                 <Input 
@@ -73,16 +79,18 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                 />
               </div>
               
-              <Button 
-                type="submit"
-                className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-[30px]"
-              >
-                Submit
-              </Button>
+              <div className="flex justify-center">
+                <Button 
+                  type="submit"
+                  className="bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-12"
+                >
+                  Submit
+                </Button>
+              </div>
             </form>
           </div>
 
-          <div className="bg-white p-8 mt-auto">
+          <div className="bg-gradient-to-br from-[#FAFAFA] to-[#E8EDEF] p-8 mt-auto">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl font-bold text-center mb-8">
                 Elevate Your Brand, Stay Compliant
@@ -91,12 +99,12 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="text-center">
                   <img 
-                    src="/lovable-uploads/1a2cdca0-9689-4954-b603-5fe8c1cce981.png"
-                    alt="Fashad Basout"
+                    src="/lovable-uploads/093c0721-b2bf-4b0e-8bab-76817fdaccb7.png"
+                    alt="Farhad Rasouli"
                     className="w-48 h-48 object-cover rounded-lg mx-auto mb-4"
                   />
-                  <h3 className="font-bold text-lg">Fashad Basout</h3>
-                  <p className="text-gray-600 mb-4">CEO & Co-Founder</p>
+                  <h3 className="font-bold text-lg">Farhad Rasouli</h3>
+                  <p className="text-gray-600 mb-4">Executive Lead & Co-Founder</p>
                   <div className="flex justify-center space-x-4">
                     <a href="#" className="text-gray-600 hover:text-blue-500">
                       <Linkedin className="w-5 h-5" />
@@ -109,12 +117,12 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                 
                 <div className="text-center">
                   <img 
-                    src="/lovable-uploads/73fb0791-7878-4102-a4df-ac7ce16350f1.png"
+                    src="/lovable-uploads/718a19dc-08d6-4a18-9312-d4deaa31be03.png"
                     alt="David Dolhomut"
                     className="w-48 h-48 object-cover rounded-lg mx-auto mb-4"
                   />
                   <h3 className="font-bold text-lg">David Dolhomut</h3>
-                  <p className="text-gray-600 mb-4">Head of Partnerships & Business Developer</p>
+                  <p className="text-gray-600 mb-4">Head of Partnerships & Business Development</p>
                   <div className="flex justify-center space-x-4">
                     <a href="#" className="text-gray-600 hover:text-blue-500">
                       <Linkedin className="w-5 h-5" />
