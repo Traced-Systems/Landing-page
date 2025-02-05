@@ -24,7 +24,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
         side="right" 
         className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl"
       >
-        <div className="h-full flex flex-col pt-20">
+        <div className="h-full flex flex-col pt-16">
           <Button 
             variant="ghost" 
             onClick={onClose}
@@ -33,24 +33,23 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
             <ArrowLeft className="h-6 w-6" />
           </Button>
 
-          <div className="text-center mb-12 relative">
-            <h1 className="text-3xl font-bold text-primary mb-2">Contact Us</h1>
+          <div className="text-center mb-16 relative px-4">
+            <h1 className="text-4xl font-bold text-primary mb-4">Contact Us</h1>
+            <h2 className="text-2xl font-semibold mb-8">Book a Demo</h2>
             <img 
               src="/lovable-uploads/traced-lines.png" 
               alt="Decorative lines" 
-              className="absolute left-1/2 -translate-x-1/2 top-full w-24 h-auto"
+              className="absolute left-1/2 -translate-x-1/2 top-[calc(100%-1rem)] w-24 h-auto"
             />
           </div>
 
-          <div className="px-8 mb-12">
-            <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto bg-[#f1f1f1] p-8 rounded-lg">
-              <h2 className="text-2xl font-semibold mb-6 text-center">Book a Demo</h2>
-              
+          <div className="px-4 sm:px-8 mb-12">
+            <form onSubmit={handleSubmit} className="space-y-8 max-w-2xl mx-auto bg-[#f1f1f1] p-8 rounded-lg">
               <div>
                 <Input 
                   placeholder="Your Name" 
                   required 
-                  className="bg-white"
+                  className="bg-white px-6 py-3 text-base"
                 />
               </div>
               
@@ -59,7 +58,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                   type="email" 
                   placeholder="Email Address" 
                   required 
-                  className="bg-white"
+                  className="bg-white px-6 py-3 text-base"
                 />
               </div>
               
@@ -67,7 +66,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                 <Input 
                   placeholder="Subject" 
                   required 
-                  className="bg-white"
+                  className="bg-white px-6 py-3 text-base"
                 />
               </div>
               
@@ -75,11 +74,11 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                 <Textarea 
                   placeholder="Message" 
                   required 
-                  className="bg-white min-h-[150px]"
+                  className="bg-white px-6 py-3 text-base min-h-[150px]"
                 />
               </div>
               
-              <div className="flex justify-center">
+              <div className="flex justify-center pt-4">
                 <Button 
                   type="submit"
                   className="bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-12"
@@ -92,17 +91,19 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
 
           <div className="bg-gradient-to-br from-[#FAFAFA] to-[#E8EDEF] p-8 mt-auto">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-center mb-8">
+              <h2 className="text-2xl font-bold text-center mb-12">
                 Elevate Your Brand, Stay Compliant
               </h2>
               
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-12">
                 <div className="text-center">
-                  <img 
-                    src="/lovable-uploads/093c0721-b2bf-4b0e-8bab-76817fdaccb7.png"
-                    alt="Farhad Rasouli"
-                    className="w-48 h-48 object-cover rounded-lg mx-auto mb-4"
-                  />
+                  <div className="w-56 h-56 mx-auto mb-6">
+                    <img 
+                      src="/lovable-uploads/093c0721-b2bf-4b0e-8bab-76817fdaccb7.png"
+                      alt="Farhad Rasouli"
+                      className="w-full h-full object-contain rounded-lg"
+                    />
+                  </div>
                   <h3 className="font-bold text-lg">Farhad Rasouli</h3>
                   <p className="text-gray-600 mb-4">Executive Lead & Co-Founder</p>
                   <div className="flex justify-center space-x-4">
@@ -116,11 +117,13 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                 </div>
                 
                 <div className="text-center">
-                  <img 
-                    src="/lovable-uploads/718a19dc-08d6-4a18-9312-d4deaa31be03.png"
-                    alt="David Dolhomut"
-                    className="w-48 h-48 object-cover rounded-lg mx-auto mb-4"
-                  />
+                  <div className="w-56 h-56 mx-auto mb-6">
+                    <img 
+                      src="/lovable-uploads/718a19dc-08d6-4a18-9312-d4deaa31be03.png"
+                      alt="David Dolhomut"
+                      className="w-full h-full object-contain rounded-lg"
+                    />
+                  </div>
                   <h3 className="font-bold text-lg">David Dolhomut</h3>
                   <p className="text-gray-600 mb-4">Head of Partnerships & Business Development</p>
                   <div className="flex justify-center space-x-4">
@@ -142,3 +145,4 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
 };
 
 export default ContactSheet;
+
