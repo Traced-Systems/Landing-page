@@ -82,14 +82,14 @@ const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
           </div>
 
           <div className="px-8 space-y-12">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <Tabs defaultValue="mission" className="flex h-[500px]">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden h-[400px]">
+              <Tabs defaultValue="mission" className="flex h-full">
                 <TabsList className="flex flex-col h-full w-[40%] space-y-0 bg-[#F5F5F5] rounded-none p-0">
                   {["mission", "focus", "solution"].map((tab) => (
                     <TabsTrigger
                       key={tab}
                       value={tab}
-                      className="w-full h-full flex items-center px-6 py-8 text-left justify-start rounded-none border-l-4 border-transparent data-[state=active]:bg-[#204850] data-[state=active]:text-white data-[state=active]:border-[#204850] transition-all"
+                      className="w-full flex-1 flex items-center px-6 py-4 text-left justify-start rounded-none border-l-4 border-transparent data-[state=active]:bg-[#204850] data-[state=active]:text-white data-[state=active]:border-[#204850] transition-all"
                     >
                       <span className="text-lg font-medium">
                         {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -98,48 +98,28 @@ const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
                   ))}
                 </TabsList>
                 <div className="relative w-[60%]">
-                  <TabsContent value="mission" className="m-0 h-full">
-                    <div className="relative h-full">
-                      <img 
-                        src="/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png" 
-                        alt="Mission" 
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center p-8">
-                        <p className="text-white font-bold text-lg text-center">
-                          Our mission is to transform supply chain efficiency and engagement by leveraging blockchain technology to enhance transparency, collaboration, and customer loyalty. From raw materials to recycling, we empower businesses to optimize workflows, build stronger brand connections, and deliver sustainable value to every stakeholder in the chain.
-                        </p>
+                  {["mission", "focus", "solution"].map((tab) => (
+                    <TabsContent key={tab} value={tab} className="m-0 h-full absolute inset-0">
+                      <div className="relative h-full">
+                        <img 
+                          src="/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png" 
+                          alt={tab}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/60 flex items-center justify-center p-8">
+                          <p className="text-white font-bold text-lg text-center">
+                            {tab === "mission" ? (
+                              "Our mission is to transform supply chain efficiency and engagement by leveraging blockchain technology to enhance transparency, collaboration, and customer loyalty."
+                            ) : tab === "focus" ? (
+                              "Our focus is on helping companies stay ahead of evolving regulations while ensuring a tangible return on investment."
+                            ) : (
+                              "Our platform goes beyond mere compliance, helping businesses integrate a truly circular approach that aligns with European values."
+                            )}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </TabsContent>
-                  <TabsContent value="focus" className="m-0 h-full">
-                    <div className="relative h-full">
-                      <img 
-                        src="/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png" 
-                        alt="Focus" 
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center p-8">
-                        <p className="text-white font-bold text-lg text-center">
-                          Our focus is on helping companies stay ahead of evolving regulations while ensuring a tangible return on investment. We guide organizations in targeting and engaging the right audiences (from legislators to end consumers) across both B2B and B2C environments. By employing a progressive, future-proof approach, we enable companies to meet (and exceed) their sustainability goals without compromising budgets or growth.
-                        </p>
-                      </div>
-                    </div>
-                  </TabsContent>
-                  <TabsContent value="solution" className="m-0 h-full">
-                    <div className="relative h-full">
-                      <img 
-                        src="/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png" 
-                        alt="Solution" 
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center p-8">
-                        <p className="text-white font-bold text-lg text-center">
-                          Our platform goes beyond mere compliance. By identifying and collaborating with key partners in the value chain, we help businesses integrate a truly circular approach that aligns with European values and environmental objectives. Whether you're seeking to reduce waste, boost resource efficiency, or enhance brand loyalty, our solution puts you at the forefront of sustainable innovation today and into the future.
-                        </p>
-                      </div>
-                    </div>
-                  </TabsContent>
+                    </TabsContent>
+                  ))}
                 </div>
               </Tabs>
             </div>
@@ -150,7 +130,11 @@ const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
                   <AccordionItem value={`item-${index}`} className="border-none">
                     <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-50">
                       <div className="flex items-center gap-3">
-                        <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
+                        <img 
+                          src="/lovable-uploads/checkmark-icon.png" 
+                          alt="checkmark" 
+                          className="w-5 h-5"
+                        />
                         <span className="text-left font-medium">{item.title}</span>
                       </div>
                     </AccordionTrigger>
@@ -162,6 +146,20 @@ const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
                   </AccordionItem>
                 </Accordion>
               ))}
+            </div>
+
+            {/* CTA Section */}
+            <div className="bg-white rounded-lg shadow-md p-12 text-center">
+              <h3 className="text-2xl font-bold text-primary mb-6">
+                Do you want to know more?
+              </h3>
+              <Button 
+                variant="secondary"
+                className="px-8 py-2 rounded-full"
+                onClick={onClose}
+              >
+                Get in Touch
+              </Button>
             </div>
           </div>
         </div>
