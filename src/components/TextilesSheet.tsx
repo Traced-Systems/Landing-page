@@ -75,7 +75,6 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
             <IndustrySheetCTA 
               title="Drive Innovation in Textiles With the Experts Who Understand Your Industry"
               description="Ready to elevate your textile operations? Our passion for sustainable innovation and deep industry insight will empower you to stay ahead in a fast-paced market. Let's explore how we can help you deliver on your mission—book a demo today!"
-              imageSrc="/lovable-uploads/1be26ed1-0275-4ab9-8bed-108d8ad53a5f.png"
             />
           </div>
         </div>
