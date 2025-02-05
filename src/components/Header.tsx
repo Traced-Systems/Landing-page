@@ -10,40 +10,40 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center gap-12">
             <img
-              src="/lovable-uploads/973d9db4-a05a-4a45-af13-2f7b06166f5b.png"
+              src="/lovable-uploads/be299dfa-b19d-4af4-b1ff-613ed0b16f58.png"
               alt="Traced Systems"
-              className="h-12"
+              className="h-8"
             />
+            
+            <nav className="hidden md:flex items-center space-x-8">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="ghost">Industries</Button>
+                </SheetTrigger>
+                <IndustriesSheet />
+              </Sheet>
+              
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="ghost">Use Cases</Button>
+                </SheetTrigger>
+                <UseCasesSheet />
+              </Sheet>
+              
+              <a href="/blog" className="text-gray-600 hover:text-primary transition-colors">
+                Blog
+              </a>
+              
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="ghost">Contact Us</Button>
+                </SheetTrigger>
+                <ContactUsSheet />
+              </Sheet>
+            </nav>
           </div>
-          
-          <nav className="hidden md:flex items-center space-x-8">
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost">Industries</Button>
-              </SheetTrigger>
-              <IndustriesSheet />
-            </Sheet>
-            
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost">Use Cases</Button>
-              </SheetTrigger>
-              <UseCasesSheet />
-            </Sheet>
-            
-            <a href="/blog" className="text-gray-600 hover:text-primary transition-colors">
-              Blog
-            </a>
-            
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost">Contact Us</Button>
-              </SheetTrigger>
-              <ContactUsSheet />
-            </Sheet>
-          </nav>
 
           <div className="flex items-center space-x-4">
             <Sheet>
