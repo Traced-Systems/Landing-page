@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
-import { LinkedIn, Mail } from 'lucide-react';
+import { Linkedin, Mail } from 'lucide-react';
 
 interface ContactSheetProps {
   isOpen: boolean;
@@ -99,7 +99,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                   <p className="text-gray-600 mb-4">CEO & Co-Founder</p>
                   <div className="flex justify-center space-x-4">
                     <a href="#" className="text-gray-600 hover:text-blue-500">
-                      <LinkedIn className="w-5 h-5" />
+                      <Linkedin className="w-5 h-5" />
                     </a>
                     <a href="#" className="text-gray-600 hover:text-blue-500">
                       <Mail className="w-5 h-5" />
@@ -117,7 +117,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                   <p className="text-gray-600 mb-4">Head of Partnerships & Business Developer</p>
                   <div className="flex justify-center space-x-4">
                     <a href="#" className="text-gray-600 hover:text-blue-500">
-                      <LinkedIn className="w-5 h-5" />
+                      <Linkedin className="w-5 h-5" />
                     </a>
                     <a href="#" className="text-gray-600 hover:text-blue-500">
                       <Mail className="w-5 h-5" />
