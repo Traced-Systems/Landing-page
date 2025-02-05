@@ -13,7 +13,7 @@ const Header = () => {
           <div className="flex items-center space-x-8">
             <img
               src="/lovable-uploads/973d9db4-a05a-4a45-af13-2f7b06166f5b.png"
-              alt="Logo"
+              alt="Traced Systems"
               className="h-12"
             />
           </div>
@@ -32,6 +32,10 @@ const Header = () => {
               </SheetTrigger>
               <UseCasesSheet />
             </Sheet>
+            
+            <a href="/blog" className="text-gray-600 hover:text-primary transition-colors">
+              Blog
+            </a>
             
             <Sheet>
               <SheetTrigger asChild>
