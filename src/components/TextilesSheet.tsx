@@ -49,7 +49,7 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-3 gap-6 mb-12 px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 px-8">
             {cards.map((card, index) => (
               <IndustrySheetCard
                 key={index}
@@ -71,7 +71,7 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
             </p>
           </div>
 
-          <div className="px-8 mb-8">
+          <div className="px-0">
             <IndustrySheetCTA 
               title="Drive Innovation in Textiles With the Experts Who Understand Your Industry"
               description="Ready to elevate your textile operations? Our passion for sustainable innovation and deep industry insight will empower you to stay ahead in a fast-paced market. Let's explore how we can help you deliver on your mission—book a demo today!"
