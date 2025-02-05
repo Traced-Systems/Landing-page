@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 interface IndustrySheetHeaderProps {
   title: string;
@@ -28,9 +28,9 @@ const IndustrySheetHeader = ({ title, description, imageSrc, onBack }: IndustryS
         <Button 
           variant="ghost" 
           onClick={onBack}
-          className="absolute right-4 top-4 hover:bg-gray-100"
+          className="absolute left-4 top-4 hover:bg-gray-100"
         >
-          <X className="h-6 w-6" />
+          <ArrowRight className="h-6 w-6 rotate-180" />
         </Button>
         
         <div className="w-full mt-12">
