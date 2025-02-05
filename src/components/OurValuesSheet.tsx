@@ -91,7 +91,9 @@ const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
                       value={tab}
                       className="w-full h-full flex items-center px-6 py-8 text-left justify-start rounded-none border-l-4 border-transparent data-[state=active]:bg-[#204850] data-[state=active]:text-white data-[state=active]:border-[#204850] transition-all"
                     >
-                      {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                      <span className="text-lg font-medium">
+                        {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                      </span>
                     </TabsTrigger>
                   ))}
                 </TabsList>
@@ -153,7 +155,7 @@ const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
                       </div>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4 pt-0">
-                      <div className="pl-8">
+                      <div className="pl-8 text-gray-600">
                         {item.content}
                       </div>
                     </AccordionContent>
