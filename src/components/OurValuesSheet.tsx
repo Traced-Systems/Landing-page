@@ -73,57 +73,89 @@ const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
           <div className="text-center mb-12">
             <h1 className="text-3xl font-bold text-primary mb-4">Our Values</h1>
             <h2 className="text-2xl font-semibold text-primary mb-2">Traced Systems</h2>
-            <p className="text-xl text-gray-600 mb-8">Driving Sustainable Innovation</p>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Traced Systems, powered by Chromia offers businesses an intuitive, secure solution to track products throughout their entire lifecycle from production to end-of-life ensuring full transparency, compliance, and trust at every stage.
+            </p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              By merging traditional processes with modern technology, we help organizations unlock new efficiencies, engage customers more deeply, and confidently embrace the future of sustainable innovation.
+            </p>
           </div>
 
           <div className="px-8 space-y-12">
-            <div className="bg-white rounded-lg p-8 shadow-md">
-              <p className="text-gray-600">
-                Traced Systems, powered by Chromia offers businesses an intuitive, secure solution to track products throughout their entire lifecycle from production to end-of-life ensuring full transparency, compliance, and trust at every stage.
-              </p>
-              <p className="text-gray-600 mt-4">
-                By merging traditional processes with modern technology, we help organizations unlock new efficiencies, engage customers more deeply, and confidently embrace the future of sustainable innovation.
-              </p>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <Tabs defaultValue="mission" className="flex h-[500px]">
+                <TabsList className="flex flex-col h-full w-[40%] space-y-0 bg-[#F5F5F5] rounded-none p-0">
+                  {["mission", "focus", "solution"].map((tab) => (
+                    <TabsTrigger
+                      key={tab}
+                      value={tab}
+                      className="w-full h-full flex items-center px-6 py-8 text-left justify-start rounded-none border-l-4 border-transparent data-[state=active]:bg-[#204850] data-[state=active]:text-white data-[state=active]:border-[#204850] transition-all"
+                    >
+                      {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
+                <div className="relative w-[60%]">
+                  <TabsContent value="mission" className="m-0 h-full">
+                    <div className="relative h-full">
+                      <img 
+                        src="/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png" 
+                        alt="Mission" 
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center p-8">
+                        <p className="text-white font-bold text-lg text-center">
+                          Our mission is to transform supply chain efficiency and engagement by leveraging blockchain technology to enhance transparency, collaboration, and customer loyalty. From raw materials to recycling, we empower businesses to optimize workflows, build stronger brand connections, and deliver sustainable value to every stakeholder in the chain.
+                        </p>
+                      </div>
+                    </div>
+                  </TabsContent>
+                  <TabsContent value="focus" className="m-0 h-full">
+                    <div className="relative h-full">
+                      <img 
+                        src="/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png" 
+                        alt="Focus" 
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center p-8">
+                        <p className="text-white font-bold text-lg text-center">
+                          Our focus is on helping companies stay ahead of evolving regulations while ensuring a tangible return on investment. We guide organizations in targeting and engaging the right audiences (from legislators to end consumers) across both B2B and B2C environments. By employing a progressive, future-proof approach, we enable companies to meet (and exceed) their sustainability goals without compromising budgets or growth.
+                        </p>
+                      </div>
+                    </div>
+                  </TabsContent>
+                  <TabsContent value="solution" className="m-0 h-full">
+                    <div className="relative h-full">
+                      <img 
+                        src="/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png" 
+                        alt="Solution" 
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center p-8">
+                        <p className="text-white font-bold text-lg text-center">
+                          Our platform goes beyond mere compliance. By identifying and collaborating with key partners in the value chain, we help businesses integrate a truly circular approach that aligns with European values and environmental objectives. Whether you're seeking to reduce waste, boost resource efficiency, or enhance brand loyalty, our solution puts you at the forefront of sustainable innovation today and into the future.
+                        </p>
+                      </div>
+                    </div>
+                  </TabsContent>
+                </div>
+              </Tabs>
             </div>
-
-            <Tabs defaultValue="mission" orientation="vertical" className="flex gap-8">
-              <TabsList className="flex flex-col h-auto space-y-2 bg-transparent">
-                <TabsTrigger value="mission" className="text-left justify-start">Our Mission</TabsTrigger>
-                <TabsTrigger value="focus" className="text-left justify-start">Our Focus</TabsTrigger>
-                <TabsTrigger value="solution" className="text-left justify-start">Our Solution</TabsTrigger>
-              </TabsList>
-              <div className="flex-1">
-                <TabsContent value="mission" className="relative">
-                  <img src="/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png" alt="Mission" className="w-full h-64 object-cover rounded-lg" />
-                  <div className="absolute inset-0 bg-black/50 p-6 text-white rounded-lg">
-                    <p>Our mission is to transform supply chain efficiency and engagement by leveraging blockchain technology to enhance transparency, collaboration, and customer loyalty. From raw materials to recycling, we empower businesses to optimize workflows, build stronger brand connections, and deliver sustainable value to every stakeholder in the chain.</p>
-                  </div>
-                </TabsContent>
-                <TabsContent value="focus" className="relative">
-                  <img src="/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png" alt="Focus" className="w-full h-64 object-cover rounded-lg" />
-                  <div className="absolute inset-0 bg-black/50 p-6 text-white rounded-lg">
-                    <p>Our focus is on helping companies stay ahead of evolving regulations while ensuring a tangible return on investment. We guide organizations in targeting and engaging the right audiences (from legislators to end consumers) across both B2B and B2C environments. By employing a progressive, future-proof approach, we enable companies to meet (and exceed) their sustainability goals without compromising budgets or growth.</p>
-                  </div>
-                </TabsContent>
-                <TabsContent value="solution" className="relative">
-                  <img src="/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png" alt="Solution" className="w-full h-64 object-cover rounded-lg" />
-                  <div className="absolute inset-0 bg-black/50 p-6 text-white rounded-lg">
-                    <p>Our platform goes beyond mere compliance. By identifying and collaborating with key partners in the value chain, we help businesses integrate a truly circular approach that aligns with European values and environmental objectives. Whether you're seeking to reduce waste, boost resource efficiency, or enhance brand loyalty, our solution puts you at the forefront of sustainable innovation today and into the future.</p>
-                  </div>
-                </TabsContent>
-              </div>
-            </Tabs>
 
             <div className="grid md:grid-cols-2 gap-8">
               {accordionItems.map((item, index) => (
-                <Accordion type="single" collapsible key={index}>
-                  <AccordionItem value={`item-${index}`}>
-                    <AccordionTrigger className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span className="text-left">{item.title}</span>
+                <Accordion type="single" collapsible key={index} className="bg-white rounded-lg shadow-sm">
+                  <AccordionItem value={`item-${index}`} className="border-none">
+                    <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-50">
+                      <div className="flex items-center gap-3">
+                        <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
+                        <span className="text-left font-medium">{item.title}</span>
+                      </div>
                     </AccordionTrigger>
-                    <AccordionContent>
-                      {item.content}
+                    <AccordionContent className="px-6 pb-4 pt-0">
+                      <div className="pl-8">
+                        {item.content}
+                      </div>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
