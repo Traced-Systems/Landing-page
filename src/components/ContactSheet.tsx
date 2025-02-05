@@ -36,11 +36,6 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
           <div className="text-center mb-16 relative px-4">
             <h1 className="text-4xl font-bold text-primary mb-4">Contact Us</h1>
             <h2 className="text-2xl font-semibold mb-8">Book a Demo</h2>
-            <img 
-              src="/lovable-uploads/traced-lines.png" 
-              alt="Decorative lines" 
-              className="absolute left-1/2 -translate-x-1/2 top-[calc(100%-1rem)] w-24 h-auto"
-            />
           </div>
 
           <div className="px-4 sm:px-8 mb-12">
@@ -97,7 +92,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
               
               <div className="grid md:grid-cols-2 gap-12">
                 <div className="text-center">
-                  <div className="w-56 h-56 mx-auto mb-6">
+                  <div className="w-[61.6px] h-[61.6px] mx-auto mb-6">
                     <img 
                       src="/lovable-uploads/093c0721-b2bf-4b0e-8bab-76817fdaccb7.png"
                       alt="Farhad Rasouli"
@@ -117,7 +112,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-56 h-56 mx-auto mb-6">
+                  <div className="w-[61.6px] h-[61.6px] mx-auto mb-6">
                     <img 
                       src="/lovable-uploads/718a19dc-08d6-4a18-9312-d4deaa31be03.png"
                       alt="David Dolhomut"
