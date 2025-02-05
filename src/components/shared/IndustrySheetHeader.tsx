@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Close } from "lucide-react";
+import { X } from "lucide-react";
 
 interface IndustrySheetHeaderProps {
   title: string;
@@ -25,7 +25,7 @@ const IndustrySheetHeader = ({ title, description, imageSrc, onBack }: IndustryS
         onClick={onBack}
         className="absolute left-4 top-4 hover:bg-gray-100"
       >
-        <Close className="h-6 w-6" />
+        <X className="h-6 w-6" />
       </Button>
       
       <div className="w-full mt-12">
