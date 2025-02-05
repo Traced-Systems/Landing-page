@@ -11,6 +11,49 @@ interface OurValuesSheetProps {
   onClose: () => void;
 }
 
+const accordionItems = [
+  {
+    title: "Supply Chain Transparency & ESG Tracking",
+    content: "Provides visibility of raw materials, production processes, and distribution channels while capturing ESG metrics for sustainability reporting, risk assessments, and credit applications."
+  },
+  {
+    title: "Dynamic Stakeholder Access Control",
+    content: "Role-based permission settings enable secure data sharing, allowing suppliers, manufacturers, regulators, and consumers to access relevant information without compromising data privacy."
+  },
+  {
+    title: "Regulatory Compliance & EBSI Integration",
+    content: "Integrated with the European Blockchain Services Infrastructure (EBSI), leveraging Verifiable Credentials for seamless compliance with EU regulations, ensuring product authenticity and data integrity."
+  },
+  {
+    title: "Tokenization for Enhanced Engagement",
+    content: "Enables digital tokenization of products, creating new revenue streams through loyalty programs, ownership verification, and secondary market opportunities, while enhancing brand authenticity."
+  },
+  {
+    title: "Incentives & Gamification for B2B & B2C Engagement",
+    content: "Drives stakeholder and consumer engagement through gamified experiences and reward systems, incentivizing sustainable behavior, product loyalty, and supply chain participation."
+  },
+  {
+    title: "Business Data Privacy & Competitive Intelligence",
+    content: "Robust encryption protocols safeguard sensitive business data, providing a competitive edge while supporting secure data sharing for audits, certifications, and regulatory submissions."
+  },
+  {
+    title: "Marketing & Brand Storytelling Tools",
+    content: "Converts product data into powerful marketing narratives, enabling brands to showcase product origins, ethical sourcing practices, and sustainability achievements to build consumer trust."
+  },
+  {
+    title: "Web3 Gateway with Gas-Free Transactions",
+    content: "Combines Web 3.0 innovation with gas-free blockchain transactions, reducing operational costs while ensuring data transparency, scalability, and secure decentralized interactions."
+  },
+  {
+    title: "Sustainability Dashboard for ESG Reporting",
+    content: "A comprehensive dashboard aggregates ESG data, streamlining sustainability reporting, enhancing CSR initiatives, and supporting green financing opportunities."
+  },
+  {
+    title: "Risk Mitigation & Impact Analytics",
+    content: "Identifies supply chain risks, enabling proactive measures to address sourcing challenges, environmental impact, and regulatory non-compliance before they affect operations."
+  }
+];
+
 const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
