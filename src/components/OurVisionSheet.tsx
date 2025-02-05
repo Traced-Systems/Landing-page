@@ -2,6 +2,7 @@ import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import AboutCTA from './shared/AboutCTA';
 
 interface OurVisionSheetProps {
   isOpen: boolean;
@@ -51,6 +52,8 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
                 Our ultimate goal is to establish a global standard for product lifecycle management that prioritizes sustainability, transparency, and circular economy principles.
               </p>
             </div>
+
+            <AboutCTA onClose={onClose} />
           </div>
         </div>
       </SheetContent>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import AboutCTA from './shared/AboutCTA';
 
 interface OurPeopleSheetProps {
   isOpen: boolean;
@@ -115,6 +116,8 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                 ))}
               </div>
             </div>
+
+            <AboutCTA onClose={onClose} />
           </div>
         </div>
       </SheetContent>
