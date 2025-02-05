@@ -1,13 +1,22 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import IndustriesSheet from './IndustriesSheet';
 import UseCasesSheet from './UseCasesSheet';
 import ContactSheet from './ContactSheet';
+import OurValuesSheet from './OurValuesSheet';
+import OurVisionSheet from './OurVisionSheet';
+import OurPeopleSheet from './OurPeopleSheet';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSheet, setActiveSheet] = useState<'industries' | 'useCases' | 'contact' | null>(null);
+  const [activeSheet, setActiveSheet] = useState<'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,11 +25,11 @@ const Header = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSheetOpen = (sheet: 'industries' | 'useCases' | 'contact') => {
+  const handleSheetOpen = (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people') => {
     setActiveSheet(sheet);
   };
 
@@ -53,7 +62,37 @@ const Header = () => {
               >
                 Use Cases
               </button>
-              <a href="#" className="text-gray-600 hover:text-primary transition-colors">About Us</a>
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-gray-600 hover:text-primary transition-colors bg-transparent">
+                      About Us
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="w-48 p-2">
+                        <button
+                          onClick={() => handleSheetOpen('values')}
+                          className="w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100"
+                        >
+                          Our Values
+                        </button>
+                        <button
+                          onClick={() => handleSheetOpen('vision')}
+                          className="w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100"
+                        >
+                          Our Vision
+                        </button>
+                        <button
+                          onClick={() => handleSheetOpen('people')}
+                          className="w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100"
+                        >
+                          Our People
+                        </button>
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">Blog</a>
               <button 
                 onClick={() => handleSheetOpen('contact')} 
@@ -90,6 +129,18 @@ const Header = () => {
       <ContactSheet 
         isOpen={activeSheet === 'contact'} 
         onClose={handleSheetClose} 
+      />
+      <OurValuesSheet
+        isOpen={activeSheet === 'values'}
+        onClose={handleSheetClose}
+      />
+      <OurVisionSheet
+        isOpen={activeSheet === 'vision'}
+        onClose={handleSheetClose}
+      />
+      <OurPeopleSheet
+        isOpen={activeSheet === 'people'}
+        onClose={handleSheetClose}
       />
     </header>
   );
