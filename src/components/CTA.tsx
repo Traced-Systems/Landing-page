@@ -1,7 +1,12 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 
-const CTA = () => {
+interface CTAProps {
+  onContactClick: () => void;
+}
+
+const CTA = ({ onContactClick }: CTAProps) => {
   return (
     <section className="relative bg-[#f2f1ee] py-24">
       <div className="container mx-auto px-4">
@@ -11,6 +16,7 @@ const CTA = () => {
           </h3>
           <Button 
             variant="outline"
+            onClick={onContactClick}
             className="border-[#D5A87E] text-[#D5A87E] hover:bg-[#D5A87E]/5 transition-colors duration-300"
           >
             Get in touch

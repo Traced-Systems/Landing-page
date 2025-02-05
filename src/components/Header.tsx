@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import IndustriesSheet from './IndustriesSheet';
@@ -6,6 +7,7 @@ import ContactSheet from './ContactSheet';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSheet, setActiveSheet] = useState<'industries' | 'useCases' | 'contact' | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +19,14 @@ const Header = () => {
     handleScroll(); // Initial check
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleSheetOpen = (sheet: 'industries' | 'useCases' | 'contact') => {
+    setActiveSheet(sheet);
+  };
+
+  const handleSheetClose = () => {
+    setActiveSheet(null);
+  };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-300 ${
@@ -31,13 +41,32 @@ const Header = () => {
           <div className="flex items-center justify-end space-x-8 w-full">
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">Home</a>
-              <IndustriesSheet />
-              <a href="#" className="text-gray-600 hover:text-primary transition-colors">Use Cases</a>
+              <button 
+                onClick={() => handleSheetOpen('industries')} 
+                className="text-gray-600 hover:text-primary transition-colors"
+              >
+                Industries
+              </button>
+              <button 
+                onClick={() => handleSheetOpen('useCases')} 
+                className="text-gray-600 hover:text-primary transition-colors"
+              >
+                Use Cases
+              </button>
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">About Us</a>
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">Blog</a>
+              <button 
+                onClick={() => handleSheetOpen('contact')} 
+                className="text-gray-600 hover:text-primary transition-colors"
+              >
+                Contact Us
+              </button>
             </nav>
             
-            <Button className="hidden md:inline-flex bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-6">
+            <Button 
+              onClick={() => handleSheetOpen('contact')}
+              className="hidden md:inline-flex bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-6"
+            >
               Book Demo
             </Button>
           </div>
@@ -49,6 +78,19 @@ const Header = () => {
           </button>
         </div>
       </div>
+
+      <IndustriesSheet 
+        isOpen={activeSheet === 'industries'} 
+        onClose={handleSheetClose} 
+      />
+      <UseCasesSheet 
+        isOpen={activeSheet === 'useCases'} 
+        onClose={handleSheetClose} 
+      />
+      <ContactSheet 
+        isOpen={activeSheet === 'contact'} 
+        onClose={handleSheetClose} 
+      />
     </header>
   );
 };

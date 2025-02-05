@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import LogoMarquee from '@/components/LogoMarquee';
@@ -12,8 +13,19 @@ import Footer from '@/components/Footer';
 import DigitalPassport from '@/components/DigitalPassport';
 import Foundation from '@/components/Foundation';
 import CTA from '@/components/CTA';
+import ContactSheet from '@/components/ContactSheet';
 
 const Index = () => {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
+  const handleContactOpen = () => {
+    setIsContactOpen(true);
+  };
+
+  const handleContactClose = () => {
+    setIsContactOpen(false);
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -28,9 +40,10 @@ const Index = () => {
         <UseCases />
         <Technologies />
         <Foundation />
-        <CTA />
+        <CTA onContactClick={handleContactOpen} />
       </main>
       <Footer />
+      <ContactSheet isOpen={isContactOpen} onClose={handleContactClose} />
     </div>
   );
 };
