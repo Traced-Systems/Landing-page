@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 interface IndustrySheetHeaderProps {
   title: string;
@@ -22,15 +22,13 @@ const IndustrySheetHeader = ({ title, description, imageSrc, onBack }: IndustryS
         }}
       />
       
-      <div 
-        className="flex items-center justify-between mb-12 relative bg-[#F9F9F9] p-8"
-      >
+      <div className="flex items-center justify-between mb-12 relative bg-[#F9F9F9] p-8">
         <Button 
           variant="ghost" 
           onClick={onBack}
           className="absolute left-4 top-4 hover:bg-gray-100"
         >
-          <ArrowRight className="h-6 w-6 rotate-180" />
+          <ArrowLeft className="h-6 w-6" />
         </Button>
         
         <div className="w-full mt-12">
