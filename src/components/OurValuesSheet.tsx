@@ -12,49 +12,6 @@ interface OurValuesSheetProps {
 }
 
 const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
-  const accordionItems = [
-    {
-      title: "Supply Chain Transparency & ESG Tracking",
-      content: "Provides visibility of raw materials, production processes, and distribution channels while capturing ESG metrics for sustainability reporting, risk assessments, and credit applications."
-    },
-    {
-      title: "Dynamic Stakeholder Access Control",
-      content: "Role-based permission settings enable secure data sharing, allowing suppliers, manufacturers, regulators, and consumers to access relevant information without compromising data privacy."
-    },
-    {
-      title: "Regulatory Compliance & EBSI Integration",
-      content: "Integrated with the European Blockchain Services Infrastructure (EBSI), leveraging Verifiable Credentials for seamless compliance with EU regulations, ensuring product authenticity and data integrity."
-    },
-    {
-      title: "Tokenization for Enhanced Engagement",
-      content: "Enables digital tokenization of products, creating new revenue streams through loyalty programs, ownership verification, and secondary market opportunities, while enhancing brand authenticity."
-    },
-    {
-      title: "Incentives & Gamification for B2B & B2C Engagement",
-      content: "Drives stakeholder and consumer engagement through gamified experiences and reward systems, incentivizing sustainable behavior, product loyalty, and supply chain participation."
-    },
-    {
-      title: "Business Data Privacy & Competitive Intelligence",
-      content: "Robust encryption protocols safeguard sensitive business data, providing a competitive edge while supporting secure data sharing for audits, certifications, and regulatory submissions."
-    },
-    {
-      title: "Marketing & Brand Storytelling Tools",
-      content: "Converts product data into powerful marketing narratives, enabling brands to showcase product origins, ethical sourcing practices, and sustainability achievements to build consumer trust."
-    },
-    {
-      title: "Web3 Gateway with Gas-Free Transactions",
-      content: "Combines Web 3.0 innovation with gas-free blockchain transactions, reducing operational costs while ensuring data transparency, scalability, and secure decentralized interactions."
-    },
-    {
-      title: "Sustainability Dashboard for ESG Reporting",
-      content: "A comprehensive dashboard aggregates ESG data, streamlining sustainability reporting, enhancing CSR initiatives, and supporting green financing opportunities."
-    },
-    {
-      title: "Risk Mitigation & Impact Analytics",
-      content: "Identifies supply chain risks, enabling proactive measures to address sourcing challenges, environmental impact, and regulatory non-compliance before they affect operations."
-    }
-  ];
-
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
       <SheetContent 
@@ -72,16 +29,20 @@ const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
 
           <div className="text-center mb-12">
             <h1 className="text-3xl font-bold text-primary mb-4">Our Values</h1>
-            <h2 className="text-2xl font-semibold text-primary mb-6">Traced Systems</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto mb-8">
-              Traced Systems, powered by Chromia, offers businesses an intuitive, secure solution to track products throughout their entire lifecycle from production to end-of-life, ensuring full transparency, compliance, and trust at every stage.
-            </p>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              By merging traditional processes with modern technology, we help organizations unlock new efficiencies, engage customers more deeply, and confidently embrace the future of sustainable innovation.
-            </p>
+            <h2 className="text-2xl font-semibold text-primary mb-2">Traced Systems</h2>
+            <p className="text-xl text-gray-600 mb-8">Driving Sustainable Innovation</p>
           </div>
 
-          <div className="mb-12 px-8">
+          <div className="px-8 space-y-12">
+            <div className="bg-white rounded-lg p-8 shadow-md">
+              <p className="text-gray-600">
+                Traced Systems, powered by Chromia offers businesses an intuitive, secure solution to track products throughout their entire lifecycle from production to end-of-life ensuring full transparency, compliance, and trust at every stage.
+              </p>
+              <p className="text-gray-600 mt-4">
+                By merging traditional processes with modern technology, we help organizations unlock new efficiencies, engage customers more deeply, and confidently embrace the future of sustainable innovation.
+              </p>
+            </div>
+
             <Tabs defaultValue="mission" orientation="vertical" className="flex gap-8">
               <TabsList className="flex flex-col h-auto space-y-2 bg-transparent">
                 <TabsTrigger value="mission" className="text-left justify-start">Our Mission</TabsTrigger>
@@ -90,28 +51,26 @@ const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
               </TabsList>
               <div className="flex-1">
                 <TabsContent value="mission" className="relative">
-                  <img src="/lovable-uploads/tabs-image.png" alt="Mission" className="w-full h-64 object-cover rounded-lg" />
+                  <img src="/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png" alt="Mission" className="w-full h-64 object-cover rounded-lg" />
                   <div className="absolute inset-0 bg-black/50 p-6 text-white rounded-lg">
                     <p>Our mission is to transform supply chain efficiency and engagement by leveraging blockchain technology to enhance transparency, collaboration, and customer loyalty. From raw materials to recycling, we empower businesses to optimize workflows, build stronger brand connections, and deliver sustainable value to every stakeholder in the chain.</p>
                   </div>
                 </TabsContent>
                 <TabsContent value="focus" className="relative">
-                  <img src="/lovable-uploads/tabs-image.png" alt="Focus" className="w-full h-64 object-cover rounded-lg" />
+                  <img src="/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png" alt="Focus" className="w-full h-64 object-cover rounded-lg" />
                   <div className="absolute inset-0 bg-black/50 p-6 text-white rounded-lg">
                     <p>Our focus is on helping companies stay ahead of evolving regulations while ensuring a tangible return on investment. We guide organizations in targeting and engaging the right audiences (from legislators to end consumers) across both B2B and B2C environments. By employing a progressive, future-proof approach, we enable companies to meet (and exceed) their sustainability goals without compromising budgets or growth.</p>
                   </div>
                 </TabsContent>
                 <TabsContent value="solution" className="relative">
-                  <img src="/lovable-uploads/tabs-image.png" alt="Solution" className="w-full h-64 object-cover rounded-lg" />
+                  <img src="/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png" alt="Solution" className="w-full h-64 object-cover rounded-lg" />
                   <div className="absolute inset-0 bg-black/50 p-6 text-white rounded-lg">
                     <p>Our platform goes beyond mere compliance. By identifying and collaborating with key partners in the value chain, we help businesses integrate a truly circular approach that aligns with European values and environmental objectives. Whether you're seeking to reduce waste, boost resource efficiency, or enhance brand loyalty, our solution puts you at the forefront of sustainable innovation today and into the future.</p>
                   </div>
                 </TabsContent>
               </div>
             </Tabs>
-          </div>
 
-          <div className="px-8">
             <div className="grid md:grid-cols-2 gap-8">
               {accordionItems.map((item, index) => (
                 <Accordion type="single" collapsible key={index}>
