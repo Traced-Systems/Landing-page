@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import IndustryCard from './IndustryCard';
@@ -6,7 +7,12 @@ import CTASection from './CTASection';
 import TextilesSheet from './TextilesSheet';
 import BatteriesSheet from './BatteriesSheet';
 
-const IndustriesSheet = () => {
+interface IndustriesSheetProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
   const [activeSheet, setActiveSheet] = useState<'industries' | 'textiles' | 'batteries' | null>(null);
 
   const handleTextilesClick = () => {
@@ -22,15 +28,14 @@ const IndustriesSheet = () => {
   };
 
   const handleMainSheetToggle = (open: boolean) => {
-    setActiveSheet(open ? 'industries' : null);
+    if (!open) {
+      onClose();
+    }
   };
 
   return (
     <>
-      <Sheet open={activeSheet === 'industries'} onOpenChange={handleMainSheetToggle}>
-        <SheetTrigger asChild>
-          <button className="text-gray-600 hover:text-primary transition-colors">Industries</button>
-        </SheetTrigger>
+      <Sheet open={isOpen} onOpenChange={handleMainSheetToggle}>
         <SheetContent 
           side="right" 
           className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl z-[998]"
@@ -108,3 +113,4 @@ const IndustriesSheet = () => {
 };
 
 export default IndustriesSheet;
+
