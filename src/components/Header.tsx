@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import IndustriesSheet from './IndustriesSheet';
+import UseCasesSheet from './UseCasesSheet';
+import ContactSheet from './ContactSheet';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
