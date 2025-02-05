@@ -53,7 +53,7 @@ const AccordionSection = () => {
             <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-50">
               <div className="flex items-center gap-3">
                 <img 
-                  src="/lovable-uploads/checkmark-icon.png" 
+                  src="/lovable-uploads/574a5f59-dcd7-416e-b43f-7b13cad071fb.png" 
                   alt="checkmark" 
                   className="w-5 h-5"
                 />
