@@ -14,19 +14,19 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
     {
       name: "Henrik Hjelte",
       role: "Principal Leader",
-      image: "/lovable-uploads/461e03e0-f628-4bd7-b948-f9d95f6892c3.png",
+      image: "/lovable-uploads/e064479f-3a08-4210-8ab7-220b7bd4a3ea.png",
       active: true
     },
     {
       name: "Johan Toll",
       role: "CIO & Senior Business Advisor",
-      image: "/lovable-uploads/846ce2f5-5e40-48e9-81d1-65f0f6ead97a.png",
+      image: "/lovable-uploads/de2aa185-4d79-46e0-b994-52daa6425bcf.png",
       active: true
     },
     {
       name: "Niclas Tordhag",
       role: "Senior Legal Advisor",
-      image: "/lovable-uploads/b342341d-8bba-476b-9d72-8aec0933e1e7.png",
+      image: "/lovable-uploads/fc35bff4-cb6e-4710-9be8-92d129edce8a.png",
       active: true
     }
   ];
