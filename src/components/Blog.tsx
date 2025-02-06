@@ -30,7 +30,7 @@ const Blog = () => {
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {blogPosts.map((post, index) => (
-            <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg">
+            <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg transform scale-90">
               <img 
                 src={post.image}
                 alt={post.title}
