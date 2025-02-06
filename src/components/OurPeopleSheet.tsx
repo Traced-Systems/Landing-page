@@ -111,19 +111,13 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                   {advisoryBoard.map((member, index) => (
                     <div 
                       key={index}
-                      className="bg-[#1B3B4B] rounded-lg overflow-hidden text-white"
+                      className="relative aspect-square overflow-hidden rounded-lg"
                     >
-                      <div className="relative aspect-square">
-                        <img 
-                          src={member.image}
-                          alt={member.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="p-4">
-                        <h3 className="font-semibold text-lg">{member.name}</h3>
-                        <p className="text-gray-300 text-sm">{member.role}</p>
-                      </div>
+                      <img 
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   ))}
                 </div>
@@ -135,19 +129,13 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                   {tracedTeam.map((member, index) => (
                     <div 
                       key={index}
-                      className="bg-[#1B3B4B] rounded-lg overflow-hidden text-white"
+                      className="relative aspect-square overflow-hidden rounded-lg"
                     >
-                      <div className="relative aspect-square">
-                        <img 
-                          src={member.image}
-                          alt={member.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="p-4">
-                        <h3 className="font-semibold text-lg">{member.name}</h3>
-                        <p className="text-gray-300 text-sm">{member.role}</p>
-                      </div>
+                      <img 
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   ))}
                 </div>
