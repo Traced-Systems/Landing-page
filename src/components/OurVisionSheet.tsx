@@ -1,8 +1,12 @@
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Handshake, Leaf, Globe } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import AboutCTA from './shared/AboutCTA';
+import VisionHeader from './vision/VisionHeader';
+import VisionCard from './vision/VisionCard';
+import KeyChallenges from './vision/KeyChallenges';
+import SuccessSection from './vision/SuccessSection';
 
 interface OurVisionSheetProps {
   isOpen: boolean;
@@ -26,126 +30,35 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
           </Button>
 
           <div className="px-8 space-y-16">
-            {/* Vision Header */}
-            <div className="text-center">
-              <h1 className="text-3xl font-bold text-primary mb-4">Our Vision</h1>
-              <h2 className="text-2xl font-semibold text-primary mb-2">Future Vision</h2>
-              <p className="text-xl text-gray-600">Driving Sustainable Innovation</p>
-            </div>
+            <VisionHeader />
 
-            {/* Transparency Section with Factory Image */}
-            <div className="flex items-center gap-8">
-              <div className="bg-white rounded-lg p-8 shadow-lg flex-1">
-                <h3 className="text-xl font-semibold mb-4">Overcoming Transparency and Traceability Barriers in Circular Economies</h3>
-                <p className="text-gray-600">
-                  Modern industries face growing pressure to reduce negative environmental impact. Through our innovative solutions, we work to make data-driven eco-responsibility a key asset rather than a burden. Companies often struggle with accurate emission tracking - our platform changes that, offering precise data at each stage in a sustainable workflow.
-                </p>
-              </div>
-              <img src="/lovable-uploads/Factory.png" alt="Factory" className="w-64 h-auto object-contain" />
-            </div>
+            <VisionCard
+              title="Overcoming Transparency and Traceability Barriers in Circular Economies"
+              content="Modern industries face growing pressure to reduce negative environmental impact. Through our innovative solutions, we work to make data-driven eco-responsibility a key asset rather than a burden. Companies often struggle with accurate emission tracking - our platform changes that, offering precise data at each stage in a sustainable workflow."
+              imageSrc="/lovable-uploads/Factory.png"
+              imageAlt="Factory"
+              imagePosition="right"
+            />
 
-            {/* Making a Difference Section with Business Card Image */}
-            <div className="flex items-center gap-8">
-              <img src="/lovable-uploads/Businesscard.png" alt="Business" className="w-64 h-auto object-contain" />
-              <div className="bg-white rounded-lg p-8 shadow-lg flex-1">
-                <h3 className="text-2xl font-semibold mb-4">How We're Making a Difference</h3>
-                <p className="text-gray-600 text-center">
-                  Through our blockchain-powered solutions, we seek to address the growing challenges of sustainable production. Our platform offers verified data, track records, and clear guidance from production to end-of-life.
-                </p>
-              </div>
-            </div>
+            <VisionCard
+              title="How We're Making a Difference"
+              content="Through our blockchain-powered solutions, we seek to address the growing challenges of sustainable production. Our platform offers verified data, track records, and clear guidance from production to end-of-life."
+              imageSrc="/lovable-uploads/Businesscard.png"
+              imageAlt="Business"
+              imagePosition="left"
+            />
 
-            {/* Key Challenges Section */}
-            <div className="bg-white rounded-lg p-8 shadow-lg">
-              <h3 className="text-2xl font-semibold text-center mb-8">Key Challenges We Tackle</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <h4 className="font-semibold">Resource Management</h4>
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-2">
-                      <img src="/lovable-uploads/b96f1414-f079-4fb6-9d9c-7b99adc06200.png" alt="Land" className="w-5 h-5" />
-                      <span>Land</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <img src="water-icon.png" alt="Water" className="w-5 h-5" />
-                      <span>Water</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <img src="/lovable-uploads/e7327db9-17b1-49f5-8957-36b6d81086c4.png" alt="Energy" className="w-5 h-5" />
-                      <span>Energy</span>
-                    </div>
-                    <p className="text-sm text-gray-600 mt-4">
-                      Remain unsustainably high, driving up costs and environmental stress.
-                    </p>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="font-semibold">Environmental Impact</h4>
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-2">
-                      <img src="chemical-icon.png" alt="Chemical" className="w-5 h-5" />
-                      <span>Chemical</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <img src="/lovable-uploads/9de06d7c-a0b7-45c4-b881-0e37b24dd6fe.png" alt="Emissions" className="w-5 h-5" />
-                      <span>Emissions</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <img src="waste-icon.png" alt="Waste" className="w-5 h-5" />
-                      <span>Waste</span>
-                    </div>
-                    <p className="text-sm text-gray-600 mt-4">
-                      Require safer, more efficient handling to minimize harm to communities and ecosystems.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <KeyChallenges />
 
-            {/* Vision for Future Section with Green Image */}
-            <div className="flex items-center gap-8">
-              <div className="bg-white rounded-lg p-8 shadow-lg flex-1">
-                <h3 className="text-xl font-semibold mb-4">Our Vision for the Future</h3>
-                <p className="text-gray-600">
-                  Our goal is to lead industry toward a future where sustainability and profitability work hand in hand. We're doing this by providing a transparent yet adaptable framework that empowers businesses to implement and maintain responsible programs for themselves, their consumers, and society at large.
-                </p>
-              </div>
-              <img src="/lovable-uploads/Green.png" alt="Green" className="w-64 h-auto object-contain" />
-            </div>
+            <VisionCard
+              title="Our Vision for the Future"
+              content="Our goal is to lead industry toward a future where sustainability and profitability work hand in hand. We're doing this by providing a transparent yet adaptable framework that empowers businesses to implement and maintain responsible programs for themselves, their consumers, and society at large."
+              imageSrc="/lovable-uploads/Green.png"
+              imageAlt="Green"
+              imagePosition="right"
+            />
 
-            {/* Success Section */}
-            <div className="space-y-8 bg-white rounded-lg p-8 shadow-lg">
-              <h3 className="text-2xl font-semibold text-center">What Success Looks Like</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center space-y-4">
-                  <div className="w-12 h-12 mx-auto bg-[#1E293B] rounded-full flex items-center justify-center">
-                    <Handshake className="w-6 h-6 text-white" />
-                  </div>
-                  <h4 className="font-semibold">Shared Accountability</h4>
-                  <p className="text-sm text-gray-600">
-                    Stakeholders from suppliers to consumers commit to shared sustainability standards.
-                  </p>
-                </div>
-                <div className="text-center space-y-4">
-                  <div className="w-12 h-12 mx-auto bg-[#1E293B] rounded-full flex items-center justify-center">
-                    <Leaf className="w-6 h-6 text-white" />
-                  </div>
-                  <h4 className="font-semibold">Reduced Footprint</h4>
-                  <p className="text-sm text-gray-600">
-                    Smart resource management through data-driven guidance for real analytics.
-                  </p>
-                </div>
-                <div className="text-center space-y-4">
-                  <div className="w-12 h-12 mx-auto bg-[#1E293B] rounded-full flex items-center justify-center">
-                    <Globe className="w-6 h-6 text-white" />
-                  </div>
-                  <h4 className="font-semibold">Global Impact</h4>
-                  <p className="text-sm text-gray-600">
-                    Empowering local communities, while working together for our planet.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <SuccessSection />
 
             <AboutCTA onClose={onClose} />
           </div>
