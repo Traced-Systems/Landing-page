@@ -39,7 +39,7 @@ const Header = () => {
     top: 0,
     left: 0,
     right: 0,
-    zIndex: 1001,
+    zIndex: 1002, // Increased z-index to be above the sheet
     backgroundColor: 'white',
     boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
   } as React.CSSProperties : {};
