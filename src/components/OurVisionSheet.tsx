@@ -39,12 +39,12 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
                   Modern industries face growing pressure to reduce negative environmental impact. Through our innovative solutions, we work to make data-driven eco-responsibility a key asset rather than a burden. Companies often struggle with accurate emission tracking - our platform changes that, offering precise data at each stage in a sustainable workflow.
                 </p>
               </div>
-              <img src="/lovable-uploads/Factory.png" alt="Factory" className="w-64 h-auto object-contain" />
+              <img src="/lovable-uploads/3b2f9435-b454-4680-aa2b-e440791a0138.png" alt="Factory" className="w-64 h-auto object-contain" />
             </div>
 
             {/* Making a Difference Section with Business Card Image */}
             <div className="flex items-center gap-8">
-              <img src="/lovable-uploads/Businesscard.png" alt="Business" className="w-64 h-auto object-contain" />
+              <img src="/lovable-uploads/fe7649b5-4a75-4e41-86b0-935ace011244.png" alt="Business" className="w-64 h-auto object-contain" />
               <div className="bg-white rounded-lg p-8 shadow-lg flex-1">
                 <h3 className="text-2xl font-semibold mb-4">How We're Making a Difference</h3>
                 <p className="text-gray-600 text-center">
@@ -61,7 +61,7 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
                   Our goal is to lead industry toward a future where sustainability and profitability work hand in hand. We're doing this by providing a transparent yet adaptable framework that empowers businesses to implement and maintain responsible programs for themselves, their consumers, and society at large.
                 </p>
               </div>
-              <img src="/lovable-uploads/Green.png" alt="Green" className="w-64 h-auto object-contain" />
+              <img src="/lovable-uploads/96f9bedc-23c9-439f-a0a6-225820086c01.png" alt="Green" className="w-64 h-auto object-contain" />
             </div>
 
             <KeyChallenges />
