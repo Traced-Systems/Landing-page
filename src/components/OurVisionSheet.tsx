@@ -35,29 +35,29 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
 
             {/* Transparency Section with Factory Image */}
             <div className="relative">
-              <div className="bg-white rounded-lg p-8 shadow-lg z-10 relative">
-                <h3 className="text-xl font-semibold mb-4">Overcoming Transparency and Traceability Barriers in Circular Economies</h3>
-                <p className="text-gray-600">
-                  Modern industries face growing pressure to reduce negative environmental impact. Through our innovative solutions, we work to make data-driven eco-responsibility a key asset rather than a burden. Companies often struggle with accurate emission tracking - our platform changes that, offering precise data at each stage in a sustainable workflow.
-                </p>
-              </div>
-              <div className="relative mt-8 h-64">
+              <div className="relative">
                 <img 
                   src="/lovable-uploads/6bfa3f5e-c24c-459f-a978-92aee3e92380.png"
                   alt="Factory" 
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full object-cover rounded-lg"
                 />
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-8 shadow-lg z-10 w-[90%] max-w-3xl">
+                  <h3 className="text-xl font-semibold mb-4">Overcoming Transparency and Traceability Barriers in Circular Economies</h3>
+                  <p className="text-gray-600">
+                    Modern industries face growing pressure to reduce negative environmental impact. Through our innovative solutions, we work to make data-driven eco-responsibility a key asset rather than a burden. Companies often struggle with accurate emission tracking - our platform changes that, offering precise data at each stage in a sustainable workflow.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Making a Difference Section */}
             <div className="space-y-8">
               <h3 className="text-2xl font-semibold text-center">How We're Making a Difference</h3>
-              <div className="relative h-48">
+              <div className="relative">
                 <img 
                   src="/lovable-uploads/0c1bff36-3eb3-4436-8df4-8514365436bd.png"
                   alt="Business Card" 
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full object-cover rounded-lg"
                 />
                 <div className="absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center p-8">
                   <p className="text-white text-center">
@@ -75,11 +75,15 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
                   <h4 className="font-semibold">Resource Management</h4>
                   <div className="flex flex-wrap gap-4">
                     <div className="flex items-center gap-2">
+                      <img src="/lovable-uploads/b96f1414-f079-4fb6-9d9c-7b99adc06200.png" alt="Land" className="w-5 h-5" />
+                      <span>Land</span>
+                    </div>
+                    <div className="flex items-center gap-2">
                       <img src="/lovable-uploads/32569177-570b-4ecc-b1a1-38ada299b25e.png" alt="Water" className="w-5 h-5" />
                       <span>Water</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <img src="/lovable-uploads/30a52c28-f95b-4caf-b773-783a775bb759.png" alt="Energy" className="w-5 h-5" />
+                      <img src="/lovable-uploads/e7327db9-17b1-49f5-8957-36b6d81086c4.png" alt="Energy" className="w-5 h-5" />
                       <span>Energy</span>
                     </div>
                   </div>
@@ -106,23 +110,23 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
 
             {/* Vision for Future Section */}
             <div className="relative">
-              <div className="bg-white rounded-lg p-8 shadow-lg relative z-10">
-                <h3 className="text-xl font-semibold mb-4">Our Vision for the Future</h3>
-                <p className="text-gray-600">
-                  Our goal is to lead industry toward a future where sustainability and profitability work hand in hand. We're doing this by providing a transparent yet adaptable framework that empowers businesses to implement and maintain responsible programs for themselves, their consumers, and society at large.
-                </p>
-              </div>
-              <div className="relative mt-8 h-48">
+              <div className="relative">
                 <img 
                   src="/lovable-uploads/ffcd1fd1-974b-475f-a167-7572afaca91a.png"
                   alt="Sustainability" 
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full object-cover rounded-lg"
                 />
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-8 shadow-lg z-10 w-[90%] max-w-3xl">
+                  <h3 className="text-xl font-semibold mb-4">Our Vision for the Future</h3>
+                  <p className="text-gray-600">
+                    Our goal is to lead industry toward a future where sustainability and profitability work hand in hand. We're doing this by providing a transparent yet adaptable framework that empowers businesses to implement and maintain responsible programs for themselves, their consumers, and society at large.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Success Section */}
-            <div className="space-y-8">
+            <div className="space-y-8 bg-white rounded-lg p-8 shadow-lg">
               <h3 className="text-2xl font-semibold text-center">What Success Looks Like</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center space-y-4">
