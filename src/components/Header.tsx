@@ -39,7 +39,7 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+      isScrolled || activeSheet ? 'bg-white shadow-md' : 'bg-transparent'
     }`}>
       <div className="container mx-auto">
         <div className="flex items-center h-16">

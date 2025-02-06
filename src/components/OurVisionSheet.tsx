@@ -35,29 +35,31 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
 
             {/* Transparency Section with Factory Image */}
             <div className="relative">
-              <div className="bg-white rounded-lg p-8 shadow-md">
+              <div className="bg-white rounded-lg p-8 shadow-lg z-10 relative">
                 <h3 className="text-xl font-semibold mb-4">Overcoming Transparency and Traceability Barriers in Circular Economies</h3>
                 <p className="text-gray-600">
                   Modern industries face growing pressure to reduce negative environmental impact. Through our innovative solutions, we work to make data-driven eco-responsibility a key asset rather than a burden. Companies often struggle with accurate emission tracking - our platform changes that, offering precise data at each stage in a sustainable workflow.
                 </p>
               </div>
-              <img 
-                src="/lovable-uploads/6bfa3f5e-c24c-459f-a978-92aee3e92380.png"
-                alt="Factory" 
-                className="w-full h-64 object-cover rounded-lg mt-8"
-              />
+              <div className="relative mt-8 h-64">
+                <img 
+                  src="/lovable-uploads/6bfa3f5e-c24c-459f-a978-92aee3e92380.png"
+                  alt="Factory" 
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
             </div>
 
             {/* Making a Difference Section */}
             <div className="space-y-8">
               <h3 className="text-2xl font-semibold text-center">How We're Making a Difference</h3>
-              <div className="relative">
+              <div className="relative h-48">
                 <img 
                   src="/lovable-uploads/0c1bff36-3eb3-4436-8df4-8514365436bd.png"
                   alt="Business Card" 
-                  className="w-full h-48 object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg"
                 />
-                <div className="bg-black/60 absolute inset-0 rounded-lg flex items-center justify-center p-8">
+                <div className="absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center p-8">
                   <p className="text-white text-center">
                     Through our blockchain-powered solutions, we seek to address the growing challenges of sustainable production. Our platform offers verified data, track records, and clear guidance from production to end-of-life.
                   </p>
@@ -70,61 +72,53 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
               <h3 className="text-2xl font-semibold text-center mb-8">Key Challenges We Tackle</h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-4">
-                  <h4 className="font-semibold">Excessive Resource Needs</h4>
-                  <div className="flex gap-4">
+                  <h4 className="font-semibold">Resource Management</h4>
+                  <div className="flex flex-wrap gap-4">
                     <div className="flex items-center gap-2">
-                      <Leaf className="w-5 h-5 text-blue-600" />
-                      <span>Land</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-5 h-5 rounded-full bg-blue-600" />
+                      <img src="/lovable-uploads/32569177-570b-4ecc-b1a1-38ada299b25e.png" alt="Water" className="w-5 h-5" />
                       <span>Water</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-5 h-5 rounded-full bg-blue-600" />
+                      <img src="/lovable-uploads/30a52c28-f95b-4caf-b773-783a775bb759.png" alt="Energy" className="w-5 h-5" />
                       <span>Energy</span>
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600">
-                    Remain unsustainably high, driving up costs and environmental stress.
-                  </p>
                 </div>
                 <div className="space-y-4">
-                  <h4 className="font-semibold">Untreated Pollution</h4>
-                  <div className="flex gap-4">
+                  <h4 className="font-semibold">Environmental Impact</h4>
+                  <div className="flex flex-wrap gap-4">
                     <div className="flex items-center gap-2">
-                      <div className="w-5 h-5 rounded-full bg-blue-600" />
+                      <img src="/lovable-uploads/6b236869-f903-46cc-8ea1-6ddc16886e51.png" alt="Chemical" className="w-5 h-5" />
                       <span>Chemical</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-5 h-5 rounded-full bg-blue-600" />
+                      <img src="/lovable-uploads/9de06d7c-a0b7-45c4-b881-0e37b24dd6fe.png" alt="Emissions" className="w-5 h-5" />
                       <span>Emissions</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-5 h-5 rounded-full bg-blue-600" />
+                      <img src="/lovable-uploads/3cb78757-f134-4b04-9eca-3038871d4e7b.png" alt="Waste" className="w-5 h-5" />
                       <span>Waste</span>
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600">
-                    Require safer, more efficient handling to minimize harm to communities and ecosystems.
-                  </p>
                 </div>
               </div>
             </div>
 
             {/* Vision for Future Section */}
             <div className="relative">
-              <div className="bg-white rounded-lg p-8 shadow-md">
+              <div className="bg-white rounded-lg p-8 shadow-lg relative z-10">
                 <h3 className="text-xl font-semibold mb-4">Our Vision for the Future</h3>
                 <p className="text-gray-600">
                   Our goal is to lead industry toward a future where sustainability and profitability work hand in hand. We're doing this by providing a transparent yet adaptable framework that empowers businesses to implement and maintain responsible programs for themselves, their consumers, and society at large.
                 </p>
               </div>
-              <img 
-                src="/lovable-uploads/ffcd1fd1-974b-475f-a167-7572afaca91a.png"
-                alt="Sustainability" 
-                className="w-full h-48 object-cover rounded-lg mt-8"
-              />
+              <div className="relative mt-8 h-48">
+                <img 
+                  src="/lovable-uploads/ffcd1fd1-974b-475f-a167-7572afaca91a.png"
+                  alt="Sustainability" 
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
             </div>
 
             {/* Success Section */}
@@ -155,7 +149,7 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
                   </div>
                   <h4 className="font-semibold">Global Impact</h4>
                   <p className="text-sm text-gray-600">
-                    Empowering local communities, while working together for our planet. Hard to move under a more responsible, circular framework.
+                    Empowering local communities, while working together for our planet.
                   </p>
                 </div>
               </div>
