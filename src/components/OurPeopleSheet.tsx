@@ -88,22 +88,18 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
         side="right" 
         className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5]"
       >
-        <div className="h-full flex flex-col pt-12">
+        <div className="h-full flex flex-col pt-24">
           <Button 
             variant="ghost" 
             onClick={onClose}
-            className="absolute left-4 top-4 hover:bg-gray-100"
+            className="absolute left-4 top-8 hover:bg-gray-100 z-50"
           >
             <ArrowLeft className="h-6 w-6" />
           </Button>
 
           <div className="max-w-4xl mx-auto w-full px-6">
-            <h1 className="text-3xl font-bold text-center mb-6">Meet the Team</h1>
+            <h1 className="text-3xl font-bold text-center mb-12">Meet the Team</h1>
             
-            <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-              At Traced System, our small but passionate team of designers, marketers, sales, and tech experts are driven by a shared goal—to build something bigger together. We combine creativity and innovation to push boundaries and make a lasting impact in the world.
-            </p>
-
             <div className="space-y-16">
               <section>
                 <h2 className="text-2xl font-semibold mb-8">Advisory Board</h2>
@@ -111,17 +107,19 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                   {advisoryBoard.map((member, index) => (
                     <div 
                       key={index}
-                      className="flex flex-col"
+                      className="flex flex-col items-center text-center"
                     >
-                      <div className="relative aspect-square overflow-hidden rounded-lg mb-4">
+                      <div className="relative aspect-square overflow-hidden rounded-lg mb-4 w-full">
                         <img 
                           src={member.image}
                           alt={member.name}
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <h3 className="text-lg font-semibold">{member.name}</h3>
-                      <p className="text-gray-600">{member.role}</p>
+                      <div className="mt-4">
+                        <span className="block text-lg font-semibold">{member.name}</span>
+                        <span className="block text-gray-600">{member.role}</span>
+                      </div>
                     </div>
                   ))}
                 </div>
