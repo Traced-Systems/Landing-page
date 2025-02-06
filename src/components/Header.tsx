@@ -60,13 +60,6 @@ const Header = () => {
         </div>
       </header>
 
-      {activeSheet && (
-        <div 
-          className="fixed inset-0 bg-black/50 z-[998] transition-opacity duration-300" 
-          onClick={handleSheetClose}
-        />
-      )}
-
       <IndustriesSheet 
         isOpen={activeSheet === 'industries'} 
         onClose={handleSheetClose} 
