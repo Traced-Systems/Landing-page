@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button";
 import IndustriesSheet from './IndustriesSheet';
 import UseCasesSheet from './UseCasesSheet';
 import ContactSheet from './ContactSheet';
 import OurValuesSheet from './OurValuesSheet';
 import OurVisionSheet from './OurVisionSheet';
 import OurPeopleSheet from './OurPeopleSheet';
-import NavigationItems from './header/NavigationItems';
-import MobileMenu from './header/MobileMenu';
-import Logo from './header/Logo';
+import MainHeader from './header/MainHeader';
+import SheetHeader from './header/SheetHeader';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,67 +31,15 @@ const Header = () => {
     setActiveSheet(null);
   };
 
-  // Sheet-specific header styles
-  const sheetHeaderStyles = activeSheet ? {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    right: 0,
-    zIndex: 1002, // Increased z-index to be above the sheet
-    backgroundColor: 'white',
-    boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-  } as React.CSSProperties : {};
-
   return (
     <>
-      {/* Original Header */}
-      <header 
-        className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ${
-          isScrolled || activeSheet ? 'bg-white shadow-md' : 'bg-transparent'
-        }`}
-      >
-        <div className="container mx-auto relative">
-          <div className="flex items-center h-16">
-            <Logo />
-            
-            <div className="flex items-center justify-end space-x-8 w-full">
-              <NavigationItems handleSheetOpen={handleSheetOpen} />
-              
-              <Button 
-                onClick={() => handleSheetOpen('contact')}
-                className="hidden md:inline-flex bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-6"
-              >
-                Book Demo
-              </Button>
-            </div>
+      <MainHeader 
+        isScrolled={isScrolled || activeSheet !== null} 
+        handleSheetOpen={handleSheetOpen} 
+      />
 
-            <MobileMenu />
-          </div>
-        </div>
-      </header>
-
-      {/* Sheet-specific Header Instance */}
       {activeSheet && (
-        <header style={sheetHeaderStyles}>
-          <div className="container mx-auto relative">
-            <div className="flex items-center h-16">
-              <Logo />
-              
-              <div className="flex items-center justify-end space-x-8 w-full">
-                <NavigationItems handleSheetOpen={handleSheetOpen} />
-                
-                <Button 
-                  onClick={() => handleSheetOpen('contact')}
-                  className="hidden md:inline-flex bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-6"
-                >
-                  Book Demo
-                </Button>
-              </div>
-
-              <MobileMenu />
-            </div>
-          </div>
-        </header>
+        <SheetHeader handleSheetOpen={handleSheetOpen} />
       )}
 
       <IndustriesSheet 
