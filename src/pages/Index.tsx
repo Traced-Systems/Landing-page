@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -8,6 +7,7 @@ import About from '@/components/About';
 import Benefits from '@/components/Benefits';
 import Process from '@/components/Process';
 import UseCases from '@/components/UseCases';
+import Blog from '@/components/Blog';
 import Technologies from '@/components/Technologies';
 import Footer from '@/components/Footer';
 import DigitalPassport from '@/components/DigitalPassport';
@@ -38,6 +38,7 @@ const Index = () => {
         <Benefits />
         <Process />
         <UseCases />
+        <Blog />
         <Technologies />
         <Foundation />
         <CTA onContactClick={handleContactOpen} />

@@ -89,14 +89,17 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
         className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5]"
       >
         <div className="h-full flex flex-col pt-24">
-          <Button 
-            variant="ghost" 
-            onClick={onClose}
-            className="absolute left-4 top-8 hover:bg-gray-100 z-50"
-          >
-            <ArrowLeft className="h-6 w-6" />
-          </Button>
-
+          <div className="flex items-center gap-8 px-8 mb-12">
+            <Button 
+              variant="ghost" 
+              onClick={onClose}
+              className="hover:bg-gray-100 z-50"
+            >
+              <ArrowLeft className="h-6 w-6" />
+            </Button>
+            <h1 className="text-3xl font-bold">Meet the Team</h1>
+          </div>
+          
           <div className="max-w-4xl mx-auto w-full px-6">
             <h1 className="text-3xl font-bold text-center mb-12">Meet the Team</h1>
             

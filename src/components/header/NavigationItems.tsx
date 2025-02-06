@@ -7,28 +7,28 @@ interface NavigationItemsProps {
 
 const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
   return (
-    <nav className="hidden md:flex items-center space-x-8">
-      <a href="#" className="text-gray-600 hover:text-primary transition-colors z-[999]">Home</a>
+    <nav className="hidden md:flex items-center space-x-8 relative z-[1001]">
+      <a href="#" className="text-gray-600 hover:text-primary transition-colors">Home</a>
       <button 
         onClick={() => handleSheetOpen('industries')} 
-        className="text-gray-600 hover:text-primary transition-colors z-[999]"
+        className="text-gray-600 hover:text-primary transition-colors"
       >
         Industries
       </button>
       <button 
         onClick={() => handleSheetOpen('useCases')} 
-        className="text-gray-600 hover:text-primary transition-colors z-[999]"
+        className="text-gray-600 hover:text-primary transition-colors"
       >
         Use Cases
       </button>
-      <NavigationMenu className="z-[999]">
+      <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="text-gray-600 hover:text-primary transition-colors bg-transparent">
               About Us
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className="w-48 p-2">
+              <div className="w-48 p-2 bg-[#f7f7f7]">
                 <button
                   onClick={() => handleSheetOpen('values')}
                   className="w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100"
@@ -52,10 +52,10 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <a href="#" className="text-gray-600 hover:text-primary transition-colors z-[999]">Blog</a>
+      <a href="#" className="text-gray-600 hover:text-primary transition-colors">Blog</a>
       <button 
         onClick={() => handleSheetOpen('contact')} 
-        className="text-gray-600 hover:text-primary transition-colors z-[999]"
+        className="text-gray-600 hover:text-primary transition-colors"
       >
         Contact Us
       </button>

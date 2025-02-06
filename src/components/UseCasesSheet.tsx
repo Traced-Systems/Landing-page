@@ -2,6 +2,7 @@ import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { ArrowLeft } from 'lucide-react';
 import { Button } from './ui/button';
+import AboutCTA from './shared/AboutCTA';
 
 interface UseCasesSheetProps {
   isOpen: boolean;
@@ -33,18 +34,16 @@ const UseCasesSheet = ({ isOpen, onClose }: UseCasesSheetProps) => {
         side="right" 
         className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl"
       >
-        <div className="h-full flex flex-col pt-20">
-          <Button 
-            variant="ghost" 
-            onClick={onClose}
-            className="absolute left-4 top-4 hover:bg-gray-100"
-          >
-            <ArrowLeft className="h-6 w-6" />
-          </Button>
-
-          <div className="text-center mb-12">
-            <h1 className="text-3xl font-bold text-primary mb-2">Use Cases</h1>
-            <p className="text-gray-600">See Our Impact</p>
+        <div className="h-full flex flex-col pt-24">
+          <div className="flex items-center gap-8 px-8 mb-12">
+            <Button 
+              variant="ghost" 
+              onClick={onClose}
+              className="hover:bg-gray-100 z-50"
+            >
+              <ArrowLeft className="h-6 w-6" />
+            </Button>
+            <h1 className="text-3xl font-bold">Use Cases</h1>
           </div>
 
           <div className="text-center mb-12 px-8">
@@ -71,6 +70,10 @@ const UseCasesSheet = ({ isOpen, onClose }: UseCasesSheetProps) => {
                 </button>
               </div>
             ))}
+          </div>
+
+          <div className="w-full px-0">
+            <AboutCTA onClose={onClose} />
           </div>
         </div>
       </SheetContent>
