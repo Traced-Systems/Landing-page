@@ -3,6 +3,7 @@ import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Handshake, Leaf, Globe } from "lucide-react";
 import AboutCTA from './shared/AboutCTA';
+import CardOverImage from './shared/CardOverImage';
 
 interface OurVisionSheetProps {
   isOpen: boolean;
@@ -34,21 +35,15 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
             </div>
 
             {/* Transparency Section with Factory Image */}
-            <div className="relative">
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/6bfa3f5e-c24c-459f-a978-92aee3e92380.png"
-                  alt="Factory" 
-                  className="w-full object-cover rounded-lg"
-                />
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-8 shadow-lg z-10 w-[90%] max-w-3xl">
-                  <h3 className="text-xl font-semibold mb-4">Overcoming Transparency and Traceability Barriers in Circular Economies</h3>
-                  <p className="text-gray-600">
-                    Modern industries face growing pressure to reduce negative environmental impact. Through our innovative solutions, we work to make data-driven eco-responsibility a key asset rather than a burden. Companies often struggle with accurate emission tracking - our platform changes that, offering precise data at each stage in a sustainable workflow.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <CardOverImage
+              imageSrc="/lovable-uploads/6bfa3f5e-c24c-459f-a978-92aee3e92380.png"
+              imageAlt="Factory"
+            >
+              <h3 className="text-xl font-semibold mb-4">Overcoming Transparency and Traceability Barriers in Circular Economies</h3>
+              <p className="text-gray-600">
+                Modern industries face growing pressure to reduce negative environmental impact. Through our innovative solutions, we work to make data-driven eco-responsibility a key asset rather than a burden. Companies often struggle with accurate emission tracking - our platform changes that, offering precise data at each stage in a sustainable workflow.
+              </p>
+            </CardOverImage>
 
             {/* Making a Difference Section */}
             <div className="space-y-8">
@@ -110,19 +105,15 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
 
             {/* Vision for Future Section */}
             <div className="relative">
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/ffcd1fd1-974b-475f-a167-7572afaca91a.png"
-                  alt="Sustainability" 
-                  className="w-full object-cover rounded-lg"
-                />
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-8 shadow-lg z-10 w-[90%] max-w-3xl">
-                  <h3 className="text-xl font-semibold mb-4">Our Vision for the Future</h3>
-                  <p className="text-gray-600">
-                    Our goal is to lead industry toward a future where sustainability and profitability work hand in hand. We're doing this by providing a transparent yet adaptable framework that empowers businesses to implement and maintain responsible programs for themselves, their consumers, and society at large.
-                  </p>
-                </div>
-              </div>
+              <CardOverImage
+                imageSrc="/lovable-uploads/ffcd1fd1-974b-475f-a167-7572afaca91a.png"
+                imageAlt="Sustainability"
+              >
+                <h3 className="text-xl font-semibold mb-4">Our Vision for the Future</h3>
+                <p className="text-gray-600">
+                  Our goal is to lead industry toward a future where sustainability and profitability work hand in hand. We're doing this by providing a transparent yet adaptable framework that empowers businesses to implement and maintain responsible programs for themselves, their consumers, and society at large.
+                </p>
+              </CardOverImage>
             </div>
 
             {/* Success Section */}

@@ -38,85 +38,91 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-[998] transition-all duration-300 ${
-      isScrolled || activeSheet ? 'bg-white shadow-md' : 'bg-transparent'
-    }`}>
-      <div className="container mx-auto">
-        <div className="flex items-center h-16">
-          <a href="/" className="text-xl font-bold text-primary">
-            <img src="/lovable-uploads/adffe373-57b3-4ac5-a5db-d6d2f0fbff52.png" alt="Traced Logo" className="h-[29.45px] w-[120px]" />
-          </a>
-          
-          <div className="flex items-center justify-end space-x-8 w-full">
-            <nav className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-gray-600 hover:text-primary transition-colors">Home</a>
-              <button 
-                onClick={() => handleSheetOpen('industries')} 
-                className="text-gray-600 hover:text-primary transition-colors"
-              >
-                Industries
-              </button>
-              <button 
-                onClick={() => handleSheetOpen('useCases')} 
-                className="text-gray-600 hover:text-primary transition-colors"
-              >
-                Use Cases
-              </button>
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-gray-600 hover:text-primary transition-colors bg-transparent">
-                      About Us
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <div className="w-48 p-2">
-                        <button
-                          onClick={() => handleSheetOpen('values')}
-                          className="w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100"
-                        >
-                          Our Values
-                        </button>
-                        <button
-                          onClick={() => handleSheetOpen('vision')}
-                          className="w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100"
-                        >
-                          Our Vision
-                        </button>
-                        <button
-                          onClick={() => handleSheetOpen('people')}
-                          className="w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100"
-                        >
-                          Our People
-                        </button>
-                      </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
-              <a href="#" className="text-gray-600 hover:text-primary transition-colors">Blog</a>
-              <button 
-                onClick={() => handleSheetOpen('contact')} 
-                className="text-gray-600 hover:text-primary transition-colors"
-              >
-                Contact Us
-              </button>
-            </nav>
+    <>
+      <header className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-300 ${
+        isScrolled || activeSheet ? 'bg-white shadow-md' : 'bg-transparent'
+      }`}>
+        <div className="container mx-auto relative z-[999]">
+          <div className="flex items-center h-16">
+            <a href="/" className="text-xl font-bold text-primary z-[999]">
+              <img src="/lovable-uploads/adffe373-57b3-4ac5-a5db-d6d2f0fbff52.png" alt="Traced Logo" className="h-[29.45px] w-[120px]" />
+            </a>
             
-            <Button 
-              onClick={() => handleSheetOpen('contact')}
-              className="hidden md:inline-flex bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-6"
-            >
-              Book Demo
-            </Button>
-          </div>
+            <div className="flex items-center justify-end space-x-8 w-full z-[999]">
+              <nav className="hidden md:flex items-center space-x-8">
+                <a href="#" className="text-gray-600 hover:text-primary transition-colors z-[999]">Home</a>
+                <button 
+                  onClick={() => handleSheetOpen('industries')} 
+                  className="text-gray-600 hover:text-primary transition-colors z-[999]"
+                >
+                  Industries
+                </button>
+                <button 
+                  onClick={() => handleSheetOpen('useCases')} 
+                  className="text-gray-600 hover:text-primary transition-colors z-[999]"
+                >
+                  Use Cases
+                </button>
+                <NavigationMenu className="z-[999]">
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger className="text-gray-600 hover:text-primary transition-colors bg-transparent">
+                        About Us
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <div className="w-48 p-2">
+                          <button
+                            onClick={() => handleSheetOpen('values')}
+                            className="w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100"
+                          >
+                            Our Values
+                          </button>
+                          <button
+                            onClick={() => handleSheetOpen('vision')}
+                            className="w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100"
+                          >
+                            Our Vision
+                          </button>
+                          <button
+                            onClick={() => handleSheetOpen('people')}
+                            className="w-full text-left px-3 py-2 text-sm rounded hover:bg-gray-100"
+                          >
+                            Our People
+                          </button>
+                        </div>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+                <a href="#" className="text-gray-600 hover:text-primary transition-colors z-[999]">Blog</a>
+                <button 
+                  onClick={() => handleSheetOpen('contact')} 
+                  className="text-gray-600 hover:text-primary transition-colors z-[999]"
+                >
+                  Contact Us
+                </button>
+              </nav>
+              
+              <Button 
+                onClick={() => handleSheetOpen('contact')}
+                className="hidden md:inline-flex bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-6 z-[999]"
+              >
+                Book Demo
+              </Button>
+            </div>
 
-          <button className="md:hidden p-2">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+            <button className="md:hidden p-2 z-[999]">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
+      </header>
+
+      <div className={`fixed inset-0 bg-black/50 z-[998] transition-opacity duration-300 ${
+        activeSheet ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      }`} onClick={handleSheetClose} />
 
       <IndustriesSheet 
         isOpen={activeSheet === 'industries'} 
@@ -142,7 +148,7 @@ const Header = () => {
         isOpen={activeSheet === 'people'}
         onClose={handleSheetClose}
       />
-    </header>
+    </>
   );
 };
 
