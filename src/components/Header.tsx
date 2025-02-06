@@ -36,7 +36,7 @@ const Header = () => {
   return (
     <>
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-300 ${
           isScrolled || activeSheet ? 'bg-white shadow-md' : 'bg-transparent'
         }`}
       >
@@ -49,7 +49,7 @@ const Header = () => {
               
               <Button 
                 onClick={() => handleSheetOpen('contact')}
-                className="hidden md:inline-flex bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-6 z-[999]"
+                className="hidden md:inline-flex bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-6"
               >
                 Book Demo
               </Button>
@@ -62,7 +62,7 @@ const Header = () => {
 
       {activeSheet && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 transition-opacity duration-300" 
+          className="fixed inset-0 bg-black/50 z-[998] transition-opacity duration-300" 
           onClick={handleSheetClose}
         />
       )}

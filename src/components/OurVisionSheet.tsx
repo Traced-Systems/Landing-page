@@ -3,7 +3,6 @@ import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Handshake, Leaf, Globe } from "lucide-react";
 import AboutCTA from './shared/AboutCTA';
-import CardOverImage from './shared/CardOverImage';
 
 interface OurVisionSheetProps {
   isOpen: boolean;
@@ -34,31 +33,21 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
               <p className="text-xl text-gray-600">Driving Sustainable Innovation</p>
             </div>
 
-            {/* Transparency Section with Factory Image */}
-            <CardOverImage
-              imageSrc="/lovable-uploads/6bfa3f5e-c24c-459f-a978-92aee3e92380.png"
-              imageAlt="Factory"
-            >
+            {/* Transparency Section */}
+            <div className="bg-white rounded-lg p-8 shadow-lg">
               <h3 className="text-xl font-semibold mb-4">Overcoming Transparency and Traceability Barriers in Circular Economies</h3>
               <p className="text-gray-600">
                 Modern industries face growing pressure to reduce negative environmental impact. Through our innovative solutions, we work to make data-driven eco-responsibility a key asset rather than a burden. Companies often struggle with accurate emission tracking - our platform changes that, offering precise data at each stage in a sustainable workflow.
               </p>
-            </CardOverImage>
+            </div>
 
             {/* Making a Difference Section */}
             <div className="space-y-8">
               <h3 className="text-2xl font-semibold text-center">How We're Making a Difference</h3>
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/0c1bff36-3eb3-4436-8df4-8514365436bd.png"
-                  alt="Business Card" 
-                  className="w-full object-cover rounded-lg"
-                />
-                <div className="absolute inset-0 bg-black/60 rounded-lg flex items-center justify-center p-8">
-                  <p className="text-white text-center">
-                    Through our blockchain-powered solutions, we seek to address the growing challenges of sustainable production. Our platform offers verified data, track records, and clear guidance from production to end-of-life.
-                  </p>
-                </div>
+              <div className="bg-white rounded-lg p-8 shadow-lg">
+                <p className="text-gray-600 text-center">
+                  Through our blockchain-powered solutions, we seek to address the growing challenges of sustainable production. Our platform offers verified data, track records, and clear guidance from production to end-of-life.
+                </p>
               </div>
             </div>
 
@@ -104,16 +93,11 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
             </div>
 
             {/* Vision for Future Section */}
-            <div className="relative">
-              <CardOverImage
-                imageSrc="/lovable-uploads/ffcd1fd1-974b-475f-a167-7572afaca91a.png"
-                imageAlt="Sustainability"
-              >
-                <h3 className="text-xl font-semibold mb-4">Our Vision for the Future</h3>
-                <p className="text-gray-600">
-                  Our goal is to lead industry toward a future where sustainability and profitability work hand in hand. We're doing this by providing a transparent yet adaptable framework that empowers businesses to implement and maintain responsible programs for themselves, their consumers, and society at large.
-                </p>
-              </CardOverImage>
+            <div className="bg-white rounded-lg p-8 shadow-lg">
+              <h3 className="text-xl font-semibold mb-4">Our Vision for the Future</h3>
+              <p className="text-gray-600">
+                Our goal is to lead industry toward a future where sustainability and profitability work hand in hand. We're doing this by providing a transparent yet adaptable framework that empowers businesses to implement and maintain responsible programs for themselves, their consumers, and society at large.
+              </p>
             </div>
 
             {/* Success Section */}
