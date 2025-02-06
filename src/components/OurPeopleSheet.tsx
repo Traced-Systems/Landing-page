@@ -111,13 +111,17 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                   {advisoryBoard.map((member, index) => (
                     <div 
                       key={index}
-                      className="relative aspect-square overflow-hidden rounded-lg"
+                      className="flex flex-col"
                     >
-                      <img 
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover"
-                      />
+                      <div className="relative aspect-square overflow-hidden rounded-lg mb-4">
+                        <img 
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <h3 className="text-lg font-semibold">{member.name}</h3>
+                      <p className="text-gray-600">{member.role}</p>
                     </div>
                   ))}
                 </div>
