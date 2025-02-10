@@ -96,15 +96,22 @@ const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
 
             <EURegulationsSection />
 
-            <div className="px-8 mb-12">
-              <img 
-                src="/lovable-uploads/c0da0885-a0e1-4ac0-b309-a464bcd66b53.png"
-                alt="Unified Platform"
-                className="w-full max-w-4xl mx-auto rounded-lg"
-              />
-            </div>
-            
-            <CTASection />
+            <CTASection>
+              <div className="text-center mb-6">
+                <p className="text-gray-600 mb-6">
+                  Our comprehensive platform integrates seamlessly across your entire value chain, 
+                  providing real-time visibility and control over your product lifecycle.
+                </p>
+                <img 
+                  src="/lovable-uploads/c0da0885-a0e1-4ac0-b309-a464bcd66b53.png"
+                  alt="Unified Platform"
+                  className="w-full max-w-4xl mx-auto mb-6 rounded-lg"
+                />
+                <Button className="bg-[#9b87f5] hover:bg-[#8b77e5] text-white px-8">
+                  Learn More
+                </Button>
+              </div>
+            </CTASection>
             
             <div className="pb-[125px]"></div>
           </div>
