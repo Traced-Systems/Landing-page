@@ -3,6 +3,7 @@ import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustrySheetHeader from './shared/IndustrySheetHeader';
 import IndustrySheetCard from './shared/IndustrySheetCard';
 import IndustrySheetCTA from './shared/IndustrySheetCTA';
+import { Button } from "@/components/ui/button";
 
 interface TextilesSheetProps {
   isOpen: boolean;
@@ -67,11 +68,19 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
               <h2 className="text-2xl font-bold text-primary mb-4">
                 Driving Collaborative Sustainability Across the Entire Value Chain
               </h2>
-              <p className="text-gray-600">
+              <p className="text-gray-600 mb-6">
                 Our digital passport system enables unprecedented transparency and traceability 
                 across your entire textile supply chain. From raw material sourcing to final product 
                 delivery, we help you track, verify, and optimize every step of the journey.
               </p>
+              <img 
+                src="/lovable-uploads/0423a563-c9a2-4282-bf0c-15c8e7d41403.png"
+                alt="Textile Value Chain"
+                className="w-full max-w-4xl mx-auto mb-6 rounded-lg"
+              />
+              <Button className="bg-[#9b87f5] hover:bg-[#8b77e5] text-white px-8">
+                Learn More
+              </Button>
             </div>
           </div>
 
