@@ -33,15 +33,17 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
     <Sheet open={isOpen} onOpenChange={onClose}>
       <SheetContent 
         side="right" 
-        className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl z-[995]"
+        className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[995]"
       >
-        <div className="h-full flex flex-col pt-20">
-          <IndustrySheetHeader
-            title="Textiles"
-            description="Traced Systems' Digital Product Passport tackles supply chain gaps, ensures ethical sourcing, and drives circularity across the textile lifecycle."
-            imageSrc="/lovable-uploads/36f60108-99d8-465a-81a4-e52c86799730.png"
-            onBack={onBack}
-          />
+        <div className="h-full flex flex-col">
+          <div className="pt-20">
+            <IndustrySheetHeader
+              title="Textiles"
+              description="Traced Systems' Digital Product Passport tackles supply chain gaps, ensures ethical sourcing, and drives circularity across the textile lifecycle."
+              imageSrc="/lovable-uploads/36f60108-99d8-465a-81a4-e52c86799730.png"
+              onBack={onBack}
+            />
+          </div>
 
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary">
@@ -49,29 +51,31 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 px-8">
-            {cards.map((card, index) => (
-              <IndustrySheetCard
-                key={index}
-                title={card.title}
-                content={card.content}
-                iconSrc={card.iconSrc}
-              />
-            ))}
+          <div className="px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              {cards.map((card, index) => (
+                <IndustrySheetCard
+                  key={index}
+                  title={card.title}
+                  content={card.content}
+                  iconSrc={card.iconSrc}
+                />
+              ))}
+            </div>
+
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-primary mb-4">
+                Driving Collaborative Sustainability Across the Entire Value Chain
+              </h2>
+              <p className="text-gray-600">
+                Our digital passport system enables unprecedented transparency and traceability 
+                across your entire textile supply chain. From raw material sourcing to final product 
+                delivery, we help you track, verify, and optimize every step of the journey.
+              </p>
+            </div>
           </div>
 
-          <div className="mb-12 px-8">
-            <h2 className="text-2xl font-bold text-primary mb-4">
-              Driving Collaborative Sustainability Across the Entire Value Chain
-            </h2>
-            <p className="text-gray-600">
-              Our digital passport system enables unprecedented transparency and traceability 
-              across your entire textile supply chain. From raw material sourcing to final product 
-              delivery, we help you track, verify, and optimize every step of the journey.
-            </p>
-          </div>
-
-          <div className="px-0">
+          <div className="mt-auto w-full">
             <IndustrySheetCTA 
               title="Drive Innovation in Textiles With the Experts Who Understand Your Industry"
               description="Ready to elevate your textile operations? Our passion for sustainable innovation and deep industry insight will empower you to stay ahead in a fast-paced market. Let's explore how we can help you deliver on your mission—book a demo today!"
