@@ -10,7 +10,7 @@ interface IndustrySheetCTAProps {
 const IndustrySheetCTA = ({ title, description }: IndustrySheetCTAProps) => {
   return (
     <div className="w-full bg-[#F2F1EE] -mx-6">
-      <div className="max-w-7xl mx-auto px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="max-w-7xl mx-auto p-5 flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="flex-grow max-w-2xl">
           <h3 className="text-2xl font-bold text-primary mb-4">
             {title}
@@ -44,3 +44,4 @@ const IndustrySheetCTA = ({ title, description }: IndustrySheetCTAProps) => {
 };
 
 export default IndustrySheetCTA;
+
