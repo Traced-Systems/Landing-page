@@ -1,5 +1,8 @@
+
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 import SheetBackButton from './shared/SheetBackButton';
 import AboutCTA from './shared/AboutCTA';
 import SheetBackgroundSection from './shared/SheetBackgroundSection';

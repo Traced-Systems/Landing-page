@@ -1,5 +1,8 @@
+
 import React, { useState } from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 import IndustryCard from './IndustryCard';
 import EURegulationsSection from './EURegulationsSection';
 import CTASection from './CTASection';
