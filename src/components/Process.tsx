@@ -91,15 +91,17 @@ const Process = () => {
 
                 <div
                   className={cn(
-                    "overflow-hidden transition-all duration-500 ease-in-out",
+                    "overflow-hidden transition-all duration-500 ease-in-out flex justify-center items-center",
                     expandedCard === index 
-                      ? "opacity-100 mt-8 text-left transform-none" 
+                      ? "opacity-100 mt-8 transform-none" 
                       : "opacity-0 translate-y-2 scale-95 absolute"
                   )}
                 >
-                  <p className="text-gray-600">
-                    {step.description}
-                  </p>
+                  <img 
+                    src="/lovable-uploads/7ad26a58-8624-48e8-bb84-9b8ea0bfb94a.png"
+                    alt="Process Icon"
+                    className="w-32 h-32 object-contain"
+                  />
                 </div>
               </div>
             </div>
@@ -111,3 +113,4 @@ const Process = () => {
 };
 
 export default Process;
+
