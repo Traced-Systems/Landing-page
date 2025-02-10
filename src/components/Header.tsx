@@ -34,10 +34,12 @@ const Header = () => {
 
   return (
     <>
-      <MainHeader 
-        isScrolled={isScrolled} 
-        handleSheetOpen={handleSheetOpen} 
-      />
+      {!activeSheet ? (
+        <MainHeader 
+          isScrolled={isScrolled} 
+          handleSheetOpen={handleSheetOpen} 
+        />
+      ) : null}
 
       <IndustriesSheet 
         isOpen={activeSheet === 'industries'} 
