@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { Check } from 'lucide-react';
 import { Separator } from "@/components/ui/separator";
@@ -53,7 +54,7 @@ const Benefits = () => {
         <div className="flex flex-col md:flex-row items-start justify-between gap-16">
           <div className="w-full md:w-5/12">
             <img 
-              src="/lovable-uploads/83145e53-565d-473e-b0e3-62990415f253.png" 
+              src="/lovable-uploads/96f9bedc-23c9-439f-a0a6-225820086c01.png" 
               alt="Product Lifecycle Management" 
               className="w-full h-auto rounded-lg shadow-lg"
             />

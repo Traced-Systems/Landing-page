@@ -10,7 +10,7 @@ const DigitalPassport = () => {
           <div className="relative w-full">
             <div className="w-[475px] mx-auto">
               <img 
-                src="/lovable-uploads/d803ece5-54b9-4b8d-842e-37fdbb96443f.png" 
+                src="/lovable-uploads/973d7c66-1d01-4e1e-89ce-2dee7a7c3dae.png" 
                 alt="Digital Product Passport Interface showing mobile screens with product information" 
                 className="w-full h-auto"
               />

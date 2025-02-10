@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
@@ -9,19 +8,19 @@ const UseCases = () => {
       tag: 'Use Case',
       title: 'BLK DNM: Connected Fashion',
       description: 'BLK DNM has launched their \'Connected Fashion\' campaign, delivering the first collection of apparel embedded with...',
-      image: '/lovable-uploads/535e05ed-983b-46cd-b1a1-0a1a3f9099cf.png'
+      image: '/lovable-uploads/a4205a69-444a-4317-be96-d4751706d608.png'
     },
     {
       tag: 'Use Case',
       title: 'Battery Lifecycle Innovation',
       description: 'What if a battery\'s lifecycle routing left a verifiable trail? This pilot project, powered by a blockchain-based Digital Product Passport...',
-      image: '/lovable-uploads/ef84fb07-c652-498c-b93e-8e8317cd1247.png'
+      image: '/lovable-uploads/b834432e-5eff-46b8-972e-507a351c4a60.png'
     },
     {
       tag: 'Use Case',
       title: 'Be Our Next Use Case',
       description: 'Ready to innovate and comply with evolving legislation? Let\'s explore how the DPP framework can enhance customer experiences and drive circularity...',
-      image: '/lovable-uploads/e3d6c737-2148-455b-8ed7-f68d77e8b695.png'
+      image: '/lovable-uploads/c2f90225-bc21-4eee-8b0c-5d0ba0e94791.png'
     }
   ];
 
