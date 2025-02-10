@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Separator } from "@/components/ui/separator";
 
@@ -9,7 +10,7 @@ const DigitalPassport = () => {
           <div className="relative w-full">
             <div className="w-[475px] mx-auto">
               <img 
-                src="/lovable-uploads/6e6c6614-080d-4e0f-863d-9683878de713.png" 
+                src="/lovable-uploads/d803ece5-54b9-4b8d-842e-37fdbb96443f.png" 
                 alt="Digital Product Passport Interface showing mobile screens with product information" 
                 className="w-full h-auto"
               />

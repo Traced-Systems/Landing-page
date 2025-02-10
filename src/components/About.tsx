@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -27,7 +28,7 @@ const About = () => {
           
           <div className="relative">
             <img
-              src="/lovable-uploads/beb0e791-c147-4bc1-8cb1-a5f6e1d1219d.png"
+              src="/lovable-uploads/1d18330c-949f-4cc8-82f9-a78eb2ca5fc6.png"
               alt="Analytics Dashboard"
               className="w-full rounded-2xl"
             />

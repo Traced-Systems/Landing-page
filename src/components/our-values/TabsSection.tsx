@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -23,7 +24,12 @@ const TabsSection = () => {
             <TabsContent key={tab} value={tab} className="m-0 h-full absolute inset-0">
               <div className="relative h-full">
                 <img 
-                  src="/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png" 
+                  src={tab === "focus" 
+                    ? "/lovable-uploads/5f3a96ab-793d-4332-8f53-403309de85cf.png"
+                    : tab === "solution"
+                    ? "/lovable-uploads/82288ca1-a71b-4e6d-be31-fc4db3f8778d.png"
+                    : "/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png"
+                  }
                   alt={tab}
                   className="w-full h-full object-cover"
                 />
