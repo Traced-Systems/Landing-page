@@ -1,7 +1,16 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 
-const CTASection = () => {
+interface CTASectionProps {
+  children?: React.ReactNode;
+}
+
+const CTASection: React.FC<CTASectionProps> = ({ children }) => {
+  if (children) {
+    return <div className="px-8">{children}</div>;
+  }
+
   return (
     <div className="text-center mt-auto">
       <h3 className="text-xl text-gray-600 mb-2">From Source to Sustainability</h3>
