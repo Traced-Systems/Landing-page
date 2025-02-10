@@ -102,9 +102,9 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
                 delivery, we help you track, verify, and optimize every step of the journey.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
                 {valueChainItems.map((item, index) => (
-                  <div key={index} className="w-full max-w-[350px] mx-auto">
+                  <div key={index} className="w-full max-w-[240px] mx-auto">
                     <img 
                       src={item.image}
                       alt={item.title}
@@ -140,3 +140,4 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
 };
 
 export default TextilesSheet;
+
