@@ -8,11 +8,11 @@ interface CTASectionProps {
 
 const CTASection: React.FC<CTASectionProps> = ({ children }) => {
   if (children) {
-    return <div className="px-8">{children}</div>;
+    return <div className="px-12">{children}</div>;
   }
 
   return (
-    <div className="text-center mt-auto">
+    <div className="text-center mt-auto px-12">
       <h3 className="text-xl text-gray-600 mb-2">From Source to Sustainability</h3>
       <h2 className="text-3xl font-bold text-primary mb-4">Unified Traceability Platform</h2>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">

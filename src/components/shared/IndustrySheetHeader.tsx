@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -12,25 +13,16 @@ interface IndustrySheetHeaderProps {
 const IndustrySheetHeader = ({ title, description, imageSrc, onBack }: IndustrySheetHeaderProps) => {
   return (
     <>
-      <div 
-        className="relative w-full h-32 mb-12"
-        style={{
-          backgroundImage: 'url("/lovable-uploads/4187353b-b062-491f-b38c-eaae240654cd.png")',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          backgroundSize: '85% auto'
-        }}
-      />
+      <Button 
+        variant="ghost" 
+        onClick={onBack}
+        className="fixed left-4 top-4 z-50 hover:bg-gray-100 bg-white shadow-md flex items-center gap-2"
+      >
+        <ArrowLeft className="h-5 w-5" />
+        <span>Back</span>
+      </Button>
       
       <div className="flex items-center justify-between mb-12 relative bg-[#F9F9F9] p-8">
-        <Button 
-          variant="ghost" 
-          onClick={onBack}
-          className="absolute left-4 top-4 hover:bg-gray-100"
-        >
-          <ArrowLeft className="h-6 w-6" />
-        </Button>
-        
         <div className="w-full mt-12">
           <div className="mb-4">
             <h3 className="text-[#D4904E] text-lg mb-2">Industries</h3>

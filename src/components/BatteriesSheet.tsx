@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustrySheetHeader from './shared/IndustrySheetHeader';
@@ -52,7 +53,7 @@ const BatteriesSheet = ({ isOpen, onClose, onBack }: BatteriesSheetProps) => {
             </h2>
           </div>
 
-          <div className="px-8">
+          <div className="px-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               {cards.map((card, index) => (
                 <IndustrySheetCard
@@ -64,11 +65,11 @@ const BatteriesSheet = ({ isOpen, onClose, onBack }: BatteriesSheetProps) => {
               ))}
             </div>
 
-            <div className="mb-12">
+            <div className="mb-12 text-center">
               <h2 className="text-2xl font-bold text-primary mb-4">
                 Driving Collaborative Sustainability Across the Entire Value Chain
               </h2>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
                 Our digital passport system enables unprecedented transparency and traceability 
                 across your entire battery supply chain. From raw material sourcing to end-of-life 
                 recycling, we help you track, verify, and optimize every step of the journey.
