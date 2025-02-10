@@ -26,7 +26,7 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger 
-              className="text-base text-gray-600 hover:text-primary transition-colors bg-transparent [&>svg]:hidden"
+              className="text-base font-normal text-gray-600 hover:text-primary transition-colors bg-transparent hover:bg-transparent p-0 [&>svg]:hidden"
             >
               About Us
             </NavigationMenuTrigger>
