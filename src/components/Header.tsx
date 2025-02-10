@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import IndustriesSheet from './IndustriesSheet';
 import UseCasesSheet from './UseCasesSheet';
@@ -33,10 +34,12 @@ const Header = () => {
 
   return (
     <>
-      <MainHeader 
-        isScrolled={isScrolled || activeSheet !== null} 
-        handleSheetOpen={handleSheetOpen} 
-      />
+      {!activeSheet && (
+        <MainHeader 
+          isScrolled={isScrolled} 
+          handleSheetOpen={handleSheetOpen} 
+        />
+      )}
 
       {activeSheet && (
         <SheetHeader handleSheetOpen={handleSheetOpen} />
