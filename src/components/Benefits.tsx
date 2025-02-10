@@ -54,7 +54,7 @@ const Benefits = () => {
         <div className="flex flex-col md:flex-row items-start justify-between gap-16">
           <div className="w-full md:w-5/12">
             <img 
-              src="/lovable-uploads/96f9bedc-23c9-439f-a0a6-225820086c01.png" 
+              src="/lovable-uploads/c2aed4bf-1d30-4b1c-9a19-3f43ca653eb5.png" 
               alt="Product Lifecycle Management" 
               className="w-full h-auto rounded-lg shadow-lg"
             />

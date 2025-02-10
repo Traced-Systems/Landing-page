@@ -9,7 +9,7 @@ const Process = () => {
   const steps = [
     {
       title: 'Product Journey Monitoring',
-      icon: '/lovable-uploads/b9fbc8de-0622-4f18-898f-dc1c52bec5ae.png',
+      icon: '/lovable-uploads/b60f3f39-d0a4-4ebe-8881-42770c9f9b94.png',
       description: 'Our solution is designed to enhance traceability and transparency across global supply chains, thus promoting visibility and circularity in the entire value chain within any industry.',
     },
     {
