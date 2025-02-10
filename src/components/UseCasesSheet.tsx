@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-import { ArrowLeft } from 'lucide-react';
-import { Button } from './ui/button';
+import SheetBackButton from './shared/SheetBackButton';
 import AboutCTA from './shared/AboutCTA';
 import SheetBackgroundSection from './shared/SheetBackgroundSection';
 
@@ -36,6 +34,8 @@ const UseCasesSheet = ({ isOpen, onClose }: UseCasesSheetProps) => {
         side="right" 
         className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0"
       >
+        <SheetBackButton onBack={onClose} />
+
         <div className="h-full flex flex-col">
           <SheetBackgroundSection>
             <div className="pt-24 px-8">

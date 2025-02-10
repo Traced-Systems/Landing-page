@@ -1,13 +1,11 @@
-
 import React, { useState } from 'react';
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustryCard from './IndustryCard';
 import EURegulationsSection from './EURegulationsSection';
 import CTASection from './CTASection';
 import TextilesSheet from './TextilesSheet';
 import BatteriesSheet from './BatteriesSheet';
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import SheetBackButton from './shared/SheetBackButton';
 
 interface IndustriesSheetProps {
   isOpen: boolean;
@@ -51,13 +49,7 @@ const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
           side="right" 
           className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[999]"
         >
-          <Button 
-            variant="ghost" 
-            onClick={onClose}
-            className="fixed -left-12 top-4 hover:bg-gray-100 bg-white z-50 shadow-md"
-          >
-            <ArrowLeft className="h-6 w-6" />
-          </Button>
+          <SheetBackButton onBack={onClose} />
 
           <div className="h-full flex flex-col pt-20">
             <div className="relative mb-8 py-8 px-4">

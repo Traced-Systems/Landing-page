@@ -1,7 +1,6 @@
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import SheetBackButton from './shared/SheetBackButton';
 import AboutCTA from './shared/AboutCTA';
 import VisionHeader from './vision/VisionHeader';
 import KeyChallenges from './vision/KeyChallenges';
@@ -19,13 +18,7 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
         side="right" 
         className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] p-0"
       >
-        <Button 
-          variant="ghost" 
-          onClick={onClose}
-          className="fixed -left-12 top-4 hover:bg-gray-100 bg-white z-50 shadow-md"
-        >
-          <ArrowLeft className="h-6 w-6" />
-        </Button>
+        <SheetBackButton onBack={onClose} />
 
         <div className="h-full flex flex-col pt-20">
           <div className="px-8 space-y-16">

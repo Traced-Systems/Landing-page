@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-import { ArrowLeft } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Linkedin, Mail } from 'lucide-react';
+import SheetBackButton from './shared/SheetBackButton';
 
 interface ContactSheetProps {
   isOpen: boolean;
@@ -24,15 +23,9 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
         side="right" 
         className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl"
       >
-        <div className="h-full flex flex-col pt-16">
-          <Button 
-            variant="ghost" 
-            onClick={onClose}
-            className="absolute left-4 top-4 hover:bg-gray-100"
-          >
-            <ArrowLeft className="h-6 w-6" />
-          </Button>
+        <SheetBackButton onBack={onClose} />
 
+        <div className="h-full flex flex-col pt-16">
           <div className="text-center mb-16 relative px-4">
             <h1 className="text-4xl font-bold text-primary mb-4">Contact Us</h1>
             <h2 className="text-2xl font-semibold mb-8">Book a Demo</h2>
@@ -145,4 +138,3 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
 };
 
 export default ContactSheet;
-
