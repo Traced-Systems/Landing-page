@@ -15,7 +15,15 @@ interface IndustriesSheetProps {
 }
 
 const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
-  const [activeSheet, setActiveSheet] = useState<'industries' | 'textiles' | 'batteries' | null>(isOpen ? 'industries' : null);
+  const [activeSheet, setActiveSheet] = useState<'industries' | 'textiles' | 'batteries' | null>(null);
+
+  React.useEffect(() => {
+    if (isOpen) {
+      setActiveSheet('industries');
+    } else {
+      setActiveSheet(null);
+    }
+  }, [isOpen]);
 
   const handleTextilesClick = () => {
     setActiveSheet('textiles');
@@ -33,16 +41,12 @@ const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
     if (!open) {
       onClose();
       setActiveSheet(null);
-    } else {
-      setActiveSheet('industries');
     }
   };
 
-  const isIndustriesVisible = activeSheet === 'industries';
-
   return (
     <>
-      <Sheet open={isIndustriesVisible} onOpenChange={handleMainSheetToggle}>
+      <Sheet open={isOpen && activeSheet === 'industries'} onOpenChange={handleMainSheetToggle}>
         <SheetContent 
           side="right" 
           className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[999]"
@@ -56,15 +60,7 @@ const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
           </Button>
 
           <div className="h-full flex flex-col pt-20">
-            <div 
-              className="relative mb-8 py-8 px-4"
-              style={{
-                backgroundImage: 'url("/lovable-uploads/4187353b-b062-491f-b38c-eaae240654cd.png")',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
-                backgroundSize: '85% auto'
-              }}
-            >
+            <div className="relative mb-8 py-8 px-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
                   <h1 className="text-2xl font-semibold text-primary">Industries</h1>
