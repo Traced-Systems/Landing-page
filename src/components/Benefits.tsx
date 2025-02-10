@@ -73,7 +73,7 @@ const Benefits = () => {
               <h2 className="text-2xl md:text-3xl text-[#002A38] mb-8">
                 with Digital Product Passports
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-base text-gray-600 leading-relaxed">
                 The Trace Systems Digital Product Passport (DPP) is a game-changer for managing products from start to finish. 
                 Built on Chromia for enterprise, it offers a complete digital record that tracks a product's journey through its entire lifecycle.
               </p>

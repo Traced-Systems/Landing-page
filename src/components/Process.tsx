@@ -35,7 +35,7 @@ const Process = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-[#002A38] mb-4">
             How We Do It?
           </h2>
-          <p className="text-gray-600">
+          <p className="text-base text-gray-600">
             The DPP Solution supports EU & public authorities in monitoring sustainable practices.
           </p>
         </div>
@@ -113,4 +113,3 @@ const Process = () => {
 };
 
 export default Process;
-
