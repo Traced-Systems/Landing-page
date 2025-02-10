@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import IndustryCard from './IndustryCard';
@@ -6,7 +7,7 @@ import CTASection from './CTASection';
 import TextilesSheet from './TextilesSheet';
 import BatteriesSheet from './BatteriesSheet';
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "@/components/ui/icons";
+import { ArrowLeft } from "lucide-react";
 
 interface IndustriesSheetProps {
   isOpen: boolean;
