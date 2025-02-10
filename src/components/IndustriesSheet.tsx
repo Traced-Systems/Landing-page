@@ -38,9 +38,11 @@ const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
     }
   };
 
+  const isIndustriesVisible = activeSheet === 'industries';
+
   return (
     <>
-      <Sheet open={isOpen} onOpenChange={handleMainSheetToggle}>
+      <Sheet open={isIndustriesVisible} onOpenChange={handleMainSheetToggle}>
         <SheetContent 
           side="right" 
           className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[999]"
