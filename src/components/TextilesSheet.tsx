@@ -31,6 +31,33 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
     }
   ];
 
+  const valueChainItems = [
+    {
+      title: "Material Suppliers",
+      image: "/lovable-uploads/b9909e8a-e966-4e3c-b02a-76a8af0d8ff9.png",
+    },
+    {
+      title: "Manufacturers",
+      image: "/lovable-uploads/8377c4c7-04ad-4a5c-84c4-156e77bae080.png",
+    },
+    {
+      title: "Brands",
+      image: "/lovable-uploads/a573ee0f-f1c1-41a5-aa75-5cc16f34c7f7.png",
+    },
+    {
+      title: "Logistics & Retail",
+      image: "/lovable-uploads/d7a8b79a-12ba-4345-b97d-9ea4a42ab4f2.png",
+    },
+    {
+      title: "Consumers",
+      image: "/lovable-uploads/ada7eeee-d085-43cf-a1e5-7bb8a5cb193f.png",
+    },
+    {
+      title: "Circular Facilities",
+      image: "/lovable-uploads/c9ebed1f-6c72-47ae-a32f-1d84fc775cdb.png",
+    },
+  ];
+
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
       <SheetContent 
@@ -69,18 +96,33 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
               <h2 className="text-2xl font-bold text-primary mb-4">
                 Driving Collaborative Sustainability Across the Entire Value Chain
               </h2>
-              <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
+              <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
                 Our digital passport system enables unprecedented transparency and traceability 
                 across your entire textile supply chain. From raw material sourcing to final product 
                 delivery, we help you track, verify, and optimize every step of the journey.
               </p>
-              <img 
-                src="/lovable-uploads/0423a563-c9a2-4282-bf0c-15c8e7d41403.png"
-                alt="Textile Value Chain"
-                className="w-full max-w-4xl mx-auto mb-6 rounded-lg"
-              />
-              <Button className="bg-[#9b87f5] hover:bg-[#8b77e5] text-white px-8">
-                Learn More
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
+                {valueChainItems.map((item, index) => (
+                  <div key={index} className="w-full max-w-[350px] mx-auto">
+                    <img 
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-auto rounded-lg shadow-md"
+                    />
+                  </div>
+                ))}
+              </div>
+
+              <Button 
+                className="bg-[#FDFDFD] text-[#143A44] border-[1.5px] border-[#E1B382] rounded-full px-6 py-2 flex items-center gap-2 hover:bg-[#E1B382]/10 mx-auto"
+              >
+                Know more
+                <img 
+                  src="/lovable-uploads/5e409765-ccc7-4562-9b05-c46afe65a486.png"
+                  alt="arrow"
+                  className="w-4 h-4 object-contain"
+                />
               </Button>
             </div>
           </div>
