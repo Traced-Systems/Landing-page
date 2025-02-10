@@ -5,6 +5,8 @@ import EURegulationsSection from './EURegulationsSection';
 import CTASection from './CTASection';
 import TextilesSheet from './TextilesSheet';
 import BatteriesSheet from './BatteriesSheet';
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "@/components/ui/icons";
 
 interface IndustriesSheetProps {
   isOpen: boolean;
@@ -12,7 +14,7 @@ interface IndustriesSheetProps {
 }
 
 const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
-  const [activeSheet, setActiveSheet] = useState<'industries' | 'textiles' | 'batteries' | null>(null);
+  const [activeSheet, setActiveSheet] = useState<'industries' | 'textiles' | 'batteries' | null>(isOpen ? 'industries' : null);
 
   const handleTextilesClick = () => {
     setActiveSheet('textiles');
@@ -29,6 +31,9 @@ const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
   const handleMainSheetToggle = (open: boolean) => {
     if (!open) {
       onClose();
+      setActiveSheet(null);
+    } else {
+      setActiveSheet('industries');
     }
   };
 
@@ -37,10 +42,17 @@ const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
       <Sheet open={isOpen} onOpenChange={handleMainSheetToggle}>
         <SheetContent 
           side="right" 
-          className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl z-[999]"
+          className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[999]"
         >
+          <Button 
+            variant="ghost" 
+            onClick={onClose}
+            className="fixed -left-12 top-4 hover:bg-gray-100 bg-white z-50 shadow-md"
+          >
+            <ArrowLeft className="h-6 w-6" />
+          </Button>
+
           <div className="h-full flex flex-col pt-20">
-            {/* Top Section with Background */}
             <div 
               className="relative mb-8 py-8 px-4"
               style={{
@@ -57,14 +69,11 @@ const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
               </div>
             </div>
 
-            {/* Section Title */}
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-primary">Key Industries We Serve</h2>
             </div>
 
-            {/* Industry Cards */}
             <div className="grid md:grid-cols-2 gap-6 mb-12 items-start">
-              {/* Textiles Card - Interactive */}
               <div className="space-y-4">
                 <IndustryCard 
                   title="Textiles"
@@ -75,7 +84,6 @@ const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
                 />
               </div>
               
-              {/* Batteries Card - Interactive */}
               <div className="space-y-4">
                 <IndustryCard 
                   title="Batteries"
@@ -90,7 +98,6 @@ const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
             <EURegulationsSection />
             <CTASection />
             
-            {/* Bottom Spacing */}
             <div className="pb-[125px]"></div>
           </div>
         </SheetContent>
@@ -98,13 +105,13 @@ const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
 
       <TextilesSheet 
         isOpen={activeSheet === 'textiles'}
-        onClose={() => setActiveSheet(null)}
+        onClose={() => setActiveSheet('industries')}
         onBack={handleSheetClose}
       />
 
       <BatteriesSheet 
         isOpen={activeSheet === 'batteries'}
-        onClose={() => setActiveSheet(null)}
+        onClose={() => setActiveSheet('industries')}
         onBack={handleSheetClose}
       />
     </>

@@ -17,17 +17,17 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
     <Sheet open={isOpen} onOpenChange={onClose}>
       <SheetContent 
         side="right" 
-        className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l"
+        className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] p-0"
       >
-        <div className="h-full flex flex-col pt-20">
-          <Button 
-            variant="ghost" 
-            onClick={onClose}
-            className="absolute left-4 top-4 hover:bg-gray-100"
-          >
-            <ArrowLeft className="h-6 w-6" />
-          </Button>
+        <Button 
+          variant="ghost" 
+          onClick={onClose}
+          className="fixed -left-12 top-4 hover:bg-gray-100 bg-white z-50 shadow-md"
+        >
+          <ArrowLeft className="h-6 w-6" />
+        </Button>
 
+        <div className="h-full flex flex-col pt-20">
           <div className="px-8 space-y-16">
             <VisionHeader />
 
@@ -78,7 +78,9 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
 
             <KeyChallenges />
             <SuccessSection />
-            <AboutCTA onClose={onClose} />
+            <div className="w-full">
+              <AboutCTA onClose={onClose} />
+            </div>
           </div>
         </div>
       </SheetContent>
