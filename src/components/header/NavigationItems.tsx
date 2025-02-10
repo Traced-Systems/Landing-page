@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 
@@ -7,24 +8,26 @@ interface NavigationItemsProps {
 
 const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
   return (
-    <nav className="hidden md:flex items-center space-x-8 relative z-[1001]">
-      <a href="#" className="text-gray-600 hover:text-primary transition-colors">Home</a>
+    <nav className="hidden md:flex items-center space-x-10 relative z-[1001]">
+      <a href="#" className="text-base text-gray-600 hover:text-primary transition-colors">Home</a>
       <button 
         onClick={() => handleSheetOpen('industries')} 
-        className="text-gray-600 hover:text-primary transition-colors"
+        className="text-base text-gray-600 hover:text-primary transition-colors"
       >
         Industries
       </button>
       <button 
         onClick={() => handleSheetOpen('useCases')} 
-        className="text-gray-600 hover:text-primary transition-colors"
+        className="text-base text-gray-600 hover:text-primary transition-colors"
       >
         Use Cases
       </button>
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-gray-600 hover:text-primary transition-colors bg-transparent">
+            <NavigationMenuTrigger 
+              className="text-base text-gray-600 hover:text-primary transition-colors bg-transparent [&>svg]:hidden"
+            >
               About Us
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -52,10 +55,10 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <a href="#" className="text-gray-600 hover:text-primary transition-colors">Blog</a>
+      <a href="#" className="text-base text-gray-600 hover:text-primary transition-colors">Blog</a>
       <button 
         onClick={() => handleSheetOpen('contact')} 
-        className="text-gray-600 hover:text-primary transition-colors"
+        className="text-base text-gray-600 hover:text-primary transition-colors"
       >
         Contact Us
       </button>
