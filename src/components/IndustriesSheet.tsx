@@ -13,9 +13,10 @@ import SheetBackButton from './shared/SheetBackButton';
 interface IndustriesSheetProps {
   isOpen: boolean;
   onClose: () => void;
+  onBack?: () => void;  // Made onBack optional
 }
 
-const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
+const IndustriesSheet = ({ isOpen, onClose, onBack = onClose }: IndustriesSheetProps) => {
   const [activeSheet, setActiveSheet] = useState<'industries' | 'textiles' | 'batteries' | null>(null);
 
   React.useEffect(() => {
@@ -52,7 +53,7 @@ const IndustriesSheet = ({ isOpen, onClose }: IndustriesSheetProps) => {
           side="right" 
           className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[999]"
         >
-          <SheetBackButton onBack={onClose} />
+          <SheetBackButton onBack={onBack} />
 
           <div className="h-full flex flex-col pt-20">
             <div className="relative mb-8 py-8 px-4">

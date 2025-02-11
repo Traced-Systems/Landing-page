@@ -69,17 +69,13 @@ const Features = () => {
                 onClick={() => handleCardClick(feature.id)}
               >
                 <div className="relative w-full h-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  {/* Front of Card */}
                   <div className="absolute inset-0 [backface-visibility:hidden]">
-                    {/* Background Image */}
                     <div 
                       className="absolute inset-0 bg-cover bg-center"
                       style={{ backgroundImage: `url(${feature.image})` }}
                     />
                     
-                    {/* Content Container */}
                     <div className="absolute inset-0 p-6 flex flex-col justify-between">
-                      {/* Icon and Title */}
                       <div className="flex items-center space-x-2">
                         <img 
                           src={feature.icon} 
@@ -91,7 +87,6 @@ const Features = () => {
                         </div>
                       </div>
                       
-                      {/* Button Area */}
                       <div className="flex justify-end">
                         <div className="w-10 h-10 rounded-full bg-[#FEC6A1] flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300">
                           <ArrowRight className="w-5 h-5 text-white" />
@@ -100,10 +95,8 @@ const Features = () => {
                     </div>
                   </div>
 
-                  {/* Back of Card */}
                   <div className="absolute inset-0 bg-[#f7f7f7] [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-2xl shadow-lg">
                     <div className="absolute inset-0 p-6 flex flex-col justify-between">
-                      {/* Content */}
                       <div className="space-y-4">
                         <div className="flex items-center space-x-2">
                           <img 
@@ -120,7 +113,6 @@ const Features = () => {
                         </p>
                       </div>
                       
-                      {/* Know More Button */}
                       <div className="flex justify-end">
                         <div className="text-[#173A44] flex items-center gap-2">
                           Know More
