@@ -8,14 +8,15 @@ import Logo from './Logo';
 interface MainHeaderProps {
   isScrolled: boolean;
   handleSheetOpen: (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog') => void;
+  className?: string; // Added className as an optional prop
 }
 
-const MainHeader = ({ isScrolled, handleSheetOpen }: MainHeaderProps) => {
+const MainHeader = ({ isScrolled, handleSheetOpen, className }: MainHeaderProps) => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-[50] transition-all duration-300 ${
         isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
-      }`}
+      } ${className || ''}`}
     >
       <div className="container mx-auto relative">
         <div className="flex items-center h-16">
@@ -40,4 +41,3 @@ const MainHeader = ({ isScrolled, handleSheetOpen }: MainHeaderProps) => {
 };
 
 export default MainHeader;
-
