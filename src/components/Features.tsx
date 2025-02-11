@@ -14,21 +14,21 @@ const Features = () => {
       title: 'Textiles',
       description: 'Sustainable Fashion',
       image: '/lovable-uploads/7db51ad9-4f3d-4085-b9e9-2004e66476b4.png',
-      hoverContent: 'By tracking origin, durability, and recyclability, the DPP encourages circular practices—repairing, reusing, and recycling. It's a vital step toward reducing waste and achieving sustainability in the fashion and textile industries.',
+      hoverContent: "By tracking origin, durability, and recyclability, the DPP encourages circular practices—repairing, reusing, and recycling. It's a vital step toward reducing waste and achieving sustainability in the fashion and textile industries.",
     },
     {
       id: 'batteries-card',
       title: 'Batteries',
       description: 'Electric Vehicle Solutions',
       image: '/lovable-uploads/973d7c66-1d01-4e1e-89ce-2dee7a7c3dae.png',
-      hoverContent: 'As the demand for batteries grows, particularly in electric vehicles and renewable energy storage, the Digital Product Passport (DPP) ensures compliance with sustainability regulations, supporting industries in meeting environmental standards and driving eco-efficient innovations.',
+      hoverContent: "As the demand for batteries grows, particularly in electric vehicles and renewable energy storage, the Digital Product Passport (DPP) ensures compliance with sustainability regulations, supporting industries in meeting environmental standards and driving eco-efficient innovations.",
     },
     {
       id: 'espr-card',
       title: 'Supporting Sectors',
       description: 'Across EU Regulations',
       image: '/lovable-uploads/a4205a69-444a-4317-be96-d4751706d608.png',
-      hoverContent: 'Our Digital Product Passport (DPP) streamlines compliance for various industries, ensuring seamless adaptation to evolving EU regulations. From the Ecodesign for Sustainable Products Regulation (ESPR) to the Right to Repair (R2R) Framework and Circular Economy Legislation, we help businesses enhance transparency, improve sustainability, and stay ahead of legislative demands.',
+      hoverContent: "Our Digital Product Passport (DPP) streamlines compliance for various industries, ensuring seamless adaptation to evolving EU regulations. From the Ecodesign for Sustainable Products Regulation (ESPR) to the Right to Repair (R2R) Framework and Circular Economy Legislation, we help businesses enhance transparency, improve sustainability, and stay ahead of legislative demands.",
     },
   ];
 
