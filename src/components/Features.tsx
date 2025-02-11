@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { ArrowRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -10,21 +11,24 @@ const Features = () => {
   const features = [
     {
       id: 'textile-card',
-      title: 'Textile',
+      title: 'Textiles',
       description: 'Sustainable Fashion',
       image: '/lovable-uploads/7db51ad9-4f3d-4085-b9e9-2004e66476b4.png',
+      hoverContent: 'By tracking origin, durability, and recyclability, the DPP encourages circular practices—repairing, reusing, and recycling. It's a vital step toward reducing waste and achieving sustainability in the fashion and textile industries.',
     },
     {
       id: 'batteries-card',
       title: 'Batteries',
       description: 'Electric Vehicle Solutions',
       image: '/lovable-uploads/973d7c66-1d01-4e1e-89ce-2dee7a7c3dae.png',
+      hoverContent: 'As the demand for batteries grows, particularly in electric vehicles and renewable energy storage, the Digital Product Passport (DPP) ensures compliance with sustainability regulations, supporting industries in meeting environmental standards and driving eco-efficient innovations.',
     },
     {
       id: 'espr-card',
-      title: 'ESPR Compliant',
-      description: 'for all sectors',
+      title: 'Supporting Sectors',
+      description: 'Across EU Regulations',
       image: '/lovable-uploads/a4205a69-444a-4317-be96-d4751706d608.png',
+      hoverContent: 'Our Digital Product Passport (DPP) streamlines compliance for various industries, ensuring seamless adaptation to evolving EU regulations. From the Ecodesign for Sustainable Products Regulation (ESPR) to the Right to Repair (R2R) Framework and Circular Economy Legislation, we help businesses enhance transparency, improve sustainability, and stay ahead of legislative demands.',
     },
   ];
 
@@ -56,7 +60,7 @@ const Features = () => {
               <div
                 key={feature.id}
                 id={feature.id}
-                className="group relative h-[340px] rounded-2xl overflow-hidden cursor-pointer [perspective:1000px]"
+                className="group relative h-[340px] rounded-2xl overflow-hidden cursor-pointer [perspective:1000px] hover:scale-105 transition-transform duration-300"
                 onClick={() => handleCardClick(feature.id)}
               >
                 <div className="relative w-full h-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
@@ -70,7 +74,9 @@ const Features = () => {
                     
                     {/* Content Container */}
                     <div className="absolute inset-0 p-6 flex flex-col justify-between">
-                      <div />
+                      <div className="text-white text-2xl font-semibold">
+                        {feature.title}
+                      </div>
                       
                       {/* Button Area */}
                       <div className="flex justify-end">
@@ -84,16 +90,13 @@ const Features = () => {
                   {/* Back of Card */}
                   <div className="absolute inset-0 bg-gray-900/95 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-2xl">
                     <div className="absolute inset-0 p-6 flex flex-col justify-between">
-                      {/* Icon Placeholder */}
-                      <div className="w-12 h-12 rounded-full bg-white/10" />
-                      
                       {/* Content */}
-                      <div className="space-y-4 text-center">
+                      <div className="space-y-4">
                         <h3 className="text-2xl font-semibold text-white">
                           {feature.title}
                         </h3>
-                        <p className="text-white/90">
-                          {feature.description}
+                        <p className="text-white/90 text-sm leading-relaxed">
+                          {feature.hoverContent}
                         </p>
                       </div>
                       
