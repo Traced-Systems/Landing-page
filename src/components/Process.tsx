@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ChevronRight } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils";
 
 const Process = () => {
@@ -81,10 +81,10 @@ const Process = () => {
                 </p>
 
                 <div className={cn(
-                  "absolute right-6 bottom-0 transition-all duration-300",
+                  "absolute left-1/2 -translate-x-1/2 bottom-0 transition-all duration-300",
                   expandedCard === index ? "opacity-0" : "opacity-100"
                 )}>
-                  <ChevronRight className="text-[#002A38] w-6 h-6" />
+                  <ChevronDown className="text-[#002A38] w-6 h-6" />
                 </div>
               </div>
             </div>
