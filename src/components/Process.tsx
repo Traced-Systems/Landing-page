@@ -11,22 +11,22 @@ const Process = () => {
       title: 'Product Journey Monitoring',
       icon: '/lovable-uploads/product-journey-icon.png',
       bgImage: '/lovable-uploads/product journey card.png',
-      hoverImage: '/lovable-uploads/product-journey.png',
-      description: 'Our solution is designed to enhance traceability and transparency across global supply chains, thus promoting visibility and circularity in the entire value chain within any industry.',
+      hoverImage: '/lovable-uploads/ee6d411a-1926-4022-a0ed-241a805eab31.png',
+      description: 'Gain a complete, bird\'s-eye view of each product\'s lifecycle from raw material sourcing to later stages such as component reuse, resale, repair, recycling, or proper disposal. Our platform helps you track and manage every step to boost accountability and sustainability.',
     },
     {
       title: 'Value Chain Transparency',
       icon: '/lovable-uploads/value-chain-icon.png',
       bgImage: '/lovable-uploads/Value-chain-card.png',
       hoverImage: '/lovable-uploads/value-chain-hover.png',
-      description: 'Our service serves as a digital bridge, connecting all stakeholders in the supply chain ecosystem. By leveraging blockchain technology, we create an immutable and transparent record of every transaction, movement, and transformation of products as they journey from raw materials to finished goods.',
+      description: 'Ensure every participant in the value chain benefits from the right insights—while safeguarding sensitive information. Our Digital Product Passport encrypts proprietary data, granting access only to authorized stakeholders (like legislators or trusted partners). This selective transparency drives collaboration without compromising trade secrets.',
     },
     {
       title: 'Comprehensive Data Integration',
       icon: '/lovable-uploads/date integration icon.png',
       bgImage: '/lovable-uploads/data-integration-card.png',
       hoverImage: '/lovable-uploads/data-integration-hover.png',
-      description: 'We seamlessly integrate data from various sources through APIs, to create a holistic view of the entire supply chain.',
+      description: 'We seamlessly connect with your existing ERP and operational systems via flexible APIs. You decide which data to share, minimizing workflow disruption while creating a unified overview. It\'s an adaptable solution that lets you maintain control over your information.',
     },
   ];
 
@@ -52,31 +52,16 @@ const Process = () => {
               key={index}
               onClick={() => handleCardClick(index)}
               className={cn(
-                "relative rounded-2xl p-6 cursor-pointer transition-all duration-500 ease-in-out h-[400px] group",
+                "relative rounded-2xl p-6 cursor-pointer transition-all duration-500 ease-in-out bg-white",
                 "hover:shadow-[4px_4px_10px_0px_rgba(0,0,0,0.1),-4px_-4px_10px_0px_rgba(255,255,255,0.9)]",
-                {
-                  "shadow-[2px_2px_5px_0px_rgba(0,0,0,0.05),-2px_-2px_5px_0px_rgba(255,255,255,0.8)]": expandedCard !== index
-                }
+                expandedCard === index ? "h-auto" : "h-[280px]"
               )}
-              style={{
-                backgroundImage: `url(${expandedCard === index ? step.hoverImage : step.bgImage})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                transition: 'background-image 0.5s ease-in-out'
-              }}
             >
               <div className={cn(
-                "flex flex-col items-start relative h-full transition-all duration-500 ease-in-out",
+                "flex flex-col items-start relative transition-all duration-500 ease-in-out h-full",
                 expandedCard === index ? "opacity-100" : "opacity-100"
               )}>
-                <div 
-                  className={cn(
-                    "transition-all duration-500 ease-in-out bg-white rounded-full p-4",
-                    expandedCard === index 
-                      ? "w-16 h-16 mb-4" 
-                      : "w-16 h-16 mb-4"
-                  )}
-                >
+                <div className="w-16 h-16 mb-6 flex items-center justify-center">
                   <img 
                     src={step.icon} 
                     alt={step.title}
@@ -84,34 +69,23 @@ const Process = () => {
                   />
                 </div>
                 
-                <h3 
-                  className={cn(
-                    "text-xl font-semibold text-white transition-all duration-500 ease-in-out mb-4",
-                    expandedCard === index 
-                      ? "opacity-100" 
-                      : "opacity-100"
-                  )}
-                >
+                <h3 className="text-xl font-semibold text-[#002A38] mb-4">
                   {step.title}
                 </h3>
 
                 <p className={cn(
-                  "text-white text-sm transition-opacity duration-500",
-                  expandedCard === index ? "opacity-100" : "opacity-0"
+                  "text-[#4A5567] leading-relaxed transition-all duration-500",
+                  expandedCard === index ? "opacity-100" : "opacity-0 h-0"
                 )}>
                   {step.description}
                 </p>
 
-                {expandedCard !== index && (
-                  <div className="absolute bottom-4 left-6">
-                    <ChevronDown 
-                      className={cn(
-                        "text-white transition-transform duration-500",
-                        "transform hover:translate-y-1"
-                      )}
-                    />
-                  </div>
-                )}
+                <div className={cn(
+                  "absolute left-1/2 -translate-x-1/2 bottom-0 transition-all duration-300",
+                  expandedCard === index ? "opacity-0" : "opacity-100"
+                )}>
+                  <ChevronDown className="text-[#002A38] w-6 h-6" />
+                </div>
               </div>
             </div>
           ))}
@@ -122,3 +96,4 @@ const Process = () => {
 };
 
 export default Process;
+
