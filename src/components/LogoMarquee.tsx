@@ -1,4 +1,6 @@
+
 import React from "react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const LogoMarquee = () => {
   const logos = [
@@ -50,44 +52,42 @@ const LogoMarquee = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden bg-white">
-      <div className="relative py-12 z-10">
-        <div className="flex overflow-hidden">
-          <div
-            className="flex animate-infinite-scroll"
-            style={{
-              gap: "6rem",
-            }}
-          >
-            {[...logos, ...logos, ...logos].map((logo, index) => (
+    <div className="relative w-full">
+      <AspectRatio ratio={16 / 3}>
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/lovable-uploads/BGforBrands.png')",
+          }}
+        >
+          <div className="relative py-12 z-10">
+            <div className="flex overflow-hidden">
               <div
-                key={index}
-                className="flex items-center justify-center flex-shrink-0 w-32 h-16"
+                className="flex animate-infinite-scroll"
+                style={{
+                  gap: "6rem",
+                }}
               >
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-15 w-auto object-contain"
-                />
+                {[...logos, ...logos, ...logos].map((logo, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center justify-center flex-shrink-0 w-32 h-16"
+                  >
+                    <img
+                      src={logo.src}
+                      alt={logo.alt}
+                      className="h-15 w-auto object-contain"
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden z-0">
-        <svg
-          viewBox="0 0 1440 320"
-          className="w-full h-auto transform translate-y-1 rotate-180"
-          preserveAspectRatio="none"
-          style={{
-            filter: "drop-shadow(0 -2px 4px rgba(0,0,0,0.05))",
-            minHeight: "160px",
-          }}
-        ></svg>
-      </div>
+      </AspectRatio>
     </div>
   );
 };
 
 export default LogoMarquee;
+
