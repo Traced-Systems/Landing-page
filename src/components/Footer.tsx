@@ -6,7 +6,8 @@ const Footer = () => {
   return (
     <footer
       className="relative text-[#f2f1ee] py-20 w-full border-none m-0 
-             bg-[#173A44] md:bg-[#173A44] lg:bg-[#F2F1EE] lg:pt-[14%] px-12 md:px-16 lg:px-220"
+             bg-[#173A44] md:bg-[#173A44] lg:bg-[#F2F1EE] lg:pt-[11
+             %] px-12 md:px-16 lg:px-[220px]"
     >
       {/* Background Image - Only Visible on Large Screens */}
       <div
@@ -15,57 +16,40 @@ const Footer = () => {
           backgroundImage: "url('/lovable-uploads/BGfooter.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          opacity: 0.9, // Ensures background doesn’t overpower content
         }}
       ></div>
 
-      {/* Content (Ensures it's above the background) */}
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col space-y-8 lg:space-y-0 lg:flex-row lg:items-start lg:justify-between">
-          {/* Left Section */}
-          <div className="lg:w-1/3 space-y-4">
-            <h2 className="text-3xl font-light">Traced</h2>
-            <p className="text-sm leading-relaxed">
-              Traced Systems powered by Chromia is transforming industries with
-              blockchain-based digital product passports.
-            </p>
-          </div>
+      {/* Content Wrapper (Ensures Text is Visible) */}
+      <div className="container mx-auto px-4 relative z-10 lg:mt-12">
+        {/* First Section: "Traced" on the left, Socials on the right */}
+        <div className="flex justify-between items-center">
+          {/* Left - "Traced" */}
+          <h1 className="text-5xl font-bold text-[#f2f1ee] relative">Traced</h1>
 
-          {/* Center Section */}
-          <div className="text-center lg:w-1/3 flex flex-col items-center">
-            <Separator className="w-full mb-8 bg-white/20" />
-            <p className="text-sm mt-auto">
-              © 2025 Traced System. All rights reserved.
-            </p>
+          {/* Right - "Follow us" and Social Icons */}
+          <div className="flex items-center space-x-4 relative">
+            <span className="text-lg text-[#f2f1ee] ">Follow us</span>
+            <Twitter className="w-6 h-6 cursor-pointer text-[#f2f1ee] " />
+            <Linkedin className="w-6 h-6 cursor-pointer text-[#f2f1ee] " />
           </div>
+        </div>
 
-          {/* Right Section */}
-          <div className="lg:w-1/3 flex flex-col lg:items-end space-y-4">
-            <div className="space-y-2">
-              <p className="text-sm mb-2">Follow Us</p>
-              <div className="flex space-x-4">
-                <a
-                  href="#"
-                  className="hover:text-[#f2f1ee]/80 transition-colors"
-                  aria-label="Follow us on Twitter"
-                >
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-[#f2f1ee]/80 transition-colors"
-                  aria-label="Follow us on LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-            <a
-              href="#"
-              className="text-sm hover:text-[#f2f1ee]/80 transition-colors"
-            >
-              Privacy Policy
-            </a>
-          </div>
+        {/* Second Section: Thin Separator Line */}
+        <Separator className="my-8 bg-[#f2f1ee]  w-full h-[1px] relative" />
+
+        {/* Third Section: Footer Text and Copyright */}
+        <div className="flex justify-between items-center relative">
+          {/* Left - Description Text */}
+          <p className="text-base text-left text-[#f2f1ee]">
+            Traced Systems powered by Chromia is transforming industries with
+            blockchain-based digital product passports.
+          </p>
+
+          {/* Right - Copyright */}
+          <p className="text-xs text-right text-[#f2f1ee]">
+            © 2025 Traced System. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
