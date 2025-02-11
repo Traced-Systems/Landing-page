@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import NavigationItems from './NavigationItems';
@@ -11,7 +12,7 @@ interface SheetHeaderProps {
 const SheetHeader = ({ handleSheetOpen }: SheetHeaderProps) => {
   return (
     <header 
-      className="fixed top-0 left-0 right-0 z-[1002] bg-white shadow-md"
+      className="fixed top-0 left-0 right-0 z-[51] bg-white shadow-md"
     >
       <div className="container mx-auto relative">
         <div className="flex items-center h-16">

@@ -37,6 +37,7 @@ const Header = () => {
       <MainHeader 
         isScrolled={isScrolled} 
         handleSheetOpen={handleSheetOpen} 
+        className={activeSheet ? 'hidden' : ''}
       />
 
       <IndustriesSheet 
