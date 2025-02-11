@@ -11,7 +11,13 @@ const LogoMarquee = () => {
     { src: '/lovable-uploads/45d8cc67-b684-4ca7-9624-e6d9a50e450c.png', alt: 'Astar', className: 'h-8' },
     { src: '/lovable-uploads/bc8afa74-fc37-4f23-860b-8398744afb82.png', alt: 'Bonsai Technology', className: 'h-8' },
     { src: '/lovable-uploads/f598ac7e-9946-4f9f-97d4-155b5c8c69b9.png', alt: 'ChromaWay', className: 'h-8' },
-    { src: '/lovable-uploads/01614cba-7f9d-4249-91d3-dc6ccca62013.png', alt: 'Polkadot', className: 'h-8' }
+    { src: '/lovable-uploads/01614cba-7f9d-4249-91d3-dc6ccca62013.png', alt: 'Polkadot', className: 'h-8' },
+    { src: '/lovable-uploads/5c94b0f7-f120-441c-b444-27981375b6db.png', alt: 'BatteriRetur', className: 'h-8' },
+    { src: '/lovable-uploads/7d0b8c20-af74-4f1d-9ffd-e9167b84b41a.png', alt: 'Instagrid', className: 'h-8' },
+    { src: '/lovable-uploads/ad02a4f9-ff80-402b-b4ac-0668566280b8.png', alt: 'Bonsai Technology Updated', className: 'h-8' },
+    { src: '/lovable-uploads/2ca68699-9651-41a4-b9d0-4d6c9d3e5db8.png', alt: 'Chromia', className: 'h-8' },
+    { src: '/lovable-uploads/753dfd17-8b10-450a-9cd4-4f7e65018ac6.png', alt: 'ChromaWay Updated', className: 'h-8' },
+    { src: '/lovable-uploads/14cbbbde-7d87-4cb6-84e9-90eb31b3f5ff.png', alt: 'Doors', className: 'h-8' }
   ];
 
   return (
