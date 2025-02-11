@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const LogoMarquee = () => {
@@ -5,7 +6,12 @@ const LogoMarquee = () => {
     { src: '/lovable-uploads/872f4e62-69fe-401b-9c71-a0c2074f0690.png', alt: 'BLK DNM', className: 'h-8' },
     { src: '/lovable-uploads/53733f77-0c96-43ec-b9a3-8cfc7930500f.png', alt: 'Cling', className: 'h-8' },
     { src: '/lovable-uploads/447b6eb2-3642-4845-80fd-9da6b5535c71.png', alt: 'EBSI', className: 'h-8' },
-    { src: '/lovable-uploads/bfe45d2d-c864-4265-9fd4-f2f7a5535d20.png', alt: 'European Commission', className: 'h-8' }
+    { src: '/lovable-uploads/bfe45d2d-c864-4265-9fd4-f2f7a5535d20.png', alt: 'European Commission', className: 'h-8' },
+    { src: '/lovable-uploads/802e5775-d45b-44c2-981c-c56dc1960493.png', alt: 'Acala', className: 'h-8' },
+    { src: '/lovable-uploads/45d8cc67-b684-4ca7-9624-e6d9a50e450c.png', alt: 'Astar', className: 'h-8' },
+    { src: '/lovable-uploads/bc8afa74-fc37-4f23-860b-8398744afb82.png', alt: 'Bonsai Technology', className: 'h-8' },
+    { src: '/lovable-uploads/f598ac7e-9946-4f9f-97d4-155b5c8c69b9.png', alt: 'ChromaWay', className: 'h-8' },
+    { src: '/lovable-uploads/01614cba-7f9d-4249-91d3-dc6ccca62013.png', alt: 'Polkadot', className: 'h-8' }
   ];
 
   return (
