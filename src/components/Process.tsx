@@ -58,7 +58,7 @@ const Process = () => {
               )}
             >
               <div className={cn(
-                "flex flex-col items-start relative transition-all duration-500 ease-in-out",
+                "flex flex-col items-start relative transition-all duration-500 ease-in-out h-full",
                 expandedCard === index ? "opacity-100" : "opacity-100"
               )}>
                 <div className="w-16 h-16 mb-6 flex items-center justify-center">
@@ -81,7 +81,7 @@ const Process = () => {
                 </p>
 
                 <div className={cn(
-                  "absolute right-0 bottom-0 transition-all duration-300",
+                  "absolute right-6 bottom-0 transition-all duration-300",
                   expandedCard === index ? "opacity-0" : "opacity-100"
                 )}>
                   <ChevronRight className="text-[#002A38] w-6 h-6" />
