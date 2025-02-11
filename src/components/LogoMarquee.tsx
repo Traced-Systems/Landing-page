@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const LogoMarquee = () => {
@@ -10,10 +11,10 @@ const LogoMarquee = () => {
     { src: '/lovable-uploads/f598ac7e-9946-4f9f-97d4-155b5c8c69b9.png', alt: 'ChromaWay', className: 'h-8' },
     { src: '/lovable-uploads/5c94b0f7-f120-441c-b444-27981375b6db.png', alt: 'BatteriRetur', className: 'h-8' },
     { src: '/lovable-uploads/7d0b8c20-af74-4f1d-9ffd-e9167b84b41a.png', alt: 'Instagrid', className: 'h-8' },
-    { src: '/lovable-uploads/ad02a4f9-ff80-402b-b4ac-0668566280b8.png', alt: 'Bonsai Technology Updated', className: 'h-8' },
-    { src: '/lovable-uploads/2ca68699-9651-41a4-b9d0-4d6c9d3e5db8.png', alt: 'Chromia', className: 'h-8' },
-    { src: '/lovable-uploads/753dfd17-8b10-450a-9cd4-4f7e65018ac6.png', alt: 'ChromaWay Updated', className: 'h-8' },
-    { src: '/lovable-uploads/14cbbbde-7d87-4cb6-84e9-90eb31b3f5ff.png', alt: 'Doors', className: 'h-8' }
+    { src: '/lovable-uploads/2071f390-3376-41c9-8cbc-18f014beee68.png', alt: 'BatteriRetur Updated', className: 'h-8' },
+    { src: '/lovable-uploads/bf4e9036-3a2e-4cf1-b119-6d0164e9a37a.png', alt: 'Instagrid Updated', className: 'h-8' },
+    { src: '/lovable-uploads/df6ee42e-2ed3-4ac0-813d-acddb23c80da.png', alt: 'Bonsai New', className: 'h-8' },
+    { src: '/lovable-uploads/caf46b2d-6ab3-4727-82f8-3429f3bc5f77.png', alt: 'Chromia New', className: 'h-8' }
   ];
 
   return (
@@ -74,3 +75,4 @@ const LogoMarquee = () => {
 };
 
 export default LogoMarquee;
+
