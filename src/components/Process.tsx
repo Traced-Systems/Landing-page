@@ -61,7 +61,7 @@ const Process = () => {
                 "flex flex-col items-start relative transition-all duration-500 ease-in-out",
                 expandedCard === index ? "opacity-100" : "opacity-100"
               )}>
-                <div className="w-16 h-16 mb-6">
+                <div className="w-16 h-16 mb-6 flex items-center justify-center">
                   <img 
                     src={step.icon} 
                     alt={step.title}
@@ -96,3 +96,4 @@ const Process = () => {
 };
 
 export default Process;
+
