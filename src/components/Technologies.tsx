@@ -1,7 +1,12 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 
 const Technologies = () => {
+  const handleKnowMoreClick = () => {
+    window.open('https://chromia.com/', '_blank');
+  };
+
   return (
     <section className="py-20" style={{ backgroundColor: '#f2f1ee' }}>
       <div className="container mx-auto px-4">
@@ -13,7 +18,11 @@ const Technologies = () => {
             <p className="text-gray-600 leading-relaxed">
               Chromia merges the strengths of relational databases with blockchain, offering direct on-chain queries, lightning-fast read/write operations, and data indexing. This innovative approach simplifies complex data management and opens up new possibilities for decentralized applications making it an ideal engine behind DPPs.
             </p>
-            <Button variant="secondary" className="rounded-full">
+            <Button 
+              variant="secondary" 
+              className="rounded-full"
+              onClick={handleKnowMoreClick}
+            >
               Know More
             </Button>
           </div>

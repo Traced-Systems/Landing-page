@@ -1,9 +1,12 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import OurValuesSheet from './OurValuesSheet';
 
 const About = () => {
+  const [isValuesOpen, setIsValuesOpen] = useState(false);
+
   return (
     <section className="py-20" style={{ backgroundColor: '#F2F1EE' }}>
       <div className="container mx-auto px-4">
@@ -21,7 +24,11 @@ const About = () => {
             <p className="text-gray-600 leading-relaxed">
               Today, Traced Systems is more than just a digital record or a platform for tracking product lifecycles. We represent the culmination of years of dedicated research, cutting-edge technology, and a commitment to sustainability and compliance by leveraging the power of Chromia technology.
             </p>
-            <Button variant="secondary" className="rounded-full">
+            <Button 
+              variant="secondary" 
+              className="rounded-full"
+              onClick={() => setIsValuesOpen(true)}
+            >
               Know More
             </Button>
           </div>
@@ -35,6 +42,11 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      <OurValuesSheet 
+        isOpen={isValuesOpen}
+        onClose={() => setIsValuesOpen(false)}
+      />
     </section>
   );
 };

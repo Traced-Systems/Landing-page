@@ -1,7 +1,11 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
+import BlogSheet from './BlogSheet';
 
 const Blog = () => {
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+  
   const blogPosts = [
     {
       title: "All Steps to follow and all angles need",
@@ -48,11 +52,20 @@ const Blog = () => {
         </div>
 
         <div className="flex justify-center">
-          <Button variant="outline" className="px-8">
+          <Button 
+            variant="outline" 
+            className="px-8"
+            onClick={() => setIsSheetOpen(true)}
+          >
             Show More
           </Button>
         </div>
       </div>
+
+      <BlogSheet 
+        isOpen={isSheetOpen}
+        onClose={() => setIsSheetOpen(false)}
+      />
     </section>
   );
 };

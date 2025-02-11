@@ -1,12 +1,12 @@
-
 import React, { useState } from 'react';
 import { ArrowRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import TextilesSheet from './TextilesSheet';
 import BatteriesSheet from './BatteriesSheet';
+import IndustriesSheet from './IndustriesSheet';
 
 const Features = () => {
-  const [activeSheet, setActiveSheet] = useState<'textiles' | 'batteries' | null>(null);
+  const [activeSheet, setActiveSheet] = useState<'textiles' | 'batteries' | 'industries' | null>(null);
 
   const features = [
     {
@@ -40,6 +40,8 @@ const Features = () => {
       setActiveSheet('textiles');
     } else if (id === 'batteries-card') {
       setActiveSheet('batteries');
+    } else if (id === 'espr-card') {
+      setActiveSheet('industries');
     }
   };
 
@@ -145,9 +147,14 @@ const Features = () => {
         onClose={handleSheetClose}
         onBack={handleSheetClose}
       />
+
+      <IndustriesSheet 
+        isOpen={activeSheet === 'industries'}
+        onClose={handleSheetClose}
+        onBack={handleSheetClose}
+      />
     </>
   );
 };
 
 export default Features;
-
