@@ -1,15 +1,16 @@
-import React from 'react';
-import { Twitter, Linkedin } from 'lucide-react';
+import React from "react";
+import { Twitter, Linkedin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
   return (
-    <footer 
-      className="relative text-[#f2f1ee] py-20"
+    <footer
+      className="relative text-[#f2f1ee] py-20 w-full bg-[#F2F1EE] border-none m-0"
       style={{
-        backgroundImage: "url('/lovable-uploads/f7986a43-8f10-409f-a344-214e743189a1.png')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        paddingTop: "12%",
+        backgroundImage: "url('/lovable-uploads/BGfooter.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       <div className="container mx-auto px-4">
@@ -18,7 +19,8 @@ const Footer = () => {
           <div className="lg:w-1/3 space-y-4">
             <h2 className="text-3xl font-light">Traced</h2>
             <p className="text-sm leading-relaxed">
-              Traced Systems powered by Chromia is transforming industries with blockchain-based digital product passports.
+              Traced Systems powered by Chromia is transforming industries with
+              blockchain-based digital product passports.
             </p>
           </div>
 
@@ -35,15 +37,15 @@ const Footer = () => {
             <div className="space-y-2">
               <p className="text-sm mb-2">Follow Us</p>
               <div className="flex space-x-4">
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="hover:text-[#f2f1ee]/80 transition-colors"
                   aria-label="Follow us on Twitter"
                 >
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="hover:text-[#f2f1ee]/80 transition-colors"
                   aria-label="Follow us on LinkedIn"
                 >
@@ -51,8 +53,8 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <a 
-              href="#" 
+            <a
+              href="#"
               className="text-sm hover:text-[#f2f1ee]/80 transition-colors"
             >
               Privacy Policy
