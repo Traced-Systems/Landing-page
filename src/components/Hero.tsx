@@ -33,12 +33,12 @@ const Hero = () => {
             </div>
 
             <div className="flex gap-4">
-              <Button className="bg-white border-2 border-gray-200 text-gray-800 hover:bg-gray-50 rounded-full px-8">
+              <Button className="bg-[#E4AC70] hover:bg-[#E6964F] text-white rounded-full px-8 border-none shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.5)]">
                 Get in Touch
               </Button>
-              <Button className="bg-[#F4A261] hover:bg-[#E76F51] text-white rounded-full px-8 border-none">
+              {/* <Button className="bg-[#F4A261] hover:bg-[#E76F51] text-white rounded-full px-8 border-none">
                 Book Demo
-              </Button>
+              </Button> */}
             </div>
           </div>
 
