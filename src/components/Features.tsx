@@ -93,8 +93,8 @@ const Features = () => {
                       </div>
 
                       <div className="flex justify-end">
-                        <div className="w-10 h-10 rounded-full bg-[#E4AC70] flex items-center justify-center hover:scale-110 shadow-lg hover:shadow-xl transition-all duration-300">
-                          <div className="w-2.5 h-2.5 border-r-2 border-t-2 border-white transform rotate-45 mr-1"></div>
+                        <div className="w-10 h-10 rounded-full bg-[#FEC6A1] flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-300">
+                          <ArrowRight className="w-5 h-5 text-white" />
                         </div>
                       </div>
                     </div>
