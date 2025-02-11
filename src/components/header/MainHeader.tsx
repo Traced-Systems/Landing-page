@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import NavigationItems from './NavigationItems';
@@ -6,7 +7,7 @@ import Logo from './Logo';
 
 interface MainHeaderProps {
   isScrolled: boolean;
-  handleSheetOpen: (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people') => void;
+  handleSheetOpen: (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog') => void;
 }
 
 const MainHeader = ({ isScrolled, handleSheetOpen }: MainHeaderProps) => {

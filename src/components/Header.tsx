@@ -6,12 +6,12 @@ import ContactSheet from './ContactSheet';
 import OurValuesSheet from './OurValuesSheet';
 import OurVisionSheet from './OurVisionSheet';
 import OurPeopleSheet from './OurPeopleSheet';
+import BlogSheet from './BlogSheet';
 import MainHeader from './header/MainHeader';
-import SheetHeader from './header/SheetHeader';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSheet, setActiveSheet] = useState<'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | null>(null);
+  const [activeSheet, setActiveSheet] = useState<'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog' | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +24,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSheetOpen = (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people') => {
+  const handleSheetOpen = (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog') => {
     setActiveSheet(sheet);
   };
 
@@ -34,12 +34,10 @@ const Header = () => {
 
   return (
     <>
-      {!activeSheet ? (
-        <MainHeader 
-          isScrolled={isScrolled} 
-          handleSheetOpen={handleSheetOpen} 
-        />
-      ) : null}
+      <MainHeader 
+        isScrolled={isScrolled} 
+        handleSheetOpen={handleSheetOpen} 
+      />
 
       <IndustriesSheet 
         isOpen={activeSheet === 'industries'} 
@@ -63,6 +61,10 @@ const Header = () => {
       />
       <OurPeopleSheet
         isOpen={activeSheet === 'people'}
+        onClose={handleSheetClose}
+      />
+      <BlogSheet
+        isOpen={activeSheet === 'blog'}
         onClose={handleSheetClose}
       />
     </>

@@ -3,7 +3,7 @@ import React from 'react';
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 
 interface NavigationItemsProps {
-  handleSheetOpen: (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people') => void;
+  handleSheetOpen: (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog') => void;
 }
 
 const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
@@ -55,7 +55,12 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <a href="#" className="text-base text-gray-600 hover:text-primary transition-colors">Blog</a>
+      <button 
+        onClick={() => handleSheetOpen('blog')} 
+        className="text-base text-gray-600 hover:text-primary transition-colors"
+      >
+        Blog
+      </button>
       <button 
         onClick={() => handleSheetOpen('contact')} 
         className="text-base text-gray-600 hover:text-primary transition-colors"
