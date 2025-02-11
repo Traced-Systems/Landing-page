@@ -11,7 +11,7 @@ const Process = () => {
       title: 'Product Journey Monitoring',
       icon: '/lovable-uploads/product-journey-icon.png',
       bgImage: '/lovable-uploads/product journey card.png',
-      hoverImage: '/lovable-uploads/product-journey.png',
+      hoverImage: '/lovable-uploads/ee6d411a-1926-4022-a0ed-241a805eab31.png',
       description: 'Gain a complete, bird\'s-eye view of each product\'s lifecycle from raw material sourcing to later stages such as component reuse, resale, repair, recycling, or proper disposal. Our platform helps you track and manage every step to boost accountability and sustainability.',
     },
     {
