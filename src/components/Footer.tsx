@@ -5,15 +5,21 @@ import { Separator } from "@/components/ui/separator";
 const Footer = () => {
   return (
     <footer
-      className="relative text-[#f2f1ee] py-20 w-full bg-[#F2F1EE] border-none m-0"
-      style={{
-        paddingTop: "12%",
-        backgroundImage: "url('/lovable-uploads/BGfooter.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="relative text-[#f2f1ee] py-20 w-full border-none m-0 
+             bg-[#173A44] md:bg-[#173A44] lg:bg-[#F2F1EE] lg:pt-[14%] px-12 md:px-16 lg:px-220"
     >
-      <div className="container mx-auto px-4">
+      {/* Background Image - Only Visible on Large Screens */}
+      <div
+        className="absolute inset-0 hidden lg:block"
+        style={{
+          backgroundImage: "url('/lovable-uploads/BGfooter.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      ></div>
+
+      {/* Content (Ensures it's above the background) */}
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col space-y-8 lg:space-y-0 lg:flex-row lg:items-start lg:justify-between">
           {/* Left Section */}
           <div className="lg:w-1/3 space-y-4">
