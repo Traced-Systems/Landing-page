@@ -50,15 +50,22 @@ const LogoMarquee = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden bg-white">
-      <div className="relative py-12 z-10">
-        <div className="flex overflow-hidden">
-          <div
-            className="flex animate-infinite-scroll"
-            style={{
-              gap: "6rem",
-            }}
-          >
+    <div className="relative w-full" style={{ paddingTop: "16.8%" }}>
+      {/* 19.58% = 282 / 1440 * 100 to maintain aspect ratio */}
+
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-[url('/lovable-uploads/BGforBrands.png')] bg-cover bg-center"
+        style={{
+          height: "100%",
+          width: "auto", // Fixed width
+        }}
+      ></div>
+
+      {/* Content Layer */}
+      <div className="absolute inset-0 flex items-center justify-center pb-8">
+        <div className="flex overflow-hidden bg-[#F4F3F0]">
+          <div className="flex animate-infinite-scroll" style={{ gap: "6rem" }}>
             {[...logos, ...logos, ...logos].map((logo, index) => (
               <div
                 key={index}
@@ -67,24 +74,12 @@ const LogoMarquee = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-15 w-auto object-contain"
+                  className="h-16 w-auto object-contain"
                 />
               </div>
             ))}
           </div>
         </div>
-      </div>
-
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden z-0">
-        <svg
-          viewBox="0 0 1440 320"
-          className="w-full h-auto transform translate-y-1 rotate-180"
-          preserveAspectRatio="none"
-          style={{
-            filter: "drop-shadow(0 -2px 4px rgba(0,0,0,0.05))",
-            minHeight: "160px",
-          }}
-        ></svg>
       </div>
     </div>
   );
