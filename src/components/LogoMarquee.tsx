@@ -64,7 +64,7 @@ const LogoMarquee = () => {
 
       {/* Content Layer */}
       <div className="absolute inset-0 flex items-center justify-center pb-8">
-        <div className="flex overflow-hidden bg-[#F4F3F0]">
+        <div className="flex overflow-hidden mb-14 bg-[rgba(242,241,238,0.9)]">
           <div className="flex animate-infinite-scroll" style={{ gap: "6rem" }}>
             {[...logos, ...logos, ...logos].map((logo, index) => (
               <div
