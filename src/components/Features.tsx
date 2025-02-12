@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import TextilesSheet from "./TextilesSheet";
 import BatteriesSheet from "./BatteriesSheet";
 import IndustriesSheet from "./IndustriesSheet";
+import { ChevronRight } from "lucide-react";
 
 const Features = () => {
   const [activeSheet, setActiveSheet] = useState<
@@ -105,7 +106,7 @@ const Features = () => {
                           <img
                             src={feature.icon}
                             alt={feature.title}
-                            className="w-6 h-6"
+                            className="w-15 h-12"
                           />
                           <h3 className="text-2xl font-semibold text-[#173A44]">
                             {feature.title}
@@ -117,9 +118,9 @@ const Features = () => {
                       </div>
 
                       <div className="flex justify-end">
-                        <div className="text-[#173A44] flex items-center gap-2">
+                        <div className="text-[#D4904E] text-sm flex items-center gap-1">
                           Know More
-                          <ArrowRight className="w-5 h-5" />
+                          <ChevronRight className="text-[#E1B382] w-5 h-5" />
                         </div>
                       </div>
                     </div>
