@@ -21,8 +21,8 @@ const UseCasesSheet = ({ isOpen, onClose }: UseCasesSheetProps) => {
     },
     {
       title: "Battery Lifecycle Innovation",
-      description: "What if a battery's lifecycle routing left a verifiable trail? This pilot project, powered by a blockchain-based Digital Product Passport...",
-      image: "/lovable-uploads/efedcb76-b69e-4a52-8689-41020d02ede5.png",
+      description: "What if a battery's history could stay with it until the end of its life? When batteries reach this stage, understanding their journey - where they've been, what they've been through, and their final destination - can be surprisingly challenging...",
+      image: "/lovable-uploads/pilot.png",
       fullContent: {
         title: "Completed DPP pilot project between Cling Systems, Traced Systems, Instagrid & Batteriretur",
         authorIcon: "/lovable-uploads/8a070271-5402-4465-91d1-3ad9ddf99fb4.png",

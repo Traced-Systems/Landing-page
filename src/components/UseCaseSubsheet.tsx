@@ -39,7 +39,7 @@ const UseCaseSubsheet = ({ isOpen, onClose, useCase }: UseCaseSubsheetProps) => 
                 <>
                   <div className="flex items-center gap-2 mb-6">
                     <img 
-                      src={useCase.fullContent.authorIcon}
+                      src="/lovable-uploads/5ce2f433-ac13-4162-97af-4ed813cff152.png"
                       alt="Traced Systems"
                       className="w-6 h-6"
                     />
