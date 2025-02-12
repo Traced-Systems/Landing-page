@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Button } from "@/components/ui/button";
+import StyledButton from '../ui/styled-button';
 
 interface IndustrySheetCTAProps {
   title: string;
@@ -9,18 +9,18 @@ interface IndustrySheetCTAProps {
 
 const IndustrySheetCTA = ({ title, description }: IndustrySheetCTAProps) => {
   return (
-    <div className="w-full bg-[#F2F1EE] -mx-6">
-      <div className="max-w-7xl mx-auto px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-8">
-        <div className="flex-grow max-w-2xl">
+    <div className="w-full bg-[#F2F1EE]">
+      <div className="max-w-7xl mx-auto px-8 py-12 flex flex-col items-center justify-center text-center">
+        <div className="max-w-2xl mx-auto">
           <h3 className="text-2xl font-bold text-primary mb-4">
             {title}
           </h3>
           <p className="text-gray-600 mb-6">{description}</p>
-          <Button className="bg-[#9b87f5] hover:bg-[#8b77e5] text-white px-8">
+          <StyledButton>
             Book Demo
-          </Button>
+          </StyledButton>
         </div>
-        <div className="w-full md:w-1/3 text-center">
+        <div className="w-full md:w-1/3 text-center mt-8">
           <picture>
             <source 
               media="(min-width: 768px)" 
@@ -32,7 +32,6 @@ const IndustrySheetCTA = ({ title, description }: IndustrySheetCTAProps) => {
               className="w-48 md:w-full h-auto rounded-lg shadow-lg object-cover mx-auto"
             />
           </picture>
-          {/* Mobile-only text */}
           <div className="block md:hidden mt-4">
             <h3 className="font-bold text-lg text-primary">David Dolhomut</h3>
             <p className="text-gray-600">Head of Partnerships & Business Developer</p>

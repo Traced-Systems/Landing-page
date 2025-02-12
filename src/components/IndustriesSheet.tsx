@@ -1,14 +1,12 @@
-
 import React, { useState } from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
 import IndustryCard from './IndustryCard';
 import EURegulationsSection from './EURegulationsSection';
 import CTASection from './CTASection';
 import TextilesSheet from './TextilesSheet';
 import BatteriesSheet from './BatteriesSheet';
 import SheetBackButton from './shared/SheetBackButton';
+import StyledButton from './ui/styled-button';
 
 interface IndustriesSheetProps {
   isOpen: boolean;
@@ -57,10 +55,8 @@ const IndustriesSheet = ({ isOpen, onClose, onBack = onClose }: IndustriesSheetP
 
           <div className="h-full flex flex-col pt-20">
             <div className="relative mb-8 py-8 px-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <h1 className="text-2xl font-semibold text-primary">Industries</h1>
-                </div>
+              <div className="flex items-center justify-center">
+                <h1 className="text-2xl font-semibold text-primary">Industries</h1>
               </div>
             </div>
 
@@ -103,9 +99,9 @@ const IndustriesSheet = ({ isOpen, onClose, onBack = onClose }: IndustriesSheetP
                   alt="Unified Platform"
                   className="w-full max-w-4xl mx-auto mb-6 rounded-lg"
                 />
-                <Button className="bg-[#9b87f5] hover:bg-[#8b77e5] text-white px-8">
+                <StyledButton>
                   Learn More
-                </Button>
+                </StyledButton>
               </div>
             </CTASection>
             
