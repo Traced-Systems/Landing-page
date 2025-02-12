@@ -68,7 +68,7 @@ const Benefits = () => {
                 <h3 className="text-xl text-[#1E293B]">
                   Elevating Product Lifecycle Management with
                 </h3>
-                <h2 className="text-3xl font-bold text-[#1E293B]">
+                <h2 className="text-3xl font-medium text-[#1E293B]">
                   Digital Product Passports
                 </h2>
               </div>
@@ -87,7 +87,7 @@ const Benefits = () => {
                 <div key={index} className="flex items-start space-x-4">
                   <div className="flex-shrink-0 mt-0">
                     <div className="inline-flex items-center justify-center w-4 h-4 bg-[#E4AC70] rounded-full">
-                      <Check className="w-3 h-3 font-bold text-[#ffffff]" />
+                      <Check className="w-3 h-3 font-medium text-[#ffffff]" />
                     </div>
                   </div>
                   <div className="flex-1">

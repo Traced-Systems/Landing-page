@@ -12,7 +12,7 @@ const Technologies = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">
+            <h2 className="text-3xl md:text-4xl font-medium text-primary">
               What technologies are behind DPP?
             </h2>
             <p className="text-gray-600 leading-relaxed">
@@ -25,7 +25,7 @@ const Technologies = () => {
             </p>
             <Button
               variant="secondary"
-              className="rounded-full border-2 border-[#E4AC70] bg-[#F2F1EE] text-[#143A44] flex items-center gap-2 pl-7 pr-6 hover:bg-[#E6E5E0]"
+              className="rounded-full border-2 border-[#E4AC70] bg-[#F2F1EE] text-[#143A44] flex items-center gap-2 pl-7 pr-6 hover:bg-[#EEEADF]"
               onClick={handleKnowMoreClick}
             >
               Know More

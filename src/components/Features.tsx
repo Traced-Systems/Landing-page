@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -19,7 +18,8 @@ const Features = () => {
       description: "Sustainable Fashion",
       image: "/lovable-uploads/7db51ad9-4f3d-4085-b9e9-2004e66476b4.png",
       icon: "/lovable-uploads/LogoTextiles.png",
-      hoverContent: "By tracking origin, durability, and recyclability, the DPP encourages circular practices—repairing, reusing, and recycling. It's a vital step toward reducing waste and achieving sustainability in the fashion and textile industries."
+      hoverContent:
+        "By tracking origin, durability, and recyclability, the DPP encourages circular practices—repairing, reusing, and recycling. It's a vital step toward reducing waste and achieving sustainability in the fashion and textile industries.",
     },
     {
       id: "batteries-card",
@@ -27,7 +27,8 @@ const Features = () => {
       description: "Electric Vehicle Solutions",
       image: "/lovable-uploads/973d7c66-1d01-4e1e-89ce-2dee7a7c3dae.png",
       icon: "/lovable-uploads/LogoBatteries.png",
-      hoverContent: "As the demand for batteries grows, particularly in electric vehicles and renewable energy storage, the Digital Product Passport (DPP) ensures compliance with sustainability regulations, supporting industries in meeting environmental standards and driving eco-efficient innovations."
+      hoverContent:
+        "As the demand for batteries grows, particularly in electric vehicles and renewable energy storage, the Digital Product Passport (DPP) ensures compliance with sustainability regulations, supporting industries in meeting environmental standards and driving eco-efficient innovations.",
     },
     {
       id: "espr-card",
@@ -35,8 +36,9 @@ const Features = () => {
       description: "Across EU Regulations",
       image: "/lovable-uploads/a4205a69-444a-4317-be96-d4751706d608.png",
       icon: "/lovable-uploads/LogoEUR.png",
-      hoverContent: "Our Digital Product Passport (DPP) streamlines compliance for various industries, ensuring seamless adaptation to evolving EU regulations. From the Ecodesign for Sustainable Products Regulation (ESPR) to the Right to Repair (R2R) Framework and Circular Economy Legislation, we help businesses enhance transparency, improve sustainability, and stay ahead of legislative demands."
-    }
+      hoverContent:
+        "Our Digital Product Passport (DPP) streamlines compliance for various industries, ensuring seamless adaptation to evolving EU regulations. From the Ecodesign for Sustainable Products Regulation (ESPR) to the Right to Repair (R2R) Framework and Circular Economy Legislation, we help businesses enhance transparency, improve sustainability, and stay ahead of legislative demands.",
+    },
   ];
 
   const handleCardClick = (id: string) => {
@@ -58,7 +60,7 @@ const Features = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="inline-block text-center mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">
+            <h2 className="text-3xl md:text-4xl font-medium text-primary">
               Digital Product Passport – Key Sectors
             </h2>
             <Separator className="my-4 h-1 bg-[#D4904E]" />
