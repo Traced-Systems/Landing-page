@@ -22,7 +22,34 @@ const UseCasesSheet = ({ isOpen, onClose }: UseCasesSheetProps) => {
     {
       title: "Battery Lifecycle Innovation",
       description: "What if a battery's lifecycle routing left a verifiable trail? This pilot project, powered by a blockchain-based Digital Product Passport...",
-      image: "/lovable-uploads/efedcb76-b69e-4a52-8689-41020d02ede5.png"
+      image: "/lovable-uploads/efedcb76-b69e-4a52-8689-41020d02ede5.png",
+      fullContent: {
+        title: "Completed DPP pilot project between Cling Systems, Traced Systems, Instagrid & Batteriretur",
+        authorIcon: "/lovable-uploads/8a070271-5402-4465-91d1-3ad9ddf99fb4.png",
+        introduction: "What if a battery's history could stay with it until the end of its life? When batteries reach this stage, understanding their journey - where they've been, what they've been through, and their final destination - can be surprisingly challenging...",
+        content: [
+          {
+            heading: "Introduction",
+            text: "Yet this information is critical for deciding whether a battery should be recalled, reused, remanufactured, or recycled. Without reliable systems to trace and access this data, ensuring transparency and improving battery recycling efficiency becomes an uphill battle.\n\nHowever, with the European Union's upcoming ESPR regulations on the horizon, Cling Systems and Traced Systems saw this opportunity to innovate. Together, they launched a pilot project introducing a pragmatic Digital Product Passport (DPP) for batteries powered by blockchain."
+          },
+          {
+            heading: "The pilot project",
+            text: "This pilot focused on the downstream side of the battery lifecycle - what happens after production when batteries are collected, recycled, or repurposed. By working closely with Instagrid (OEM) and Batteriretur (collector), the team aimed to reimagine how batteries are tracked and managed.\n\nOver six months, a blockchain-powered DPP application was developed, combining Cling Systems' tools with the Chromia blockchain from Traced Systems. This collaborative approach, driven by insights and expertise from Instagrid and Batteriretur, ensured the DPP was designed to meet the functionality, requirements, and integration needs of all stakeholders."
+          },
+          {
+            heading: "The outcome? A functional DPP.",
+            text: "The role-based passport enables control over access to specific data points for each user or actor in the value chain, ensuring easy data accessibility while maintaining privacy. OEMs and producers can add product information, while downstream actors can access this data and add events related to the end-of-life (EoL) management of batteries.\n\nEnabling:\n\n• Downstream information: OEMs, like Instagrid, can track where their batteries end up and gain insights into their usage.\n• Upstream information: Downstream players, such as Batteriretur, can access product and chemistry information about the batteries they receive, improving operational efficiency."
+          },
+          {
+            heading: "Looking ahead",
+            text: "The pilot highlighted the importance of involving additional industry stakeholders to further refine and enhance the system. Scaling the DPP will require greater automation and seamless integration into existing workflows to ensure it can operate efficiently at a larger scale."
+          },
+          {
+            heading: "Next steps",
+            text: "• Traced Systems plans to expand the DPP to include more battery types and users, enhance compliance features with advanced reporting tools, and improve usability with API integrations.\n• Cling Systems will continue its mission to accelerate circular value chains by providing businesses with tools to maximize the value of their batteries.\n\nWant to learn more? Don't miss our upcoming webinar together with Doors3, where we'll dive deeper into the pilot project results and explore how your organization can benefit from blockchain-powered Digital Product Passports."
+          }
+        ]
+      }
     },
     {
       title: "Be Our Next Use Case",
