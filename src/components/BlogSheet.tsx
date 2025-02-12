@@ -18,21 +18,21 @@ const BlogSheet = ({ isOpen, onClose }: BlogSheetProps) => {
     {
       title: "The Future of Digital Product Passports",
       description: "Explore how digital product passports are revolutionizing supply chain transparency and sustainability...",
-      image: "/lovable-uploads/23c3935b-ef5c-4e12-bdf7-7147ff947024.png",
+      image: "/lovable-uploads/pilot.png",
       date: "March 15, 2024",
       author: "David Anderson"
     },
     {
       title: "Sustainability in the Digital Age",
       description: "Discover how businesses are leveraging technology to achieve their sustainability goals and meet regulatory requirements...",
-      image: "/lovable-uploads/23c3935b-ef5c-4e12-bdf7-7147ff947024.png",
+      image: "/lovable-uploads/pilot.png",
       date: "March 10, 2024",
       author: "Sarah Johnson"
     },
     {
       title: "Innovation in Supply Chain Management",
       description: "Learn about the latest innovations in supply chain management and how they're transforming industry practices...",
-      image: "/lovable-uploads/23c3935b-ef5c-4e12-bdf7-7147ff947024.png",
+      image: "/lovable-uploads/pilot.png",
       date: "March 5, 2024",
       author: "Michael Zhang"
     }

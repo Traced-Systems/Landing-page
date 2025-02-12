@@ -10,17 +10,17 @@ const Blog = () => {
     {
       title: "All Steps to follow and all angles need",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus.",
-      image: "/lovable-uploads/23c3935b-ef5c-4e12-bdf7-7147ff947024.png"
+      image: "/lovable-uploads/pilot.png"
     },
     {
       title: "All Steps to follow and all angles need",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus.",
-      image: "/lovable-uploads/23c3935b-ef5c-4e12-bdf7-7147ff947024.png"
+      image: "/lovable-uploads/pilot.png"
     },
     {
       title: "All Steps to follow and all angles need",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus.",
-      image: "/lovable-uploads/23c3935b-ef5c-4e12-bdf7-7147ff947024.png"
+      image: "/lovable-uploads/pilot.png"
     }
   ];
 
