@@ -8,8 +8,8 @@ const Blog = () => {
   
   const blogPosts = [
     {
-      title: "All Steps to follow and all angles need",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus.",
+      title: "The Blueprint for a Successful Blockchain Partner Ecosystem",
+      description: "In this edition of the Greatest Minds in Partnerships series, David Dolhomut, Head of Partnerships & Business Development at Traced Systems, shares his insights on building a thriving blockchain partner ecosystem. From overcoming industry challenges and onboarding the right partners to balancing traditional enterprises with Web3-native collaborations, David provides a blueprint for successful blockchain partnerships. Learn how to navigate regulatory landscapes, drive adoption through strategic alliances, and leverage technology like PRM platforms to scale blockchain ecosystems effectively.",
       image: "/lovable-uploads/pilot.png"
     },
     {

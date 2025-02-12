@@ -48,14 +48,12 @@ const BlogSheet = ({ isOpen, onClose }: BlogSheetProps) => {
           <SheetBackButton onBack={onClose} />
 
           <div className="h-full flex flex-col pt-24">
-            <div className="px-8 mb-12">
-              <BlogSection
-                title="Latest Blog Posts"
-                subtitle="Discover insights and updates from our experts about digital product passports, sustainability, and supply chain innovation."
-                posts={blogPosts}
-                onPostClick={setActivePost}
-              />
-            </div>
+            <BlogSection
+              title="Latest Blog Posts"
+              subtitle="Discover insights and updates from our experts about digital product passports, sustainability, and supply chain innovation."
+              posts={blogPosts}
+              onPostClick={setActivePost}
+            />
 
             <div className="mt-auto">
               <AboutCTA onClose={onClose} />
