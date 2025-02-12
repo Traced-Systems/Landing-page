@@ -22,7 +22,7 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
         <SheetBackButton onBack={onClose} />
 
         <div className="h-full flex flex-col pt-20">
-          <div className="px-8 space-y-16">
+          <div className="px-8 space-y-16 mb-16">
             <VisionHeader />
 
             {/* Transparency Section with Factory Image */}
@@ -40,8 +40,6 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
               </div>
             </div>
 
-            <KeyChallenges />
-
             {/* Making a Difference Section with Business Card Image */}
             <div className="relative h-[330px]">
               <img 
@@ -56,6 +54,8 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
                 </p>
               </div>
             </div>
+
+            <KeyChallenges />
 
             {/* Vision for Future Section with Green Image */}
             <div className="relative h-[330px]">
