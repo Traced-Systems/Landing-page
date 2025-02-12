@@ -27,8 +27,8 @@ const Blog = () => {
   return (
     <>
       <BlogSection
-        title="Explore Our Blog"
-        subtitle="Experience insights from our digital product passport team"
+        title="The Blueprint for a Successful Blockchain Partner Ecosystem"
+        subtitle="In this edition of the Greatest Minds in Partnerships series, David Dolhomut shares insights on building thriving blockchain partnerships"
         posts={blogPosts}
         showMoreButton={true}
         onShowMore={() => setIsSheetOpen(true)}
