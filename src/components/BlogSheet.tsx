@@ -63,32 +63,53 @@ const BlogSheet = ({ isOpen, onClose }: BlogSheetProps) => {
       image: "/lovable-uploads/pilot.png",
       fullContent: {
         title: "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports",
-        introduction: "Traced Systems is thrilled to announce a partnership with Doors3, a leading innovator in decentralization solutions for businesses. This collaboration marks a pivotal moment in our journey toward creating sustainable, transparent, and technologically advanced solutions that transform industries. Together, we're setting out to transform the way businesses and consumers interact with products through the implementation of Digital Product Passports.",
+        introduction: "In today's fast-paced, interconnected world, sustainability, transparency, and innovation have become more important than ever. At Traced Systems, we are at the forefront of this movement, transforming industries through blockchain-powered solutions that inspire trust and promote accountability.",
         sections: [
           {
-            heading: "A Strategic Partnership",
-            content: "This collaboration brings together Traced Systems' expertise in digital product passports and Doors3's innovative decentralization solutions, creating a powerful synergy that will drive innovation in supply chain transparency."
+            heading: "Who Are We?",
+            content: "Our journey began as part of a ChromaWay project with the European Blockchain Services Infrastructure (EBSI), an EU-led initiative designed to explore the transformative potential of blockchain and distributed ledger technologies (DLTs). Since 2021, we have been deeply involved in shaping this vision, partnering with the EU in a multi-phased approach that combines rigorous research, advanced technological development, and extensive field testing.",
+            quote: "Traced Systems' Digital Product Passport transforms complex regulatory compliance into a strategic advantage, enabling businesses to seamlessly track, verify, and optimize their product lifecycles with unprecedented transparency and sustainability intelligence."
           },
           {
-            heading: "Transforming Industries",
-            content: "Through this partnership, we aim to revolutionize how businesses track, manage, and share product information across their supply chains, making transparency and sustainability not just achievable but efficient."
+            heading: "Why Choose Traced Systems?",
+            content: "Sustainability is no longer a choice – it's a necessity. Traced Systems empowers businesses to embrace this mandate by providing a seamless end-to-end supply chain management service. Our solution simplifies product tracking from production to end-of-life, ensuring regulatory compliance aligned with the European Commission's priorities, support for regulations like the Ecodesign for Sustainable Products Regulation (ESPR), and future-proofed business models that embrace decentralization. But we don't stop there. By leveraging Web3's dynamic capabilities, we go beyond compliance, offering secure, personalized digital experiences that enhance user engagement, build trust, and showcase organizations' commitment to sustainability."
           },
           {
-            heading: "Looking Ahead",
-            content: "As we move forward with this partnership, we're excited about the possibilities it creates for businesses looking to embrace digital transformation and sustainable practices."
+            heading: "Battery Value Chain",
+            content: "Our strategic partnerships within the battery sector showcase the realized potential of our blockchain-powered DPP solution. We've developed and implemented a Digital Product Passport for batteries with Cling Systems, facilitated collaborations with key partners and initial clients, and enabled comprehensive lifecycle management from manufacturing to second-life applications and recycling. By fostering transparency and traceability, our solution ensures accountability across the supply chain, circular business models, and a resilient battery ecosystem aligned with circular economy principles."
+          },
+          {
+            heading: "Textile Industry",
+            content: "In the textile sector, we blend traceability expertise with the transformative power of Web3. We offer blockchain-powered digital wardrobes for garment authenticity, digital twins that enhance consumer engagement, and real-time data and secure transactions from production to resale & recycling. By embracing Web3 opportunities, we are redefining the future of textiles, fostering trust, efficiency, and sustainability."
+          },
+          {
+            heading: "Join the Movement",
+            content: "We invite industry leaders, sustainability advocates, and technology enthusiasts to join us in our mission to drive change. Discover how Traced Systems ensures full transparency and traceability across a product's entire lifecycle, set new benchmarks in compliance, sustainability, and innovation. Whether you're in textiles, batteries, or another industry, we're ready to help you implement Digital Product Passports. Let's collaborate to create a better tomorrow together. Connect with Traced Systems today and be part of the movement shaping the future of sustainable and transparent industries."
           }
         ],
         faq: {
           title: "Frequently Asked Questions",
-          subtitle: "Common questions about our partnership",
+          subtitle: "Your right to know",
           questions: [
             {
-              question: "What is a Digital Product Passport?",
-              answer: "A Digital Product Passport is a comprehensive digital record that contains all relevant information about a product's lifecycle, from raw materials to end-of-life."
+              question: "What are the key benefits of partnerships in the blockchain industry?",
+              answer: "Blockchain partnerships drive innovation, adoption, and interoperability by connecting projects with complementary expertise. Strategic collaborations help businesses integrate decentralized solutions, comply with evolving regulations, and enhance security, ultimately accelerating industry-wide adoption and trust."
             },
             {
-              question: "How does this partnership benefit businesses?",
-              answer: "This partnership combines Traced Systems' expertise in product traceability with Doors3's decentralization solutions, enabling businesses to achieve greater transparency and efficiency in their supply chains."
+              question: "How do blockchain companies attract the right partners?",
+              answer: "Successful blockchain companies attract partners by offering cutting-edge technology, clear value propositions, and strong ecosystem support. Businesses that provide seamless onboarding, compliance solutions, and co-marketing opportunities create long-term, mutually beneficial relationships in the decentralized space."
+            },
+            {
+              question: "What challenges do blockchain partnerships face?",
+              answer: "Blockchain partnerships must navigate regulatory uncertainty, trust issues, and interoperability challenges. Overcoming negative industry perceptions and ensuring compliance with frameworks like ESPR and GDPR are crucial for fostering credibility and securing enterprise adoption."
+            },
+            {
+              question: "How do Web3-native partnerships differ from enterprise blockchain collaborations?",
+              answer: "Web3-native partnerships move faster due to shared knowledge of tokenomics, NFTs, and decentralized governance, while enterprise collaborations require structured onboarding, clear ROI demonstration, and regulatory compliance. Successful blockchain companies balance both by translating complex Web3 concepts into business-friendly solutions."
+            },
+            {
+              question: "What role does technology play in managing blockchain partnerships?",
+              answer: "Technology, especially Partner Relationship Management (PRM) platforms, streamlines blockchain partnerships by automating onboarding, tracking engagement, and managing deal pipelines. PRMs provide shared dashboards for co-marketing, revenue tracking, and compliance monitoring, helping companies scale their partner ecosystems efficiently."
             }
           ]
         }
