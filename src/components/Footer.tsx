@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
 
         {/* Second Section: Thin Separator Line */}
-        <Separator className="my-8 bg-[#f2f1ee]  w-full h-[1px] relative" />
+        <Separator className="my-8 bg-[#f2f1ee]   h-[1px] relative" />
 
         {/* Third Section: Footer Text and Copyright */}
         <div className="flex justify-between items-center relative">
