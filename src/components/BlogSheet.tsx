@@ -21,20 +21,27 @@ const BlogSheet = ({ isOpen, onClose }: BlogSheetProps) => {
       image: "/lovable-uploads/pilot.png",
       fullContent: {
         title: "The Blueprint for a Successful Blockchain Partner Ecosystem",
-        introduction: "In this edition of the Greatest Minds in Partnerships series, David Dolhomut, Head of Partnerships & Business Development at Traced Systems, shares his insights on building a thriving blockchain partner ecosystem. From overcoming industry challenges and onboarding the right partners to balancing traditional enterprises with Web3-native collaborations, David provides a blueprint for successful blockchain partnerships. Learn how to navigate regulatory landscapes, drive adoption through strategic alliances, and leverage technology like PRM platforms to scale blockchain ecosystems effectively.",
+        introduction: "For this edition of the Greatest Minds in Partnerships series, we sat down with David Dolhomut, Head of Partnerships & Business Development at Traced Systems, to explore building and scaling a thriving partner ecosystem in the blockchain industry.\n\nWith years of experience fostering B2B and B2G collaborations, David has played a pivotal role in bridging traditional enterprises and Web3-native projects. From working at the Embassy of Canada in Poland to shaping the Nordic Blockchain Association, his journey into blockchain partnerships has been defined by a passion for trust, innovation, and real-world adoption.\n\nIn this conversation, he shares key insights into overcoming blockchain-specific challenges, onboarding the right partners, balancing traditional and decentralized partnerships, and leveraging technology to scale collaborations in this rapidly evolving space.",
         sections: [
           {
-            heading: "Building Strong Foundations",
-            content: "The key to a successful blockchain partner ecosystem lies in establishing strong foundations from the start. This includes clear communication channels, well-defined objectives, and mutual understanding of goals between all parties involved.",
+            heading: "Navigating the Challenges of Blockchain Partnerships",
+            content: "Unlike many industries, blockchain partnerships must contend with technical and reputational challenges. According to David, one of the biggest hurdles is the negative perception of blockchain, often fueled by sensationalized media coverage of crypto-related scandals.",
             quote: "While illicit activities occur in all financial sectors, blockchain and crypto-related crimes receive disproportionate attention, making it harder to advocate for the technology's legitimate and transformative applications."
           },
           {
-            heading: "Navigating Challenges",
-            content: "One of the biggest challenges in building a blockchain partner ecosystem is bridging the gap between traditional enterprises and Web3-native organizations. Each comes with its own set of expectations, processes, and cultural nuances that need to be carefully managed."
+            heading: "How to Identify and Onboard the Right Partners in a Decentralized Industry",
+            content: "In blockchain, partnerships drive adoption, interoperability, and innovation. Unlike traditional industries, where partnerships often follow structured, centralized agreements, Web3 collaboration thrives on flexibility and shared ecosystems.\n\nAt Traced Systems, David and his team focus on four key types of partners:\n\n• Consulting firms that guide businesses into Web3 adoption\n• Technology providers that enhance blockchain solutions\n• Compliance experts that ensure regulatory alignment\n• Marketplaces that connect businesses to decentralized tools",
+            quote: "We start by aligning objectives, improving adoption, compliance, or interoperability. For tech partners, we focus on seamless integration through APIs, while compliance partnerships ensure regulatory adherence."
           },
           {
-            heading: "Strategic Alliance Formation",
-            content: "Successful partnerships in the blockchain space require a strategic approach to alliance formation. This includes careful partner selection, clear value proposition alignment, and structured onboarding processes."
+            heading: "Balancing Traditional Enterprises and Web3-Native Partnerships",
+            content: "One of the biggest challenges in blockchain partnerships is bridging the gap between traditional businesses and Web3-native projects.",
+            quote: "With Web3-native collaborations, things move faster because there's already a shared understanding of tokenomics, NFT integrations, and interoperability."
+          },
+          {
+            heading: "How to Measure the Success of a Blockchain Partner Ecosystem",
+            content: "The success of a blockchain partner ecosystem isn't just about the number of signed agreements; it's about delivering real value to clients through combined competencies.",
+            quote: "The true value lies in offering clients a bundled deal rather than individual solutions."
           }
         ],
         faq: {
@@ -52,6 +59,14 @@ const BlogSheet = ({ isOpen, onClose }: BlogSheetProps) => {
             {
               question: "What challenges do blockchain partnerships face?",
               answer: "Blockchain partnerships must navigate regulatory uncertainty, trust issues, and interoperability challenges. Overcoming negative industry perceptions and ensuring compliance with frameworks like ESPR and GDPR are crucial."
+            },
+            {
+              question: "How do Web3-native partnerships differ from enterprise blockchain collaborations?",
+              answer: "Web3-native partnerships move faster due to shared knowledge of tokenomics, NFTs, and decentralized governance, while enterprise collaborations require structured onboarding, clear ROI demonstration, and regulatory compliance."
+            },
+            {
+              question: "What role does technology play in managing blockchain partnerships?",
+              answer: "Partner Relationship Management (PRM) platforms streamline blockchain partnerships by automating onboarding, tracking engagement, and managing deal pipelines."
             }
           ]
         }

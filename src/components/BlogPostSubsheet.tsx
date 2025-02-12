@@ -1,8 +1,8 @@
+
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from './shared/SheetBackButton';
 import IndustrySheetCTA from './shared/IndustrySheetCTA';
-import { Link } from 'react-router-dom';
 
 interface BlogPostSubsheetProps {
   isOpen: boolean;
@@ -46,12 +46,25 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
               {post.fullContent ? (
                 <>
                   <div className="flex items-center gap-2 mb-6">
-                    <img 
-                      src="/lovable-uploads/a163e1df-6783-427e-940a-22d1f8c80d11.png"
-                      alt="Traced Systems"
-                      className="w-12 h-12"
-                    />
-                    <span className="text-gray-600">Written by Traced Systems</span>
+                    {post.title === "The Blueprint for a Successful Blockchain Partner Ecosystem" ? (
+                      <>
+                        <img 
+                          src="/lovable-uploads/0d25c486-df3a-4a98-b070-691da893d470.png"
+                          alt="Kiflo"
+                          className="h-8"
+                        />
+                        <span className="text-gray-600">Written by <a href="https://www.kiflo.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600">Kiflo</a></span>
+                      </>
+                    ) : (
+                      <>
+                        <img 
+                          src="/lovable-uploads/a163e1df-6783-427e-940a-22d1f8c80d11.png"
+                          alt="Traced Systems"
+                          className="w-12 h-12"
+                        />
+                        <span className="text-gray-600">Written by Traced Systems</span>
+                      </>
+                    )}
                   </div>
 
                   <div className="mb-8">
