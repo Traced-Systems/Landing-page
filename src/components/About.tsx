@@ -13,7 +13,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">
+              <h2 className="text-3xl md:text-4xl font-medium text-primary">
                 Who are we?
               </h2>
               <Separator className="my-4 h-1 w-[100px] bg-[#D4904E]" />
@@ -36,7 +36,7 @@ const About = () => {
             </p>
             <Button
               variant="secondary"
-              className="rounded-full border-2 border-[#E4AC70] bg-[#F2F1EE] text-[#143A44] flex items-center gap-2 pl-7 pr-6 hover:bg-[#E6E5E0]"
+              className="rounded-full border-2 border-[#E4AC70] bg-[#F2F1EE] text-[#143A44] flex items-center gap-2 pl-7 pr-6 hover:bg-[#EEEADF]"
               onClick={() => setIsValuesOpen(true)}
             >
               Know More

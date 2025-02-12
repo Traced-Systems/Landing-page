@@ -51,7 +51,7 @@ const Process = () => {
     <section className="py-20 bg-[#fff]">
       <div className="container mx-auto px-4" id="process-container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#002A38] mb-4">
+          <h2 className="text-3xl md:text-4xl font-medium text-[#002A38] mb-4">
             How We Do It?
           </h2>
           <p className="text-base text-gray-600">
@@ -125,10 +125,12 @@ const Process = () => {
                   {step.description}
                 </p>
 
-                {/* Arrow at the bottom-right corner */}
-                <div className="absolute bottom-4 right-4 transition-all duration-300">
-                  <ChevronRight className="text-[#E1B382] w-6 h-6" />
-                </div>
+                {/* Arrow at the bottom-right corner - Only appear when NOT expanded */}
+                {expandedCard !== index && (
+                  <div className="absolute bottom-4 right-4 transition-all duration-300">
+                    <ChevronRight className="text-[#E1B382] w-6 h-6" />
+                  </div>
+                )}
               </div>
             </div>
           ))}

@@ -13,6 +13,12 @@ const Hero = () => {
               "radial-gradient(circle at 50% 0%, #F0E6D2 0%, #F7F7F5 40%, #E1ECEB 100%)",
           }}
         />
+        {/* Background Image */}
+        <img
+          src="/lovable-uploads/herobg.png" // Replace with actual image
+          alt="Background Overlay"
+          className="absolute inset-0 w-full h-full object-cover hidden md:block"
+        />
       </div>
 
       <div className="container mx-auto relative z-10">

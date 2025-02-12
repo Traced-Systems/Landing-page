@@ -20,7 +20,7 @@ const DigitalPassport = () => {
             <div className="space-y-3">
               <p className="text-xl text-[#1E293B]">Traced Systems developed</p>
               <div className="inline-block">
-                <h2 className="text-3xl font-bold text-[#1E293B]">
+                <h2 className="text-3xl font-medium text-[#1E293B]">
                   Digital Product Passport
                 </h2>
                 <Separator className="my-9 h-1 w-[100px] bg-[#D4904E]" />
@@ -29,7 +29,7 @@ const DigitalPassport = () => {
 
             <div className="space-y-6">
               <div>
-                <h3 className="font-semibold text-lg mb-2">Our Solution</h3>
+                <h3 className="font-medium text-lg mb-2">Our Solution</h3>
                 <p className="text-base text-gray-600 leading-relaxed">
                   Our solution shines a light on the often opaque world of
                   supply chains. By leveraging supply chain transparency, we
@@ -39,7 +39,7 @@ const DigitalPassport = () => {
               </div>
 
               <div>
-                <h3 className="font-semibold text-lg mb-2">Our Service</h3>
+                <h3 className="font-medium text-lg mb-2">Our Service</h3>
                 <p className="text-base text-gray-600 leading-relaxed">
                   Our service plays an instrumental role in enabling businesses
                   to align their operations with sustainable business models.
@@ -47,7 +47,7 @@ const DigitalPassport = () => {
               </div>
 
               <div>
-                <h3 className="font-semibold text-lg mb-2">Our Versatility</h3>
+                <h3 className="font-medium text-lg mb-2">Our Versatility</h3>
                 <p className="text-base text-gray-600 leading-relaxed">
                   A complete digital record that tracks a product's entire
                   lifecycle, ensuring transparency, sustainability, and
