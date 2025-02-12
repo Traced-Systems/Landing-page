@@ -1,10 +1,10 @@
 
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
 import SheetBackButton from './shared/SheetBackButton';
 import BlogPostSheet from './BlogPostSheet';
 import AboutCTA from './shared/AboutCTA';
+import BlogSection from './shared/BlogSection';
 
 interface BlogSheetProps {
   isOpen: boolean;
@@ -49,33 +49,12 @@ const BlogSheet = ({ isOpen, onClose }: BlogSheetProps) => {
 
           <div className="h-full flex flex-col pt-24">
             <div className="px-8 mb-12">
-              <h1 className="text-3xl font-bold text-primary mb-6">Latest Blog Posts</h1>
-              <p className="text-gray-600 mb-8">
-                Discover insights and updates from our experts about digital product passports, 
-                sustainability, and supply chain innovation.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {blogPosts.map((post, index) => (
-                  <div 
-                    key={index}
-                    onClick={() => setActivePost(index)}
-                    className="bg-white rounded-xl p-6 shadow-[4px_4px_10px_0px_rgba(0,0,0,0.1),-4px_-4px_10px_0px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_12px_0px_rgba(0,0,0,0.15),-6px_-6px_12px_0px_rgba(255,255,255,0.95)] transition-all duration-300 cursor-pointer"
-                  >
-                    <img 
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-48 object-cover rounded-lg mb-4"
-                    />
-                    <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-                    <p className="text-gray-600 mb-4">{post.description}</p>
-                    <div className="flex items-center justify-between text-sm text-gray-500">
-                      <span>{post.date}</span>
-                      <span>{post.author}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <BlogSection
+                title="Latest Blog Posts"
+                subtitle="Discover insights and updates from our experts about digital product passports, sustainability, and supply chain innovation."
+                posts={blogPosts}
+                onPostClick={setActivePost}
+              />
             </div>
 
             <div className="mt-auto">
