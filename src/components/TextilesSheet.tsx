@@ -3,7 +3,7 @@ import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustrySheetHeader from './shared/IndustrySheetHeader';
 import IndustrySheetCard from './shared/IndustrySheetCard';
 import IndustrySheetCTA from './shared/IndustrySheetCTA';
-import { Button } from "@/components/ui/button";
+import Button1 from './ui/button-1';
 
 interface TextilesSheetProps {
   isOpen: boolean;
@@ -113,16 +113,18 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
                 ))}
               </div>
 
-              <Button 
-                className="bg-[#FDFDFD] text-[#143A44] border-[1.5px] border-[#E1B382] rounded-full px-6 py-2 flex items-center gap-2 hover:bg-[#E1B382]/10 mx-auto"
+              <Button1 
+                className="mx-auto"
+                icon={
+                  <img 
+                    src="/lovable-uploads/5e409765-ccc7-4562-9b05-c46afe65a486.png"
+                    alt="arrow"
+                    className="w-4 h-4 object-contain"
+                  />
+                }
               >
                 Know more
-                <img 
-                  src="/lovable-uploads/5e409765-ccc7-4562-9b05-c46afe65a486.png"
-                  alt="arrow"
-                  className="w-4 h-4 object-contain"
-                />
-              </Button>
+              </Button1>
             </div>
           </div>
 
