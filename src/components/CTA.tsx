@@ -7,7 +7,7 @@ interface CTAProps {
 
 const CTA = ({ onContactClick }: CTAProps) => {
   return (
-    <section className="relative bg-[#f2f1ee] pt-24 pb-5">
+    <section className="relative bg-[#f2f1ee] pt-20   pb-12 xl:pb-2 lg:pb-2 md:pb-20 sm:pb-12 ">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto flex flex-col items-center text-center space-y-8">
           <h3 className="text-3xl font-medium text-[#1E293B]">

@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React from "react";
 
 interface IndustryCardProps {
   title: string;
@@ -9,19 +8,30 @@ interface IndustryCardProps {
   onClick?: () => void;
 }
 
-const IndustryCard = ({ title, description, imageSrc, imageAlt, onClick }: IndustryCardProps) => {
+const IndustryCard = ({
+  title,
+  description,
+  imageSrc,
+  imageAlt,
+  onClick,
+}: IndustryCardProps) => {
   return (
-    <div 
-      className="bg-white rounded-xl p-6 shadow-[4px_4px_10px_0px_rgba(0,0,0,0.1),-4px_-4px_10px_0px_rgba(255,255,255,0.9)] h-[400px] flex flex-col cursor-pointer transition-all duration-300 hover:shadow-[6px_6px_12px_0px_rgba(0,0,0,0.15),-6px_-6px_12px_0px_rgba(255,255,255,0.95)]"
+    <div
+      className="bg-white rounded-xl min-w-[150px] shadow-[2px_2px_6px_0px_rgba(0,0,0,0.05),-2px_-2px_6px_0px_rgba(255,255,255,0.8)] 
+hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,255,0.85)] transition-all duration-300 "
       onClick={onClick}
     >
-      <img 
-        src={imageSrc}
-        alt={imageAlt}
-        className="w-full h-48 object-cover rounded-lg mb-4"
-      />
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <div className="w-full" style={{ aspectRatio: "430 / 270" }}>
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          className="w-full h-full object-cover rounded-t-lg"
+        />
+      </div>
+      <div className="p-6 min-h-[200px] flex flex-col">
+        <h3 className="text-xl font-semibold mb-2 text-[#173A44]">{title}</h3>
+        <p className="text-gray-600 flex-1">{description}</p>
+      </div>
     </div>
   );
 };

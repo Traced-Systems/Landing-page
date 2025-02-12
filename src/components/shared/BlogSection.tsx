@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React from "react";
 import { Button } from "@/components/ui/button";
 
 interface BlogPost {
@@ -19,16 +18,16 @@ interface BlogSectionProps {
   onShowMore?: () => void;
 }
 
-const BlogSection = ({ 
-  title, 
-  subtitle, 
-  posts, 
+const BlogSection = ({
+  title,
+  subtitle,
+  posts,
   onPostClick,
   showMoreButton = false,
-  onShowMore 
+  onShowMore,
 }: BlogSectionProps) => {
   return (
-    <section className="py-20 bg-white">
+    <section className="pt-32 pb-28 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">{title}</h2>
@@ -37,12 +36,12 @@ const BlogSection = ({
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {posts.map((post, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="bg-white rounded-lg overflow-hidden shadow-lg transform scale-90 cursor-pointer"
               onClick={() => onPostClick?.(index)}
             >
-              <img 
+              <img
                 src={post.image}
                 alt={post.title}
                 className="w-full h-48 object-cover"
@@ -57,7 +56,10 @@ const BlogSection = ({
                   </div>
                 )}
                 {!post.date && (
-                  <Button variant="link" className="text-blue-500 p-0 hover:text-blue-600">
+                  <Button
+                    variant="link"
+                    className="text-blue-500 p-0 hover:text-blue-600"
+                  >
                     Read More →
                   </Button>
                 )}
@@ -68,11 +70,7 @@ const BlogSection = ({
 
         {showMoreButton && (
           <div className="flex justify-center">
-            <Button 
-              variant="outline" 
-              className="px-8"
-              onClick={onShowMore}
-            >
+            <Button variant="outline" className="px-8" onClick={onShowMore}>
               Show More
             </Button>
           </div>
