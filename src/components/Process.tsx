@@ -125,10 +125,12 @@ const Process = () => {
                   {step.description}
                 </p>
 
-                {/* Arrow at the bottom-right corner */}
-                <div className="absolute bottom-4 right-4 transition-all duration-300">
-                  <ChevronRight className="text-[#E1B382] w-6 h-6" />
-                </div>
+                {/* Arrow at the bottom-right corner - Only appear when NOT expanded */}
+                {expandedCard !== index && (
+                  <div className="absolute bottom-4 right-4 transition-all duration-300">
+                    <ChevronRight className="text-[#E1B382] w-6 h-6" />
+                  </div>
+                )}
               </div>
             </div>
           ))}
