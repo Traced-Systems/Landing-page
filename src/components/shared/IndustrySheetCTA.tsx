@@ -1,6 +1,6 @@
 
 import React from 'react';
-import StyledButton from '../ui/styled-button';
+import Button1 from '../ui/button-1';
 
 interface IndustrySheetCTAProps {
   title: string;
@@ -17,9 +17,9 @@ const IndustrySheetCTA = ({ title, description }: IndustrySheetCTAProps) => {
               {title}
             </h3>
             <p className="text-gray-600 mb-6">{description}</p>
-            <StyledButton className="border-[#E1B382]">
+            <Button1>
               Book Demo
-            </StyledButton>
+            </Button1>
           </div>
           <div className="w-full md:w-1/3">
             <picture>

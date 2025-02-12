@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustrySheetHeader from './shared/IndustrySheetHeader';
 import IndustrySheetCard from './shared/IndustrySheetCard';
 import IndustrySheetCTA from './shared/IndustrySheetCTA';
-import { Button } from "@/components/ui/button";
+import Button1 from './ui/button-1';
 
 interface BatteriesSheetProps {
   isOpen: boolean;
@@ -79,9 +78,9 @@ const BatteriesSheet = ({ isOpen, onClose, onBack }: BatteriesSheetProps) => {
                 alt="Battery Value Chain"
                 className="w-full max-w-4xl mx-auto mb-6 rounded-lg"
               />
-              <Button className="bg-[#9b87f5] hover:bg-[#8b77e5] text-white px-8">
+              <Button1>
                 Learn More
-              </Button>
+              </Button1>
             </div>
           </div>
 

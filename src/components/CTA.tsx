@@ -1,6 +1,6 @@
 
 import React from 'react';
-import StyledButton from './ui/styled-button';
+import Button1 from './ui/button-1';
 
 interface CTAProps {
   onContactClick: () => void;
@@ -14,9 +14,9 @@ const CTA = ({ onContactClick }: CTAProps) => {
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1E4B56] leading-tight">
             Trace Your Impact, Reward Your Actions, Sustain Our Planet.
           </h3>
-          <StyledButton onClick={onContactClick}>
+          <Button1 onClick={onContactClick}>
             Get in touch
-          </StyledButton>
+          </Button1>
         </div>
       </div>
     </section>
