@@ -39,7 +39,7 @@ const MainHeader = ({
 
             <Button
               onClick={() => handleSheetOpen("contact")}
-              className="hidden md:inline-flex bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-8 shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.5)"
+              className="hidden lg:inline-flex bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-8 shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.5)]"
             >
               Book Demo
             </Button>
