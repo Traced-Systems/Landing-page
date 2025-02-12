@@ -91,7 +91,7 @@ const Process = () => {
                   <div
                     className={cn(
                       "transition-all duration-500",
-                      expandedCard === index ? "w-10 h-10" : "w-16 h-16"
+                      expandedCard === index ? "w-12 h-12" : "w-[80px] h-[80px]"
                     )}
                   >
                     <img
