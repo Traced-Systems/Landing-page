@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustrySheetHeader from './shared/IndustrySheetHeader';
 import IndustrySheetCard from './shared/IndustrySheetCard';
 import IndustrySheetCTA from './shared/IndustrySheetCTA';
-import { Button } from "@/components/ui/button";
+import Button1 from './ui/button-1';
 
 interface TextilesSheetProps {
   isOpen: boolean;
@@ -65,7 +64,7 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
         className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[995]"
       >
         <div className="h-full flex flex-col">
-          <div className="pt-20">
+          <div className="pt-12">
             <IndustrySheetHeader
               title="Textiles"
               description="Traced Systems' Digital Product Passport tackles supply chain gaps, ensures ethical sourcing, and drives circularity across the textile lifecycle."
@@ -114,16 +113,18 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
                 ))}
               </div>
 
-              <Button 
-                className="bg-[#FDFDFD] text-[#143A44] border-[1.5px] border-[#E1B382] rounded-full px-6 py-2 flex items-center gap-2 hover:bg-[#E1B382]/10 mx-auto"
+              <Button1 
+                className="mx-auto"
+                icon={
+                  <img 
+                    src="/lovable-uploads/5e409765-ccc7-4562-9b05-c46afe65a486.png"
+                    alt="arrow"
+                    className="w-4 h-4 object-contain"
+                  />
+                }
               >
                 Know more
-                <img 
-                  src="/lovable-uploads/5e409765-ccc7-4562-9b05-c46afe65a486.png"
-                  alt="arrow"
-                  className="w-4 h-4 object-contain"
-                />
-              </Button>
+              </Button1>
             </div>
           </div>
 
@@ -140,4 +141,3 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
 };
 
 export default TextilesSheet;
-

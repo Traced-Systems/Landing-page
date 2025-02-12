@@ -1,10 +1,11 @@
+
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Linkedin, Mail } from 'lucide-react';
 import SheetBackButton from './shared/SheetBackButton';
+import Button1 from './ui/button-1';
 
 interface ContactSheetProps {
   isOpen: boolean;
@@ -29,11 +30,6 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
           <div className="text-center mb-16 relative px-4">
             <h1 className="text-4xl font-bold text-primary mb-4">Contact Us</h1>
             <h2 className="text-2xl font-semibold mb-8">Book a Demo</h2>
-            <img 
-              src="/lovable-uploads/traced-lines.png" 
-              alt="Decorative lines" 
-              className="absolute left-1/2 -translate-x-1/2 top-[calc(100%-1rem)] w-24 h-auto"
-            />
           </div>
 
           <div className="px-4 sm:px-8 mb-12">
@@ -72,12 +68,9 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
               </div>
               
               <div className="flex justify-center pt-4">
-                <Button 
-                  type="submit"
-                  className="bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-12"
-                >
+                <Button1 type="submit">
                   Submit
-                </Button>
+                </Button1>
               </div>
             </form>
           </div>

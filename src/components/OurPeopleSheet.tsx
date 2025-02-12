@@ -1,8 +1,8 @@
+
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
 import AboutCTA from './shared/AboutCTA';
+import SheetBackButton from './shared/SheetBackButton';
 
 interface OurPeopleSheetProps {
   isOpen: boolean;
@@ -88,29 +88,10 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
         side="right" 
         className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] p-0"
       >
-        <Button 
-          variant="ghost" 
-          onClick={onClose}
-          className="fixed -left-12 top-4 hover:bg-gray-100 bg-white z-50 shadow-md"
-        >
-          <ArrowLeft className="h-6 w-6" />
-        </Button>
+        <SheetBackButton onBack={onClose} />
 
         <div className="h-full flex flex-col pt-24">
-          <div className="flex items-center gap-8 px-8 mb-12">
-            <Button 
-              variant="ghost" 
-              onClick={onClose}
-              className="hover:bg-gray-100 z-50"
-            >
-              <ArrowLeft className="h-6 w-6" />
-            </Button>
-            <h1 className="text-3xl font-bold">Meet the Team</h1>
-          </div>
-          
-          <div className="max-w-4xl mx-auto w-full px-6">
-            <h1 className="text-3xl font-bold text-center mb-12">Meet the Team</h1>
-            
+          <div className="max-w-4xl mx-auto w-full px-6 mb-16">
             <div className="space-y-16">
               <section>
                 <h2 className="text-2xl font-semibold mb-8">Advisory Board</h2>
@@ -118,19 +99,13 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                   {advisoryBoard.map((member, index) => (
                     <div 
                       key={index}
-                      className="flex flex-col items-center text-center"
+                      className="relative aspect-square overflow-hidden rounded-lg"
                     >
-                      <div className="relative aspect-square overflow-hidden rounded-lg mb-4 w-full">
-                        <img 
-                          src={member.image}
-                          alt={member.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="mt-4">
-                        <span className="block text-lg font-semibold">{member.name}</span>
-                        <span className="block text-gray-600">{member.role}</span>
-                      </div>
+                      <img 
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   ))}
                 </div>
@@ -154,11 +129,9 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                 </div>
               </section>
             </div>
-
-            <div className="mt-16">
-              <AboutCTA onClose={onClose} />
-            </div>
           </div>
+          
+          <AboutCTA onClose={onClose} />
         </div>
       </SheetContent>
     </Sheet>

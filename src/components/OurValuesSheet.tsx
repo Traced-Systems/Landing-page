@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from './shared/SheetBackButton';
@@ -20,9 +21,9 @@ const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
       >
         <SheetBackButton onBack={onClose} />
 
-        <div className="h-full flex flex-col pt-20">
+        <div className="h-full flex flex-col pt-16">
           <SheetBackgroundSection>
-            <div className="pt-20 px-8">
+            <div className="pt-8 px-8">
               <div className="text-center mb-12">
                 <h1 className="text-3xl font-bold text-primary mb-4">Our Values</h1>
                 <h2 className="text-2xl font-semibold text-primary mb-2">Traced Systems</h2>
@@ -41,9 +42,7 @@ const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
             <AccordionSection />
           </div>
 
-          <div className="mt-16 w-full">
-            <AboutCTA onClose={onClose} />
-          </div>
+          <AboutCTA onClose={onClose} />
         </div>
       </SheetContent>
     </Sheet>
