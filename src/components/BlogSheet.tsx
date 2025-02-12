@@ -1,10 +1,10 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from './shared/SheetBackButton';
-import BlogPostSheet from './BlogPostSheet';
 import AboutCTA from './shared/AboutCTA';
-import BlogSection from './shared/BlogSection';
+import SheetBackgroundSection from './shared/SheetBackgroundSection';
+import BlogPostSubsheet from './BlogPostSubsheet';
 
 interface BlogSheetProps {
   isOpen: boolean;
@@ -12,31 +12,66 @@ interface BlogSheetProps {
 }
 
 const BlogSheet = ({ isOpen, onClose }: BlogSheetProps) => {
-  const [activePost, setActivePost] = React.useState<number | null>(null);
+  const [activePost, setActivePost] = useState<typeof blogPosts[0] | null>(null);
 
   const blogPosts = [
     {
-      title: "The Future of Digital Product Passports",
-      description: "Explore how digital product passports are revolutionizing supply chain transparency and sustainability...",
+      title: "The Blueprint for a Successful Blockchain Partner Ecosystem",
+      description: "In this edition of the Greatest Minds in Partnerships series, David Dolhomut, Head of Partnerships & Business Development at Traced Systems, shares his insights on building a thriving blockchain partner ecosystem...",
       image: "/lovable-uploads/pilot.png",
-      date: "March 15, 2024",
-      author: "David Anderson"
+      fullContent: {
+        title: "The Blueprint for a Successful Blockchain Partner Ecosystem",
+        authorIcon: "/lovable-uploads/5ce2f433-ac13-4162-97af-4ed813cff152.png",
+        introduction: "In this edition of the Greatest Minds in Partnerships series, David Dolhomut, Head of Partnerships & Business Development at Traced Systems, shares his insights on building a thriving blockchain partner ecosystem. From overcoming industry challenges and onboarding the right partners to balancing traditional enterprises with Web3-native collaborations, David provides a blueprint for successful blockchain partnerships. Learn how to navigate regulatory landscapes, drive adoption through strategic alliances, and leverage technology like PRM platforms to scale blockchain ecosystems effectively.",
+        content: [
+          {
+            heading: "Building Strong Foundations",
+            text: "The key to a successful blockchain partner ecosystem lies in establishing strong foundations from the start. This includes clear communication channels, well-defined objectives, and mutual understanding of goals between all parties involved."
+          },
+          {
+            heading: "Navigating Challenges",
+            text: "One of the biggest challenges in building a blockchain partner ecosystem is bridging the gap between traditional enterprises and Web3-native organizations. Each comes with its own set of expectations, processes, and cultural nuances that need to be carefully managed."
+          },
+          {
+            heading: "Strategic Alliance Formation",
+            text: "Successful partnerships in the blockchain space require a strategic approach to alliance formation. This includes careful partner selection, clear value proposition alignment, and structured onboarding processes."
+          }
+        ]
+      }
     },
     {
-      title: "Sustainability in the Digital Age",
-      description: "Discover how businesses are leveraging technology to achieve their sustainability goals and meet regulatory requirements...",
+      title: "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports",
+      description: "Traced Systems is thrilled to announce a partnership with Doors3, a leading innovator in decentralization solutions for businesses...",
       image: "/lovable-uploads/pilot.png",
-      date: "March 10, 2024",
-      author: "Sarah Johnson"
-    },
-    {
-      title: "Innovation in Supply Chain Management",
-      description: "Learn about the latest innovations in supply chain management and how they're transforming industry practices...",
-      image: "/lovable-uploads/pilot.png",
-      date: "March 5, 2024",
-      author: "Michael Zhang"
+      fullContent: {
+        title: "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports",
+        authorIcon: "/lovable-uploads/5ce2f433-ac13-4162-97af-4ed813cff152.png",
+        introduction: "Traced Systems is thrilled to announce a partnership with Doors3, a leading innovator in decentralization solutions for businesses. This collaboration marks a pivotal moment in our journey toward creating sustainable, transparent, and technologically advanced solutions that transform industries. Together, we're setting out to transform the way businesses and consumers interact with products through the implementation of Digital Product Passports.",
+        content: [
+          {
+            heading: "A Strategic Partnership",
+            text: "This collaboration brings together Traced Systems' expertise in digital product passports and Doors3's innovative decentralization solutions, creating a powerful synergy that will drive innovation in supply chain transparency."
+          },
+          {
+            heading: "Transforming Industries",
+            text: "Through this partnership, we aim to revolutionize how businesses track, manage, and share product information across their supply chains, making transparency and sustainability not just achievable but efficient."
+          },
+          {
+            heading: "Looking Ahead",
+            text: "As we move forward with this partnership, we're excited about the possibilities it creates for businesses looking to embrace digital transformation and sustainable practices."
+          }
+        ]
+      }
     }
   ];
+
+  const handlePostClick = (post: typeof blogPosts[0]) => {
+    setActivePost(post);
+  };
+
+  const handleSubsheetClose = () => {
+    setActivePost(null);
+  };
 
   return (
     <>
@@ -47,29 +82,56 @@ const BlogSheet = ({ isOpen, onClose }: BlogSheetProps) => {
         >
           <SheetBackButton onBack={onClose} />
 
-          <div className="h-full flex flex-col pt-24">
-            <BlogSection
-              title="Latest Blog Posts"
-              subtitle="Discover insights and updates from our experts about digital product passports, sustainability, and supply chain innovation."
-              posts={blogPosts}
-              onPostClick={setActivePost}
-            />
+          <div className="h-full flex flex-col">
+            <SheetBackgroundSection>
+              <div className="pt-24 px-8">
+                <h1 className="text-3xl font-bold text-center mb-8">Blog</h1>
 
-            <div className="mt-auto">
+                <div className="text-center mb-12">
+                  <p className="text-gray-600">
+                    Insights and updates from our team about digital product passports, sustainability, and innovation.
+                  </p>
+                </div>
+              </div>
+            </SheetBackgroundSection>
+
+            <div className="px-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                {blogPosts.map((post, index) => (
+                  <div 
+                    key={index}
+                    onClick={() => handlePostClick(post)}
+                    className="bg-white rounded-xl p-6 shadow-[4px_4px_10px_0px_rgba(0,0,0,0.1),-4px_-4px_10px_0px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_12px_0px_rgba(0,0,0,0.15),-6px_-6px_12px_0px_rgba(255,255,255,0.95)] transition-all duration-300 cursor-pointer"
+                  >
+                    <img 
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-48 object-cover rounded-lg mb-4"
+                    />
+                    <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
+                    <p className="text-gray-600 mb-4 line-clamp-3">{post.description}</p>
+                    <button className="text-blue-500 hover:text-blue-600 transition-colors">
+                      Read More →
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-auto w-full">
               <AboutCTA onClose={onClose} />
             </div>
           </div>
         </SheetContent>
       </Sheet>
 
-      {blogPosts.map((post, index) => (
-        <BlogPostSheet
-          key={index}
-          isOpen={activePost === index}
-          onClose={() => setActivePost(null)}
-          post={post}
+      {activePost && (
+        <BlogPostSubsheet 
+          isOpen={!!activePost}
+          onClose={handleSubsheetClose}
+          post={activePost}
         />
-      ))}
+      )}
     </>
   );
 };
