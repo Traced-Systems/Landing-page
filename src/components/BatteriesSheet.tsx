@@ -38,7 +38,7 @@ const BatteriesSheet = ({ isOpen, onClose, onBack }: BatteriesSheetProps) => {
         className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[995]"
       >
         <div className="h-full flex flex-col">
-          <div className="pt-20">
+          <div className="pt-12">
             <IndustrySheetHeader
               title="Batteries"
               description="Traced Systems' Digital Product Passport streamlines battery management by enhancing transparency, ensuring compliance, and optimizing the full product lifecycle."

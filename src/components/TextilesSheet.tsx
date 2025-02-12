@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustrySheetHeader from './shared/IndustrySheetHeader';
@@ -65,7 +64,7 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
         className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[995]"
       >
         <div className="h-full flex flex-col">
-          <div className="pt-20">
+          <div className="pt-12">
             <IndustrySheetHeader
               title="Textiles"
               description="Traced Systems' Digital Product Passport tackles supply chain gaps, ensures ethical sourcing, and drives circularity across the textile lifecycle."
@@ -140,4 +139,3 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
 };
 
 export default TextilesSheet;
-
