@@ -6,7 +6,7 @@ import CTASection from './CTASection';
 import TextilesSheet from './TextilesSheet';
 import BatteriesSheet from './BatteriesSheet';
 import SheetBackButton from './shared/SheetBackButton';
-import StyledButton from './ui/styled-button';
+import Button1 from './ui/button-1';
 
 interface IndustriesSheetProps {
   isOpen: boolean;
@@ -99,9 +99,9 @@ const IndustriesSheet = ({ isOpen, onClose, onBack = onClose }: IndustriesSheetP
                   alt="Unified Platform"
                   className="w-full max-w-4xl mx-auto mb-6 rounded-lg"
                 />
-                <StyledButton>
+                <Button1>
                   Learn More
-                </StyledButton>
+                </Button1>
               </div>
             </CTASection>
             
