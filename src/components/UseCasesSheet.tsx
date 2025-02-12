@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from './shared/SheetBackButton';
@@ -21,11 +22,11 @@ const UseCasesSheet = ({ isOpen, onClose }: UseCasesSheetProps) => {
     },
     {
       title: "Battery Lifecycle Innovation",
-      description: "What if a battery's history could stay with it until the end of its life? When batteries reach this stage, understanding their journey - where they've been, what they've been through, and their final destination - can be surprisingly challenging...",
+      description: "What if a battery's history could stay with it until the end of its life? When batteries reach this stage, understanding their journey can be surprisingly challenging...",
       image: "/lovable-uploads/pilot.png",
       fullContent: {
         title: "Completed DPP pilot project between Cling Systems, Traced Systems, Instagrid & Batteriretur",
-        authorIcon: "/lovable-uploads/8a070271-5402-4465-91d1-3ad9ddf99fb4.png",
+        authorIcon: "/lovable-uploads/5ce2f433-ac13-4162-97af-4ed813cff152.png",
         introduction: "What if a battery's history could stay with it until the end of its life? When batteries reach this stage, understanding their journey - where they've been, what they've been through, and their final destination - can be surprisingly challenging...",
         content: [
           {
