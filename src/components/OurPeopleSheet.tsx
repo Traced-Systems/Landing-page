@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import AboutCTA from './shared/AboutCTA';
@@ -92,8 +91,6 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
 
         <div className="h-full flex flex-col pt-24">
           <div className="max-w-4xl mx-auto w-full px-6">
-            <h1 className="text-3xl font-bold text-center mb-12">Meet the Team</h1>
-            
             <div className="space-y-16">
               <section>
                 <h2 className="text-2xl font-semibold mb-8">Advisory Board</h2>
@@ -131,11 +128,9 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                 </div>
               </section>
             </div>
-
-            <div className="mt-16">
-              <AboutCTA onClose={onClose} />
-            </div>
           </div>
+          
+          <AboutCTA onClose={onClose} />
         </div>
       </SheetContent>
     </Sheet>

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from './shared/SheetBackButton';
@@ -52,7 +51,7 @@ const UseCasesSheet = ({ isOpen, onClose }: UseCasesSheetProps) => {
           <div className="h-full flex flex-col">
             <SheetBackgroundSection>
               <div className="pt-24 px-8">
-                <h1 className="text-3xl font-bold mb-8">Use Cases</h1>
+                <h1 className="text-3xl font-bold text-center mb-8">Use Cases</h1>
 
                 <div className="text-center mb-12">
                   <p className="text-gray-600">
