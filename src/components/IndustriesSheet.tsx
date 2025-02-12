@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustryCard from './IndustryCard';
@@ -99,9 +100,11 @@ const IndustriesSheet = ({ isOpen, onClose, onBack = onClose }: IndustriesSheetP
                   alt="Unified Platform"
                   className="w-full max-w-4xl mx-auto mb-6 rounded-lg"
                 />
-                <Button1>
-                  Learn More
-                </Button1>
+                <div className="flex justify-center">
+                  <Button1>
+                    Learn More
+                  </Button1>
+                </div>
               </div>
             </CTASection>
             
