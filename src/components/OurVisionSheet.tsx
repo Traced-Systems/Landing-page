@@ -73,10 +73,9 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
             </div>
 
             <SuccessSection />
-            <div className="w-full">
-              <AboutCTA onClose={onClose} />
-            </div>
           </div>
+          
+          <AboutCTA onClose={onClose} />
         </div>
       </SheetContent>
     </Sheet>
