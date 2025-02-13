@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import UseCasesSheet from "./UseCasesSheet";
 import UseCaseSubsheet from "./UseCaseSubsheet";
@@ -21,7 +21,7 @@ const UseCases = () => {
       title: "Battery Lifecycle Innovation",
       description:
         "What if a battery's lifecycle routing left a verifiable trail? This pilot project, powered by a blockchain-based Digital Product Passport...",
-      image: "/lovable-uploads/efedcb76-b69e-4a52-8689-41020d02ede5.png",
+      image: "/lovable-uploads/0d128533-7eb5-4de9-9aa6-43943eb3a716.png",
       fullContent: {
         title: "Completed DPP pilot project between Cling Systems, Traced Systems, Instagrid & Batteriretur",
         authorIcon: "/lovable-uploads/5ce2f433-ac13-4162-97af-4ed813cff152.png",
