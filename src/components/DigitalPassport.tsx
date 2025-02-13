@@ -7,7 +7,7 @@ const DigitalPassport = () => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative w-full h-full flex items-center">
-            <div className="w-[620px] mx-auto">
+            <div className="mx-auto">
               <img
                 src="/lovable-uploads/84a52b04-4231-4b58-ab6a-c4326f80eb31.png"
                 alt="Digital Product Passport Interface showing mobile screens with product information"
