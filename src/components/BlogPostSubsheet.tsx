@@ -36,10 +36,8 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
     <Sheet open={isOpen} onOpenChange={onClose}>
       <SheetContent 
         side="right" 
-        className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[995]"
+        className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0"
       >
-        <SheetBackButton onBack={onClose} />
-
         <div className="h-full flex flex-col">
           <div className="pt-24 px-8">
             <div className="max-w-4xl mx-auto">
