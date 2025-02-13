@@ -42,13 +42,11 @@ const BlogSection = ({
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
               onClick={() => onPostClick?.(index)}
             >
-              <div className="w-full h-64 overflow-hidden">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-64 object-cover"
+              />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3 text-[#173A44]">{post.title}</h3>
                 <p className="text-gray-600 mb-4 line-clamp-3">{post.description}</p>
