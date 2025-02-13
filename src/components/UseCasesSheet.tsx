@@ -1,20 +1,42 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from './shared/SheetBackButton';
 import AboutCTA from './shared/AboutCTA';
 import SheetBackgroundSection from './shared/SheetBackgroundSection';
 import UseCaseSubsheet from './UseCaseSubsheet';
 
+type UseCase = {
+  title: string;
+  description: string;
+  image: string;
+  fullContent?: {
+    title: string;
+    authorIcon: string;
+    introduction: string;
+    content: Array<{
+      heading: string;
+      text: string;
+    }>;
+  };
+};
+
 interface UseCasesSheetProps {
   isOpen: boolean;
   onClose: () => void;
+  initialCase: UseCase | null;
 }
 
-const UseCasesSheet = ({ isOpen, onClose }: UseCasesSheetProps) => {
-  const [activeCase, setActiveCase] = useState<typeof cases[0] | null>(null);
+const UseCasesSheet = ({ isOpen, onClose, initialCase }: UseCasesSheetProps) => {
+  const [activeCase, setActiveCase] = useState<UseCase | null>(null);
 
-  const cases = [
+  useEffect(() => {
+    if (initialCase) {
+      setActiveCase(initialCase);
+    }
+  }, [initialCase]);
+
+  const cases: UseCase[] = [
     {
       title: "BLK DNM: Connected Fashion",
       description: "BLK DNM has launched their 'Connected Fashion' campaign, delivering the first collection of apparel embedded with...",
@@ -23,7 +45,7 @@ const UseCasesSheet = ({ isOpen, onClose }: UseCasesSheetProps) => {
     {
       title: "Battery Lifecycle Innovation",
       description: "What if a battery's history could stay with it until the end of its life? When batteries reach this stage, understanding their journey can be surprisingly challenging...",
-      image: "/lovable-uploads/pilot.png",
+      image: "/lovable-uploads/0d128533-7eb5-4de9-9aa6-43943eb3a716.png",
       fullContent: {
         title: "Completed DPP pilot project between Cling Systems, Traced Systems, Instagrid & Batteriretur",
         authorIcon: "/lovable-uploads/5ce2f433-ac13-4162-97af-4ed813cff152.png",
@@ -59,7 +81,7 @@ const UseCasesSheet = ({ isOpen, onClose }: UseCasesSheetProps) => {
     }
   ];
 
-  const handleCaseClick = (useCase: typeof cases[0]) => {
+  const handleCaseClick = (useCase: UseCase) => {
     setActiveCase(useCase);
   };
 
