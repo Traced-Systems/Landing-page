@@ -46,7 +46,8 @@ const Header = () => {
       />
       <UseCasesSheet 
         isOpen={activeSheet === 'useCases'} 
-        onClose={handleSheetClose} 
+        onClose={handleSheetClose}
+        initialCase={null}
       />
       <ContactSheet 
         isOpen={activeSheet === 'contact'} 

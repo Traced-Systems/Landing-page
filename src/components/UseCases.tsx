@@ -2,11 +2,13 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import UseCasesSheet from "./UseCasesSheet";
+import UseCaseSubsheet from "./UseCaseSubsheet";
 import { ChevronRight } from "lucide-react";
 
 const UseCases = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const [selectedCase, setSelectedCase] = useState<typeof cases[0] | null>(null);
+  const [showCaseDirectly, setShowCaseDirectly] = useState(false);
 
   const cases = [
     {
@@ -58,7 +60,18 @@ const UseCases = () => {
 
   const handleCaseClick = (useCase: typeof cases[0]) => {
     setSelectedCase(useCase);
+    setShowCaseDirectly(true);
+  };
+
+  const handleClose = () => {
+    setIsSheetOpen(false);
+    setSelectedCase(null);
+    setShowCaseDirectly(false);
+  };
+
+  const handleShowMoreClick = () => {
     setIsSheetOpen(true);
+    setShowCaseDirectly(false);
   };
 
   return (
@@ -96,7 +109,7 @@ hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,25
           <Button
             variant="outline"
             className="rounded-full border-2 border-[#E4AC70] bg-[#F7F7F7] text-[#143A44] flex items-center gap-2 pl-7 pr-6 hover:bg-[#E6E5E0]"
-            onClick={() => setIsSheetOpen(true)}
+            onClick={handleShowMoreClick}
           >
             Know More <ChevronRight className="w-5 h-5 text-[#143A44]" />
           </Button>
@@ -105,12 +118,17 @@ hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,25
 
       <UseCasesSheet
         isOpen={isSheetOpen}
-        onClose={() => {
-          setIsSheetOpen(false);
-          setSelectedCase(null);
-        }}
-        initialCase={selectedCase}
+        onClose={handleClose}
+        initialCase={null}
       />
+
+      {showCaseDirectly && selectedCase && (
+        <UseCaseSubsheet 
+          isOpen={true}
+          onClose={handleClose}
+          useCase={selectedCase}
+        />
+      )}
     </section>
   );
 };
