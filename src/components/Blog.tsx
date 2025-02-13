@@ -9,26 +9,21 @@ const Blog = () => {
   const blogPosts = [
     {
       title: "The Blueprint for a Successful Blockchain Partner Ecosystem",
-      description: "In this edition of the Greatest Minds in Partnerships series, David Dolhomut, Head of Partnerships & Business Development at Traced Systems, shares his insights on building a thriving blockchain partner ecosystem. From overcoming industry challenges and onboarding the right partners to balancing traditional enterprises with Web3-native collaborations, David provides a blueprint for successful blockchain partnerships. Learn how to navigate regulatory landscapes, drive adoption through strategic alliances, and leverage technology like PRM platforms to scale blockchain ecosystems effectively.",
-      image: "/lovable-uploads/pilot.png"
+      description: "In this edition of the Greatest Minds in Partnerships series, David Dolhomut, Head of Partnerships & Business Development at Traced Systems, shares his insights on building a thriving blockchain partner ecosystem. From overcoming industry challenges and onboarding the right partners to balancing traditional enterprises with Web3-native collaborations, David provides a blueprint for successful blockchain partnerships...",
+      image: "/lovable-uploads/ecdba3ef-2ae6-4fa3-96d6-e01f4e951b66.png"
     },
     {
-      title: "All Steps to follow and all angles need",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus.",
-      image: "/lovable-uploads/pilot.png"
-    },
-    {
-      title: "All Steps to follow and all angles need",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus.",
-      image: "/lovable-uploads/pilot.png"
+      title: "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports",
+      description: "Sustainability, transparency, and innovation are becoming essential in today's interconnected world. At Traced Systems, we are committed to driving change through blockchain-powered solutions that promote trust and accountability.",
+      image: "/lovable-uploads/c0e03054-5e46-4abd-ab45-c5a523b99799.png"
     }
   ];
 
   return (
     <>
       <BlogSection
-        title="The Blueprint for a Successful Blockchain Partner Ecosystem"
-        subtitle="In this edition of the Greatest Minds in Partnerships series, David Dolhomut shares insights on building thriving blockchain partnerships"
+        title="Explore Our Blog"
+        subtitle="Explore expert ideas and stories from our team."
         posts={blogPosts}
         showMoreButton={true}
         onShowMore={() => setIsSheetOpen(true)}
