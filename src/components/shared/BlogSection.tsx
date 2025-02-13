@@ -1,6 +1,7 @@
 
 import React from "react";
 import Button1 from "@/components/ui/button-1";
+import { Button } from "@/components/ui/button";
 
 interface BlogPost {
   title: string;
@@ -50,9 +51,12 @@ const BlogSection = ({
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3 text-[#173A44]">{post.title}</h3>
                 <p className="text-gray-600 mb-4 line-clamp-3">{post.description}</p>
-                <Button1>
+                <Button
+                  variant="link"
+                  className="text-blue-500 p-0 hover:text-blue-600"
+                >
                   Read More →
-                </Button1>
+                </Button>
               </div>
             </div>
           ))}
