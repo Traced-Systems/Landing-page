@@ -68,6 +68,7 @@ const Header = () => {
       <BlogSheet
         isOpen={activeSheet === 'blog'}
         onClose={handleSheetClose}
+        initialPost={null}
       />
     </>
   );
