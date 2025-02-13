@@ -2,9 +2,12 @@
 import React, { useState } from 'react';
 import BlogSheet from './BlogSheet';
 import BlogSection from './shared/BlogSection';
+import { blogPosts as allBlogPosts } from '@/data/blogPosts';
+import { BlogPost } from '@/types/blog';
 
 const Blog = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
   
   const blogPosts = [
     {
@@ -19,6 +22,19 @@ const Blog = () => {
     }
   ];
 
+  const handlePostClick = (index: number) => {
+    const clickedPost = allBlogPosts.find(post => post.title === blogPosts[index].title);
+    if (clickedPost) {
+      setSelectedPost(clickedPost);
+      setIsSheetOpen(true);
+    }
+  };
+
+  const handleClose = () => {
+    setIsSheetOpen(false);
+    setSelectedPost(null);
+  };
+
   return (
     <>
       <BlogSection
@@ -27,11 +43,13 @@ const Blog = () => {
         posts={blogPosts}
         showMoreButton={true}
         onShowMore={() => setIsSheetOpen(true)}
+        onPostClick={handlePostClick}
       />
 
       <BlogSheet 
         isOpen={isSheetOpen}
-        onClose={() => setIsSheetOpen(false)}
+        onClose={handleClose}
+        initialPost={selectedPost}
       />
     </>
   );

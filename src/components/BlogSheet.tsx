@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from './shared/SheetBackButton';
 import AboutCTA from './shared/AboutCTA';
@@ -12,10 +12,17 @@ import { BlogPost } from '@/types/blog';
 interface BlogSheetProps {
   isOpen: boolean;
   onClose: () => void;
+  initialPost?: BlogPost | null;
 }
 
-const BlogSheet = ({ isOpen, onClose }: BlogSheetProps) => {
+const BlogSheet = ({ isOpen, onClose, initialPost }: BlogSheetProps) => {
   const [activePost, setActivePost] = useState<BlogPost | null>(null);
+
+  useEffect(() => {
+    if (initialPost) {
+      setActivePost(initialPost);
+    }
+  }, [initialPost]);
 
   const handlePostClick = (post: BlogPost) => {
     setActivePost(post);
