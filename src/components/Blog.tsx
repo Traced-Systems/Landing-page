@@ -29,6 +29,8 @@ const Blog = () => {
     if (clickedPost) {
       setSelectedPost(clickedPost);
       setShowPostDirectly(true);
+      // Don't open the underlying sheet when clicking from homepage
+      setIsSheetOpen(false);
     }
   };
 
