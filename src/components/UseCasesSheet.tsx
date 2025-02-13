@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from './shared/SheetBackButton';
 import AboutCTA from './shared/AboutCTA';
@@ -9,10 +9,30 @@ import UseCaseSubsheet from './UseCaseSubsheet';
 interface UseCasesSheetProps {
   isOpen: boolean;
   onClose: () => void;
+  initialCase?: {
+    title: string;
+    description: string;
+    image: string;
+    fullContent?: {
+      title: string;
+      authorIcon: string;
+      introduction: string;
+      content: Array<{
+        heading: string;
+        text: string;
+      }>;
+    };
+  } | null;
 }
 
-const UseCasesSheet = ({ isOpen, onClose }: UseCasesSheetProps) => {
+const UseCasesSheet = ({ isOpen, onClose, initialCase }: UseCasesSheetProps) => {
   const [activeCase, setActiveCase] = useState<typeof cases[0] | null>(null);
+
+  useEffect(() => {
+    if (initialCase) {
+      setActiveCase(initialCase);
+    }
+  }, [initialCase]);
 
   const cases = [
     {
