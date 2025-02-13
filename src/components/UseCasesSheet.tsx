@@ -6,27 +6,29 @@ import AboutCTA from './shared/AboutCTA';
 import SheetBackgroundSection from './shared/SheetBackgroundSection';
 import UseCaseSubsheet from './UseCaseSubsheet';
 
+type UseCase = {
+  title: string;
+  description: string;
+  image: string;
+  fullContent?: {
+    title: string;
+    authorIcon: string;
+    introduction: string;
+    content: Array<{
+      heading: string;
+      text: string;
+    }>;
+  };
+};
+
 interface UseCasesSheetProps {
   isOpen: boolean;
   onClose: () => void;
-  initialCase?: {
-    title: string;
-    description: string;
-    image: string;
-    fullContent?: {
-      title: string;
-      authorIcon: string;
-      introduction: string;
-      content: Array<{
-        heading: string;
-        text: string;
-      }>;
-    };
-  } | null;
+  initialCase: UseCase | null;
 }
 
 const UseCasesSheet = ({ isOpen, onClose, initialCase }: UseCasesSheetProps) => {
-  const [activeCase, setActiveCase] = useState<typeof cases[0] | null>(null);
+  const [activeCase, setActiveCase] = useState<UseCase | null>(null);
 
   useEffect(() => {
     if (initialCase) {
@@ -34,7 +36,7 @@ const UseCasesSheet = ({ isOpen, onClose, initialCase }: UseCasesSheetProps) => 
     }
   }, [initialCase]);
 
-  const cases = [
+  const cases: UseCase[] = [
     {
       title: "BLK DNM: Connected Fashion",
       description: "BLK DNM has launched their 'Connected Fashion' campaign, delivering the first collection of apparel embedded with...",
@@ -79,7 +81,7 @@ const UseCasesSheet = ({ isOpen, onClose, initialCase }: UseCasesSheetProps) => 
     }
   ];
 
-  const handleCaseClick = (useCase: typeof cases[0]) => {
+  const handleCaseClick = (useCase: UseCase) => {
     setActiveCase(useCase);
   };
 
