@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import BlogSheet from './BlogSheet';
+import BlogPostSubsheet from './BlogPostSubsheet';
 import BlogSection from './shared/BlogSection';
 import { blogPosts as allBlogPosts } from '@/data/blogPosts';
 import { BlogPost } from '@/types/blog';
@@ -8,6 +9,7 @@ import { BlogPost } from '@/types/blog';
 const Blog = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+  const [showPostDirectly, setShowPostDirectly] = useState(false);
   
   const blogPosts = [
     {
@@ -26,13 +28,19 @@ const Blog = () => {
     const clickedPost = allBlogPosts.find(post => post.title === blogPosts[index].title);
     if (clickedPost) {
       setSelectedPost(clickedPost);
-      setIsSheetOpen(true);
+      setShowPostDirectly(true);
     }
   };
 
   const handleClose = () => {
     setIsSheetOpen(false);
     setSelectedPost(null);
+    setShowPostDirectly(false);
+  };
+
+  const handleShowMoreClick = () => {
+    setShowPostDirectly(false);
+    setIsSheetOpen(true);
   };
 
   return (
@@ -42,15 +50,23 @@ const Blog = () => {
         subtitle="Explore expert ideas and stories from our team."
         posts={blogPosts}
         showMoreButton={true}
-        onShowMore={() => setIsSheetOpen(true)}
+        onShowMore={handleShowMoreClick}
         onPostClick={handlePostClick}
       />
 
       <BlogSheet 
-        isOpen={isSheetOpen}
+        isOpen={isSheetOpen && !showPostDirectly}
         onClose={handleClose}
         initialPost={selectedPost}
       />
+
+      {showPostDirectly && selectedPost && (
+        <BlogPostSubsheet 
+          isOpen={true}
+          onClose={handleClose}
+          post={selectedPost}
+        />
+      )}
     </>
   );
 };
