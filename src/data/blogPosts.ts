@@ -4,7 +4,7 @@ export const blogPosts: BlogPost[] = [
   {
     title: "The Blueprint for a Successful Blockchain Partner Ecosystem",
     description: "In this edition of the Greatest Minds in Partnerships series, David Dolhomut, Head of Partnerships & Business Development at Traced Systems, shares his insights on building a thriving blockchain partner ecosystem...",
-    image: "/lovable-uploads/14465f50-ded9-4af6-a527-819be3a69783.png",
+    image: "/lovable-uploads/38805650-ecc3-48cc-b0f1-923d17a75d9a.png",
     fullContent: {
       title: "The Blueprint for a Successful Blockchain Partner Ecosystem",
       introduction: "For this edition of the Greatest Minds in Partnerships series, we sat down with David Dolhomut, Head of Partnerships & Business Development at Traced Systems, to explore building and scaling a thriving partner ecosystem in the blockchain industry.\n\nWith years of experience fostering B2B and B2G collaborations, David has played a pivotal role in bridging traditional enterprises and Web3-native projects. From working at the Embassy of Canada in Poland to shaping the Nordic Blockchain Association, his journey into blockchain partnerships has been defined by a passion for trust, innovation, and real-world adoption.\n\nIn this conversation, he shares key insights into overcoming blockchain-specific challenges, onboarding the right partners, balancing traditional and decentralized partnerships, and leveraging technology to scale collaborations in this rapidly evolving space.",
@@ -60,7 +60,7 @@ export const blogPosts: BlogPost[] = [
   {
     title: "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports",
     description: "Traced Systems is thrilled to announce a partnership with Doors3, a leading innovator in decentralization solutions for businesses...",
-    image: "/lovable-uploads/38805650-ecc3-48cc-b0f1-923d17a75d9a.png",
+    image: "/lovable-uploads/14465f50-ded9-4af6-a527-819be3a69783.png",
     fullContent: {
       title: "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports",
       introduction: "Sustainability, transparency, and innovation are becoming essential in today's interconnected world. At Traced Systems, we are committed to driving change through blockchain-powered solutions that promote trust and accountability.",
