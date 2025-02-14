@@ -94,11 +94,11 @@ const UseCasesSheet = ({ isOpen, onClose, initialCase }: UseCasesSheetProps) => 
       <Sheet open={isOpen} onOpenChange={onClose}>
         <SheetContent 
           side="right" 
-          className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0"
+          className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 relative"
         >
           <SheetBackButton onBack={onClose} />
 
-          <div className="h-full flex flex-col">
+          <div className="min-h-screen flex flex-col pb-[84px]">
             <SheetBackgroundSection>
               <div className="pt-24 px-8">
                 <h1 className="text-3xl font-bold text-center mb-8">Use Cases</h1>
@@ -134,7 +134,7 @@ const UseCasesSheet = ({ isOpen, onClose, initialCase }: UseCasesSheetProps) => 
               </div>
             </div>
 
-            <div className="mt-auto w-full">
+            <div className="fixed bottom-0 left-0 right-0">
               <AboutCTA onClose={onClose} />
             </div>
           </div>
