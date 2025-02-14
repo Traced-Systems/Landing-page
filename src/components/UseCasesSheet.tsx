@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from './shared/SheetBackButton';
@@ -134,9 +133,7 @@ const UseCasesSheet = ({ isOpen, onClose, initialCase }: UseCasesSheetProps) => 
               </div>
             </div>
 
-            <div className="mt-auto w-full">
-              <AboutCTA onClose={onClose} />
-            </div>
+            <AboutCTA onClose={onClose} />
           </div>
         </SheetContent>
       </Sheet>
