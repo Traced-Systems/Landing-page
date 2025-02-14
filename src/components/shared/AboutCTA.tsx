@@ -6,7 +6,7 @@ interface AboutCTAProps {
 const AboutCTA = ({
   onClose
 }: AboutCTAProps) => {
-  return <section className="bg-[#173A44] w-full p-12 text-center mx-0 my-[84px]">
+  return <section className="bg-[#173A44] w-full p-12 text-center mx-0 my-[84px] py-[64px]">
       <h3 className="text-2xl font-bold text-white mb-6">
         Do you want to know more?
       </h3>
