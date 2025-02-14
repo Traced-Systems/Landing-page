@@ -113,12 +113,12 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer"
+                      className="relative aspect-square overflow-hidden rounded-lg group hover:scale-105 transition-transform duration-300"
                     >
                       <img 
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300" />
                     </a>
@@ -135,12 +135,12 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer"
+                      className="relative aspect-square overflow-hidden rounded-lg group hover:scale-105 transition-transform duration-300"
                     >
                       <img 
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300" />
                     </a>
