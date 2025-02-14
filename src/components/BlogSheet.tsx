@@ -66,9 +66,7 @@ const BlogSheet = ({ isOpen, onClose, initialPost }: BlogSheetProps) => {
               </div>
             </div>
 
-            <div className="mt-auto w-full">
-              <AboutCTA onClose={onClose} />
-            </div>
+            <AboutCTA onClose={onClose} />
           </div>
         </SheetContent>
       </Sheet>
