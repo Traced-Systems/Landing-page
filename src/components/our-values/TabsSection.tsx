@@ -36,7 +36,9 @@ const TabsSection = () => {
                 <div className="absolute inset-0 bg-black/60 flex items-center justify-center p-8">
                   <p className="text-white font-bold text-lg text-center">
                     {tab === "mission" ? (
-                      "Our mission is to transform supply chain efficiency and engagement by leveraging blockchain technology to enhance transparency, collaboration, and customer loyalty."
+                      <>
+                        <strong>Our mission is to transform supply chain efficiency and engagement by leveraging blockchain technology to enhance transparency, collaboration, and customer loyalty.</strong> From raw materials to recycling, we empower businesses to optimize workflows, build stronger brand connections, and deliver sustainable value to every stakeholder in the chain.
+                      </>
                     ) : tab === "focus" ? (
                       "Our focus is on helping companies stay ahead of evolving regulations while ensuring a tangible return on investment."
                     ) : (
