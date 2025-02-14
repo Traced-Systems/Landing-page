@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const TabsSection = () => {
@@ -18,7 +19,9 @@ const TabsSection = () => {
                   <p className="text-white font-bold text-center text-base">
                     {tab === "mission" ? <>
                         <strong>Our mission is to transform supply chain efficiency and engagement by leveraging blockchain technology to enhance transparency, collaboration, and customer loyalty.</strong> From raw materials to recycling, we empower businesses to optimize workflows, build stronger brand connections, and deliver sustainable value to every stakeholder in the chain.
-                      </> : tab === "focus" ? "Our focus is on helping companies stay ahead of evolving regulations while ensuring a tangible return on investment." : "Our platform goes beyond mere compliance, helping businesses integrate a truly circular approach that aligns with European values."}
+                      </> : tab === "focus" ? <>
+                        <strong>Our focus is on helping companies stay ahead of evolving regulations while ensuring a tangible return on investment.</strong> We guide organizations in targeting and engaging the right audiences (from legislators to end consumers) across both B2B and B2C environments. By employing a progressive, future-proof approach, we enable companies to meet (and exceed) their sustainability goals without compromising budgets or growth.
+                      </> : "Our platform goes beyond mere compliance, helping businesses integrate a truly circular approach that aligns with European values."}
                   </p>
                 </div>
               </div>
