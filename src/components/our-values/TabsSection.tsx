@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const TabsSection = () => {
@@ -20,7 +21,9 @@ const TabsSection = () => {
                         <strong>Our mission is to transform supply chain efficiency and engagement by leveraging blockchain technology to enhance transparency, collaboration, and customer loyalty.</strong> From raw materials to recycling, we empower businesses to optimize workflows, build stronger brand connections, and deliver sustainable value to every stakeholder in the chain.
                       </> : tab === "focus" ? <>
                         <strong>Our focus is on helping companies stay ahead of evolving regulations while ensuring a tangible return on investment.</strong> We guide organizations in targeting and engaging the right audiences (from legislators to end consumers) across both B2B and B2C environments. By employing a progressive, future-proof approach, we enable companies to meet (and exceed) their sustainability goals without compromising budgets or growth.
-                      </> : "Our platform goes beyond mere compliance, helping businesses integrate a truly circular approach that aligns with European values."}
+                      </> : <>
+                        <strong>Our platform goes beyond mere compliance.</strong> By identifying and collaborating with key partners in the value chain, we help businesses integrate a truly circular approach that aligns with European values and environmental objectives. Whether you're seeking to reduce waste, boost resource efficiency, or enhance brand loyalty, our solution puts you at the forefront of sustainable innovation today and into the future.
+                      </>}
                   </p>
                 </div>
               </div>
