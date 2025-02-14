@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import NavigationItems from "./NavigationItems";
@@ -6,17 +7,8 @@ import Logo from "./Logo";
 
 interface MainHeaderProps {
   isScrolled: boolean;
-  handleSheetOpen: (
-    sheet:
-      | "industries"
-      | "useCases"
-      | "contact"
-      | "values"
-      | "vision"
-      | "people"
-      | "blog"
-  ) => void;
-  className?: string; // Added className as an optional prop
+  handleSheetOpen: (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog') => void;
+  className?: string;
 }
 
 const MainHeader = ({
@@ -45,7 +37,7 @@ const MainHeader = ({
             </Button>
           </div>
 
-          <MobileMenu />
+          <MobileMenu handleSheetOpen={handleSheetOpen} />
         </div>
       </div>
     </header>
