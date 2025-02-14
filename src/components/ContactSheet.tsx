@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Input } from "./ui/input";
@@ -50,9 +51,9 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
 
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
-      <SheetContent
-        side="right"
-        className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl"
+      <SheetContent 
+        side="right" 
+        className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl"
       >
         <SheetBackButton onBack={onClose} />
 
