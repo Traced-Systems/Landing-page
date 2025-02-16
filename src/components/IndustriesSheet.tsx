@@ -62,7 +62,7 @@ const IndustriesSheet = ({
         >
           <div className="h-full flex flex-col relative">
             <SheetBackButton onBack={onBack} />
-            
+
             <div
               className="relative w-full"
               style={{ paddingTop: `${(202 / 1082) * 100}%` }}
@@ -74,15 +74,15 @@ const IndustriesSheet = ({
                 }}
               />
 
-              <div className="absolute inset-0 flex items-center pl-8">
-                <h1 className="text-4xl font-semibold text-[#2D545E] pl-5">
+              <div className="absolute inset-0 flex items-center pl-20 pt-12">
+                <h1 className="text-2xl font-semibold text-[#2D545E] ">
                   Industries
                 </h1>
               </div>
             </div>
 
             <div className="text-center mb-12 pt-20">
-              <h2 className="text-3xl text-[#173A44] font-medium ">
+              <h2 className="text-2xl text-[#173A44] font-medium ">
                 Key Industries We Serve
               </h2>
             </div>
