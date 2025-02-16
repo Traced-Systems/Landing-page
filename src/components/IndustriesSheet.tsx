@@ -33,20 +33,20 @@ const IndustriesSheet = ({
   }, [isOpen]);
 
   const handleTextilesClick = () => {
-    // Close industries sheet before opening textiles
-    setActiveSheet(null);
-    // Small delay to ensure smooth transition
+    // First, open the textiles sheet
+    setActiveSheet("textiles");
+    // Then, after a small delay, close the industries sheet
     setTimeout(() => {
-      setActiveSheet("textiles");
+      onClose();
     }, 100);
   };
 
   const handleBatteriesClick = () => {
-    // Close industries sheet before opening batteries
-    setActiveSheet(null);
-    // Small delay to ensure smooth transition
+    // First, open the batteries sheet
+    setActiveSheet("batteries");
+    // Then, after a small delay, close the industries sheet
     setTimeout(() => {
-      setActiveSheet("batteries");
+      onClose();
     }, 100);
   };
 
