@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustryCard from "./IndustryCard";
@@ -35,19 +34,11 @@ const IndustriesSheet = ({
   const handleTextilesClick = () => {
     // First, open the textiles sheet
     setActiveSheet("textiles");
-    // Then, after a small delay, close the industries sheet
-    setTimeout(() => {
-      onClose();
-    }, 100);
   };
 
   const handleBatteriesClick = () => {
     // First, open the batteries sheet
     setActiveSheet("batteries");
-    // Then, after a small delay, close the industries sheet
-    setTimeout(() => {
-      onClose();
-    }, 100);
   };
 
   const handleSheetClose = () => {
