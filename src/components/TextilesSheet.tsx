@@ -5,6 +5,8 @@ import IndustrySheetHeader from './shared/IndustrySheetHeader';
 import IndustrySheetCard from './shared/IndustrySheetCard';
 import IndustrySheetCTA from './shared/IndustrySheetCTA';
 import Button1 from './ui/button-1';
+import SheetBackButton from './shared/SheetBackButton';
+import { useNavigate } from 'react-router-dom';
 
 interface TextilesSheetProps {
   isOpen: boolean;
@@ -13,6 +15,18 @@ interface TextilesSheetProps {
 }
 
 const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
+  const navigate = useNavigate();
+  
+  const handleSheetClose = (open: boolean) => {
+    if (!open) {
+      onClose();
+      // Navigate to index after closing
+      setTimeout(() => {
+        navigate('/');
+      }, 300);
+    }
+  };
+
   const cards = [
     {
       title: "Lifecycle Traceability",
@@ -59,11 +73,12 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
   ];
 
   return (
-    <Sheet open={isOpen} onOpenChange={onClose}>
+    <Sheet open={isOpen} onOpenChange={handleSheetClose}>
       <SheetContent 
         side="right" 
         className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[995]"
       >
+        <SheetBackButton onBack={onBack} />
         <div className="h-full flex flex-col">
           <div className="pt-12">
             <IndustrySheetHeader
