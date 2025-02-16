@@ -6,7 +6,6 @@ import CTASection from "./CTASection";
 import TextilesSheet from "./TextilesSheet";
 import BatteriesSheet from "./BatteriesSheet";
 import SheetBackButton from "./shared/SheetBackButton";
-import CloseButton from "./shared/CloseButton";
 import Button1 from "./ui/button-1";
 
 interface IndustriesSheetProps {
@@ -63,7 +62,6 @@ const IndustriesSheet = ({
         >
           <div className="h-full flex flex-col relative">
             <SheetBackButton onBack={onBack} />
-            <CloseButton onClose={onClose} />
             
             <div
               className="relative w-full"
@@ -76,15 +74,15 @@ const IndustriesSheet = ({
                 }}
               />
 
-              <div className="absolute inset-0 flex items-center pl-20 pt-12">
-                <h1 className="text-2xl font-semibold text-[#2D545E] ">
+              <div className="absolute inset-0 flex items-center pl-8">
+                <h1 className="text-4xl font-semibold text-[#2D545E] pl-5">
                   Industries
                 </h1>
               </div>
             </div>
 
             <div className="text-center mb-12 pt-20">
-              <h2 className="text-2xl text-[#173A44] font-medium ">
+              <h2 className="text-3xl text-[#173A44] font-medium ">
                 Key Industries We Serve
               </h2>
             </div>
@@ -114,12 +112,12 @@ const IndustriesSheet = ({
             <EURegulationsSection />
 
             <CTASection>
-              <div className="text-center mt-6 px-8">
+              <div className="text-center mt-6">
                 <div>
-                  <h2 className="text-2xl font-medium text-center mb-2 text-[#173A44]">
+                  <h2 className="text-2xl font-bold text-center mb-2">
                     A Unified Traceability Platform
                   </h2>
-                  <h3 className="text-xl text-center mb-6 text-[#173A44]">
+                  <h3 className="text-xl text-center mb-6">
                     From Source to Sustainability
                   </h3>
                 </div>
@@ -139,7 +137,7 @@ const IndustriesSheet = ({
               </div>
             </CTASection>
 
-            <div className="pb-[100px]"></div>
+            <div className="pb-[125px]"></div>
           </div>
         </SheetContent>
       </Sheet>
