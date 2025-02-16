@@ -32,10 +32,12 @@ const IndustriesSheet = ({
   }, [isOpen]);
 
   const handleTextilesClick = () => {
+    // First, open the textiles sheet
     setActiveSheet("textiles");
   };
 
   const handleBatteriesClick = () => {
+    // First, open the batteries sheet
     setActiveSheet("batteries");
   };
 
@@ -65,17 +67,15 @@ const IndustriesSheet = ({
           <div className="h-full flex flex-col">
             <div
               className="relative w-full"
-              style={{ paddingTop: `${(202 / 1082) * 100}%` }} // Maintain aspect ratio
+              style={{ paddingTop: `${(202 / 1082) * 100}%` }}
             >
-              {/* Background Image */}
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
                   backgroundImage: "url('/lovable-uploads/sideWindowBG.png')",
-                }} // Replace with actual image path
+                }}
               />
 
-              {/* Content (Text Left-Aligned) */}
               <div className="absolute inset-0 flex items-center pl-8">
                 <h1 className="text-4xl font-semibold text-[#2D545E] pl-5">
                   Industries
