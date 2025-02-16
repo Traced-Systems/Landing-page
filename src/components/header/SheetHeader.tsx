@@ -6,7 +6,7 @@ import MobileMenu from './MobileMenu';
 import Logo from './Logo';
 
 interface SheetHeaderProps {
-  handleSheetOpen: (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people') => void;
+  handleSheetOpen: (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog') => void;
 }
 
 const SheetHeader = ({ handleSheetOpen }: SheetHeaderProps) => {
@@ -29,7 +29,7 @@ const SheetHeader = ({ handleSheetOpen }: SheetHeaderProps) => {
             </Button>
           </div>
 
-          <MobileMenu />
+          <MobileMenu handleSheetOpen={handleSheetOpen} />
         </div>
       </div>
     </header>

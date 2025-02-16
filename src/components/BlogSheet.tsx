@@ -37,7 +37,7 @@ const BlogSheet = ({ isOpen, onClose, initialPost }: BlogSheetProps) => {
       <Sheet open={isOpen} onOpenChange={onClose}>
         <SheetContent 
           side="right" 
-          className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0"
+          className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0"
         >
           <SheetBackButton onBack={onClose} />
 
@@ -66,9 +66,7 @@ const BlogSheet = ({ isOpen, onClose, initialPost }: BlogSheetProps) => {
               </div>
             </div>
 
-            <div className="mt-auto w-full">
-              <AboutCTA onClose={onClose} />
-            </div>
+            <AboutCTA onClose={onClose} />
           </div>
         </SheetContent>
       </Sheet>
