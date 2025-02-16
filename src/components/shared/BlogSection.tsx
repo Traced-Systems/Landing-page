@@ -1,5 +1,6 @@
 
 import React from "react";
+import Button1 from "@/components/ui/button-1";
 import { Button } from "@/components/ui/button";
 
 interface BlogPost {
@@ -63,13 +64,9 @@ const BlogSection = ({
 
         {showMoreButton && (
           <div className="flex justify-center">
-            <Button 
-              variant="outline" 
-              className="px-8 border-2 border-[#E4AC70] text-[#143A44] hover:bg-[#EEEADF]"
-              onClick={onShowMore}
-            >
+            <Button1 onClick={onShowMore}>
               Show More
-            </Button>
+            </Button1>
           </div>
         )}
       </div>

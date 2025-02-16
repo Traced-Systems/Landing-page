@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustryCard from "./IndustryCard";
@@ -11,7 +12,7 @@ import Button1 from "./ui/button-1";
 interface IndustriesSheetProps {
   isOpen: boolean;
   onClose: () => void;
-  onBack?: () => void; // Made onBack optional
+  onBack?: () => void;
 }
 
 const IndustriesSheet = ({
@@ -58,7 +59,7 @@ const IndustriesSheet = ({
       >
         <SheetContent
           side="right"
-          className="!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[999]"
+          className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[999]"
         >
           <SheetBackButton onBack={onBack} />
 
