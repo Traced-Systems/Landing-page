@@ -2,8 +2,8 @@ import React from "react";
 
 const EURegulationsSection = () => {
   return (
-    <div className="bg-white px-20 py-24 mb-12 ">
-      <h2 className="text-2xl font-bold text-center mb-6">
+    <div className="bg-white px-20 py-20 mb-12 ">
+      <h2 className="text-2xl font-medium text-center mb-8 text-[#173A44]">
         Meet Today's EU Regulations, Stay Ready for Tomorrow's
       </h2>
       <div className="flex flex-col md:flex-row gap-8 items-center">

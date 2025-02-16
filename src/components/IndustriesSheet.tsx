@@ -116,10 +116,10 @@ const IndustriesSheet = ({
             <CTASection>
               <div className="text-center mt-6 px-8">
                 <div>
-                  <h2 className="text-2xl font-bold text-center mb-2">
+                  <h2 className="text-2xl font-medium text-center mb-2 text-[#173A44]">
                     A Unified Traceability Platform
                   </h2>
-                  <h3 className="text-xl text-center mb-6">
+                  <h3 className="text-xl text-center mb-6 text-[#173A44]">
                     From Source to Sustainability
                   </h3>
                 </div>
