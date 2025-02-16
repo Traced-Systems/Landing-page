@@ -89,7 +89,7 @@ const IndustriesSheet = ({
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-24 px-24 xs:px-16">
+            <div className="grid md:grid-cols-2 gap-20 mb-24 px-20 xs:px-16">
               <div className="space-y-4">
                 <IndustryCard
                   title="Textiles"
@@ -114,7 +114,15 @@ const IndustriesSheet = ({
             <EURegulationsSection />
 
             <CTASection>
-              <div className="text-center mb-6">
+              <div className="text-center mt-6">
+                <div>
+                  <h2 className="text-2xl font-bold text-center mb-2">
+                    A Unified Traceability Platform
+                  </h2>
+                  <h3 className="text-xl text-center mb-6">
+                    From Source to Sustainability
+                  </h3>
+                </div>
                 <p className="text-gray-600 mb-6">
                   Our comprehensive platform integrates seamlessly across your
                   entire value chain, providing real-time visibility and control
@@ -123,10 +131,10 @@ const IndustriesSheet = ({
                 <img
                   src="/lovable-uploads/c0da0885-a0e1-4ac0-b309-a464bcd66b53.png"
                   alt="Unified Platform"
-                  className="w-full max-w-4xl mx-auto mb-6 rounded-lg"
+                  className="w-full max-w-4xl mx-auto pt-4 mb-12 rounded-lg"
                 />
                 <div className="flex justify-center">
-                  <Button1>Learn More</Button1>
+                  <Button1 className="px-8">Get in touch</Button1>
                 </div>
               </div>
             </CTASection>
