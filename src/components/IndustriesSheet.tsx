@@ -6,6 +6,7 @@ import CTASection from "./CTASection";
 import TextilesSheet from "./TextilesSheet";
 import BatteriesSheet from "./BatteriesSheet";
 import SheetBackButton from "./shared/SheetBackButton";
+import CloseButton from "./shared/CloseButton";
 import Button1 from "./ui/button-1";
 
 interface IndustriesSheetProps {
@@ -62,7 +63,8 @@ const IndustriesSheet = ({
         >
           <div className="h-full flex flex-col relative">
             <SheetBackButton onBack={onBack} />
-
+            <CloseButton onClose={onClose} />
+            
             <div
               className="relative w-full"
               style={{ paddingTop: `${(202 / 1082) * 100}%` }}

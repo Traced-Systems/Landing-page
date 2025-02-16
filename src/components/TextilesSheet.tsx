@@ -5,6 +5,7 @@ import IndustrySheetCard from "./shared/IndustrySheetCard";
 import IndustrySheetCTA from "./shared/IndustrySheetCTA";
 import Button1 from "./ui/button-1";
 import SheetBackButton from "./shared/SheetBackButton";
+import CloseButton from "./shared/CloseButton";
 import { useNavigate } from "react-router-dom";
 
 interface TextilesSheetProps {
@@ -80,93 +81,96 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
         side="right"
         className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[995]"
       >
-        <SheetBackButton onBack={onBack} />
-        <div
-          className="relative w-full"
-          style={{ paddingTop: `${(202 / 1082) * 100}%` }}
-        >
+        <div className="relative">
+          <SheetBackButton onBack={onBack} />
+          <CloseButton onClose={onClose} />
           <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/lovable-uploads/sideWindowBG.png')",
-            }}
-          />
-
-          <div className="absolute inset-0 flex items-center pl-20 pt-12">
-            <h1 className="text-2xl font-semibold text-[#2D545E] ">Textiles</h1>
-          </div>
-        </div>
-        <div className="h-full flex flex-col">
-          <div className="pt-12">
-            <IndustrySheetHeader
-              title="Textiles"
-              description="Traced Systems' Digital Product Passport tackles supply chain gaps, ensures ethical sourcing, and drives circularity across the textile lifecycle."
-              imageSrc="/lovable-uploads/36f60108-99d8-465a-81a4-e52c86799730.png"
-              onBack={onBack}
+            className="relative w-full"
+            style={{ paddingTop: `${(202 / 1082) * 100}%` }}
+          >
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: "url('/lovable-uploads/sideWindowBG.png')",
+              }}
             />
-          </div>
 
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary">
-              How Traced Systems Elevates the Textile Industry
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              {cards.map((card, index) => (
-                <IndustrySheetCard
-                  key={index}
-                  title={card.title}
-                  content={card.content}
-                  iconSrc={card.iconSrc}
-                />
-              ))}
+            <div className="absolute inset-0 flex items-center pl-20 pt-12">
+              <h1 className="text-2xl font-semibold text-[#2D545E] ">Textiles</h1>
             </div>
           </div>
+          <div className="h-full flex flex-col">
+            <div className="pt-12">
+              <IndustrySheetHeader
+                title="Textiles"
+                description="Traced Systems' Digital Product Passport tackles supply chain gaps, ensures ethical sourcing, and drives circularity across the textile lifecycle."
+                imageSrc="/lovable-uploads/36f60108-99d8-465a-81a4-e52c86799730.png"
+                onBack={onBack}
+              />
+            </div>
 
-          <div className="px-20">
-            <div className="mb-12 text-center">
-              <h2 className="text-2xl font-bold text-primary mb-4">
-                Driving Collaborative Sustainability Across the Entire Value
-                Chain
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-primary">
+                How Traced Systems Elevates the Textile Industry
               </h2>
-              <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
-                Our digital passport system enables unprecedented transparency
-                and traceability across your entire textile supply chain. From
-                raw material sourcing to final product delivery, we help you
-                track, verify, and optimize every step of the journey.
-              </p>
-
-              <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-6 mb-8 max-w-5xl mx-auto">
-                {valueChainItems.map((item, index) => (
-                  <div key={index} className="w-full">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-auto rounded-lg shadow-md"
-                    />
-                  </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                {cards.map((card, index) => (
+                  <IndustrySheetCard
+                    key={index}
+                    title={card.title}
+                    content={card.content}
+                    iconSrc={card.iconSrc}
+                  />
                 ))}
               </div>
-
-              <Button1
-                className="mx-auto"
-                icon={
-                  <img
-                    src="/lovable-uploads/5e409765-ccc7-4562-9b05-c46afe65a486.png"
-                    alt="arrow"
-                    className="w-4 h-4 object-contain"
-                  />
-                }
-              >
-                Know more
-              </Button1>
             </div>
-          </div>
 
-          <div className="mt-auto w-full">
-            <IndustrySheetCTA
-              title="Drive Innovation in Textiles With the Experts Who Understand Your Industry"
-              description="Ready to elevate your textile operations? Our passion for sustainable innovation and deep industry insight will empower you to stay ahead in a fast-paced market. Let's explore how we can help you deliver on your mission—book a demo today!"
-            />
+            <div className="px-20">
+              <div className="mb-12 text-center">
+                <h2 className="text-2xl font-bold text-primary mb-4">
+                  Driving Collaborative Sustainability Across the Entire Value
+                  Chain
+                </h2>
+                <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Our digital passport system enables unprecedented transparency
+                  and traceability across your entire textile supply chain. From
+                  raw material sourcing to final product delivery, we help you
+                  track, verify, and optimize every step of the journey.
+                </p>
+
+                <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-6 mb-8 max-w-5xl mx-auto">
+                  {valueChainItems.map((item, index) => (
+                    <div key={index} className="w-full">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-auto rounded-lg shadow-md"
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                <Button1
+                  className="mx-auto"
+                  icon={
+                    <img
+                      src="/lovable-uploads/5e409765-ccc7-4562-9b05-c46afe65a486.png"
+                      alt="arrow"
+                      className="w-4 h-4 object-contain"
+                    />
+                  }
+                >
+                  Know more
+                </Button1>
+              </div>
+            </div>
+
+            <div className="mt-auto w-full">
+              <IndustrySheetCTA
+                title="Drive Innovation in Textiles With the Experts Who Understand Your Industry"
+                description="Ready to elevate your textile operations? Our passion for sustainable innovation and deep industry insight will empower you to stay ahead in a fast-paced market. Let's explore how we can help you deliver on your mission—book a demo today!"
+              />
+            </div>
           </div>
         </div>
       </SheetContent>
