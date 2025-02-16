@@ -33,11 +33,21 @@ const IndustriesSheet = ({
   }, [isOpen]);
 
   const handleTextilesClick = () => {
-    setActiveSheet("textiles");
+    // Close industries sheet before opening textiles
+    setActiveSheet(null);
+    // Small delay to ensure smooth transition
+    setTimeout(() => {
+      setActiveSheet("textiles");
+    }, 100);
   };
 
   const handleBatteriesClick = () => {
-    setActiveSheet("batteries");
+    // Close industries sheet before opening batteries
+    setActiveSheet(null);
+    // Small delay to ensure smooth transition
+    setTimeout(() => {
+      setActiveSheet("batteries");
+    }, 100);
   };
 
   const handleSheetClose = () => {
@@ -66,17 +76,15 @@ const IndustriesSheet = ({
           <div className="h-full flex flex-col">
             <div
               className="relative w-full"
-              style={{ paddingTop: `${(202 / 1082) * 100}%` }} // Maintain aspect ratio
+              style={{ paddingTop: `${(202 / 1082) * 100}%` }}
             >
-              {/* Background Image */}
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
                   backgroundImage: "url('/lovable-uploads/sideWindowBG.png')",
-                }} // Replace with actual image path
+                }}
               />
 
-              {/* Content (Text Left-Aligned) */}
               <div className="absolute inset-0 flex items-center pl-8">
                 <h1 className="text-4xl font-semibold text-[#2D545E] pl-5">
                   Industries
