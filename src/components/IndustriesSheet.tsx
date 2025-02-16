@@ -32,12 +32,10 @@ const IndustriesSheet = ({
   }, [isOpen]);
 
   const handleTextilesClick = () => {
-    // First, open the textiles sheet
     setActiveSheet("textiles");
   };
 
   const handleBatteriesClick = () => {
-    // First, open the batteries sheet
     setActiveSheet("batteries");
   };
 
@@ -62,9 +60,9 @@ const IndustriesSheet = ({
           side="right"
           className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[999]"
         >
-          <SheetBackButton onBack={onBack} />
-
-          <div className="h-full flex flex-col">
+          <div className="h-full flex flex-col relative">
+            <SheetBackButton onBack={onBack} />
+            
             <div
               className="relative w-full"
               style={{ paddingTop: `${(202 / 1082) * 100}%` }}
