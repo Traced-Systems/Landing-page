@@ -106,8 +106,8 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
             />
           </div>
 
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary">
+          <div className="text-center mb-12 mx-20">
+            <h2 className="text-2xl font-medium text-primary mb-8">
               How Traced Systems Elevates the Textile Industry
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
