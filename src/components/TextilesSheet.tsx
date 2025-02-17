@@ -7,7 +7,7 @@ import Button1 from "./ui/button-1";
 import SheetBackButton from "./shared/SheetBackButton";
 import { useNavigate } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
-import ExpandableImage from "./ui/expandable-image";
+import ExpandableImage from "./shared/ExpandableImage";
 
 interface TextilesSheetProps {
   isOpen: boolean;
