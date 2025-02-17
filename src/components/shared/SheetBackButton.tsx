@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -24,7 +25,7 @@ const SheetBackButton = ({ onBack }: SheetBackButtonProps) => {
     <Button
       variant="ghost"
       onClick={handleBack}
-      className="absolute top-2 left-2 z-[9999] hover:bg-gray-100 bg-white shadow-sm flex items-center gap-2"
+      className="fixed top-4 right-4 z-[9999] hover:bg-gray-100 bg-white shadow-md flex items-center gap-2 py-[19px] px-[34px]"
     >
       <ArrowLeft className="h-5 w-5" />
       <span>Back</span>

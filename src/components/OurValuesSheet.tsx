@@ -18,10 +18,13 @@ const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
       <SheetContent 
         side="right" 
         className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] p-0"
+        onSwipeRight={onClose}
+        swipeDirection="right"
+        swipeThreshold={50}
       >
         <SheetBackButton onBack={onClose} />
 
-        <div className="h-full flex flex-col pt-16 py-0">
+        <div className="h-full flex flex-col pt-16">
           <SheetBackgroundSection>
             <div className="pt-8 px-8 py-[31px] my-0">
               <div className="text-center mb-12">
