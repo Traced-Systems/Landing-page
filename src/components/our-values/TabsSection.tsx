@@ -3,10 +3,10 @@ import React, { useEffect, useRef } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
-import { useMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const TabsSection = () => {
-  const isMobile = useMobile();
+  const isMobile = useIsMobile();
   const tabsListRef = useRef<HTMLDivElement>(null);
   const [activeTab, setActiveTab] = React.useState("mission");
 
