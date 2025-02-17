@@ -103,13 +103,6 @@
   .animate-infinite-scroll {
     animation: infinite-scroll 20s linear infinite;
   }
-  .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
-  }
 }
 
 @layer base {
