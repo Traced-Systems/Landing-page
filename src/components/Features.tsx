@@ -12,15 +12,6 @@ const Features = () => {
 
   const features = [
     {
-      id: "textile-card",
-      title: "Textiles",
-      description: "Sustainable Fashion",
-      image: "/lovable-uploads/7db51ad9-4f3d-4085-b9e9-2004e66476b4.png",
-      icon: "/lovable-uploads/LogoTextiles.png",
-      hoverContent:
-        "By tracking origin, durability, and recyclability, the DPP encourages circular practices—repairing, reusing, and recycling. It's a vital step toward reducing waste and achieving sustainability in the fashion and textile industries.",
-    },
-    {
       id: "batteries-card",
       title: "Batteries",
       description: "Electric Vehicle Solutions",
@@ -28,6 +19,15 @@ const Features = () => {
       icon: "/lovable-uploads/LogoBatteries.png",
       hoverContent:
         "As the demand for batteries grows, particularly in electric vehicles and renewable energy storage, the Digital Product Passport (DPP) ensures compliance with sustainability regulations, supporting industries in meeting environmental standards and driving eco-efficient innovations.",
+    },
+    {
+      id: "textile-card",
+      title: "Textiles",
+      description: "Sustainable Fashion",
+      image: "/lovable-uploads/7db51ad9-4f3d-4085-b9e9-2004e66476b4.png",
+      icon: "/lovable-uploads/LogoTextiles.png",
+      hoverContent:
+        "By tracking origin, durability, and recyclability, the DPP encourages circular practices—repairing, reusing, and recycling. It's a vital step toward reducing waste and achieving sustainability in the fashion and textile industries.",
     },
     {
       id: "espr-card",
@@ -84,7 +84,7 @@ const Features = () => {
                         <img
                           src={feature.icon}
                           alt={feature.title}
-                          className="w-6 h-6"
+                          className="w-6 h-6 object-contain"
                         />
                         <div className="text-white text-2xl font-semibold">
                           {feature.title}
@@ -106,7 +106,7 @@ const Features = () => {
                           <img
                             src={feature.icon}
                             alt={feature.title}
-                            className="w-15 h-12"
+                            className="w-15 h-12 object-contain"
                           />
                           <h3 className="text-2xl font-semibold text-[#173A44]">
                             {feature.title}
