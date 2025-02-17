@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ArrowRight } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 import TextilesSheet from "./TextilesSheet";
 import BatteriesSheet from "./BatteriesSheet";
 import IndustriesSheet from "./IndustriesSheet";
@@ -57,10 +59,11 @@ const Features = () => {
     <>
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center">
-            <h2 className="text-3xl md:text-3xl font-medium text-[#173A44] text-center mb-6">
-              Digital Product Passport - Key Sectors
+          <div className="inline-block text-center mx-auto">
+            <h2 className="text-3xl md:text-4xl font-medium text-primary">
+              Digital Product Passport – Key Sectors
             </h2>
+            <Separator className="my-4 h-1 bg-[#D4904E]" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mt-12">
@@ -147,7 +150,6 @@ const Features = () => {
         isOpen={activeSheet === "industries"}
         onClose={handleSheetClose}
         onBack={handleSheetClose}
-        scrollToEU={true} // 🔥 Only Features sets this to true
       />
     </>
   );
