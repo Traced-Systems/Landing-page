@@ -1,16 +1,9 @@
-
 import React from "react";
-
 const DigitalPassport = () => {
-  return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
+  return <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
       <div className="flex flex-col lg:flex-row items-center gap-12">
         <div className="lg:w-1/2">
-          <img
-            src="/lovable-uploads/832d948c-7f61-4083-84b6-e1dea08a60a0.png"
-            alt="Digital Product Passport"
-            className="w-full h-auto"
-          />
+          <img alt="Digital Product Passport" className="w-full h-auto" src="/lovable-uploads/d363c6de-0cc3-405c-badd-bdb03dcf3549.png" />
         </div>
         <div className="lg:w-1/2 space-y-8">
           <div>
@@ -45,8 +38,6 @@ const DigitalPassport = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default DigitalPassport;
