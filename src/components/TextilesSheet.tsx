@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustrySheetHeader from "./shared/IndustrySheetHeader";
@@ -93,12 +94,12 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
             }}
           />
 
-          <div className="absolute inset-0 flex items-center pl-20 pt-12">
-            <h1 className="text-2xl font-semibold text-[#2D545E] ">Textiles</h1>
+          <div className="absolute inset-0 flex items-center pl-6 sm:pl-20 pt-12">
+            <h1 className="text-2xl font-semibold text-[#2D545E]">Textiles</h1>
           </div>
         </div>
         <div className="h-full flex flex-col">
-          <div className="pt-12">
+          <div className="pt-8 sm:pt-12">
             <IndustrySheetHeader
               title="Textiles"
               description="Traced Systems' Digital Product Passport tackles supply chain gaps, ensures ethical sourcing, and drives circularity across the textile lifecycle."
@@ -107,11 +108,11 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
             />
           </div>
 
-          <div className="text-center my-20 mx-20">
-            <h2 className="text-2xl font-medium text-[#173A44] mb-12">
+          <div className="text-center my-10 sm:my-20 mx-4 sm:mx-20">
+            <h2 className="text-2xl font-medium text-[#173A44] mb-8 sm:mb-12">
               How Traced Systems Elevates the Textile Industry
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10 ">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-10">
               {cards.map((card, index) => (
                 <IndustrySheetCard
                   key={index}
@@ -123,20 +124,19 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
             </div>
           </div>
 
-          <div className="px-20">
-            <div className="mb-12 text-center">
+          <div className="px-4 sm:px-20">
+            <div className="mb-8 sm:mb-12 text-center">
               <h2 className="text-2xl font-medium text-[#173A44] mb-4">
-                Driving Collaborative Sustainability Across the Entire Value
-                Chain
+                Driving Collaborative Sustainability Across the Entire Value Chain
               </h2>
-              <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
-                Our digital passport system enables unprecedented transparency
-                and traceability across your entire textile supply chain. From
-                raw material sourcing to final product delivery, we help you
-                track, verify, and optimize every step of the journey.
+              <p className="text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto text-sm sm:text-base">
+                Our digital passport system enables unprecedented transparency and
+                traceability across your entire textile supply chain. From raw
+                material sourcing to final product delivery, we help you track,
+                verify, and optimize every step of the journey.
               </p>
 
-              <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-6 mb-8 max-w-5xl mx-auto">
+              <div className="grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-3 sm:gap-6 mb-6 sm:mb-8 max-w-5xl mx-auto">
                 {valueChainItems.map((item, index) => (
                   <div key={index} className="w-full">
                     <img
