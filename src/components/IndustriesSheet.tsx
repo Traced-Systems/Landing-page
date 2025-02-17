@@ -8,12 +8,14 @@ import BatteriesSheet from "./BatteriesSheet";
 import SheetBackButton from "./shared/SheetBackButton";
 import Button1 from "./ui/button-1";
 import ExpandableImage from "./shared/ExpandableImage";
+
 interface IndustriesSheetProps {
   isOpen: boolean;
   onClose: () => void;
   onBack?: () => void;
   scrollToEU?: boolean;
 }
+
 const IndustriesSheet = ({
   isOpen,
   onClose,
@@ -22,6 +24,7 @@ const IndustriesSheet = ({
 }: IndustriesSheetProps) => {
   const [activeSheet, setActiveSheet] = useState<"industries" | "textiles" | "batteries" | null>(null);
   const euSectionRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
     if (isOpen && scrollToEU && euSectionRef.current) {
       euSectionRef.current.scrollIntoView({
@@ -30,6 +33,7 @@ const IndustriesSheet = ({
       });
     }
   }, [isOpen, scrollToEU]);
+
   React.useEffect(() => {
     if (isOpen) {
       setActiveSheet("industries");
@@ -37,21 +41,26 @@ const IndustriesSheet = ({
       setActiveSheet(null);
     }
   }, [isOpen]);
+
   const handleTextilesClick = () => {
     setActiveSheet("textiles");
   };
+
   const handleBatteriesClick = () => {
     setActiveSheet("batteries");
   };
+
   const handleSheetClose = () => {
     setActiveSheet("industries");
   };
+
   const handleMainSheetToggle = (open: boolean) => {
     if (!open) {
       onClose();
       setActiveSheet(null);
     }
   };
+
   return <>
       <Sheet open={isOpen && activeSheet === "industries"} onOpenChange={handleMainSheetToggle}>
         <SheetContent side="right" className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[999]">
@@ -118,7 +127,10 @@ const IndustriesSheet = ({
                   over your product lifecycle.
                 </p>
                 <div className="w-[95%] sm:w-full max-w-4xl mx-auto px-0">
-                  <ExpandableImage src="/lovable-uploads/c0da0885-a0e1-4ac0-b309-a464bcd66b53.png" alt="Unified Traceability Platform" />
+                  <ExpandableImage 
+                    src="/lovable-uploads/c0da0885-a0e1-4ac0-b309-a464bcd66b53.png"
+                    alt="Unified Traceability Platform"
+                  />
                 </div>
                 <div className="flex justify-center mt-8">
                   <Button1 className="px-8">Get in touch</Button1>
@@ -136,4 +148,5 @@ const IndustriesSheet = ({
       <BatteriesSheet isOpen={activeSheet === "batteries"} onClose={() => setActiveSheet("industries")} onBack={handleSheetClose} />
     </>;
 };
+
 export default IndustriesSheet;
