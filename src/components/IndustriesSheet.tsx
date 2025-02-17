@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustryCard from "./IndustryCard";
@@ -12,14 +13,14 @@ interface IndustriesSheetProps {
   isOpen: boolean;
   onClose: () => void;
   onBack?: () => void;
-  scrollToEU?: boolean; // 🔥 New prop to control scrolling
+  scrollToEU?: boolean;
 }
 
 const IndustriesSheet = ({
   isOpen,
   onClose,
   onBack = onClose,
-  scrollToEU = false, // Default is false to prevent unwanted scrolling
+  scrollToEU = false,
 }: IndustriesSheetProps) => {
   const [activeSheet, setActiveSheet] = useState<
     "industries" | "textiles" | "batteries" | null
@@ -27,7 +28,6 @@ const IndustriesSheet = ({
 
   const euSectionRef = useRef<HTMLDivElement | null>(null);
 
-  // 🔥 Scroll to EURegulationsSection when opening from Features
   useEffect(() => {
     if (isOpen && scrollToEU && euSectionRef.current) {
       euSectionRef.current.scrollIntoView({
@@ -88,20 +88,20 @@ const IndustriesSheet = ({
                 }}
               />
 
-              <div className="absolute inset-0 flex items-center pl-20 pt-12">
-                <h1 className="text-2xl font-semibold text-[#2D545E] ">
+              <div className="absolute inset-0 flex items-center pl-6 sm:pl-20 pt-12">
+                <h1 className="text-2xl font-semibold text-[#2D545E]">
                   Industries
                 </h1>
               </div>
             </div>
 
-            <div className="text-center mb-12 pt-20">
-              <h2 className="text-2xl text-[#173A44] font-medium ">
+            <div className="text-center mb-8 sm:mb-12 pt-12 sm:pt-20 px-4">
+              <h2 className="text-2xl text-[#173A44] font-medium">
                 Key Industries We Serve
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-20 mb-24 px-20 xs:px-16">
+            <div className="grid md:grid-cols-2 gap-8 sm:gap-20 mb-16 sm:mb-24 px-4 sm:px-20">
               <div className="space-y-4">
                 <IndustryCard
                   title="Textiles"
@@ -123,13 +123,12 @@ const IndustriesSheet = ({
               </div>
             </div>
 
-            {/* 🔥 Scroll to this only when `scrollToEU === true` */}
             <div ref={euSectionRef}>
               <EURegulationsSection />
             </div>
 
             <CTASection>
-              <div className="text-center mt-6 px-8">
+              <div className="text-center mt-6 px-4 sm:px-8">
                 <div>
                   <h2 className="text-2xl font-medium text-center mb-2 text-[#173A44]">
                     A Unified Traceability Platform
