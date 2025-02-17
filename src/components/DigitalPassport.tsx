@@ -1,19 +1,12 @@
-
 import React from "react";
 import { Separator } from "@/components/ui/separator";
-
 const DigitalPassport = () => {
-  return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-6 lg:px-8">
+  return <section className="py-16 bg-white">
+      <div className="container mx-auto lg:px-8 px-[16px]">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative w-full h-full flex items-center">
             <div className="mx-auto">
-              <img
-                src="/lovable-uploads/84a52b04-4231-4b58-ab6a-c4326f80eb31.png"
-                alt="Digital Product Passport Interface showing mobile screens with product information"
-                className="w-full h-auto object-contain"
-              />
+              <img src="/lovable-uploads/84a52b04-4231-4b58-ab6a-c4326f80eb31.png" alt="Digital Product Passport Interface showing mobile screens with product information" className="w-full h-auto object-contain" />
             </div>
           </div>
 
@@ -60,8 +53,6 @@ const DigitalPassport = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default DigitalPassport;
