@@ -21,13 +21,13 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
     const formData = new FormData(form);
 
     const emailParams = {
-      from_name: formData.get("from_name") as string, // ✅ Fixed
-      from_email: formData.get("from_email") as string, // ✅ Fixed
+      from_name: formData.get("from_name") as string,
+      from_email: formData.get("from_email") as string,
       subject: formData.get("subject") as string,
       message: formData.get("message") as string,
     };
 
-    console.log("Sending email with params:", emailParams); // Debugging line
+    console.log("Sending email with params:", emailParams);
 
     emailjs
       .send(
@@ -54,6 +54,9 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
       <SheetContent 
         side="right" 
         className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl"
+        onSwipeRight={onClose}
+        swipeDirection="right"
+        swipeThreshold={50}
       >
         <SheetBackButton onBack={onClose} />
 
