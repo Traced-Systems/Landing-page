@@ -69,18 +69,18 @@ const Features = () => {
               <div
                 key={feature.id}
                 id={feature.id}
-                className="group relative h-[340px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:shadow-lg"
+                className="group relative h-[340px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-in-out hover:scale-[1.02] hover:shadow-lg"
                 onClick={() => handleCardClick(feature.id)}
               >
-                <div className="relative w-full h-full transition-all duration-200 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                <div className="relative w-full h-full transition-all duration-700 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   <div className="absolute inset-0 [backface-visibility:hidden]">
                     <div
-                      className="absolute inset-0 bg-cover bg-center transition-transform duration-200 group-hover:scale-105"
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out group-hover:scale-105"
                       style={{ backgroundImage: `url(${feature.image})` }}
                     />
 
                     <div className="absolute inset-0 p-6 flex flex-col justify-between bg-gradient-to-b from-transparent to-black/50">
-                      <div className="flex items-center space-x-2 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-200">
+                      <div className="flex items-center space-x-2 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
                         <img
                           src={feature.icon}
                           alt={feature.title}
@@ -92,7 +92,7 @@ const Features = () => {
                       </div>
 
                       <div className="flex justify-end">
-                        <div className="w-10 h-10 rounded-full bg-[#E4AC70] flex items-center justify-center transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
+                        <div className="w-10 h-10 rounded-full bg-[#E4AC70] flex items-center justify-center transition-all duration-500 ease-in-out hover:scale-105 shadow-lg hover:shadow-xl">
                           <div className="w-2.5 h-2.5 border-r-2 border-t-2 border-white transform rotate-45 mr-1"></div>
                         </div>
                       </div>
@@ -118,7 +118,7 @@ const Features = () => {
                       </div>
 
                       <div className="flex justify-end">
-                        <div className="text-[#D4904E] text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform duration-200">
+                        <div className="text-[#D4904E] text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform duration-500 ease-in-out">
                           Know More
                           <ChevronRight className="text-[#E1B382] w-5 h-5" />
                         </div>
@@ -148,7 +148,7 @@ const Features = () => {
         isOpen={activeSheet === "industries"}
         onClose={handleSheetClose}
         onBack={handleSheetClose}
-        scrollToEU={true} // 🔥 Only Features sets this to true
+        scrollToEU={true}
       />
     </>
   );
