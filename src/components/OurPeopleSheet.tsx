@@ -59,7 +59,7 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
     {
       name: "Francesco Giacomello",
       role: "Head of Partnerships & Business Development",
-      image: "/lovable-uploads/5e890080-10d5-4bf4-bed6-513a0fc10da5.png",
+      image: "/lovable-uploads/952b95c7-bab8-42ab-96dd-652929e8093e.png",
       active: true,
       linkedin: "https://www.linkedin.com/in/francesco-giacomello"
     },
@@ -80,7 +80,7 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
     {
       name: "Milas Heeris",
       role: "UI/UX Design",
-      image: "/lovable-uploads/952b95c7-bab8-42ab-96dd-652929e8093e.png",
+      image: "/lovable-uploads/5e890080-10d5-4bf4-bed6-513a0fc10da5.png",
       active: true,
       linkedin: "https://www.linkedin.com/in/milasheeris/"
     },
