@@ -108,20 +108,19 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                 <h2 className="text-2xl font-semibold mb-8">Advisory Board</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {advisoryBoard.map((member, index) => (
-                    <a 
-                      key={index}
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="relative aspect-square overflow-hidden rounded-lg group hover:scale-105 transition-transform duration-300"
-                    >
+                    <div key={index} className="relative aspect-square">
                       <img 
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-lg"
                       />
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300" />
-                    </a>
+                      <a 
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-opacity duration-300 rounded-lg"
+                      />
+                    </div>
                   ))}
                 </div>
               </section>
@@ -130,20 +129,19 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                 <h2 className="text-2xl font-semibold mb-8">Traced Team</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                   {tracedTeam.map((member, index) => (
-                    <a 
-                      key={index}
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="relative aspect-square overflow-hidden rounded-lg group hover:scale-105 transition-transform duration-300"
-                    >
+                    <div key={index} className="relative aspect-square">
                       <img 
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-lg"
                       />
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300" />
-                    </a>
+                      <a 
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-opacity duration-300 rounded-lg"
+                      />
+                    </div>
                   ))}
                 </div>
               </section>
