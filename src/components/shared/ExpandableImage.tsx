@@ -23,7 +23,7 @@ const ExpandableImage = ({ src, alt }: ExpandableImageProps) => {
           onClick={handleToggle}
         >
           <div 
-            className="relative w-[90%] max-h-[90%] bg-white rounded-xl p-4 shadow-lg"
+            className="relative w-[95vw] max-h-[90vh] bg-white rounded-xl p-4 shadow-lg"
             onClick={(e) => e.stopPropagation()}
           >
             <button 
@@ -46,7 +46,7 @@ const ExpandableImage = ({ src, alt }: ExpandableImageProps) => {
 
       {/* Normal Image View */}
       <div 
-        className="w-full cursor-pointer transition-transform duration-200 active:scale-95 sm:active:scale-100"
+        className="w-full cursor-pointer transition-transform duration-200 active:scale-95 sm:active:scale-100 -mx-6 sm:mx-0 px-0 sm:px-0"
         onClick={() => {
           if (window.innerWidth < 640) { // Only trigger on mobile
             handleToggle();
@@ -56,7 +56,7 @@ const ExpandableImage = ({ src, alt }: ExpandableImageProps) => {
         <img
           src={src}
           alt={alt}
-          className="w-full h-auto rounded-lg shadow-md"
+          className="w-[calc(100%+3rem)] sm:w-full h-auto rounded-lg shadow-md"
         />
       </div>
     </>
