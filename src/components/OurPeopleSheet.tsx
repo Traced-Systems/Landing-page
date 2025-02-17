@@ -21,7 +21,7 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
     {
       name: "Johan Toll",
       role: "CIO & Senior Business Advisor",
-      image: "/lovable-uploads/574a49a8-1fcd-4366-82d7-b47e7cf96153.png",
+      image: "/lovable-uploads/d52e78c5-39a3-467e-a9f3-7a3405fb7fba.png",
       active: true,
       linkedin: "https://www.linkedin.com/in/johantoll/"
     },
@@ -38,56 +38,56 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
     {
       name: "Farhad Rasouli",
       role: "Executive Lead & Co-Founder",
-      image: "/lovable-uploads/64d340f7-d681-421d-88f3-b9e49bb57bad.png",
+      image: "/lovable-uploads/f554ce90-b2c8-4975-ba67-386d73243903.png",
       active: true,
       linkedin: "https://www.linkedin.com/in/farhadrasouli/"
     },
     {
       name: "David Dolhomut",
       role: "Head of Partnerships & Business Development",
-      image: "/lovable-uploads/f4b51d1d-32fd-4210-b0af-12bffb3b287c.png",
+      image: "/lovable-uploads/68b8df3f-b66c-4d46-92d0-c7d84b99bcf6.png",
       active: true,
       linkedin: "https://www.linkedin.com/in/daviddolhomut/"
     },
     {
       name: "Natalie Hlavackova",
       role: "Head of Digital Analytics and SEO",
-      image: "/lovable-uploads/d22391a5-5183-4a8d-a5b9-3aaebd583ed4.png",
+      image: "/lovable-uploads/aa83c039-fa77-44d1-a4e4-682bc3091340.png",
       active: true,
       linkedin: "https://www.linkedin.com/in/natalie-hlavackova/"
     },
     {
       name: "Francesco Giacomello",
       role: "Head of Partnerships & Business Development",
-      image: "/lovable-uploads/c4f4eaa2-20bc-4fcc-b34a-59d58a4dca90.png",
+      image: "/lovable-uploads/952b95c7-bab8-42ab-96dd-652929e8093e.png",
       active: true,
       linkedin: "https://www.linkedin.com/in/francesco-giacomello"
     },
     {
       name: "Petra Bosnjak",
       role: "Head of Marketing",
-      image: "/lovable-uploads/66786a1b-9f67-48d6-b954-763c3a8897dd.png",
+      image: "/lovable-uploads/1aeb695e-eb6e-4312-92a8-af399dd5768b.png",
       active: true,
       linkedin: "https://www.linkedin.com/in/petra-josephine-bosnjak-56b33a220/"
     },
     {
       name: "Kostiantyn Nikolaiev",
       role: "Tech Lead",
-      image: "/lovable-uploads/3865c1c3-db27-411d-bbd6-bbf13654c622.png",
+      image: "/lovable-uploads/b580da07-90b5-432e-a1b9-5edaeed20f2b.png",
       active: true,
       linkedin: "https://www.linkedin.com/in/kostiantyn-s-nikolaiev/"
     },
     {
       name: "Milas Heeris",
       role: "UI/UX Design",
-      image: "/lovable-uploads/b3608835-46bf-46e7-b94b-253628b0c1eb.png",
+      image: "/lovable-uploads/5e890080-10d5-4bf4-bed6-513a0fc10da5.png",
       active: true,
       linkedin: "https://www.linkedin.com/in/milasheeris/"
     },
     {
       name: "Ziwei Chen",
       role: "Creative Designer",
-      image: "/lovable-uploads/02469d55-a79b-42b8-937b-672fc85806ad.png",
+      image: "/lovable-uploads/fc0992f1-05d7-48a0-add2-309803a7f7b0.png",
       active: true,
       linkedin: "https://www.linkedin.com/in/ziwei-chen-b64971208/"
     }
@@ -108,20 +108,19 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                 <h2 className="text-2xl font-semibold mb-8">Advisory Board</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {advisoryBoard.map((member, index) => (
-                    <a 
-                      key={index}
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="relative aspect-square overflow-hidden rounded-lg group hover:scale-105 transition-transform duration-300"
-                    >
+                    <div key={index} className="relative aspect-square">
                       <img 
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-lg"
                       />
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300" />
-                    </a>
+                      <a 
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-opacity duration-300 rounded-lg"
+                      />
+                    </div>
                   ))}
                 </div>
               </section>
@@ -130,20 +129,19 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                 <h2 className="text-2xl font-semibold mb-8">Traced Team</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                   {tracedTeam.map((member, index) => (
-                    <a 
-                      key={index}
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="relative aspect-square overflow-hidden rounded-lg group hover:scale-105 transition-transform duration-300"
-                    >
+                    <div key={index} className="relative aspect-square">
                       <img 
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-lg"
                       />
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300" />
-                    </a>
+                      <a 
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-opacity duration-300 rounded-lg"
+                      />
+                    </div>
                   ))}
                 </div>
               </section>

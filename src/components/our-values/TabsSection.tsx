@@ -1,5 +1,6 @@
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 const TabsSection = () => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden h-[200px]">
@@ -17,14 +18,14 @@ const TabsSection = () => {
             </TabsTrigger>
           ))}
         </TabsList>
-        <div className="relative w-[60%]">
+        <div className="relative md:w-[60%] w-full flex-grow">
           {["mission", "focus", "solution"].map((tab) => (
             <TabsContent
               key={tab}
               value={tab}
-              className="m-0 h-full absolute inset-0"
+              className="m-0 h-full md:absolute md:inset-0"
             >
-              <div className="relative h-full">
+              <div className="relative h-full min-h-[300px] md:min-h-0">
                 <img
                   src={
                     tab === "focus"
@@ -34,13 +35,13 @@ const TabsSection = () => {
                       : "/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png"
                   }
                   alt={tab}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover brightness-[0.3] md:brightness-100 absolute inset-0"
                 />
-                <div className="absolute inset-0 bg-black/70 flex items-center justify-center p-8">
-                  <p className="text-white text-center text-base font-normal">
+                <div className="relative md:absolute inset-0 bg-[#204850]/95 md:bg-black/60 flex items-start md:items-center justify-start p-6 md:p-8 min-h-[300px] md:min-h-0">
+                  <p className="text-white text-sm md:text-base font-normal md:text-center text-left leading-relaxed">
                     {tab === "mission" ? (
                       <>
-                        <strong>
+                        <strong className="block mb-3 text-base md:text-base">
                           Our mission is to transform supply chain efficiency
                           and engagement by leveraging blockchain technology to
                           enhance transparency, collaboration, and customer
@@ -53,7 +54,7 @@ const TabsSection = () => {
                       </>
                     ) : tab === "focus" ? (
                       <>
-                        <strong>
+                        <strong className="block mb-3 text-base md:text-base">
                           Our focus is on helping companies stay ahead of
                           evolving regulations while ensuring a tangible return
                           on investment.
@@ -67,7 +68,7 @@ const TabsSection = () => {
                       </>
                     ) : (
                       <>
-                        <strong>
+                        <strong className="block mb-3 text-base md:text-base">
                           Our platform goes beyond mere compliance.
                         </strong>{" "}
                         By identifying and collaborating with key partners in
@@ -89,4 +90,5 @@ const TabsSection = () => {
     </div>
   );
 };
+
 export default TabsSection;
