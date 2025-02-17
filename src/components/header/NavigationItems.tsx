@@ -49,7 +49,7 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
               onClick={() => setIsOpen(!isOpen)}
               onPointerEnter={e => e.preventDefault()}
               onPointerLeave={e => e.preventDefault()}
-              open={isOpen}
+              data-state={isOpen ? "open" : "closed"}
             >
               About Us
             </NavigationMenuTrigger>
