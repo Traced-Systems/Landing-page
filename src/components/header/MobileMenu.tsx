@@ -1,30 +1,47 @@
+
 import React, { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu, ArrowLeft, ChevronDown } from "lucide-react";
+
 interface MobileMenuProps {
   handleSheetOpen: (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog') => void;
 }
+
 const MobileMenu = ({
   handleSheetOpen
 }: MobileMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isAboutUsOpen, setIsAboutUsOpen] = useState(false);
+
   const handleMenuItemClick = (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog') => {
     setIsOpen(false);
     handleSheetOpen(sheet);
   };
+
   const toggleAboutUs = () => {
     setIsAboutUsOpen(!isAboutUsOpen);
   };
+
   return <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
         <Button variant="ghost" size="icon" className="lg:hidden">
           <Menu className="h-6 w-6" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="top" className="w-full h-[100vh] lg:hidden pt-16 bg-white">
-        <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="absolute right-4 top-4 hover:bg-gray-100 bg-white shadow-md flex items-center gap-2 py-[19px] px-[42px]">
+      <SheetContent 
+        side="top" 
+        className="w-full h-[100vh] lg:hidden pt-16 bg-white"
+        onSwipeRight={() => setIsOpen(false)}
+        swipeDirection="right"
+        swipeThreshold={50}
+      >
+        <Button 
+          variant="ghost" 
+          size="icon" 
+          onClick={() => setIsOpen(false)} 
+          className="absolute right-4 top-4 hover:bg-gray-100 bg-white shadow-md flex items-center gap-2 py-[19px] px-[42px]"
+        >
           <ArrowLeft className="h-5 w-5" />
           <span>Back</span>
         </Button>
@@ -69,4 +86,5 @@ const MobileMenu = ({
       </SheetContent>
     </Sheet>;
 };
+
 export default MobileMenu;
