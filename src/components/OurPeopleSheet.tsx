@@ -59,7 +59,7 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
     {
       name: "Francesco Giacomello",
       role: "Head of Partnerships & Business Development",
-      image: "/lovable-uploads/fc0992f1-05d7-48a0-add2-309803a7f7b0.png",
+      image: "/lovable-uploads/5e890080-10d5-4bf4-bed6-513a0fc10da5.png",
       active: true,
       linkedin: "https://www.linkedin.com/in/francesco-giacomello"
     },
@@ -87,7 +87,7 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
     {
       name: "Ziwei Chen",
       role: "Creative Designer",
-      image: "/lovable-uploads/5e890080-10d5-4bf4-bed6-513a0fc10da5.png",
+      image: "/lovable-uploads/fc0992f1-05d7-48a0-add2-309803a7f7b0.png",
       active: true,
       linkedin: "https://www.linkedin.com/in/ziwei-chen-b64971208/"
     }
