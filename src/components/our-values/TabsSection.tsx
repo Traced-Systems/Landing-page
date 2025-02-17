@@ -1,20 +1,23 @@
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const TabsSection = () => {
   const isMobile = useIsMobile();
-  const [activeTab, setActiveTab] = React.useState("mission");
+  const [activeTab, setActiveTab] = React.useState<string | null>("mission");
+
+  const handleTabClick = (tab: string) => {
+    setActiveTab(activeTab === tab ? null : tab);
+  };
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       <Tabs 
-        defaultValue="mission" 
+        value={activeTab || ""} 
         className="flex flex-col h-full"
-        value={activeTab}
-        onValueChange={setActiveTab}
+        onValueChange={(value) => handleTabClick(value)}
       >
         <div className="flex flex-col md:flex-row h-full">
           <TabsList 
@@ -30,21 +33,20 @@ const TabsSection = () => {
                 value={tab}
                 className={cn(
                   "w-full flex items-center px-6 py-4 text-left justify-between rounded-none",
-                  "border-l-4 border-transparent data-[state=active]:bg-[#204850]",
-                  "data-[state=active]:text-white data-[state=active]:border-[#204850]",
-                  "transition-all",
+                  "border-l-4 border-transparent",
+                  "data-[state=active]:bg-[#204850] data-[state=active]:text-white data-[state=active]:border-[#204850]",
+                  "transition-all duration-200",
                   "focus-visible:ring-offset-0 focus-visible:ring-2 focus-visible:ring-[#204850]",
-                  "aria-selected:bg-[#204850] aria-selected:text-white",
+                  "hover:bg-gray-100 hover:border-gray-300",
                   "group"
                 )}
-                aria-controls={`${tab}-tab`}
               >
-                <span className="text-lg font-medium">
+                <span className="text-lg font-medium whitespace-nowrap">
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </span>
                 <svg 
                   className={cn(
-                    "w-5 h-5 transition-transform",
+                    "w-5 h-5 transition-transform duration-200",
                     "md:hidden",
                     "group-data-[state=active]:rotate-180"
                   )} 
@@ -58,19 +60,17 @@ const TabsSection = () => {
             ))}
           </TabsList>
 
-          <div className="relative w-full md:w-[60%]">
+          <div className="w-full md:w-[60%]">
             {["mission", "focus", "solution"].map(tab => (
               <TabsContent 
                 key={tab}
                 value={tab}
                 className={cn(
-                  "m-0 transition-all",
-                  "data-[state=inactive]:h-0 data-[state=inactive]:invisible",
-                  "data-[state=active]:h-auto data-[state=active]:visible",
-                  "focus-visible:ring-2 focus-visible:ring-[#204850] focus-visible:ring-offset-2 focus-visible:outline-none"
+                  "m-0",
+                  "transition-all duration-200",
+                  "data-[state=inactive]:animate-accordion-up data-[state=active]:animate-accordion-down",
+                  "overflow-hidden"
                 )}
-                role="tabpanel"
-                id={`${tab}-tab`}
               >
                 <div className="relative md:h-[200px]">
                   <img 
