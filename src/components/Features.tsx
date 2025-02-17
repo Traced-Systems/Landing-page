@@ -75,56 +75,30 @@ const Features = () => {
                 className="group relative h-[340px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:shadow-lg"
                 onClick={() => handleCardClick(feature.id)}
               >
-                <div className="relative w-full h-full transition-all duration-200 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  <div className="absolute inset-0 [backface-visibility:hidden]">
-                    <div
-                      className="absolute inset-0 bg-cover bg-center transition-transform duration-200 group-hover:scale-105"
-                      style={{ backgroundImage: `url(${feature.image})` }}
-                    />
+                <div className="relative w-full h-full">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-200 group-hover:scale-105"
+                    style={{ backgroundImage: `url(${feature.image})` }}
+                  />
 
-                    <div className="absolute inset-0 p-6 flex flex-col justify-between bg-gradient-to-b from-transparent to-black/50">
-                      <div className="flex items-center space-x-2 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-200">
-                        <img
-                          src={feature.icon}
-                          alt={feature.title}
-                          className="w-6 h-6"
-                        />
-                        <div className="text-white text-2xl font-semibold">
-                          {feature.title}
-                        </div>
-                      </div>
-
-                      <div className="flex justify-end">
-                        <div className="w-10 h-10 rounded-full bg-[#E4AC70] flex items-center justify-center transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
-                          <div className="w-2.5 h-2.5 border-r-2 border-t-2 border-white transform rotate-45 mr-1"></div>
-                        </div>
+                  <div className="absolute inset-0 p-6 flex flex-col justify-between bg-gradient-to-b from-transparent to-black/50">
+                    <div className="flex items-center space-x-2 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-200">
+                      <img
+                        src={feature.icon}
+                        alt={feature.title}
+                        className="w-6 h-6"
+                      />
+                      <div className="text-[#f7f7f7] text-2xl font-semibold">
+                        {feature.title}
                       </div>
                     </div>
-                  </div>
 
-                  <div className="absolute inset-0 bg-[#f7f7f7] [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-2xl shadow-lg">
-                    <div className="absolute inset-0 p-6 flex flex-col justify-between">
-                      <div className="space-y-4">
-                        <div className="flex items-center space-x-2">
-                          <img
-                            src={feature.icon}
-                            alt={feature.title}
-                            className="w-15 h-12"
-                          />
-                          <h3 className="text-2xl font-semibold text-[#173A44]">
-                            {feature.title}
-                          </h3>
-                        </div>
-                        <p className="text-[#173A44] text-sm leading-relaxed">
-                          {feature.hoverContent}
-                        </p>
+                    <div className="flex justify-between items-end">
+                      <div className="text-[#f7f7f7] max-w-[70%]">
+                        {feature.hoverContent}
                       </div>
-
-                      <div className="flex justify-end">
-                        <div className="text-[#D4904E] text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform duration-200">
-                          Know More
-                          <ChevronRight className="text-[#E1B382] w-5 h-5" />
-                        </div>
+                      <div className="w-10 h-10 rounded-full bg-[#E4AC70] flex items-center justify-center transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
+                        <div className="w-2.5 h-2.5 border-r-2 border-t-2 border-white transform rotate-45 mr-1"></div>
                       </div>
                     </div>
                   </div>
