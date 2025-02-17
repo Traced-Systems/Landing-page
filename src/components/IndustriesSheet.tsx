@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustryCard from "./IndustryCard";
 import EURegulationsSection from "./EURegulationsSection";
@@ -12,30 +12,16 @@ interface IndustriesSheetProps {
   isOpen: boolean;
   onClose: () => void;
   onBack?: () => void;
-  scrollToEU?: boolean; // 🔥 New prop to control scrolling
 }
 
 const IndustriesSheet = ({
   isOpen,
   onClose,
   onBack = onClose,
-  scrollToEU = false, // Default is false to prevent unwanted scrolling
 }: IndustriesSheetProps) => {
   const [activeSheet, setActiveSheet] = useState<
     "industries" | "textiles" | "batteries" | null
   >(null);
-
-  const euSectionRef = useRef<HTMLDivElement | null>(null);
-
-  // 🔥 Scroll to EURegulationsSection when opening from Features
-  useEffect(() => {
-    if (isOpen && scrollToEU && euSectionRef.current) {
-      euSectionRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }
-  }, [isOpen, scrollToEU]);
 
   React.useEffect(() => {
     if (isOpen) {
@@ -72,7 +58,7 @@ const IndustriesSheet = ({
       >
         <SheetContent
           side="right"
-          className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[999]"
+          className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[999]"
         >
           <div className="h-full flex flex-col relative">
             <SheetBackButton onBack={onBack} />
@@ -123,10 +109,7 @@ const IndustriesSheet = ({
               </div>
             </div>
 
-            {/* 🔥 Scroll to this only when `scrollToEU === true` */}
-            <div ref={euSectionRef}>
-              <EURegulationsSection />
-            </div>
+            <EURegulationsSection />
 
             <CTASection>
               <div className="text-center mt-6 px-8">

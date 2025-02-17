@@ -13,7 +13,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block">
-              <h2 className="text-3xl md:text-4xl font-medium text-[#173A44]">
+              <h2 className="text-3xl md:text-4xl font-medium text-primary">
                 Who are we?
               </h2>
               <Separator className="my-4 h-1 w-[100px] bg-[#D4904E]" />

@@ -12,10 +12,8 @@ const IndustrySheetCTA = ({ title, description }: IndustrySheetCTAProps) => {
       <div className="max-w-7xl mx-auto px-20 py-16">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-2/3 text-left">
-            <h3 className="text-2xl font-medium text-[#173A44] mb-4">
-              {title}
-            </h3>
-            <p className="text-gray-700 mb-6">{description}</p>
+            <h3 className="text-2xl font-bold text-primary mb-4">{title}</h3>
+            <p className="text-gray-600 mb-6">{description}</p>
             <Button1 className="bg-[#E4AC70] hover:bg-[#E6964F] text-white rounded-full px-8 border-none shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.5)]">
               Book Demo
             </Button1>
