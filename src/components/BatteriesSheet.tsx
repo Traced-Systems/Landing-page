@@ -83,7 +83,7 @@ const BatteriesSheet = ({ isOpen, onClose, onBack }: BatteriesSheetProps) => {
       >
         <SheetBackButton onBack={onBack} />
         <div
-          className="relative w-full"
+          className="relative w-full hidden sm:block"
           style={{ paddingTop: `${(202 / 1082) * 100}%` }}
         >
           <div

@@ -84,7 +84,7 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
       >
         <SheetBackButton onBack={onBack} />
         <div
-          className="relative w-full"
+          className="relative w-full hidden sm:block"
           style={{ paddingTop: `${(202 / 1082) * 100}%` }}
         >
           <div
