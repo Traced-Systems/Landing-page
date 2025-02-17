@@ -1,58 +1,62 @@
+
 import React from "react";
-import { Separator } from "@/components/ui/separator";
+
 const DigitalPassport = () => {
-  return <section className="py-16 bg-white">
-      <div className="container mx-auto lg:px-8 px-[16px]">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative w-full h-full flex items-center">
-            <div className="mx-auto">
-              <img src="/lovable-uploads/84a52b04-4231-4b58-ab6a-c4326f80eb31.png" alt="Digital Product Passport Interface showing mobile screens with product information" className="w-full h-auto object-contain" />
-            </div>
-          </div>
+  return (
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div className="text-center">
+        <h2 className="text-4xl font-bold text-gray-900 mb-8">
+          Digital Product Passport
+        </h2>
+        <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+          Our innovative digital product passport solution enables manufacturers,
+          brands, and retailers to track and trace their products throughout the
+          entire lifecycle, ensuring transparency and sustainability.
+        </p>
+      </div>
 
-          <div className="space-y-0">
-            <div className="space-y-3">
-              <p className="text-xl text-[#1E293B]">Traced Systems developed</p>
-              <div className="inline-block">
-                <h2 className="text-3xl font-medium text-[#1E293B]">
-                  Digital Product Passport
-                </h2>
-                <Separator className="my-9 h-1 w-[100px] bg-[#D4904E]" />
-              </div>
-            </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="bg-white p-8 rounded-lg shadow-lg">
+          <img
+            src="/lovable-uploads/productJourneyIcon.png"
+            alt="Product Journey"
+            className="w-12 h-12 mb-6"
+          />
+          <h3 className="text-xl font-semibold mb-4">Product Journey</h3>
+          <p className="text-gray-600">
+            Track your product's complete lifecycle, from raw material sourcing to
+            end-of-life, ensuring transparency and traceability at every step.
+          </p>
+        </div>
 
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-medium text-lg mb-2">Our Solution</h3>
-                <p className="text-base text-gray-600 leading-relaxed">
-                  Our solution shines a light on the often opaque world of
-                  supply chains. By leveraging supply chain transparency, we
-                  support businesses in their journey of transition towards a
-                  circular economy.
-                </p>
-              </div>
+        <div className="bg-white p-8 rounded-lg shadow-lg">
+          <img
+            src="/lovable-uploads/valueChainIcon.png"
+            alt="Value Chain"
+            className="w-12 h-12 mb-6"
+          />
+          <h3 className="text-xl font-semibold mb-4">Value Chain</h3>
+          <p className="text-gray-600">
+            Connect all stakeholders in your value chain, enabling seamless
+            collaboration and data sharing while maintaining data sovereignty.
+          </p>
+        </div>
 
-              <div>
-                <h3 className="font-medium text-lg mb-2">Our Service</h3>
-                <p className="text-base text-gray-600 leading-relaxed">
-                  Our service plays an instrumental role in enabling businesses
-                  to align their operations with sustainable business models.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-medium text-lg mb-2">Our Versatility</h3>
-                <p className="text-base text-gray-600 leading-relaxed">
-                  A complete digital record that tracks a product's entire
-                  lifecycle, ensuring transparency, sustainability, and
-                  compliance across multiple sectors, from batteries and
-                  textiles to electronics, furniture, and beyond.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="bg-white p-8 rounded-lg shadow-lg">
+          <img
+            src="/lovable-uploads/dateIntegrationIcon.png"
+            alt="Data Integration"
+            className="w-12 h-12 mb-6"
+          />
+          <h3 className="text-xl font-semibold mb-4">Data Integration</h3>
+          <p className="text-gray-600">
+            Easily integrate with existing systems and data sources, creating a
+            unified view of your product data across the entire supply chain.
+          </p>
         </div>
       </div>
-    </section>;
+    </div>
+  );
 };
+
 export default DigitalPassport;
