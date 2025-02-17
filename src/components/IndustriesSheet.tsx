@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustryCard from "./IndustryCard";
@@ -8,6 +7,7 @@ import TextilesSheet from "./TextilesSheet";
 import BatteriesSheet from "./BatteriesSheet";
 import SheetBackButton from "./shared/SheetBackButton";
 import Button1 from "./ui/button-1";
+import ExpandableImage from "./shared/ExpandableImage";
 
 interface IndustriesSheetProps {
   isOpen: boolean;
@@ -145,12 +145,13 @@ const IndustriesSheet = ({
                   entire value chain, providing real-time visibility and control
                   over your product lifecycle.
                 </p>
-                <img 
-                  src="/lovable-uploads/c0da0885-a0e1-4ac0-b309-a464bcd66b53.png" 
-                  alt="Unified Platform" 
-                  className="w-full max-w-4xl mx-auto pt-4 mb-8 sm:mb-12 rounded-lg object-cover" 
-                />
-                <div className="flex justify-center">
+                <div className="w-[95%] sm:w-full max-w-4xl mx-auto">
+                  <ExpandableImage 
+                    src="/lovable-uploads/c0da0885-a0e1-4ac0-b309-a464bcd66b53.png"
+                    alt="Unified Traceability Platform"
+                  />
+                </div>
+                <div className="flex justify-center mt-8">
                   <Button1 className="px-8">Get in touch</Button1>
                 </div>
               </div>
