@@ -6,6 +6,7 @@ import IndustrySheetCTA from "./shared/IndustrySheetCTA";
 import Button1 from "./ui/button-1";
 import SheetBackButton from "./shared/SheetBackButton";
 import { useNavigate } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 
 interface TextilesSheetProps {
   isOpen: boolean;
@@ -28,19 +29,19 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
 
   const cards = [
     {
-      title: "Lifecycle Traceability",
+      title: "Deliver Lifecycle Transparency",
       content:
         "Our platform unites data and stakeholders at every stage from raw materials to recycling or resale offering actionable transparency. By integrating all touchpoints in the supply chain, we help businesses reduce waste, build trust, and make more informed decisions.",
       iconSrc: "/lovable-uploads/859fbae4-6beb-478f-8c68-b8afd2733b38.png",
     },
     {
-      title: "Reliable Compliance",
+      title: "Ensure Reliable Compliance",
       content:
         "Powered by secure blockchain, our solution provides tamper‐proof records to meet both internal and external standards. Data validation and sharing streamlined compliance, boost stakeholder confidence, and lay the groundwork for truly sustainable operations.",
       iconSrc: "/lovable-uploads/af862426-05dd-45c3-ac0a-40e68e59f5cc.png",
     },
     {
-      title: "Sustainable Growth",
+      title: "Enable Sustainable Growth",
       content:
         "We equip organizations to meet the rising demand for credible, eco‐friendly products whether in B2B or B2C markets. By verifying sustainability claims and improving transparency, our tool helps businesses stand out, reduce environmental impact, and foster profitable growth.",
       iconSrc: "/lovable-uploads/7e022afd-d192-4c0a-92fc-014012d85fb2.png",
@@ -78,7 +79,7 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
     <Sheet open={isOpen} onOpenChange={handleSheetClose}>
       <SheetContent
         side="right"
-        className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[995]"
+        className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7f7f7] border-l shadow-xl p-0 z-[995]"
       >
         <SheetBackButton onBack={onBack} />
         <div
@@ -106,11 +107,11 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
             />
           </div>
 
-          <div className="text-center mb-12 mx-20">
-            <h2 className="text-2xl font-medium text-primary mb-8">
+          <div className="text-center my-20 mx-20">
+            <h2 className="text-2xl font-medium text-[#173A44] mb-12">
               How Traced Systems Elevates the Textile Industry
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10 ">
               {cards.map((card, index) => (
                 <IndustrySheetCard
                   key={index}
@@ -124,7 +125,7 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
 
           <div className="px-20">
             <div className="mb-12 text-center">
-              <h2 className="text-2xl font-bold text-primary mb-4">
+              <h2 className="text-2xl font-medium text-[#173A44] mb-4">
                 Driving Collaborative Sustainability Across the Entire Value
                 Chain
               </h2>
@@ -148,12 +149,12 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
               </div>
 
               <Button1
-                className="mx-auto"
+                className="mx-auto bg-[#f7f7f7]"
                 icon={
                   <img
                     src="/lovable-uploads/5e409765-ccc7-4562-9b05-c46afe65a486.png"
                     alt="arrow"
-                    className="w-4 h-4 object-contain"
+                    className="w-3 h-3 object-contain"
                   />
                 }
               >
