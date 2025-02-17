@@ -1,4 +1,3 @@
-
 import * as SheetPrimitive from "@radix-ui/react-dialog"
 import { cva, type VariantProps } from "class-variance-authority"
 import * as React from "react"
@@ -53,22 +52,29 @@ const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
 >(({ side = "right", className, children, onSwipeRight, swipeDirection, swipeThreshold = 50, ...props }, ref) => {
-  const [touchStart, setTouchStart] = React.useState<number | null>(null);
-  const [touchEnd, setTouchEnd] = React.useState<number | null>(null);
+  const [touchStart, setTouchStart] = React.useState<{x: number; y: number} | null>(null);
+  const [touchEnd, setTouchEnd] = React.useState<{x: number; y: number} | null>(null);
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.targetTouches[0].clientX);
+    setTouchStart({
+      x: e.targetTouches[0].clientX,
+      y: e.targetTouches[0].clientY
+    });
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
+    setTouchEnd({
+      x: e.targetTouches[0].clientX,
+      y: e.targetTouches[0].clientY
+    });
   };
 
   const handleTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
 
-    const distance = touchEnd - touchStart;
-    const isRightSwipe = distance > swipeThreshold;
+    const distanceX = touchEnd.x - touchStart.x;
+    const distanceY = Math.abs(touchEnd.y - touchStart.y);
+    const isRightSwipe = distanceX > swipeThreshold && distanceY < 100;
 
     if (isRightSwipe && onSwipeRight && swipeDirection === "right") {
       onSwipeRight();

@@ -25,7 +25,7 @@ const SheetBackButton = ({ onBack }: SheetBackButtonProps) => {
     <Button
       variant="ghost"
       onClick={handleBack}
-      className="fixed top-4 right-4 z-[9999] hover:bg-gray-100 bg-white shadow-md flex items-center gap-2 py-[19px] px-[34px]"
+      className="fixed top-4 right-4 z-[9999] hover:bg-gray-100 bg-white shadow-md flex items-center gap-2 px-[42px] py-[18px]"
     >
       <ArrowLeft className="h-5 w-5" />
       <span>Back</span>
