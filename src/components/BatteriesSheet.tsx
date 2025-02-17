@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustrySheetHeader from "./shared/IndustrySheetHeader";
@@ -7,6 +6,7 @@ import IndustrySheetCTA from "./shared/IndustrySheetCTA";
 import Button1 from "./ui/button-1";
 import SheetBackButton from "./shared/SheetBackButton";
 import { useNavigate } from "react-router-dom";
+import ExpandableImage from "./shared/ExpandableImage";
 
 interface BatteriesSheetProps {
   isOpen: boolean;
@@ -138,10 +138,9 @@ const BatteriesSheet = ({ isOpen, onClose, onBack }: BatteriesSheetProps) => {
               <div className="grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-3 sm:gap-6 mb-6 sm:mb-8 max-w-5xl mx-auto">
                 {valueChainItems.map((item, index) => (
                   <div key={index} className="w-full">
-                    <img
+                    <ExpandableImage
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-auto rounded-lg shadow-md"
                     />
                   </div>
                 ))}
