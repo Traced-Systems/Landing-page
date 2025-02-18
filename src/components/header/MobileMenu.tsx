@@ -19,11 +19,17 @@ const MobileMenu = ({
     handleSheetOpen(sheet);
   };
 
+  const handleBookDemo = () => {
+    setIsOpen(false);
+    window.dispatchEvent(new CustomEvent('openContact'));
+  };
+
   const toggleAboutUs = () => {
     setIsAboutUsOpen(!isAboutUsOpen);
   };
 
-  return <Sheet open={isOpen} onOpenChange={setIsOpen}>
+  return (
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
         <Button 
           variant="ghost" 
@@ -80,12 +86,13 @@ const MobileMenu = ({
           <button onClick={() => handleMenuItemClick('contact')} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
             Contact Us
           </button>
-          <Button onClick={() => handleMenuItemClick('contact')} className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-8 shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.5)]">
+          <Button onClick={handleBookDemo} className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-8 shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.5)]">
             Book Demo
           </Button>
         </nav>
       </SheetContent>
-    </Sheet>;
+    </Sheet>
+  );
 };
 
 export default MobileMenu;

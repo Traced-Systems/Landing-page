@@ -3,7 +3,7 @@ import React from "react";
 import Button1 from "./ui/button-1";
 
 interface CTAProps {
-  onContactClick: () => void;
+  onContactClick?: () => void;
 }
 
 const CTA = ({ onContactClick }: CTAProps) => {
