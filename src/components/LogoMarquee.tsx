@@ -21,22 +21,22 @@ const LogoMarquee = () => {
     {
       src: "/lovable-uploads/bfe45d2d-c864-4265-9fd4-f2f7a5535d20.png",
       alt: "European Commission",
-      className: "max-h-10 w-auto object-contain",
+      className: "h-8",
     },
     {
       src: "/lovable-uploads/bonsai-technology_logo_rev-20230126-07.png",
       alt: "Bonsai Technology",
-      className: "max-h-10 w-auto object-contain",
+      className: "h-8",
     },
     {
       src: "/lovable-uploads/ChromaWayLogo.png",
       alt: "ChromaWay",
-      className: "max-h-10 w-auto object-contain",
+      className: "h-8",
     },
     {
       src: "/lovable-uploads/BatterireturAvdHoyenergi_staaende_RGB1.png",
       alt: "BatteriRetur",
-      className: "max-h-10 w-auto object-contain",
+      className: "h-8",
     },
     {
       src: "/lovable-uploads/LOGO-instagrid-red-black-RGB.png",
@@ -80,7 +80,7 @@ const LogoMarquee = () => {
                   src={logo.src}
                   alt={logo.alt}
                   className={logo.className}
-                  style={{ maxWidth: '100%', objectFit: 'contain' }}
+                  style={{ maxWidth: '100%', objectFit: 'contain', maxHeight: '32px' }}
                 />
               </div>
             ))}
@@ -94,7 +94,7 @@ const LogoMarquee = () => {
                   src={logo.src}
                   alt={logo.alt}
                   className={logo.className}
-                  style={{ maxWidth: '100%', objectFit: 'contain' }}
+                  style={{ maxWidth: '100%', objectFit: 'contain', maxHeight: '32px' }}
                 />
               </div>
             ))}
