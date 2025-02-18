@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustrySheetHeader from "./shared/IndustrySheetHeader";
@@ -6,7 +7,6 @@ import IndustrySheetCTA from "./shared/IndustrySheetCTA";
 import Button1 from "./ui/button-1";
 import SheetBackButton from "./shared/SheetBackButton";
 import { useNavigate } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
 import ExpandableImage from "./shared/ExpandableImage";
 
 interface TextilesSheetProps {
@@ -17,6 +17,17 @@ interface TextilesSheetProps {
 
 const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
   const navigate = useNavigate();
+
+  React.useEffect(() => {
+    const handleCloseSheets = () => {
+      onClose();
+    };
+
+    window.addEventListener('closeIndustrySheets', handleCloseSheets);
+    return () => {
+      window.removeEventListener('closeIndustrySheets', handleCloseSheets);
+    };
+  }, [onClose]);
 
   const handleSheetClose = (open: boolean) => {
     if (!open) {

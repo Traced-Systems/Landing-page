@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustrySheetHeader from "./shared/IndustrySheetHeader";
@@ -16,6 +17,17 @@ interface BatteriesSheetProps {
 
 const BatteriesSheet = ({ isOpen, onClose, onBack }: BatteriesSheetProps) => {
   const navigate = useNavigate();
+
+  React.useEffect(() => {
+    const handleCloseSheets = () => {
+      onClose();
+    };
+
+    window.addEventListener('closeIndustrySheets', handleCloseSheets);
+    return () => {
+      window.removeEventListener('closeIndustrySheets', handleCloseSheets);
+    };
+  }, [onClose]);
 
   const handleSheetClose = (open: boolean) => {
     if (!open) {
