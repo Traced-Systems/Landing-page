@@ -42,6 +42,18 @@ const IndustriesSheet = ({
     }
   }, [isOpen]);
 
+  React.useEffect(() => {
+    const handleCloseSheets = () => {
+      onClose();
+      setActiveSheet(null);
+    };
+
+    window.addEventListener('closeIndustrySheets', handleCloseSheets);
+    return () => {
+      window.removeEventListener('closeIndustrySheets', handleCloseSheets);
+    };
+  }, [onClose]);
+
   const handleTextilesClick = () => {
     setActiveSheet("textiles");
   };

@@ -9,7 +9,12 @@ interface IndustrySheetCTAProps {
 
 const IndustrySheetCTA = ({ title, description }: IndustrySheetCTAProps) => {
   const handleContactClick = () => {
-    window.dispatchEvent(new CustomEvent('openContact'));
+    // First, dispatch a custom event to close all industry sheets
+    window.dispatchEvent(new CustomEvent('closeIndustrySheets'));
+    // Then after a small delay, open the contact form
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent('openContact'));
+    }, 100);
   };
 
   return (
