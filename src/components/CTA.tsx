@@ -8,7 +8,7 @@ interface CTAProps {
 
 const CTA = ({ onContactClick }: CTAProps) => {
   const handleContactClick = () => {
-    window.dispatchEvent(new CustomEvent('openContact'));
+    window.dispatchEvent(new CustomEvent('openCTAContact'));
   };
 
   return (

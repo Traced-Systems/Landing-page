@@ -3,18 +3,17 @@ import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { Linkedin, Mail } from "lucide-react";
 import SheetBackButton from "./shared/SheetBackButton";
 import Button1 from "./ui/button-1";
 import emailjs from "emailjs-com";
 
-interface ContactSheetProps {
+interface CTAContactSheetProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
+const CTAContactSheet = ({ isOpen, onClose }: CTAContactSheetProps) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -99,16 +98,12 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
               </div>
 
               <div>
-                <Select name="subject" required>
-                  <SelectTrigger className="bg-white px-6 py-3 text-base h-auto">
-                    <SelectValue placeholder="Select Subject" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="general">General Inquiries</SelectItem>
-                    <SelectItem value="marketing">Marketing</SelectItem>
-                    <SelectItem value="press">Press</SelectItem>
-                  </SelectContent>
-                </Select>
+                <Input
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                  className="bg-white px-6 py-3 text-base"
+                />
               </div>
 
               <div>
@@ -185,4 +180,4 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
   );
 };
 
-export default ContactSheet;
+export default CTAContactSheet;
