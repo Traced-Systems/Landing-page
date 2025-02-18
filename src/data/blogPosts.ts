@@ -2,42 +2,35 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
-    title: "The Blueprint for a Successful Blockchain Partner Ecosystem",
+    title: "Efficient product tracking with blockchain in supply chains",
     description:
-      "In this edition of the Greatest Minds in Partnerships series, David Dolhomut, Head of Partnerships & Business Development at Traced Systems, shares his insights on building a thriving blockchain partner ecosystem...",
-    image: "/lovable-uploads/38805650-ecc3-48cc-b0f1-923d17a75d9a.png",
+      "Many sectors face significant challenges in maintaining transparent and sustainable product tracking. Traced Systems, a blockchain-powered solution from ChromaWay, is improving product traceability across industries as part of the Trace4Value+SwePass project. By leveraging Digital Product Passports, Traced Systems fosters greater transparency and sustainability throughout the entire product lifecycle across sectors.",
+    image: "/lovable-uploads/dd922267-04dd-42fd-bfc5-31dfb191dbcc.png",
     fullContent: {
-      title: "The Blueprint for a Successful Blockchain Partner Ecosystem",
+      title: "Efficient product tracking with blockchain in supply chains",
       introduction:
-        "For this edition of the Greatest Minds in Partnerships series, we sat down with David Dolhomut, Head of Partnerships & Business Development at Traced Systems, to explore building and scaling a thriving partner ecosystem in the blockchain industry.\n\nWith years of experience fostering B2B and B2G collaborations, David has played a pivotal role in bridging traditional enterprises and Web3-native projects. From working at the Embassy of Canada in Poland to shaping the Nordic Blockchain Association, his journey into blockchain partnerships has been defined by a passion for trust, innovation, and real-world adoption.\n\nIn this conversation, he shares key insights into overcoming blockchain-specific challenges, onboarding the right partners, balancing traditional and decentralized partnerships, and leveraging technology to scale collaborations in this rapidly evolving space.",
+        "Many sectors face significant challenges in maintaining transparent and sustainable product tracking. Traced Systems, a blockchain-powered solution from ChromaWay, is improving product traceability across industries as part of the Trace4Value+SwePass project. By leveraging Digital Product Passports, Traced Systems fosters greater transparency and sustainability throughout the entire product lifecycle across sectors.",
       sections: [
         {
-          heading: "Navigating the Challenges of Blockchain Partnerships",
+          heading: "The Challenge of Product Tracking",
           content:
-            "Unlike many industries, blockchain partnerships must contend with technical and reputational challenges. According to David, one of the biggest hurdles is the negative perception of blockchain, often fueled by sensationalized media coverage of crypto-related scandals.\n\nThis perception affects not only enterprise adoption but also regulatory frameworks. Many policymakers react to negative headlines rather than evaluating blockchain's potential, leading to regulations that fail to differentiate between speculative crypto markets and enterprise blockchain solutions that improve transparency, security, and efficiency.\n\nDespite these challenges, real-world use cases are proving blockchain's value. In supply chain industries like textile and battery manufacturing, blockchain is already enhancing traceability and accountability, helping businesses comply with sustainability standards, and combating counterfeiting. However, partnerships in this space require a proactive approach to shifting the narrative, highlighting tangible success stories over hype-driven fears.",
-          quote:
-            "While illicit activities occur in all financial sectors, blockchain and crypto-related crimes receive disproportionate attention, making it harder to advocate for the technology's legitimate and transformative applications.",
+            "In today's complex global supply chains, maintaining transparent and sustainable product tracking is a significant challenge. Many industries struggle with inefficient tracking systems, lack of transparency, and difficulty in verifying product authenticity and sustainability claims.",
+          quote: "Transparent product tracking is essential for building trust and ensuring sustainability across supply chains.",
         },
         {
-          heading:
-            "How to Identify and Onboard the Right Partners in a Decentralized Industry",
+          heading: "Blockchain-Powered Solution",
           content:
-            "In blockchain, partnerships drive adoption, interoperability, and innovation. Unlike traditional industries, where partnerships often follow structured, centralized agreements, Web3 collaboration thrives on flexibility and shared ecosystems.\n\nAt Traced Systems, David and his team focus on four key types of partners:\n\n• Consulting firms that guide businesses into Web3 adoption\n• Technology providers that enhance blockchain solutions\n• Compliance experts that ensure regulatory alignment\n• Marketplaces that connect businesses to decentralized tools\n\nOnboarding is structured yet adaptable. Strong relationships are further reinforced through co-marketing efforts and thought leadership, helping educate partners and end users.",
-          quote:
-            "We start by aligning objectives, improving adoption, compliance, or interoperability. For tech partners, we focus on seamless integration through APIs, while compliance partnerships ensure regulatory adherence.",
+            "Traced Systems leverages blockchain technology to create a robust and transparent product tracking solution. As part of the Trace4Value+SwePass project, we're implementing innovative approaches to enhance traceability across various industries.\n\nOur solution provides:\n\n• Immutable record-keeping\n• Real-time tracking capabilities\n• Secure data sharing\n• Automated compliance verification",
         },
         {
-          heading: "The Key Incentives That Drive Blockchain Partnerships",
+          heading: "Digital Product Passports",
           content:
-            'David highlights three fundamental factors that create successful blockchain partnerships:\n\n• Technical Expertise and Innovation – Blockchain is still an emerging industry, and companies that offer cutting-edge solutions such as smart contracts, decentralized applications (DApps), and interoperable ledgers create the strongest partnerships.\n• Trust and Security – "Trust is everything in blockchain," David emphasizes. Strong partnerships require secure technology and compliance-driven processes that help businesses transition smoothly into Web3.\n• Industry-Specific Knowledge – Blockchain is not a one-size-fits-all solution; it must be adapted to different sectors, regulations, and use cases.\n\nBy aligning its solution with partners\' goals, Traced Systems creates partnerships that are not only strategic but also highly impactful.',
+            "At the heart of our solution are Digital Product Passports (DPPs). These digital identities accompany products throughout their lifecycle, storing and sharing critical information about:\n\n• Origin and manufacturing\n• Transportation and storage\n• Sustainability metrics\n• Compliance certifications\n• End-of-life handling",
         },
         {
-          heading:
-            "Balancing Traditional Enterprises and Web3-Native Partnerships",
+          heading: "Impact Across Sectors",
           content:
-            "One of the biggest challenges in blockchain partnerships is bridging the gap between traditional businesses and Web3-native projects.\n\nThis allows for rapid innovation, as seen in projects like My Neighbor Alice, a decentralized gaming ecosystem built on Chromia.\n\nOn the other hand, traditional enterprise adoption requires patience and structured engagement. Large corporations often need clear, value-driven blockchain solutions, usually facilitated by trusted Web3 consultants like Doors3.\n\nTo successfully bridge these two worlds, David focuses on three key competencies:\n\n• Deep industry knowledge to speak the language of enterprises\n• Translating complex Web3 concepts into business-friendly strategies\n• Problem-solving to align decentralized ecosystems with corporate needs\n\nBy combining these elements, Traced Systems ensures its partnerships are innovative and scalable.",
-          quote:
-            "With Web3-native collaborations, things move faster because there's already a shared understanding of tokenomics, NFT integrations, and interoperability.",
+            "Our blockchain-based tracking solution is making a significant impact across multiple sectors:\n\n• Manufacturing: Enhanced supply chain visibility\n• Retail: Improved product authenticity verification\n• Agriculture: Better traceability of food products\n• Electronics: Efficient lifecycle management\n\nBy implementing Digital Product Passports, organizations can achieve greater transparency, improve sustainability reporting, and build trust with stakeholders.",
         },
       ],
       faq: {
@@ -45,32 +38,24 @@ export const blogPosts: BlogPost[] = [
         subtitle: "Your right to know",
         questions: [
           {
-            question:
-              "What are the key benefits of partnerships in the blockchain industry?",
-            answer:
-              "Blockchain partnerships drive innovation, adoption, and interoperability by connecting projects with complementary expertise. Strategic collaborations help businesses integrate decentralized solutions, comply with evolving regulations, and enhance security, ultimately accelerating industry-wide adoption and trust.",
+            question: "How does blockchain improve product tracking?",
+            answer: "Blockchain technology creates an immutable, transparent record of product movements and transformations throughout the supply chain, ensuring data integrity and real-time visibility.",
           },
           {
-            question: "How do blockchain companies attract the right partners?",
-            answer:
-              "Successful blockchain companies attract partners by offering cutting-edge technology, clear value propositions, and strong ecosystem support. Businesses that provide seamless onboarding, compliance solutions, and co-marketing opportunities create long-term, mutually beneficial relationships in the decentralized space.",
+            question: "What is a Digital Product Passport?",
+            answer: "A Digital Product Passport is a digital identity that contains key information about a product's lifecycle, including origin, manufacturing details, sustainability metrics, and compliance certifications.",
           },
           {
-            question: "What challenges do blockchain partnerships face?",
-            answer:
-              "Blockchain partnerships must navigate regulatory uncertainty, trust issues, and interoperability challenges. Overcoming negative industry perceptions and ensuring compliance with frameworks like ESPR and GDPR are crucial for fostering credibility and securing enterprise adoption.",
+            question: "Which industries can benefit from this solution?",
+            answer: "The solution is applicable across various sectors including manufacturing, retail, agriculture, and electronics, helping organizations improve traceability and sustainability reporting.",
           },
           {
-            question:
-              "How do Web3-native partnerships differ from enterprise blockchain collaborations?",
-            answer:
-              "Web3-native partnerships often move faster due to shared knowledge of tokenomics, NFTs, and decentralized governance, while enterprise collaborations require structured onboarding, clear ROI demonstration, and regulatory compliance. Successful blockchain companies balance both by translating complex Web3 concepts into business-friendly solutions.",
+            question: "How does this support sustainability goals?",
+            answer: "By providing transparent tracking and verification of sustainability metrics, the solution helps organizations demonstrate their environmental commitment and comply with regulations.",
           },
           {
-            question:
-              "What role does technology play in managing blockchain partnerships?",
-            answer:
-              "Partner Relationship Management (PRM) platforms help automate onboarding, track engagement, and manage deal pipelines, making blockchain partnerships more effective and scalable.",
+            question: "What role does the Trace4Value+SwePass project play?",
+            answer: "The Trace4Value+SwePass project provides a framework for implementing blockchain-based tracking solutions and Digital Product Passports across different industries.",
           },
         ],
       },
