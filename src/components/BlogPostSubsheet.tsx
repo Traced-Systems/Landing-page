@@ -14,24 +14,23 @@ interface BlogPostSubsheetProps {
       title: string;
       authorIcon: string;
       introduction: string;
-      sections: Array<{
+      content: Array<{
         heading: string;
-        content: string;
-        quote?: string;
+        text: string;
       }>;
-      faq?: {
-        title: string;
-        subtitle: string;
-        questions: Array<{
-          question: string;
-          answer: string;
-        }>;
-      };
     };
   };
 }
 
 const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
+  const handleContactClick = () => {
+    onClose();
+    // Small delay to ensure smooth transition between sheets
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent('openContact'));
+    }, 100);
+  };
+
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
       <SheetContent 
@@ -46,27 +45,13 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
               {post.fullContent ? (
                 <>
                   <div className="flex items-center gap-2 mb-6">
-                    {post.title === "The Blueprint for a Successful Blockchain Partner Ecosystem" ? (
-                      <>
-                        <img 
-                          src="/lovable-uploads/0d25c486-df3a-4a98-b070-691da893d470.png"
-                          alt="Kiflo"
-                          className="h-8"
-                        />
-                        <span className="text-gray-600">Written by <a href="https://www.kiflo.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600">Kiflo</a></span>
-                      </>
-                    ) : (
-                      <>
-                        <img 
-                          src="/lovable-uploads/a163e1df-6783-427e-940a-22d1f8c80d11.png"
-                          alt="Traced Systems"
-                          className="w-12 h-12"
-                        />
-                        <span className="text-gray-600">Written by Traced Systems</span>
-                      </>
-                    )}
+                    <img 
+                      src="/lovable-uploads/5ce2f433-ac13-4162-97af-4ed813cff152.png"
+                      alt="Traced Systems"
+                      className="w-6 h-6"
+                    />
+                    <span className="text-gray-600">Written by Traced Systems</span>
                   </div>
-
                   <div className="mb-8">
                     <h1 className="text-4xl font-bold text-primary mb-4">{post.fullContent.title}</h1>
                   </div>
@@ -78,40 +63,18 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
                   />
 
                   <div className="prose max-w-none mb-12">
-                    <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+                    <p className="text-gray-600 mb-8 text-lg">
                       {post.fullContent.introduction}
                     </p>
 
-                    {post.fullContent.sections.map((section, index) => (
-                      <section key={index} className="mb-12">
-                        <h2 className="text-2xl font-bold text-primary mb-6">{section.heading}</h2>
-                        <div className="text-gray-600 leading-relaxed whitespace-pre-line">
-                          {section.content}
+                    {post.fullContent.content.map((section, index) => (
+                      <div key={index} className="mb-8">
+                        <h2 className="text-2xl font-bold text-primary mb-4">{section.heading}</h2>
+                        <div className="text-gray-600 whitespace-pre-line">
+                          {section.text}
                         </div>
-                        {section.quote && (
-                          <blockquote className="border-l-4 border-blue-500 pl-4 my-6 italic text-gray-700">
-                            {section.quote}
-                          </blockquote>
-                        )}
-                      </section>
+                      </div>
                     ))}
-
-                    {post.fullContent.faq && (
-                      <section className="bg-gray-50 rounded-lg p-8 mb-12">
-                        <h2 className="text-2xl font-bold text-primary mb-2">{post.fullContent.faq.title}</h2>
-                        <p className="text-gray-600 mb-8">{post.fullContent.faq.subtitle}</p>
-                        <p className="text-gray-600 mb-8">Got a question? Get your answer.</p>
-
-                        <div className="space-y-6">
-                          {post.fullContent.faq.questions.map((faq, index) => (
-                            <div key={index}>
-                              <h3 className="font-semibold text-lg mb-2">{faq.question}</h3>
-                              <p className="text-gray-600">{faq.answer}</p>
-                            </div>
-                          ))}
-                        </div>
-                      </section>
-                    )}
                   </div>
                 </>
               ) : (
@@ -130,6 +93,27 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
                     <p className="text-gray-600 mb-4">
                       {post.description}
                     </p>
+
+                    <h2 className="text-2xl font-bold text-primary mb-4">The Challenge</h2>
+                    <p className="text-gray-600 mb-4">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+                      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+
+                    <h2 className="text-2xl font-bold text-primary mb-4">The Solution</h2>
+                    <p className="text-gray-600 mb-4">
+                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+                      doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+                      veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    </p>
+
+                    <h2 className="text-2xl font-bold text-primary mb-4">The Results</h2>
+                    <p className="text-gray-600 mb-4">
+                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis 
+                      praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias 
+                      excepturi sint occaecati cupiditate non provident.
+                    </p>
                   </div>
                 </>
               )}
@@ -140,6 +124,7 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
             <IndustrySheetCTA 
               title="Want to Learn More About Our Solutions?"
               description="Discover how our digital product passport can transform your business operations and help you meet sustainability goals."
+              onCtaClick={handleContactClick}
             />
           </div>
         </div>
