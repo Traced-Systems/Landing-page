@@ -1,13 +1,8 @@
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-<<<<<<< HEAD
 import SheetBackButton from "./shared/SheetBackButton";
 import IndustrySheetCTA from "./shared/IndustrySheetCTA";
-=======
-import SheetBackButton from './shared/SheetBackButton';
-import IndustrySheetCTA from './shared/IndustrySheetCTA';
-import { BlogPost } from '@/types/blog';
->>>>>>> main
+import { BlogPost } from "@/types/blog";
 
 interface BlogPostSubsheetProps {
   isOpen: boolean;
