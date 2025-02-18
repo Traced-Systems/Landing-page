@@ -6,6 +6,7 @@ export interface BlogPost {
   fullContent?: {
     title: string;
     introduction: string;
+    authorIcon?: string; // Made authorIcon optional
     sections: Array<{
       heading: string;
       content: string;
