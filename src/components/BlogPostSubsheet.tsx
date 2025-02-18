@@ -1,13 +1,16 @@
+
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from './shared/SheetBackButton';
 import IndustrySheetCTA from './shared/IndustrySheetCTA';
 import { BlogPost } from '@/types/blog';
+
 interface BlogPostSubsheetProps {
   isOpen: boolean;
   onClose: () => void;
   post: BlogPost;
 }
+
 const BlogPostSubsheet = ({
   isOpen,
   onClose,
@@ -67,7 +70,26 @@ const BlogPostSubsheet = ({
                           </blockquote>}
                       </section>)}
 
-                    {post.fullContent.faq}
+                    {post.fullContent.faq && (
+                      <section className="bg-gray-50 rounded-lg p-8 mb-12">
+                        <h2 className="text-2xl font-bold text-primary mb-2">
+                          {post.fullContent.faq.title}
+                        </h2>
+                        <p className="text-gray-600 mb-8">
+                          {post.fullContent.faq.subtitle}
+                        </p>
+                        <div className="space-y-6">
+                          {post.fullContent.faq.questions.map((faq, index) => (
+                            <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                              <h3 className="font-semibold text-lg mb-2 text-primary">
+                                {faq.question}
+                              </h3>
+                              <p className="text-gray-600">{faq.answer}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </section>
+                    )}
                   </div>
                 </> : <>
                   <div className="mb-8">
@@ -92,4 +114,5 @@ const BlogPostSubsheet = ({
       </SheetContent>
     </Sheet>;
 };
+
 export default BlogPostSubsheet;
