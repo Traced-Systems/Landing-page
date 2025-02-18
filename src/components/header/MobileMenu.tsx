@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu, ArrowLeft, ChevronDown } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface MobileMenuProps {
   handleSheetOpen: (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog') => void;
@@ -13,6 +14,7 @@ const MobileMenu = ({
 }: MobileMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isAboutUsOpen, setIsAboutUsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleMenuItemClick = (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog') => {
     setIsOpen(false);
@@ -26,6 +28,11 @@ const MobileMenu = ({
 
   const toggleAboutUs = () => {
     setIsAboutUsOpen(!isAboutUsOpen);
+  };
+
+  const handleHomeClick = () => {
+    setIsOpen(false);
+    navigate('/');
   };
 
   return (
@@ -62,9 +69,9 @@ const MobileMenu = ({
         </Button>
 
         <nav className="flex flex-col space-y-4 p-4">
-          <a href="#" className="text-lg text-[#173A44] hover:text-[#066985] py-2">
+          <button onClick={handleHomeClick} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
             Home
-          </a>
+          </button>
           <button onClick={() => handleMenuItemClick('industries')} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
             Industries
           </button>
