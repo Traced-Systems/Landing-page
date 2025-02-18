@@ -62,7 +62,7 @@ export default {
         }
       },
       animation: {
-        marquee: 'marquee 25s linear infinite',
+        marquee: 'marquee 40s linear infinite', // Slowed down from 25s to 40s
         "fade-up": "fade-up 0.5s ease-out",
         "extend-line": "extend-line 1s ease-out forwards"
       },

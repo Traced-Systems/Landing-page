@@ -21,22 +21,22 @@ const LogoMarquee = () => {
     {
       src: "/lovable-uploads/bfe45d2d-c864-4265-9fd4-f2f7a5535d20.png",
       alt: "European Commission",
-      className: "h-8",
+      className: "max-h-10 w-auto object-contain",
     },
     {
       src: "/lovable-uploads/bonsai-technology_logo_rev-20230126-07.png",
       alt: "Bonsai Technology",
-      className: "h-8",
+      className: "max-h-10 w-auto object-contain",
     },
     {
       src: "/lovable-uploads/ChromaWayLogo.png",
       alt: "ChromaWay",
-      className: "h-8",
+      className: "max-h-10 w-auto object-contain",
     },
     {
       src: "/lovable-uploads/BatterireturAvdHoyenergi_staaende_RGB1.png",
       alt: "BatteriRetur",
-      className: "h-8",
+      className: "max-h-10 w-auto object-contain",
     },
     {
       src: "/lovable-uploads/LOGO-instagrid-red-black-RGB.png",
@@ -65,9 +65,9 @@ const LogoMarquee = () => {
           <div 
             className="flex whitespace-nowrap animate-marquee"
             style={{
-              gap: '96px', // Consistent gap between all logos
-              paddingLeft: '96px', // Initial spacing
-              paddingRight: '96px', // End spacing
+              gap: '96px',
+              paddingLeft: '96px',
+              paddingRight: '96px',
             }}
           >
             {/* First set of logos */}
@@ -79,7 +79,8 @@ const LogoMarquee = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-16 w-auto object-contain"
+                  className={logo.className}
+                  style={{ maxWidth: '100%', objectFit: 'contain' }}
                 />
               </div>
             ))}
@@ -92,7 +93,8 @@ const LogoMarquee = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-16 w-auto object-contain"
+                  className={logo.className}
+                  style={{ maxWidth: '100%', objectFit: 'contain' }}
                 />
               </div>
             ))}
