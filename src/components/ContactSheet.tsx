@@ -96,12 +96,12 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                 />
               </div>
 
-              <div>
+              <div className="relative">
                 <Select name="subject" required>
-                  <SelectTrigger className="bg-white px-6 py-3 text-base h-auto">
+                  <SelectTrigger className="w-full bg-white px-6 py-3 text-base h-auto border border-gray-300 rounded-md">
                     <SelectValue placeholder="Select Subject" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="bg-white z-[9999] min-w-[200px]">
                     <SelectItem value="general">General Inquiries</SelectItem>
                     <SelectItem value="marketing">Marketing</SelectItem>
                     <SelectItem value="press">Press</SelectItem>
