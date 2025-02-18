@@ -1,12 +1,12 @@
 
 import React from 'react';
 
-const Index = () => {
+const About = () => {
   return (
     <div className="min-h-screen pt-16">
-      <h1>Welcome to our platform</h1>
+      <h1>About Us</h1>
     </div>
   );
 };
 
-export default Index;
+export default About;
