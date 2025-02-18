@@ -1,3 +1,4 @@
+
 import * as SheetPrimitive from "@radix-ui/react-dialog"
 import { cva, type VariantProps } from "class-variance-authority"
 import * as React from "react"
@@ -51,22 +52,41 @@ interface SheetContentProps
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
->(({ side = "right", className, children, onSwipeRight, swipeDirection, swipeThreshold = 50, ...props }, ref) => {
+>(({ side = "right", className, children, onSwipeRight, swipeDirection = "right", swipeThreshold = 50, ...props }, ref) => {
   const [touchStart, setTouchStart] = React.useState<{x: number; y: number} | null>(null);
   const [touchEnd, setTouchEnd] = React.useState<{x: number; y: number} | null>(null);
+  const [dragging, setDragging] = React.useState(false);
+  const [dragOffset, setDragOffset] = React.useState(0);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart({
       x: e.targetTouches[0].clientX,
       y: e.targetTouches[0].clientY
     });
+    setDragging(true);
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd({
+    if (!touchStart) return;
+    
+    const currentTouch = {
       x: e.targetTouches[0].clientX,
       y: e.targetTouches[0].clientY
-    });
+    };
+    setTouchEnd(currentTouch);
+
+    // Calculate drag distance
+    const distanceX = currentTouch.x - touchStart.x;
+    const distanceY = Math.abs(currentTouch.y - touchStart.y);
+
+    // Only update drag offset if primarily horizontal movement
+    if (distanceY < Math.abs(distanceX)) {
+      if (side === "right" && distanceX > 0) {
+        setDragOffset(distanceX);
+      } else if (side === "left" && distanceX < 0) {
+        setDragOffset(distanceX);
+      }
+    }
   };
 
   const handleTouchEnd = () => {
@@ -74,15 +94,27 @@ const SheetContent = React.forwardRef<
 
     const distanceX = touchEnd.x - touchStart.x;
     const distanceY = Math.abs(touchEnd.y - touchStart.y);
-    const isRightSwipe = distanceX > swipeThreshold && distanceY < 100;
+    const isHorizontalSwipe = distanceY < Math.abs(distanceX);
+    const isRightSwipe = distanceX > swipeThreshold;
+    const isLeftSwipe = distanceX < -swipeThreshold;
 
-    if (isRightSwipe && onSwipeRight && swipeDirection === "right") {
-      onSwipeRight();
+    if (isHorizontalSwipe) {
+      if (side === "right" && isRightSwipe && onSwipeRight) {
+        onSwipeRight();
+      } else if (side === "left" && isLeftSwipe && onSwipeRight) {
+        onSwipeRight();
+      }
     }
 
+    // Reset states
     setTouchStart(null);
     setTouchEnd(null);
+    setDragging(false);
+    setDragOffset(0);
   };
+
+  const transform = dragging ? `translateX(${dragOffset}px)` : '';
+  const transition = dragging ? 'none' : 'transform 0.3s ease-out';
 
   return (
     <SheetPortal>
@@ -90,6 +122,7 @@ const SheetContent = React.forwardRef<
       <SheetPrimitive.Content
         ref={ref}
         className={cn(sheetVariants({ side }), className)}
+        style={{ transform, transition }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
