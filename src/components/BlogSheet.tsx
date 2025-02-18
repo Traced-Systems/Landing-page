@@ -8,6 +8,7 @@ import BlogPostSubsheet from './BlogPostSubsheet';
 import BlogCard from './blog/BlogCard';
 import { blogPosts } from '@/data/blogPosts';
 import { BlogPost } from '@/types/blog';
+import SheetMobileHeader from './shared/SheetMobileHeader';
 
 interface BlogSheetProps {
   isOpen: boolean;
@@ -32,6 +33,11 @@ const BlogSheet = ({ isOpen, onClose, initialPost }: BlogSheetProps) => {
     setActivePost(null);
   };
 
+  const handleMenuClick = () => {
+    // This will close the current sheet and open the mobile menu
+    onClose();
+  };
+
   return (
     <>
       <Sheet open={isOpen} onOpenChange={onClose}>
@@ -39,6 +45,7 @@ const BlogSheet = ({ isOpen, onClose, initialPost }: BlogSheetProps) => {
           side="right" 
           className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0"
         >
+          <SheetMobileHeader onMenuClick={handleMenuClick} />
           <SheetBackButton onBack={onClose} />
 
           <div className="h-full flex flex-col">
