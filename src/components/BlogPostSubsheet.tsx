@@ -1,13 +1,9 @@
+
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-<<<<<<< HEAD
-import SheetBackButton from "./shared/SheetBackButton";
-import IndustrySheetCTA from "./shared/IndustrySheetCTA";
-=======
 import SheetBackButton from './shared/SheetBackButton';
 import IndustrySheetCTA from './shared/IndustrySheetCTA';
 import { BlogPost } from '@/types/blog';
->>>>>>> main
 
 interface BlogPostSubsheetProps {
   isOpen: boolean;
@@ -58,7 +54,15 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
                           className="w-12 h-12"
                         />
                         <span className="text-gray-600">
-                          Written by Traced Systems
+                          Written by Traced Systems x{" "}
+                          <a
+                            href="https://trace4value.se/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-500 hover:text-blue-600"
+                          >
+                            TRACE4VALUE + SwePass
+                          </a>
                         </span>
                       </>
                     )}
