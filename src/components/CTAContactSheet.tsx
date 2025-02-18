@@ -1,9 +1,7 @@
-
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Linkedin, Mail } from "lucide-react";
 import SheetBackButton from "./shared/SheetBackButton";
 import Button1 from "./ui/button-1";
 import emailjs from "emailjs-com";
@@ -140,14 +138,6 @@ const CTAContactSheet = ({ isOpen, onClose }: CTAContactSheetProps) => {
                   <p className="text-gray-600 mb-4">
                     Executive Lead & Co-Founder
                   </p>
-                  <div className="flex justify-center space-x-4">
-                    <a href="#" className="text-gray-600 hover:text-blue-500">
-                      <Linkedin className="w-5 h-5" />
-                    </a>
-                    <a href="#" className="text-gray-600 hover:text-blue-500">
-                      <Mail className="w-5 h-5" />
-                    </a>
-                  </div>
                 </div>
 
                 <div className="text-center">
@@ -162,14 +152,6 @@ const CTAContactSheet = ({ isOpen, onClose }: CTAContactSheetProps) => {
                   <p className="text-gray-600 mb-4">
                     Head of Partnerships & Business Development
                   </p>
-                  <div className="flex justify-center space-x-4">
-                    <a href="#" className="text-gray-600 hover:text-blue-500">
-                      <Linkedin className="w-5 h-5" />
-                    </a>
-                    <a href="#" className="text-gray-600 hover:text-blue-500">
-                      <Mail className="w-5 h-5" />
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
