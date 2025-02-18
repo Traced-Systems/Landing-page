@@ -36,9 +36,6 @@ const MobileMenu = ({
       <SheetContent 
         side="top" 
         className="w-full h-[100vh] lg:hidden pt-16 bg-white" 
-        onSwipeRight={() => setIsOpen(false)}
-        swipeDirection="right"
-        swipeThreshold={50}
       >
         <Button 
           variant="ghost" 

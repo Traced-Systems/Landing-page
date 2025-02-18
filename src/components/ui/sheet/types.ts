@@ -6,8 +6,5 @@ import { sheetVariants } from "./variants"
 export interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
     VariantProps<typeof sheetVariants> {
-  onSwipeRight?: () => void;
-  swipeDirection?: "right" | "left" | "up" | "down";
-  swipeThreshold?: number;
   onOpenChange?: (open: boolean) => void;
 }

@@ -4,7 +4,6 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 import { sheetVariants } from "./variants"
 import { SheetContentProps } from "./types"
-import { useSheetSwipe } from "./use-sheet-swipe"
 
 const Sheet = SheetPrimitive.Root
 const SheetTrigger = SheetPrimitive.Trigger
@@ -29,26 +28,13 @@ SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
->(({ side = "right", className, children, onSwipeRight, onOpenChange, swipeDirection = "right", swipeThreshold = 50, ...props }, ref) => {
-  const { handleTouchStart, handleTouchMove, handleTouchEnd, swipeStyles } = useSheetSwipe(side, () => {
-    if (onOpenChange) {
-      onOpenChange(false)
-    }
-    if (onSwipeRight) {
-      onSwipeRight()
-    }
-  }, swipeThreshold)
-
+>(({ side = "right", className, children, ...props }, ref) => {
   return (
     <SheetPortal>
       <SheetOverlay />
       <SheetPrimitive.Content
         ref={ref}
         className={cn(sheetVariants({ side }), className)}
-        style={swipeStyles}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
         {...props}
       >
         {children}
