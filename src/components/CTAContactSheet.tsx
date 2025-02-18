@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Input } from "./ui/input";
@@ -22,7 +23,7 @@ const CTAContactSheet = ({ isOpen, onClose }: CTAContactSheetProps) => {
       from_name: formData.get("from_name") as string,
       from_email: formData.get("from_email") as string,
       company_name: formData.get("company_name") as string,
-      subject: formData.get("subject") as string,
+      subject: "Demo Request",
       message: formData.get("message") as string,
     };
 
@@ -56,7 +57,7 @@ const CTAContactSheet = ({ isOpen, onClose }: CTAContactSheetProps) => {
       >
         <SheetBackButton onBack={onClose} />
 
-        <div className="h-full flex flex-col pt-16">
+        <div id="CTAContact" className="h-full flex flex-col pt-16">
           <div className="text-center mb-16 relative px-4">
             <h1 className="text-4xl font-bold text-primary mb-4">Contact Us</h1>
             <h2 className="text-2xl font-semibold mb-8">Book a Demo</h2>
@@ -90,15 +91,6 @@ const CTAContactSheet = ({ isOpen, onClose }: CTAContactSheetProps) => {
                   name="from_email"
                   type="email"
                   placeholder="Email Address"
-                  required
-                  className="bg-white px-6 py-3 text-base"
-                />
-              </div>
-
-              <div>
-                <Input
-                  name="subject"
-                  placeholder="Subject"
                   required
                   className="bg-white px-6 py-3 text-base"
                 />

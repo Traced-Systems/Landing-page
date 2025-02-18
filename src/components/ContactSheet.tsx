@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Input } from "./ui/input";
@@ -57,10 +58,9 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
       >
         <SheetBackButton onBack={onClose} />
 
-        <div className="h-full flex flex-col pt-16">
+        <div id="GeneralContact" className="h-full flex flex-col pt-16">
           <div className="text-center mb-16 relative px-4">
             <h1 className="text-4xl font-bold text-primary mb-4">Contact Us</h1>
-            <h2 className="text-2xl font-semibold mb-8">Book a Demo</h2>
           </div>
 
           <div className="px-4 sm:px-8 mb-12">
