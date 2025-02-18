@@ -1,33 +1,18 @@
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
+<<<<<<< HEAD
 import SheetBackButton from "./shared/SheetBackButton";
 import IndustrySheetCTA from "./shared/IndustrySheetCTA";
+=======
+import SheetBackButton from './shared/SheetBackButton';
+import IndustrySheetCTA from './shared/IndustrySheetCTA';
+import { BlogPost } from '@/types/blog';
+>>>>>>> main
 
 interface BlogPostSubsheetProps {
   isOpen: boolean;
   onClose: () => void;
-  post: {
-    title: string;
-    description: string;
-    image: string;
-    fullContent?: {
-      title: string;
-      introduction: string;
-      sections: Array<{
-        heading: string;
-        content: string;
-        quote?: string;
-      }>;
-      faq?: {
-        title: string;
-        subtitle: string;
-        questions: Array<{
-          question: string;
-          answer: string;
-        }>;
-      };
-    };
-  };
+  post: BlogPost;
 }
 
 const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {

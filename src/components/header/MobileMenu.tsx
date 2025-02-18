@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu, ArrowLeft, ChevronDown } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface MobileMenuProps {
   handleSheetOpen: (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog') => void;
@@ -13,29 +14,50 @@ const MobileMenu = ({
 }: MobileMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isAboutUsOpen, setIsAboutUsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleMenuItemClick = (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog') => {
     setIsOpen(false);
     handleSheetOpen(sheet);
   };
 
+  const handleBookDemo = () => {
+    setIsOpen(false);
+    window.dispatchEvent(new CustomEvent('openContact'));
+  };
+
   const toggleAboutUs = () => {
     setIsAboutUsOpen(!isAboutUsOpen);
   };
 
-  return <Sheet open={isOpen} onOpenChange={setIsOpen}>
+  const handleHomeClick = () => {
+    setIsOpen(false);
+    navigate('/');
+  };
+
+  return (
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="lg:hidden">
+        <Button 
+          variant="ghost" 
+          size="icon" 
+          className="lg:hidden fixed top-4 right-4 z-[999] bg-white shadow-md hover:bg-gray-100"
+        >
           <Menu className="h-6 w-6" />
         </Button>
       </SheetTrigger>
       <SheetContent 
         side="top" 
         className="w-full h-[100vh] lg:hidden pt-16 bg-white" 
-        onSwipeRight={() => setIsOpen(false)}
-        swipeDirection="right"
-        swipeThreshold={50}
       >
+        <div className="absolute left-4 top-[18px] z-[999]">
+          <img
+            src="/lovable-uploads/adffe373-57b3-4ac5-a5db-d6d2f0fbff52.svg"
+            alt="Traced Logo"
+            className="h-[29.45px] w-[120px]"
+          />
+        </div>
+        
         <Button 
           variant="ghost" 
           size="icon" 
@@ -47,9 +69,9 @@ const MobileMenu = ({
         </Button>
 
         <nav className="flex flex-col space-y-4 p-4">
-          <a href="#" className="text-lg text-[#173A44] hover:text-[#066985] py-2">
+          <button onClick={handleHomeClick} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
             Home
-          </a>
+          </button>
           <button onClick={() => handleMenuItemClick('industries')} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
             Industries
           </button>
@@ -79,12 +101,13 @@ const MobileMenu = ({
           <button onClick={() => handleMenuItemClick('contact')} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
             Contact Us
           </button>
-          <Button onClick={() => handleMenuItemClick('contact')} className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-8 shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.5)]">
+          <Button onClick={handleBookDemo} className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-[30px] px-8 shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.5)]">
             Book Demo
           </Button>
         </nav>
       </SheetContent>
-    </Sheet>;
+    </Sheet>
+  );
 };
 
 export default MobileMenu;
