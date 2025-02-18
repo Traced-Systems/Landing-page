@@ -29,8 +29,15 @@ SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
->(({ side = "right", className, children, onSwipeRight, swipeDirection = "right", swipeThreshold = 50, ...props }, ref) => {
-  const { handleTouchStart, handleTouchMove, handleTouchEnd, swipeStyles } = useSheetSwipe(side, onSwipeRight, swipeThreshold)
+>(({ side = "right", className, children, onSwipeRight, onOpenChange, swipeDirection = "right", swipeThreshold = 50, ...props }, ref) => {
+  const { handleTouchStart, handleTouchMove, handleTouchEnd, swipeStyles } = useSheetSwipe(side, () => {
+    if (onOpenChange) {
+      onOpenChange(false)
+    }
+    if (onSwipeRight) {
+      onSwipeRight()
+    }
+  }, swipeThreshold)
 
   return (
     <SheetPortal>

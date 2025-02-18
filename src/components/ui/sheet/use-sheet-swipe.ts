@@ -54,17 +54,27 @@ export const useSheetSwipe = (side: "left" | "right" | "top" | "bottom" = "right
 
     if (isHorizontalSwipe) {
       if (side === "right" && isRightSwipe && onSwipeRight) {
-        // Add a small delay to allow the animation to complete
+        // First reset the drag state
+        setDragOffset(0)
+        setDragging(false)
+        // Then trigger the close action after a short delay
         setTimeout(() => {
-          onSwipeRight()
-        }, 50)
+          if (onSwipeRight) {
+            onSwipeRight()
+          }
+        }, 150) // Increased delay to ensure animation completes
       } else if (side === "left" && isLeftSwipe && onSwipeRight) {
+        setDragOffset(0)
+        setDragging(false)
         setTimeout(() => {
-          onSwipeRight()
-        }, 50)
+          if (onSwipeRight) {
+            onSwipeRight()
+          }
+        }, 150)
       }
     }
 
+    // Reset the touch states
     setTouchStart(null)
     setTouchEnd(null)
     setDragging(false)
