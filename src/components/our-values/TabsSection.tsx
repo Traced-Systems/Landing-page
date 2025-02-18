@@ -24,7 +24,7 @@ const TabsSection = () => {
             <TabsContent
               key={tab}
               value={tab}
-              className="m-0 h-[300px] md:h-full md:absolute md:inset-0"
+              className="m-0 max-h-[400px] overflow-y-auto md:h-full md:absolute md:inset-0 md:overflow-hidden"
             >
               <div className="relative h-full">
                 <img
