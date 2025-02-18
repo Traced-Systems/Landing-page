@@ -43,7 +43,7 @@ const MobileMenu = ({
         side="top" 
         className="w-full h-[100vh] lg:hidden pt-16 bg-white" 
       >
-        <div className="absolute left-4 top-4 z-[999]">
+        <div className="absolute left-4 top-[18px] z-[999]">
           <img
             src="/lovable-uploads/adffe373-57b3-4ac5-a5db-d6d2f0fbff52.svg"
             alt="Traced Logo"
