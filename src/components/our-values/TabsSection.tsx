@@ -1,31 +1,32 @@
+
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const TabsSection = () => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden h-[200px]">
-      <Tabs defaultValue="mission" className="flex h-full">
-        <TabsList className="flex flex-col h-full w-[40%] space-y-0 bg-[#F5F5F5] rounded-none p-0">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden h-auto md:h-[200px]">
+      <Tabs defaultValue="mission" className="flex flex-col md:flex-row h-full">
+        <TabsList className="flex md:flex-col h-auto md:h-full w-full md:w-[40%] space-y-0 bg-[#F5F5F5] rounded-none p-0">
           {["mission", "focus", "solution"].map((tab) => (
             <TabsTrigger
               key={tab}
               value={tab}
-              className="w-full flex-1 flex items-center px-6 py-4 text-left justify-start rounded-none border-l-4 border-transparent data-[state=active]:bg-[#204850] data-[state=active]:text-white data-[state=active]:border-[#204850] transition-all"
+              className="w-full flex-1 flex items-center px-6 py-3 md:py-4 text-left justify-start rounded-none border-b-2 md:border-l-4 md:border-b-0 border-transparent data-[state=active]:bg-[#204850] data-[state=active]:text-white data-[state=active]:border-[#204850] transition-all"
             >
-              <span className="text-lg font-medium">
+              <span className="text-base md:text-lg font-medium">
                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
               </span>
             </TabsTrigger>
           ))}
         </TabsList>
-        <div className="relative md:w-[60%] w-full flex-grow">
+        <div className="relative w-full md:w-[60%] flex-grow">
           {["mission", "focus", "solution"].map((tab) => (
             <TabsContent
               key={tab}
               value={tab}
-              className="m-0 h-full md:absolute md:inset-0"
+              className="m-0 h-[300px] md:h-full md:absolute md:inset-0"
             >
-              <div className="relative h-full min-h-[300px] md:min-h-0">
+              <div className="relative h-full">
                 <img
                   src={
                     tab === "focus"
@@ -37,7 +38,7 @@ const TabsSection = () => {
                   alt={tab}
                   className="w-full h-full object-cover brightness-[0.3] md:brightness-100 absolute inset-0"
                 />
-                <div className="relative md:absolute inset-0 bg-[#204850]/95 md:bg-black/60 flex items-start md:items-center justify-start p-6 md:p-8 min-h-[300px] md:min-h-0">
+                <div className="relative md:absolute inset-0 bg-[#204850]/95 md:bg-black/60 flex items-start md:items-center justify-start p-6 md:p-8">
                   <p className="text-white text-sm md:text-base font-normal md:text-center text-left leading-relaxed">
                     {tab === "mission" ? (
                       <>
