@@ -9,4 +9,5 @@ export interface SheetContentProps
   onSwipeRight?: () => void;
   swipeDirection?: "right" | "left" | "up" | "down";
   swipeThreshold?: number;
+  onOpenChange?: (open: boolean) => void;
 }
