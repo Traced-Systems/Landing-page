@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from './shared/SheetBackButton';
 import IndustrySheetCTA from './shared/IndustrySheetCTA';
+
 interface UseCaseSubsheetProps {
   isOpen: boolean;
   onClose: () => void;
@@ -20,6 +22,7 @@ interface UseCaseSubsheetProps {
     };
   };
 }
+
 const UseCaseSubsheet = ({
   isOpen,
   onClose,
@@ -35,7 +38,7 @@ const UseCaseSubsheet = ({
               {useCase.fullContent ? <>
                   <div className="flex items-center gap-2 mb-6">
                     <img src="/lovable-uploads/5ce2f433-ac13-4162-97af-4ed813cff152.png" alt="Traced Systems" className="w-6 h-6" />
-                    <span className="text-gray-600">Written by Traced Systems x Cling Systems</span>
+                    <span className="text-gray-600">Written by Traced Systems x <a href="https://www.clingsystems.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 underline">Cling Systems</a></span>
                   </div>
                   <div className="mb-8">
                     <h1 className="text-4xl font-bold text-primary mb-4">{useCase.fullContent.title}</h1>
@@ -99,4 +102,5 @@ const UseCaseSubsheet = ({
       </SheetContent>
     </Sheet>;
 };
+
 export default UseCaseSubsheet;
