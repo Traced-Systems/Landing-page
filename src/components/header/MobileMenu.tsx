@@ -25,7 +25,11 @@ const MobileMenu = ({
 
   return <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="lg:hidden">
+        <Button 
+          variant="ghost" 
+          size="icon" 
+          className="lg:hidden fixed top-4 right-4 z-[999] bg-white shadow-md hover:bg-gray-100"
+        >
           <Menu className="h-6 w-6" />
         </Button>
       </SheetTrigger>
