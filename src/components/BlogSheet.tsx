@@ -1,13 +1,12 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-import SheetBackButton from './shared/SheetBackButton';
-import AboutCTA from './shared/AboutCTA';
-import SheetBackgroundSection from './shared/SheetBackgroundSection';
-import BlogPostSubsheet from './BlogPostSubsheet';
-import BlogCard from './blog/BlogCard';
-import { blogPosts } from '@/data/blogPosts';
-import { BlogPost } from '@/types/blog';
+import SheetBackButton from "./shared/SheetBackButton";
+import AboutCTA from "./shared/AboutCTA";
+import SheetBackgroundSection from "./shared/SheetBackgroundSection";
+import BlogPostSubsheet from "./BlogPostSubsheet";
+import BlogCard from "./blog/BlogCard";
+import { blogPosts } from "@/data/blogPosts";
+import { BlogPost } from "@/types/blog";
 
 interface BlogSheetProps {
   isOpen: boolean;
@@ -35,9 +34,9 @@ const BlogSheet = ({ isOpen, onClose, initialPost }: BlogSheetProps) => {
   return (
     <>
       <Sheet open={isOpen} onOpenChange={onClose}>
-        <SheetContent 
-          side="right" 
-          className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0"
+        <SheetContent
+          side="right"
+          className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] shadow-xl p-0"
         >
           <SheetBackButton onBack={onClose} />
 
@@ -48,20 +47,17 @@ const BlogSheet = ({ isOpen, onClose, initialPost }: BlogSheetProps) => {
 
                 <div className="text-center mb-12">
                   <p className="text-gray-600">
-                    Insights and updates from our team about digital product passports, sustainability, and innovation.
+                    Insights and updates from our team about digital product
+                    passports, sustainability, and innovation.
                   </p>
                 </div>
               </div>
             </SheetBackgroundSection>
 
             <div className="px-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                 {blogPosts.map((post, index) => (
-                  <BlogCard
-                    key={index}
-                    post={post}
-                    onClick={handlePostClick}
-                  />
+                  <BlogCard key={index} post={post} onClick={handlePostClick} />
                 ))}
               </div>
             </div>
@@ -72,7 +68,7 @@ const BlogSheet = ({ isOpen, onClose, initialPost }: BlogSheetProps) => {
       </Sheet>
 
       {activePost && (
-        <BlogPostSubsheet 
+        <BlogPostSubsheet
           isOpen={!!activePost}
           onClose={handleSubsheetClose}
           post={activePost}

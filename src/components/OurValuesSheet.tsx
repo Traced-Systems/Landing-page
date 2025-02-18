@@ -3,6 +3,7 @@ import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from "./shared/SheetBackButton";
 import AboutCTA from "./shared/AboutCTA";
 import TabsSection from "./our-values/TabsSection";
+import TitleBanner from "@/components/shared/TitleBanner";
 import AccordionSection from "./our-values/AccordionSection";
 import SheetBackgroundSection from "./shared/SheetBackgroundSection";
 
@@ -19,22 +20,9 @@ const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
         className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] p-0"
       >
         <SheetBackButton onBack={onClose} />
-        <div
-          className="relative w-full"
-          style={{ paddingTop: `${(202 / 1082) * 100}%` }}
-        >
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/lovable-uploads/sideWindowBG.png')",
-            }}
-          />
 
-          <div className="absolute inset-0 flex items-center pl-20 pt-12">
-            <h1 className="text-2xl font-semibold text-[#2D545E] ">
-              Our Values
-            </h1>
-          </div>
+        <div>
+          <TitleBanner title="Our Values" />
         </div>
 
         <div className="h-full flex flex-col pt-16 py-0">
