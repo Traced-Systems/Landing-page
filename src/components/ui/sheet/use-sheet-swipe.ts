@@ -35,8 +35,10 @@ export const useSheetSwipe = (side: "left" | "right" | "top" | "bottom" = "right
     if (distanceY < Math.abs(distanceX)) {
       if (side === "right" && distanceX > 0) {
         setDragOffset(distanceX)
+        e.preventDefault() // Prevent scrolling while swiping
       } else if (side === "left" && distanceX < 0) {
         setDragOffset(distanceX)
+        e.preventDefault() // Prevent scrolling while swiping
       }
     }
   }
@@ -52,9 +54,14 @@ export const useSheetSwipe = (side: "left" | "right" | "top" | "bottom" = "right
 
     if (isHorizontalSwipe) {
       if (side === "right" && isRightSwipe && onSwipeRight) {
-        onSwipeRight()
+        // Add a small delay to allow the animation to complete
+        setTimeout(() => {
+          onSwipeRight()
+        }, 50)
       } else if (side === "left" && isLeftSwipe && onSwipeRight) {
-        onSwipeRight()
+        setTimeout(() => {
+          onSwipeRight()
+        }, 50)
       }
     }
 
