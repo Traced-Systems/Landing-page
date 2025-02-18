@@ -4,6 +4,7 @@ import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from "./shared/SheetBackButton";
 import AboutCTA from "./shared/AboutCTA";
 import VisionHeader from "./vision/VisionHeader";
+import TitleBanner from "@/components/shared/TitleBanner";
 import KeyChallenges from "./vision/KeyChallenges";
 import SuccessSection from "./vision/SuccessSection";
 
@@ -21,22 +22,8 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
       >
         <SheetBackButton onBack={onClose} />
 
-        <div
-          className="relative w-full"
-          style={{ paddingTop: `${(202 / 1082) * 100}%` }}
-        >
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/lovable-uploads/sideWindowBG.png')",
-            }}
-          />
-
-          <div className="absolute inset-0 flex items-center pl-20 pt-12">
-            <h1 className="text-2xl font-semibold text-[#2D545E] ">
-              Our Vision
-            </h1>
-          </div>
+        <div>
+          <TitleBanner title="Our Vision" />
         </div>
 
         <div className="h-full flex flex-col">

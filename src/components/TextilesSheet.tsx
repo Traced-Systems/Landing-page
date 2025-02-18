@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import IndustrySheetHeader from "./shared/IndustrySheetHeader";
@@ -7,6 +6,8 @@ import IndustrySheetCTA from "./shared/IndustrySheetCTA";
 import Button1 from "./ui/button-1";
 import SheetBackButton from "./shared/SheetBackButton";
 import { useNavigate } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
+import TitleBanner from "@/components/shared/TitleBanner";
 import ExpandableImage from "./shared/ExpandableImage";
 
 interface TextilesSheetProps {
@@ -23,9 +24,9 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
       onClose();
     };
 
-    window.addEventListener('closeIndustrySheets', handleCloseSheets);
+    window.addEventListener("closeIndustrySheets", handleCloseSheets);
     return () => {
-      window.removeEventListener('closeIndustrySheets', handleCloseSheets);
+      window.removeEventListener("closeIndustrySheets", handleCloseSheets);
     };
   }, [onClose]);
 
@@ -94,21 +95,10 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
         className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7f7f7] border-l shadow-xl p-0 z-[995]"
       >
         <SheetBackButton onBack={onBack} />
-        <div
-          className="relative w-full hidden sm:block"
-          style={{ paddingTop: `${(202 / 1082) * 100}%` }}
-        >
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/lovable-uploads/sideWindowBG.png')",
-            }}
-          />
-
-          <div className="absolute inset-0 flex items-center pl-6 sm:pl-20 pt-12">
-            <h1 className="text-2xl font-semibold text-[#2D545E]">Textiles</h1>
-          </div>
+        <div>
+          <TitleBanner title="Textiles" />
         </div>
+
         <div className="h-full flex flex-col">
           <div className="pt-8 sm:pt-12">
             <IndustrySheetHeader
@@ -138,22 +128,20 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
           <div className="px-4 sm:px-20">
             <div className="mb-8 sm:mb-12 text-center">
               <h2 className="text-2xl font-medium text-[#173A44] mb-4">
-                Driving Collaborative Sustainability Across the Entire Value Chain
+                Driving Collaborative Sustainability Across the Entire Value
+                Chain
               </h2>
               <p className="text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto text-sm sm:text-base">
-                Our digital passport system enables unprecedented transparency and
-                traceability across your entire textile supply chain. From raw
-                material sourcing to final product delivery, we help you track,
-                verify, and optimize every step of the journey.
+                Our digital passport system enables unprecedented transparency
+                and traceability across your entire textile supply chain. From
+                raw material sourcing to final product delivery, we help you
+                track, verify, and optimize every step of the journey.
               </p>
 
               <div className="grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-3 sm:gap-6 mb-6 sm:mb-8 max-w-5xl mx-auto">
                 {valueChainItems.map((item, index) => (
                   <div key={index} className="w-full">
-                    <ExpandableImage
-                      src={item.image}
-                      alt={item.title}
-                    />
+                    <ExpandableImage src={item.image} alt={item.title} />
                   </div>
                 ))}
               </div>

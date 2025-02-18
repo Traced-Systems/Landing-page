@@ -1,7 +1,6 @@
-
 import React from "react";
-import Button1 from "@/components/ui/button-1";
 import { Button } from "@/components/ui/button";
+import { ChevronRight } from "lucide-react";
 
 interface BlogPost {
   title: string;
@@ -36,27 +35,30 @@ const BlogSection = ({
           <p className="text-gray-600">{subtitle}</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
           {posts.map((post, index) => (
             <div
               key={index}
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
               onClick={() => onPostClick?.(index)}
             >
-              <img
-                src={post.image}
-                alt={post.title}
-                className="w-full h-64 object-cover"
-              />
+              <div className="aspect-[430/243] w-full">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-[#173A44]">{post.title}</h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">{post.description}</p>
-                <Button
-                  variant="link"
-                  className="text-blue-500 p-0 hover:text-blue-600"
-                >
-                  Read More →
-                </Button>
+                <h3 className="text-xl font-semibold mb-3 text-[#173A44]">
+                  {post.title}
+                </h3>
+                <p className="text-gray-600 mb-4 line-clamp-3">
+                  {post.description}
+                </p>
+                <button className="transition-colors text-[#E4AC70] hover:text-[#C66600] flex items-center gap-0.5">
+                  Know More <ChevronRight className="w-4 h-4 mt-0.5" />
+                </button>
               </div>
             </div>
           ))}
@@ -64,9 +66,12 @@ const BlogSection = ({
 
         {showMoreButton && (
           <div className="flex justify-center">
-            <Button1 onClick={onShowMore}>
-              Show More
-            </Button1>
+            <Button
+              variant="outline"
+              className="rounded-full border-2 border-[#E4AC70] bg-[#Ffffff] text-[#143A44] flex items-center gap-2 pl-7 pr-6 hover:bg-[#F2F1EE]"
+            >
+              Know More <ChevronRight className="w-5 h-5 text-[#143A44]" />
+            </Button>
           </div>
         )}
       </div>
