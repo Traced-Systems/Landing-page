@@ -16,7 +16,7 @@ export const blogPosts: BlogPost[] = [
           heading: "Origins and Evolution",
           content:
             "Traced Systems originated from ChromaWay's collaboration with the European Blockchain Services Infrastructure (EBSI). Today, it serves as a robust solution for tracing a product's lifecycle, from production to recycling. By leveraging the Digital Product Passport, Traced Systems securely captures and stores this data, enabling businesses to comply with EU sustainability regulations while seamlessly fostering customer trust.",
-          quote: "Our solution goes beyond compliance, enabling businesses to streamline operations while ensuring product information is accessible, verifiable, and trustworthy. By fostering transparency and efficiency, we create an ecosystem where organizations can operate with confidence, reduce inefficiencies, and strengthen relationships with customers and stakeholders.",
+          quote: "Our solution goes beyond compliance, enabling businesses to streamline operations while ensuring product information is accessible, verifiable, and trustworthy. By fostering transparency and efficiency, we create an ecosystem where organizations can operate with confidence, reduce inefficiencies, and strengthen relationships with customers and stakeholders, says Farhad Rasouli, Executive Lead & Co-Founder at Traced Systems.",
         },
         {
           heading: "Using blockchain for a greener future",
@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
           heading: "What's Next for Traced Systems?",
           content:
             "As Traced Systems looks to its collaboration with Trace4Value+SwePass and beyond, the company is looking to expand its reach into new industries, including furniture and electronics. Building on its expertise in textiles and batteries, Traced Systems is set to bring innovative solutions to these sectors. Additionally, its Digital Product Passport will support the EU's new deforestation and responsible sourcing regulation, helping businesses maintain transparency and compliance in their supply chains.",
-          quote: "The fusion of blockchain, AI, and IoT transforms supply chains, creating a more interconnected, transparent, and resilient ecosystem. This technological synergy offers a powerful chance to boost transparency, accountability, and operational efficiency across industries, enabling companies to respond more effectively to changing market conditions and customer needs.",
+          quote: "The fusion of blockchain, AI, and IoT transforms supply chains, creating a more interconnected, transparent, and resilient ecosystem. This technological synergy offers a powerful chance to boost transparency, accountability, and operational efficiency across industries, enabling companies to respond more effectively to changing market conditions and customer needs, notes Farhad Rasouli.",
         },
         {
           heading: "Transforming Traceability",
