@@ -1,3 +1,4 @@
+
 import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
@@ -134,6 +135,75 @@ export const blogPosts: BlogPost[] = [
               "What role does technology play in managing blockchain partnerships?",
             answer:
               "Partner Relationship Management (PRM) platforms help automate onboarding, track engagement, and manage deal pipelines, making blockchain partnerships more effective.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    title: "The Blueprint for a Successful Blockchain Partner Ecosystem",
+    description:
+      "In this edition of the Greatest Minds in Partnerships series, David Dolhomut, Head of Partnerships & Business Development at Traced Systems, shares his insights on building a thriving blockchain partner ecosystem. From overcoming industry challenges and onboarding the right partners to balancing traditional enterprises with Web3-native collaborations, David provides a blueprint for successful blockchain partnerships...",
+    image: "/lovable-uploads/c0e03054-5e46-4abd-ab45-c5a523b99799.png",
+    fullContent: {
+      title: "The Blueprint for a Successful Blockchain Partner Ecosystem",
+      introduction:
+        "In this edition of the Greatest Minds in Partnerships series, David Dolhomut, Head of Partnerships & Business Development at Traced Systems, shares his insights on building a thriving blockchain partner ecosystem. From overcoming industry challenges and onboarding the right partners to balancing traditional enterprises with Web3-native collaborations, David provides a blueprint for successful blockchain partnerships.",
+      sections: [
+        {
+          heading: "Building Trust in the Blockchain Space",
+          content:
+            "When it comes to blockchain technology, trust is everything. Partners need to feel confident in both the technology and the team behind it. At Traced Systems, we've learned that transparency, consistent communication, and demonstrated expertise are key to building this trust.\n\nOur approach focuses on:\n\n• Clear documentation and technical specifications\n• Regular partner updates and feedback sessions\n• Proven use cases and success stories\n• Strong industry relationships and references",
+        },
+        {
+          heading: "The Right Partners Make All the Difference",
+          content:
+            "Not all partnerships are created equal. The key is finding partners who share your vision and can contribute meaningfully to the ecosystem. We look for partners who:\n\n• Have a strong track record in their industry\n• Share our commitment to innovation\n• Bring complementary capabilities\n• Are ready to invest in the relationship",
+        },
+        {
+          heading: "Balancing Innovation with Enterprise Needs",
+          content:
+            "One of the biggest challenges in blockchain partnerships is bridging the gap between cutting-edge technology and enterprise requirements. This means:\n\n• Providing enterprise-grade security and support\n• Meeting compliance and regulatory standards\n• Offering scalable solutions\n• Maintaining flexibility for different use cases",
+        },
+        {
+          heading: "Technology as an Enabler",
+          content:
+            "While blockchain is our foundation, successful partnerships require more than just great technology. We focus on:\n\n• Seamless integration capabilities\n• Comprehensive partner enablement\n• Robust support systems\n• Clear value proposition\n\nOur partnership platform makes it easy for partners to get started and scale their blockchain initiatives.",
+        },
+        {
+          heading: "Looking Ahead",
+          content:
+            "The blockchain partnership landscape is evolving rapidly. To stay ahead, we're:\n\n• Expanding our partner ecosystem\n• Developing new partnership models\n• Investing in partner success\n• Creating innovative solutions together\n\nWe believe that strong partnerships are key to driving blockchain adoption and creating lasting value.",
+        },
+      ],
+      faq: {
+        title: "Frequently Asked Questions",
+        subtitle: "Partnership Insights",
+        questions: [
+          {
+            question: "What makes a successful blockchain partnership?",
+            answer:
+              "Success comes from alignment on vision, clear value proposition, strong communication, and mutual commitment to innovation and growth.",
+          },
+          {
+            question: "How do you measure partnership success?",
+            answer:
+              "We track metrics like joint customer wins, partner satisfaction, solution adoption rates, and ecosystem growth.",
+          },
+          {
+            question: "What support do partners receive?",
+            answer:
+              "Partners get access to technical documentation, training, marketing resources, and dedicated support teams.",
+          },
+          {
+            question: "How long does partner onboarding take?",
+            answer:
+              "Typical onboarding takes 4-6 weeks, including technical integration, training, and initial go-to-market activities.",
+          },
+          {
+            question: "What types of partners do you work with?",
+            answer:
+              "We partner with technology providers, system integrators, consultants, and industry specialists who share our vision.",
           },
         ],
       },
