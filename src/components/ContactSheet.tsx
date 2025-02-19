@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Textarea } from "./ui/textarea";
@@ -8,6 +7,7 @@ import emailjs from "emailjs-com";
 import { FloatingInput } from "./ui/floating-input";
 import { Loader, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 
 interface ContactSheetProps {
   isOpen: boolean;
@@ -16,6 +16,7 @@ interface ContactSheetProps {
 
 const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [companyField, setCompanyField] = useState<string>("");
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -24,11 +25,13 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const otherField = formData.get("other_field");
 
     const emailParams = {
       from_name: formData.get("from_name") as string,
       from_email: formData.get("from_email") as string,
-      subject: formData.get("subject") as string,
+      company_name: formData.get("company_name") as string,
+      company_field: companyField === "other" ? otherField : companyField,
       message: formData.get("message") as string,
     };
 
@@ -51,6 +54,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
             action: <CheckCircle2 className="h-5 w-5 text-green-500" />,
           });
           form.reset();
+          setCompanyField("");
           setIsSubmitting(false);
         },
         (error) => {
@@ -105,10 +109,43 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
 
               <div>
                 <FloatingInput
-                  name="subject"
-                  label="Subject"
+                  name="company_name"
+                  label="Company Name"
                   required
                 />
+              </div>
+
+              <div className="space-y-4">
+                <div className="relative">
+                  <Select
+                    name="company_field"
+                    value={companyField}
+                    onValueChange={setCompanyField}
+                    required
+                  >
+                    <SelectTrigger className="w-full bg-white px-6 py-3 text-base h-auto border border-gray-300 rounded-md">
+                      <SelectValue placeholder="Select Company Field" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-white z-[9999] min-w-[200px]">
+                      <SelectItem value="batteries">Batteries</SelectItem>
+                      <SelectItem value="textiles">Textiles</SelectItem>
+                      <SelectItem value="furniture">Furniture</SelectItem>
+                      <SelectItem value="perishable">Perishable Goods</SelectItem>
+                      <SelectItem value="luxury">Luxury Goods</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {companyField === "other" && (
+                  <div>
+                    <FloatingInput
+                      name="other_field"
+                      label="Write your company field"
+                      required
+                    />
+                  </div>
+                )}
               </div>
 
               <div>
@@ -140,31 +177,45 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
 
               <div className="grid md:grid-cols-2 gap-12">
                 <div className="text-center">
-                  <div className="w-56 h-56 mx-auto mb-6">
-                    <img
-                      src="/lovable-uploads/093c0721-b2bf-4b0e-8bab-76817fdaccb7.png"
-                      alt="Farhad Rasouli"
-                      className="w-full h-full object-contain rounded-lg"
-                    />
-                  </div>
-                  <h3 className="font-bold text-lg">Farhad Rasouli</h3>
-                  <p className="text-gray-600 mb-4">
-                    Executive Lead & Co-Founder
-                  </p>
+                  <a 
+                    href="https://www.linkedin.com/in/farhadrasouli/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="w-56 h-56 mx-auto mb-6 transition-transform duration-300 hover:scale-105">
+                      <img
+                        src="/lovable-uploads/093c0721-b2bf-4b0e-8bab-76817fdaccb7.png"
+                        alt="Farhad Rasouli"
+                        className="w-full h-full object-contain rounded-lg hover:opacity-90 transition-opacity"
+                      />
+                    </div>
+                    <h3 className="font-bold text-lg">Farhad Rasouli</h3>
+                    <p className="text-gray-600 mb-4">
+                      Executive Lead & Co-Founder
+                    </p>
+                  </a>
                 </div>
 
                 <div className="text-center">
-                  <div className="w-56 h-56 mx-auto mb-6">
-                    <img
-                      src="/lovable-uploads/718a19dc-08d6-4a18-9312-d4deaa31be03.png"
-                      alt="David Dolhomut"
-                      className="w-full h-full object-contain rounded-lg"
-                    />
-                  </div>
-                  <h3 className="font-bold text-lg">David Dolhomut</h3>
-                  <p className="text-gray-600 mb-4">
-                    Head of Partnerships & Business Development
-                  </p>
+                  <a 
+                    href="https://www.linkedin.com/in/daviddolhomut/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="w-56 h-56 mx-auto mb-6 transition-transform duration-300 hover:scale-105">
+                      <img
+                        src="/lovable-uploads/718a19dc-08d6-4a18-9312-d4deaa31be03.png"
+                        alt="David Dolhomut"
+                        className="w-full h-full object-contain rounded-lg hover:opacity-90 transition-opacity"
+                      />
+                    </div>
+                    <h3 className="font-bold text-lg">David Dolhomut</h3>
+                    <p className="text-gray-600 mb-4">
+                      Head of Partnerships & Business Development
+                    </p>
+                  </a>
                 </div>
               </div>
             </div>

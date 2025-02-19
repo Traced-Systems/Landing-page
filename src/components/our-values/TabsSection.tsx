@@ -5,15 +5,16 @@ const TabsSection = () => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden h-auto">
       <Tabs defaultValue="mission" className="flex flex-col md:flex-row h-full">
-        <TabsList className="flex md:flex-col h-auto md:h-full w-full md:w-[40%] space-y-0 bg-[#F5F5F5] rounded-none p-0">
+        <TabsList className="flex md:flex-col h-auto md:h-full w-full md:w-[40%] space-y-0 bg-[#F5F5F5] md:bg-[#f3f3f3] rounded-none p-0">
           {["mission", "focus", "solution"].map((tab) => (
             <TabsTrigger
               key={tab}
               value={tab}
+
               className="w-full flex-1 flex items-center px-6 py-3 md:py-4 rounded-none border-b-2 md:border-l-4 md:border-b-0 border-transparent data-[state=active]:bg-[#204850] data-[state=active]:text-white data-[state=active]:w-full data-[state=active]:border-[#204850] transition-all"
             >
-              <span className="text-base md:text-lg font-medium">
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              <span className="text-base md:text-lg font-medium capitalize">
+                {tab}
               </span>
             </TabsTrigger>
           ))}
