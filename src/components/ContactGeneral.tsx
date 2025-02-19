@@ -1,13 +1,13 @@
 
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { Linkedin, Mail } from "lucide-react";
 import SheetBackButton from "./shared/SheetBackButton";
 import Button1 from "./ui/button-1";
 import emailjs from "emailjs-com";
+import { FloatingInput } from "./ui/floating-input";
 
 interface ContactGeneralProps {
   isOpen: boolean;
@@ -24,6 +24,7 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
     const emailParams = {
       from_name: formData.get("from_name") as string,
       from_email: formData.get("from_email") as string,
+      company_name: formData.get("company_name") as string,
       subject: formData.get("subject") as string,
       message: formData.get("message") as string,
     };
@@ -60,7 +61,7 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
 
         <div className="h-full flex flex-col pt-16">
           <div className="text-center mb-16 relative px-4">
-            <h1 className="text-4xl font-bold text-primary mb-4">Hello</h1>
+            <h1 className="text-4xl font-bold text-primary mb-4">Contact Us</h1>
           </div>
 
           <div className="px-4 sm:px-8 mb-12">
@@ -69,21 +70,27 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
               className="space-y-8 max-w-2xl mx-auto bg-[#f1f1f1] p-8 rounded-lg"
             >
               <div>
-                <Input
+                <FloatingInput
                   name="from_name"
-                  placeholder="Your Name"
+                  label="Your Name"
                   required
-                  className="bg-white px-6 py-3 text-base"
                 />
               </div>
 
               <div>
-                <Input
+                <FloatingInput
+                  name="company_name"
+                  label="Company Name"
+                  required
+                />
+              </div>
+
+              <div>
+                <FloatingInput
                   name="from_email"
                   type="email"
-                  placeholder="Email Address"
+                  label="Email Address"
                   required
-                  className="bg-white px-6 py-3 text-base"
                 />
               </div>
 
