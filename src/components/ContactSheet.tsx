@@ -6,7 +6,8 @@ import SheetBackButton from "./shared/SheetBackButton";
 import Button1 from "./ui/button-1";
 import emailjs from "emailjs-com";
 import { FloatingInput } from "./ui/floating-input";
-import { Loader } from "lucide-react";
+import { Loader, CheckCircle2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 interface ContactSheetProps {
   isOpen: boolean;
@@ -15,6 +16,7 @@ interface ContactSheetProps {
 
 const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -42,13 +44,23 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
       .then(
         (response) => {
           console.log("Email sent successfully:", response);
-          alert("Message sent successfully!");
+          toast({
+            title: "Message Sent Successfully",
+            description: "Thank you for contacting us. We'll get back to you soon!",
+            className: "fixed top-6 left-1/2 transform -translate-x-1/2 bg-green-50 border-green-200 z-[10000] min-w-[300px] shadow-lg",
+            action: <CheckCircle2 className="h-5 w-5 text-green-500" />,
+          });
           form.reset();
           setIsSubmitting(false);
         },
         (error) => {
           console.error("Error sending email:", error);
-          alert("Failed to send message. Please try again later.");
+          toast({
+            title: "Error Sending Message",
+            description: "Please try again later.",
+            variant: "destructive",
+            className: "fixed top-6 left-1/2 transform -translate-x-1/2 z-[10000] min-w-[300px] shadow-lg",
+          });
           setIsSubmitting(false);
         }
       );
