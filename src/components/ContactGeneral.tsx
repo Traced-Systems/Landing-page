@@ -1,20 +1,25 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import SheetBackButton from "./shared/SheetBackButton";
 import Button1 from "./ui/button-1";
 import emailjs from "emailjs-com";
+import { FloatingInput } from "./ui/floating-input";
+import { Loader } from "lucide-react";
 
-interface CTAContactSheetProps {
+interface ContactGeneralProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const CTAContactSheet = ({ isOpen, onClose }: CTAContactSheetProps) => {
+const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -23,7 +28,7 @@ const CTAContactSheet = ({ isOpen, onClose }: CTAContactSheetProps) => {
       from_name: formData.get("from_name") as string,
       from_email: formData.get("from_email") as string,
       company_name: formData.get("company_name") as string,
-      subject: "Demo Request",
+      subject: formData.get("subject") as string,
       message: formData.get("message") as string,
     };
 
@@ -41,10 +46,12 @@ const CTAContactSheet = ({ isOpen, onClose }: CTAContactSheetProps) => {
           console.log("Email sent successfully:", response);
           alert("Message sent successfully!");
           form.reset();
+          setIsSubmitting(false);
         },
         (error) => {
           console.error("Error sending email:", error);
           alert("Failed to send message. Please try again later.");
+          setIsSubmitting(false);
         }
       );
   };
@@ -57,10 +64,9 @@ const CTAContactSheet = ({ isOpen, onClose }: CTAContactSheetProps) => {
       >
         <SheetBackButton onBack={onClose} />
 
-        <div id="CTAContact" className="h-full flex flex-col pt-16">
+        <div className="h-full flex flex-col pt-16">
           <div className="text-center mb-16 relative px-4">
             <h1 className="text-4xl font-bold text-primary mb-4">Contact Us</h1>
-            <h2 className="text-2xl font-semibold mb-8">Book a Demo</h2>
           </div>
 
           <div className="px-4 sm:px-8 mb-12">
@@ -69,31 +75,41 @@ const CTAContactSheet = ({ isOpen, onClose }: CTAContactSheetProps) => {
               className="space-y-8 max-w-2xl mx-auto bg-[#f1f1f1] p-8 rounded-lg"
             >
               <div>
-                <Input
+                <FloatingInput
                   name="from_name"
-                  placeholder="Your Name"
+                  label="Your Name"
                   required
-                  className="bg-white px-6 py-3 text-base"
                 />
               </div>
 
               <div>
-                <Input
+                <FloatingInput
                   name="company_name"
-                  placeholder="Company Name"
+                  label="Company Name"
                   required
-                  className="bg-white px-6 py-3 text-base"
                 />
               </div>
 
               <div>
-                <Input
+                <FloatingInput
                   name="from_email"
                   type="email"
-                  placeholder="Email Address"
+                  label="Email Address"
                   required
-                  className="bg-white px-6 py-3 text-base"
                 />
+              </div>
+
+              <div className="relative">
+                <Select name="subject" required>
+                  <SelectTrigger className="w-full bg-white px-6 py-3 text-base h-auto border border-gray-300 rounded-md">
+                    <SelectValue placeholder="Select Subject" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-white z-[9999] min-w-[200px]">
+                    <SelectItem value="general">General Inquiries</SelectItem>
+                    <SelectItem value="marketing">Marketing</SelectItem>
+                    <SelectItem value="press">Press</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
               <div>
@@ -106,7 +122,13 @@ const CTAContactSheet = ({ isOpen, onClose }: CTAContactSheetProps) => {
               </div>
 
               <div className="flex justify-center pt-4">
-                <Button1 type="submit">Submit</Button1>
+                <Button1 type="submit" disabled={isSubmitting} className="relative">
+                  {isSubmitting ? (
+                    <Loader className="w-5 h-5 animate-spin" />
+                  ) : (
+                    "Submit"
+                  )}
+                </Button1>
               </div>
             </form>
           </div>
@@ -154,4 +176,4 @@ const CTAContactSheet = ({ isOpen, onClose }: CTAContactSheetProps) => {
   );
 };
 
-export default CTAContactSheet;
+export default ContactGeneral;

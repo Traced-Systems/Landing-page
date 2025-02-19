@@ -8,29 +8,20 @@ import { useState, useEffect } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ContactSheet from "./components/ContactSheet";
-import CTAContactSheet from "./components/CTAContactSheet";
 
 const queryClient = new QueryClient();
 
 const App = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
-  const [isCTAContactOpen, setIsCTAContactOpen] = useState(false);
 
   useEffect(() => {
     const handleOpenContact = () => {
       setIsContactOpen(true);
     };
 
-    const handleOpenCTAContact = () => {
-      setIsCTAContactOpen(true);
-    };
-
     window.addEventListener('openContact', handleOpenContact);
-    window.addEventListener('openCTAContact', handleOpenCTAContact);
-    
     return () => {
       window.removeEventListener('openContact', handleOpenContact);
-      window.removeEventListener('openCTAContact', handleOpenCTAContact);
     };
   }, []);
 
@@ -46,7 +37,6 @@ const App = () => {
           </Routes>
         </BrowserRouter>
         <ContactSheet isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-        <CTAContactSheet isOpen={isCTAContactOpen} onClose={() => setIsCTAContactOpen(false)} />
       </TooltipProvider>
     </QueryClientProvider>
   );
