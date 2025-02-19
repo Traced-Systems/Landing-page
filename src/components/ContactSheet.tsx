@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Textarea } from "./ui/textarea";
@@ -7,7 +8,6 @@ import emailjs from "emailjs-com";
 import { FloatingInput } from "./ui/floating-input";
 import { Loader, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 
 interface ContactSheetProps {
   isOpen: boolean;
@@ -16,7 +16,6 @@ interface ContactSheetProps {
 
 const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [companyField, setCompanyField] = useState<string>("");
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,13 +24,11 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    const otherField = formData.get("other_field");
 
     const emailParams = {
       from_name: formData.get("from_name") as string,
       from_email: formData.get("from_email") as string,
       company_name: formData.get("company_name") as string,
-      company_field: companyField === "other" ? otherField : companyField,
       message: formData.get("message") as string,
     };
 
@@ -54,7 +51,6 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
             action: <CheckCircle2 className="h-5 w-5 text-green-500" />,
           });
           form.reset();
-          setCompanyField("");
           setIsSubmitting(false);
         },
         (error) => {
@@ -113,39 +109,6 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                   label="Company Name"
                   required
                 />
-              </div>
-
-              <div className="space-y-4">
-                <div className="relative">
-                  <Select
-                    name="company_field"
-                    value={companyField}
-                    onValueChange={setCompanyField}
-                    required
-                  >
-                    <SelectTrigger className="w-full bg-white px-6 py-3 text-base h-auto border border-gray-300 rounded-md">
-                      <SelectValue placeholder="Select Company Field" />
-                    </SelectTrigger>
-                    <SelectContent className="bg-white z-[9999] min-w-[200px]">
-                      <SelectItem value="batteries">Batteries</SelectItem>
-                      <SelectItem value="textiles">Textiles</SelectItem>
-                      <SelectItem value="furniture">Furniture</SelectItem>
-                      <SelectItem value="perishable">Perishable Goods</SelectItem>
-                      <SelectItem value="luxury">Luxury Goods</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                {companyField === "other" && (
-                  <div>
-                    <FloatingInput
-                      name="other_field"
-                      label="Write your company field"
-                      required
-                    />
-                  </div>
-                )}
               </div>
 
               <div>
