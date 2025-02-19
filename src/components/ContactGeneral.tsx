@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Textarea } from "./ui/textarea";
@@ -153,31 +152,45 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
 
               <div className="grid md:grid-cols-2 gap-12">
                 <div className="text-center">
-                  <div className="w-56 h-56 mx-auto mb-6">
-                    <img
-                      src="/lovable-uploads/093c0721-b2bf-4b0e-8bab-76817fdaccb7.png"
-                      alt="Farhad Rasouli"
-                      className="w-full h-full object-contain rounded-lg"
-                    />
-                  </div>
-                  <h3 className="font-bold text-lg">Farhad Rasouli</h3>
-                  <p className="text-gray-600 mb-4">
-                    Executive Lead & Co-Founder
-                  </p>
+                  <a 
+                    href="https://www.linkedin.com/in/farhadrasouli/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="w-56 h-56 mx-auto mb-6 transition-transform duration-300 hover:scale-105">
+                      <img
+                        src="/lovable-uploads/093c0721-b2bf-4b0e-8bab-76817fdaccb7.png"
+                        alt="Farhad Rasouli"
+                        className="w-full h-full object-contain rounded-lg hover:opacity-90 transition-opacity"
+                      />
+                    </div>
+                    <h3 className="font-bold text-lg">Farhad Rasouli</h3>
+                    <p className="text-gray-600 mb-4">
+                      Executive Lead & Co-Founder
+                    </p>
+                  </a>
                 </div>
 
                 <div className="text-center">
-                  <div className="w-56 h-56 mx-auto mb-6">
-                    <img
-                      src="/lovable-uploads/718a19dc-08d6-4a18-9312-d4deaa31be03.png"
-                      alt="David Dolhomut"
-                      className="w-full h-full object-contain rounded-lg"
-                    />
-                  </div>
-                  <h3 className="font-bold text-lg">David Dolhomut</h3>
-                  <p className="text-gray-600 mb-4">
-                    Head of Partnerships & Business Development
-                  </p>
+                  <a 
+                    href="https://www.linkedin.com/in/daviddolhomut/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="w-56 h-56 mx-auto mb-6 transition-transform duration-300 hover:scale-105">
+                      <img
+                        src="/lovable-uploads/718a19dc-08d6-4a18-9312-d4deaa31be03.png"
+                        alt="David Dolhomut"
+                        className="w-full h-full object-contain rounded-lg hover:opacity-90 transition-opacity"
+                      />
+                    </div>
+                    <h3 className="font-bold text-lg">David Dolhomut</h3>
+                    <p className="text-gray-600 mb-4">
+                      Head of Partnerships & Business Development
+                    </p>
+                  </a>
                 </div>
               </div>
             </div>
