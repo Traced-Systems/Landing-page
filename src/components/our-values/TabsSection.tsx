@@ -10,7 +10,6 @@ const TabsSection = () => {
             <TabsTrigger
               key={tab}
               value={tab}
-
               className="w-full flex-1 flex items-center px-6 py-3 md:py-4 rounded-none border-b-2 md:border-l-4 md:border-b-0 border-transparent data-[state=active]:bg-[#204850] data-[state=active]:text-white data-[state=active]:w-full data-[state=active]:border-[#204850] transition-all"
             >
               <span className="text-base md:text-lg font-medium capitalize">
@@ -25,7 +24,6 @@ const TabsSection = () => {
               key={tab}
               value={tab}
               className="overflow-hidden md:h-full md:absolute md:inset-0"
-              s
             >
               <div className="relative h-full">
                 <div className="absolute inset-0 w-full h-full">
