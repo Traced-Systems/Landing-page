@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from "./shared/SheetBackButton";
@@ -30,7 +29,7 @@ const OurValuesSheet = ({ isOpen, onClose }: OurValuesSheetProps) => {
           <SheetBackgroundSection>
             <div className="pt-8 px-8 py-[31px] my-0">
               <div className="text-center mb-12">
-                <h2 className="text-2xl font-semibold text-primary mb-2">
+                <h2 className="text-2xl font-medium text-[#173A44] mb-8">
                   Traced Systems
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
