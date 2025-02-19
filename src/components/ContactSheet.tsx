@@ -1,11 +1,11 @@
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Linkedin, Mail } from "lucide-react";
 import SheetBackButton from "./shared/SheetBackButton";
 import Button1 from "./ui/button-1";
 import emailjs from "emailjs-com";
+import { FloatingInput } from "./ui/floating-input";
 
 interface ContactSheetProps {
   isOpen: boolean;
@@ -53,6 +53,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
       <SheetContent 
         side="right" 
         className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[9999]"
+        id="Ctacontact"
       >
         <SheetBackButton onBack={onClose} />
 
@@ -68,31 +69,27 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
               className="space-y-8 max-w-2xl mx-auto bg-[#f1f1f1] p-8 rounded-lg"
             >
               <div>
-                <Input
+                <FloatingInput
                   name="from_name"
-                  placeholder="Your Name"
+                  label="Your Name"
                   required
-                  defaultValue=""
-                  className="bg-white px-6 py-3 text-base"
                 />
               </div>
 
               <div>
-                <Input
+                <FloatingInput
                   name="from_email"
                   type="email"
-                  placeholder="Email Address"
+                  label="Email Address"
                   required
-                  className="bg-white px-6 py-3 text-base"
                 />
               </div>
 
               <div>
-                <Input
+                <FloatingInput
                   name="subject"
-                  placeholder="Subject"
+                  label="Subject"
                   required
-                  className="bg-white px-6 py-3 text-base"
                 />
               </div>
 
