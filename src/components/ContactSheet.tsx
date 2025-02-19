@@ -47,7 +47,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
           toast({
             title: "Message Sent Successfully",
             description: "Thank you for contacting us. We'll get back to you soon!",
-            className: "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-green-50 border-green-200 z-[10000] min-w-[300px]",
+            className: "fixed top-6 left-1/2 transform -translate-x-1/2 bg-green-50 border-green-200 z-[10000] min-w-[300px] shadow-lg",
             action: <CheckCircle2 className="h-5 w-5 text-green-500" />,
           });
           form.reset();
@@ -59,7 +59,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
             title: "Error Sending Message",
             description: "Please try again later.",
             variant: "destructive",
-            className: "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[10000] min-w-[300px]",
+            className: "fixed top-6 left-1/2 transform -translate-x-1/2 z-[10000] min-w-[300px] shadow-lg",
           });
           setIsSubmitting(false);
         }
