@@ -10,7 +10,7 @@ const KeyChallenges = () => {
         <div className="space-y-4">
           <h4 className="text-[#173A44] font-medium">Resource Management</h4>
           <div className="space-y-6">
-            <div className="grid grid-cols-3 !sm:grid-cols-1 gap-2">
+            <div className="grid grid-cols-1 xl:grid-cols-3 gap-2">
               <div className="flex items-center gap-2">
                 <img
                   src="/lovable-uploads/1597880643.svg"
@@ -45,7 +45,7 @@ const KeyChallenges = () => {
         <div className="space-y-4">
           <h4 className="text-[#173A44] font-medium">Environmental Impact</h4>
           <div className="space-y-6">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
               <div className="flex items-center gap-2">
                 <img
                   src="/lovable-uploads/1597880646.svg"

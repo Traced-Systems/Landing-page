@@ -22,9 +22,9 @@ const Foundation = () => {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="/lovable-uploads/d05fb389-8a90-42a6-9fb2-580384106614.png"
+                    src="/lovable-uploads/1000002907.svg"
                     alt="ChromaWay"
-                    className="h-10"
+                    className="h-14"
                   />
                 </a>
                 <a
@@ -35,7 +35,7 @@ const Foundation = () => {
                   <img
                     src="/lovable-uploads/ff086cb2-38b6-4ca2-a158-69f69cf213ee.png"
                     alt="European Commission"
-                    className="h-10"
+                    className="h-14"
                   />
                 </a>
                 <a
@@ -46,14 +46,14 @@ const Foundation = () => {
                   <img
                     src="/lovable-uploads/e1307a99-b10d-4799-b274-47c5f4487c18.png"
                     alt="EBSI"
-                    className="h-12 mt-1"
+                    className="h-20 pt-2"
                   />
                 </a>
               </div>
             </div>
 
             {/* Middle Section - Thin Separator (Hidden on Small Screens) */}
-            <div className="hidden md:block w-px h-16 bg-gray-300 mx-20 mt-3"></div>
+            <div className="hidden md:block w-px h-20 bg-gray-300 mx-8 mt-3"></div>
 
             {/* Right Section (Powered by) */}
             <div className="flex flex-col items-center space-y-4">
@@ -68,7 +68,7 @@ const Foundation = () => {
                 <img
                   src="/lovable-uploads/6f62693e-d89e-4061-b259-b6e900dcc386.png"
                   alt="Chromia"
-                  className="h-12"
+                  className="h-16"
                 />
               </a>
             </div>

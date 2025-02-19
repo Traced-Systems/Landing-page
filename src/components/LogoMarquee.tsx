@@ -28,7 +28,7 @@ const LogoMarquee = () => {
       className: "h-8",
     },
     {
-      src: "/lovable-uploads/ChromaWayLogo.png",
+      src: "/lovable-uploads/1000002907.png",
       alt: "ChromaWay",
       className: "h-8",
     },
@@ -43,7 +43,7 @@ const LogoMarquee = () => {
       className: "h-8",
     },
     {
-      src: "/lovable-uploads/ChromiaLogo.png",
+      src: "/lovable-uploads/1000002905.png",
       alt: "Chromia Logo",
       className: "h-8",
     },
@@ -63,18 +63,18 @@ const LogoMarquee = () => {
       ></div>
 
       {/* Content Layer */}
-      <div className="absolute inset-0 flex items-center justify-center pb-8">
+      <div className="absolute inset-0 flex items-center justify-center pb-12">
         <div className="flex overflow-hidden mb-14 bg-[rgba(242,241,238,0.9)]">
           <div className="flex animate-infinite-scroll" style={{ gap: "6rem" }}>
             {[...logos, ...logos, ...logos].map((logo, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center flex-shrink-0 w-32 h-16"
+                className="flex items-center justify-center flex-shrink-0 w-auto h-20"
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-16 w-auto object-contain"
+                  className="h-16 w-auto object-cover"
                 />
               </div>
             ))}
