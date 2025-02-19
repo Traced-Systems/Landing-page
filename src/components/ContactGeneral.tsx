@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Textarea } from "./ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
 import SheetBackButton from "./shared/SheetBackButton";
 import Button1 from "./ui/button-1";
 import emailjs from "emailjs-com";
@@ -29,7 +35,8 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
       from_name: formData.get("from_name") as string,
       from_email: formData.get("from_email") as string,
       company_name: formData.get("company_name") as string,
-      subject: formData.get("subject") as string,
+      job_title: formData.get("job_title") as string,
+      select_content: formData.get("select_content") as string,
       message: formData.get("message") as string,
     };
 
@@ -38,7 +45,7 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
     emailjs
       .send(
         "service_z7y8ym8",
-        "template_uvaie1r",
+        "template_utkz4px",
         emailParams,
         "N8xBUF-xOQnWEdxCb"
       )
@@ -47,8 +54,10 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
           console.log("Email sent successfully:", response);
           toast({
             title: "Message Sent Successfully",
-            description: "Thank you for contacting us. We'll get back to you soon!",
-            className: "fixed top-6 left-1/2 transform -translate-x-1/2 bg-green-50 border-green-200 z-[10000] min-w-[300px] shadow-lg",
+            description:
+              "Thank you for contacting us. We'll get back to you soon!",
+            className:
+              "fixed top-6 left-1/2 transform -translate-x-1/2 bg-green-50 border-green-200 z-[10000] w-[65vw] shadow-lg",
             action: <CheckCircle2 className="h-5 w-5 text-green-500" />,
           });
           form.reset();
@@ -60,7 +69,8 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
             title: "Error Sending Message",
             description: "Please try again later.",
             variant: "destructive",
-            className: "fixed top-6 left-1/2 transform -translate-x-1/2 z-[10000] min-w-[300px] shadow-lg",
+            className:
+              "fixed top-6 left-1/2 transform -translate-x-1/2 z-[10000] w-[65vw] shadow-lg",
           });
           setIsSubmitting(false);
         }
@@ -69,8 +79,8 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
 
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
-      <SheetContent 
-        side="right" 
+      <SheetContent
+        side="right"
         className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[9999]"
       >
         <SheetBackButton onBack={onClose} />
@@ -86,9 +96,14 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
               className="space-y-8 max-w-2xl mx-auto bg-[#f1f1f1] p-8 rounded-lg"
             >
               <div>
+                <FloatingInput name="from_name" label="Your Name" required />
+              </div>
+
+              <div>
                 <FloatingInput
-                  name="from_name"
-                  label="Your Name"
+                  name="from_email"
+                  type="email"
+                  label="Email Address"
                   required
                 />
               </div>
@@ -102,16 +117,11 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
               </div>
 
               <div>
-                <FloatingInput
-                  name="from_email"
-                  type="email"
-                  label="Email Address"
-                  required
-                />
+                <FloatingInput name="job_title" label="Job Title" required />
               </div>
 
               <div className="relative">
-                <Select name="subject" required>
+                <Select name="select_content" required>
                   <SelectTrigger className="w-full bg-white px-6 py-3 text-base h-auto border border-gray-300 rounded-md">
                     <SelectValue placeholder="Select Subject" />
                   </SelectTrigger>
@@ -133,7 +143,11 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
               </div>
 
               <div className="flex justify-center pt-4">
-                <Button1 type="submit" disabled={isSubmitting} className="relative">
+                <Button1
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="relative"
+                >
                   {isSubmitting ? (
                     <Loader className="w-5 h-5 animate-spin" />
                   ) : (
@@ -152,7 +166,7 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
 
               <div className="grid md:grid-cols-2 gap-12">
                 <div className="text-center">
-                  <a 
+                  <a
                     href="https://www.linkedin.com/in/farhadrasouli/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -173,7 +187,7 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
                 </div>
 
                 <div className="text-center">
-                  <a 
+                  <a
                     href="https://www.linkedin.com/in/daviddolhomut/"
                     target="_blank"
                     rel="noopener noreferrer"
