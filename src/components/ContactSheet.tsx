@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Textarea } from "./ui/textarea";
@@ -47,6 +48,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
             title: "Message Sent Successfully",
             description: "Thank you for contacting us. We'll get back to you soon!",
             className: "bg-green-50 border-green-200",
+            icon: <CheckCircle2 className="h-5 w-5 text-green-500" />,
           });
           form.reset();
           setIsSubmitting(false);
