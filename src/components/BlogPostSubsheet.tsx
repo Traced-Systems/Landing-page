@@ -1,9 +1,11 @@
 
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
+
 import SheetBackButton from './shared/SheetBackButton';
 import IndustrySheetCTA from './shared/IndustrySheetCTA';
 import { BlogPost } from '@/types/blog';
+
 
 interface BlogPostSubsheetProps {
   isOpen: boolean;
