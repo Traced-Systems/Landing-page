@@ -3,17 +3,16 @@ import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import SheetBackButton from "./shared/SheetBackButton";
 import Button1 from "./ui/button-1";
 import emailjs from "emailjs-com";
 
-interface ContactSheetProps {
+interface CTAContactSheetProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
+const CTAContactSheet = ({ isOpen, onClose }: CTAContactSheetProps) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -24,7 +23,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
       from_name: formData.get("from_name") as string,
       from_email: formData.get("from_email") as string,
       company_name: formData.get("company_name") as string,
-      subject: formData.get("subject") as string,
+      subject: "Demo Request",
       message: formData.get("message") as string,
     };
 
@@ -58,9 +57,10 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
       >
         <SheetBackButton onBack={onClose} />
 
-        <div id="GeneralContact" className="h-full flex flex-col pt-16">
+        <div id="CTAContact" className="h-full flex flex-col pt-16">
           <div className="text-center mb-16 relative px-4">
             <h1 className="text-4xl font-bold text-primary mb-4">Contact Us</h1>
+            <h2 className="text-2xl font-semibold mb-8">Book a Demo</h2>
           </div>
 
           <div className="px-4 sm:px-8 mb-12">
@@ -94,19 +94,6 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                   required
                   className="bg-white px-6 py-3 text-base"
                 />
-              </div>
-
-              <div className="relative">
-                <Select name="subject" required>
-                  <SelectTrigger className="w-full bg-white px-6 py-3 text-base h-auto border border-gray-300 rounded-md">
-                    <SelectValue placeholder="Select Subject" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-white z-[9999] min-w-[200px]">
-                    <SelectItem value="general">General Inquiries</SelectItem>
-                    <SelectItem value="marketing">Marketing</SelectItem>
-                    <SelectItem value="press">Press</SelectItem>
-                  </SelectContent>
-                </Select>
               </div>
 
               <div>
@@ -167,4 +154,4 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
   );
 };
 
-export default ContactSheet;
+export default CTAContactSheet;

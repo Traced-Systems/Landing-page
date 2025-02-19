@@ -13,6 +13,11 @@ const Blog = () => {
   
   const blogPosts = [
     {
+      title: "Efficient product tracking with blockchain in supply chains",
+      description: "Many sectors face significant challenges in maintaining transparent and sustainable product tracking. Traced Systems, a blockchain-powered solution from ChromaWay, is improving product traceability across industries as part of the Trace4Value+SwePass project. By leveraging Digital Product Passports, Traced Systems fosters greater transparency and sustainability throughout the entire product lifecycle across sectors.",
+      image: "/lovable-uploads/dd922267-04dd-42fd-bfc5-31dfb191dbcc.png"
+    },
+    {
       title: "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports",
       description: "Sustainability, transparency, and innovation are becoming essential in today's interconnected world. At Traced Systems, we are committed to driving change through blockchain-powered solutions that promote trust and accountability.",
       image: "/lovable-uploads/ecdba3ef-2ae6-4fa3-96d6-e01f4e951b66.png"
