@@ -1,11 +1,12 @@
-import React from "react";
+
+import React, { useState } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Textarea } from "./ui/textarea";
-import { Linkedin, Mail } from "lucide-react";
 import SheetBackButton from "./shared/SheetBackButton";
 import Button1 from "./ui/button-1";
 import emailjs from "emailjs-com";
 import { FloatingInput } from "./ui/floating-input";
+import { Loader } from "lucide-react";
 
 interface ContactSheetProps {
   isOpen: boolean;
@@ -13,8 +14,11 @@ interface ContactSheetProps {
 }
 
 const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -40,10 +44,12 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
           console.log("Email sent successfully:", response);
           alert("Message sent successfully!");
           form.reset();
+          setIsSubmitting(false);
         },
         (error) => {
           console.error("Error sending email:", error);
           alert("Failed to send message. Please try again later.");
+          setIsSubmitting(false);
         }
       );
   };
@@ -103,7 +109,13 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
               </div>
 
               <div className="flex justify-center pt-4">
-                <Button1 type="submit">Submit</Button1>
+                <Button1 type="submit" disabled={isSubmitting} className="relative">
+                  {isSubmitting ? (
+                    <Loader className="w-5 h-5 animate-spin" />
+                  ) : (
+                    "Submit"
+                  )}
+                </Button1>
               </div>
             </form>
           </div>
@@ -127,14 +139,6 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                   <p className="text-gray-600 mb-4">
                     Executive Lead & Co-Founder
                   </p>
-                  <div className="flex justify-center space-x-4">
-                    <a href="#" className="text-gray-600 hover:text-blue-500">
-                      <Linkedin className="w-5 h-5" />
-                    </a>
-                    <a href="#" className="text-gray-600 hover:text-blue-500">
-                      <Mail className="w-5 h-5" />
-                    </a>
-                  </div>
                 </div>
 
                 <div className="text-center">
@@ -149,14 +153,6 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                   <p className="text-gray-600 mb-4">
                     Head of Partnerships & Business Development
                   </p>
-                  <div className="flex justify-center space-x-4">
-                    <a href="#" className="text-gray-600 hover:text-blue-500">
-                      <Linkedin className="w-5 h-5" />
-                    </a>
-                    <a href="#" className="text-gray-600 hover:text-blue-500">
-                      <Mail className="w-5 h-5" />
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
