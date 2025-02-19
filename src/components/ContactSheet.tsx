@@ -28,7 +28,6 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
     const emailParams = {
       from_name: formData.get("from_name") as string,
       from_email: formData.get("from_email") as string,
-      company_name: formData.get("company_name") as string,
       message: formData.get("message") as string,
     };
 
@@ -99,14 +98,6 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                   name="from_email"
                   type="email"
                   label="Email Address"
-                  required
-                />
-              </div>
-
-              <div>
-                <FloatingInput
-                  name="company_name"
-                  label="Company Name"
                   required
                 />
               </div>
