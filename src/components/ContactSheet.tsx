@@ -1,9 +1,8 @@
-
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { Linkedin, Mail } from "lucide-react";
 import SheetBackButton from "./shared/SheetBackButton";
 import Button1 from "./ui/button-1";
 import emailjs from "emailjs-com";
@@ -23,7 +22,6 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
     const emailParams = {
       from_name: formData.get("from_name") as string,
       from_email: formData.get("from_email") as string,
-      company_name: formData.get("company_name") as string,
       subject: formData.get("subject") as string,
       message: formData.get("message") as string,
     };
@@ -58,9 +56,10 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
       >
         <SheetBackButton onBack={onClose} />
 
-        <div id="GeneralContact" className="h-full flex flex-col pt-16">
+        <div className="h-full flex flex-col pt-16">
           <div className="text-center mb-16 relative px-4">
             <h1 className="text-4xl font-bold text-primary mb-4">Contact Us</h1>
+            <h2 className="text-2xl font-semibold mb-8">Book a Demo</h2>
           </div>
 
           <div className="px-4 sm:px-8 mb-12">
@@ -73,15 +72,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                   name="from_name"
                   placeholder="Your Name"
                   required
-                  className="bg-white px-6 py-3 text-base"
-                />
-              </div>
-
-              <div>
-                <Input
-                  name="company_name"
-                  placeholder="Company Name"
-                  required
+                  defaultValue=""
                   className="bg-white px-6 py-3 text-base"
                 />
               </div>
@@ -96,17 +87,13 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                 />
               </div>
 
-              <div className="relative">
-                <Select name="subject" required>
-                  <SelectTrigger className="w-full bg-white px-6 py-3 text-base h-auto border border-gray-300 rounded-md">
-                    <SelectValue placeholder="Select Subject" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-white z-[9999] min-w-[200px]">
-                    <SelectItem value="general">General Inquiries</SelectItem>
-                    <SelectItem value="marketing">Marketing</SelectItem>
-                    <SelectItem value="press">Press</SelectItem>
-                  </SelectContent>
-                </Select>
+              <div>
+                <Input
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                  className="bg-white px-6 py-3 text-base"
+                />
               </div>
 
               <div>
@@ -143,6 +130,14 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                   <p className="text-gray-600 mb-4">
                     Executive Lead & Co-Founder
                   </p>
+                  <div className="flex justify-center space-x-4">
+                    <a href="#" className="text-gray-600 hover:text-blue-500">
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="text-gray-600 hover:text-blue-500">
+                      <Mail className="w-5 h-5" />
+                    </a>
+                  </div>
                 </div>
 
                 <div className="text-center">
@@ -157,6 +152,14 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
                   <p className="text-gray-600 mb-4">
                     Head of Partnerships & Business Development
                   </p>
+                  <div className="flex justify-center space-x-4">
+                    <a href="#" className="text-gray-600 hover:text-blue-500">
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="text-gray-600 hover:text-blue-500">
+                      <Mail className="w-5 h-5" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
