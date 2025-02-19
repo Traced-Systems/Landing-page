@@ -21,15 +21,17 @@ const Hero = () => {
         />
       </div>
 
-      <div className="container mx-auto relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto relative z-10 flex justify-center">
+        <div className="grid md:grid-cols-2 gap-[16vw] items-center max-w-[77vw] xl:max-w-[80vw] mx-auto">
           <div className="space-y-8">
             <div className="space-y-4 flex flex-col  items-start">
-              <img
-                src="/lovable-uploads/BigTitleTracedSystem.png"
-                alt="Traced Systems"
-                className="w-auto h-16 md:h-20 lg:h-24 -ml-4 md:-ml-6 lg:-ml-11"
-              />
+              <div>
+                <img
+                  src="/lovable-uploads/BigTitleTracedSystem.png"
+                  alt="Traced Systems"
+                  className="h-16 md:h-30 lg:h-28 w-auto object-contain -ml-6 md:-ml-6 lg:-ml-11"
+                />
+              </div>
               <h2 className="text-xl md:text-2xl text-[#173A44]">
                 Digital Product Passport
               </h2>
@@ -50,7 +52,7 @@ const Hero = () => {
               <img
                 src="/lovable-uploads/f13aac64-15e3-4a2a-9838-a7f474b842e5.png"
                 alt="Product Mockup"
-                className="w-full h-auto max-w-[500px]"
+                className="w-full h-auto max-w-[500px] "
               />
             </div>
           </div>
