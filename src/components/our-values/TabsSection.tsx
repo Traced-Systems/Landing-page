@@ -11,7 +11,7 @@ const TabsSection = () => {
             <TabsTrigger
               key={tab}
               value={tab}
-              className="group w-full flex-1 flex items-center px-6 py-3 md:py-6 text-left justify-start rounded-none border-b-2 md:border-b-0 md:border-l-4 border-transparent text-black/80 md:text-black/70 bg-transparent data-[state=active]:bg-[#204850] md:data-[state=active]:bg-white md:data-[state=active]:border-l-[#204850] data-[state=active]:text-white md:data-[state=active]:text-black transition-all duration-200 hover:bg-[#204850]/10 md:hover:bg-gray-50"
+              className="group w-full h-full flex-1 flex items-center px-6 py-3 md:py-6 text-left justify-start rounded-none border-b-2 md:border-b-0 md:border-l-4 border-transparent text-black/80 md:text-black/70 bg-transparent data-[state=active]:bg-[#204850] md:data-[state=active]:bg-[#2D545E] data-[state=active]:text-white md:data-[state=active]:text-[#f7f7f7] transition-all duration-200 hover:bg-[#204850]/10 md:hover:bg-gray-50"
             >
               <span className="text-base md:text-lg font-medium capitalize group-data-[state=active]:font-semibold">
                 {tab}
@@ -36,7 +36,7 @@ const TabsSection = () => {
                       : "/lovable-uploads/aa6a2a37-d9f1-44a7-8d11-a32893b35db5.png"
                   }
                   alt={tab}
-                  className="w-full h-full object-cover brightness-[0.3] md:brightness-100 absolute inset-0"
+                  className="w-full h-full absolute inset-0"
                 />
                 <div className="relative md:absolute inset-0 bg-[#204850]/95 md:bg-[#204850]/90 flex items-start md:items-center justify-start p-6 md:p-10">
                   <p className="text-white text-sm md:text-base font-normal md:text-left leading-relaxed">
