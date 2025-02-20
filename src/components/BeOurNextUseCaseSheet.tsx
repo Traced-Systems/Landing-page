@@ -18,7 +18,7 @@ const BeOurNextUseCaseSheet = ({ isOpen, onClose }: BeOurNextUseCaseSheetProps) 
       >
         <SheetBackButton onBack={onClose} />
 
-        <div className="h-full flex flex-col">
+        <div className="h-full flex flex-col" id="nextusecase">
           <div className="pt-24 px-8">
             <div className="max-w-4xl mx-auto">
               <div className="mb-8">
