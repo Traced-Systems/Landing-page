@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import UseCasesSheet from "./UseCasesSheet";
@@ -14,19 +13,7 @@ const UseCases = () => {
   const cases: UseCase[] = [
     {
       title: "BLK DNM: Connected Fashion on Chromia Appnet",
-      description: (
-        <>
-          <a
-            href="https://digital.blkdnm.com/?ref=blog.chromia.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#E4AC70] hover:text-[#C66600]"
-          >
-            BLK DNM
-          </a>{" "}
-          has launched their 'Connected Fashion' campaign, delivering their first collection of apparel embedded with blockchain-enabled hardware! This exclusive collection features 72 signature leather jackets in 7 styles, merging fashion and technology to deliver handcrafted and timeless designs that exist in both the physical and virtual world.
-        </>
-      ),
+      description: "BLK DNM has launched their 'Connected Fashion' campaign, delivering their first collection of apparel embedded with blockchain-enabled hardware! This exclusive collection features 72 signature leather jackets...",
       image: "/lovable-uploads/1896ee6a-5182-48cf-bab2-dcd33adf89cf.png",
       fullContent: {
         title: "BLK DNM: Connected Fashion on Chromia Appnet",
