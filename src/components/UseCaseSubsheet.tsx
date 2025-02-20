@@ -94,12 +94,7 @@ const UseCaseSubsheet = ({
                     <h2 className="text-2xl font-bold text-primary mb-4">
                       The Solution
                     </h2>
-                    <p className="text-gray-600 mb-4">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem accusantium doloremque laudantium, totam rem
-                      aperiam, eaque ipsa quae ab illo inventore veritatis et
-                      quasi architecto beatae vitae dicta sunt explicabo.
-                    </p>
+                    <p className="text-gray-600 mb-4">Traced Systems’ Digital Product Passport (DPP) is sector-agnostic, integrating supplier data, compliance requirements, and consumer insights on a secure blockchain. This provides full traceability, streamlined processes, and sustainability metrics.</p>
 
                     <h2 className="text-2xl font-bold text-primary mb-4">
                       The Results
