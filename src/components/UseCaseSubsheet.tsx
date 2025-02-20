@@ -1,13 +1,16 @@
+
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from "./shared/SheetBackButton";
 import IndustrySheetCTA from "./shared/IndustrySheetCTA";
 import { UseCase } from "@/types/useCase";
+
 interface UseCaseSubsheetProps {
   isOpen: boolean;
   onClose: () => void;
   useCase: UseCase;
 }
+
 const UseCaseSubsheet = ({
   isOpen,
   onClose,
@@ -94,12 +97,17 @@ const UseCaseSubsheet = ({
                     <h2 className="text-2xl font-bold text-primary mb-4">
                       The Solution
                     </h2>
-                    <p className="text-gray-600 mb-4">Traced Systems’ Digital Product Passport (DPP) is sector-agnostic, integrating supplier data, compliance requirements, and consumer insights on a secure blockchain. This provides full traceability, streamlined processes, and sustainability metrics.</p>
+                    <p className="text-gray-600 mb-4">Traced Systems' Digital Product Passport (DPP) is sector-agnostic, integrating supplier data, compliance requirements, and consumer insights on a secure blockchain. This provides full traceability, streamlined processes, and sustainability metrics.</p>
 
                     <h2 className="text-2xl font-bold text-primary mb-4">
                       The Results
                     </h2>
                     <p className="text-gray-600 mb-4">Companies using our DPP reduce compliance headaches, strengthen brand trust, and minimize waste. They gain actionable insights that drive innovation and boost profitability.</p>
+
+                    <h2 className="text-2xl font-bold text-primary mb-4">
+                      Why You Need a DPP
+                    </h2>
+                    <p className="text-gray-600 mb-4">With mounting pressures from regulators and consumers, a reliable DPP is your strategic advantage. Embrace transparency, protect your brand, and lead in sustainability—become our next success story.</p>
                   </div>
                 </>}
             </div>
@@ -112,4 +120,5 @@ const UseCaseSubsheet = ({
       </SheetContent>
     </Sheet>;
 };
+
 export default UseCaseSubsheet;
