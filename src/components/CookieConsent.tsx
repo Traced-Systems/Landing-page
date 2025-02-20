@@ -60,9 +60,10 @@ const CookieConsentBanner = () => {
   if (!showBanner && !isOpen) return (
     <Button
       onClick={openPreferences}
-      className="fixed bottom-4 left-4 z-50 bg-[#173A44] text-white hover:bg-[#0D2328]"
+      className="fixed bottom-4 right-4 z-50 bg-white/80 hover:bg-white text-gray-600 text-sm py-2 px-3 rounded-md shadow-sm border border-gray-200 backdrop-blur-sm transition-all duration-200 hover:shadow-md"
+      variant="ghost"
     >
-      Cookie Settings
+      Cookie Preferences
     </Button>
   );
 
