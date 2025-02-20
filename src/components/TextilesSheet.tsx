@@ -125,7 +125,7 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
             </div>
           </div>
 
-          <div className="px-4 sm:px-20">
+          <div className="px-4 sm:px-20 pb-10 lg:pb-16">
             <div className="mb-8 sm:mb-12 text-center">
               <h2 className="text-2xl font-medium text-[#173A44] mb-4">
                 Driving Collaborative Sustainability Across the Entire Value
@@ -146,7 +146,7 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
                 ))}
               </div>
 
-              <Button1
+              {/* <Button1
                 className="mx-auto bg-[#f7f7f7]"
                 icon={
                   <img
@@ -157,7 +157,7 @@ const TextilesSheet = ({ isOpen, onClose, onBack }: TextilesSheetProps) => {
                 }
               >
                 Know more
-              </Button1>
+              </Button1> */}
             </div>
           </div>
 

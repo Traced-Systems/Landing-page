@@ -29,7 +29,8 @@ const UseCasesSheet = ({
   const cases: UseCase[] = [
     {
       title: "BLK DNM: Connected Fashion on Chromia Appnet",
-      description: "BLK DNM has launched their 'Connected Fashion' campaign, delivering their first collection of apparel embedded with blockchain-enabled hardware! This exclusive collection features 72 signature leather jackets...",
+      description:
+        "BLK DNM has launched their 'Connected Fashion' campaign, delivering their first collection of apparel embedded with blockchain-enabled hardware! This exclusive collection features 72 signature leather jackets...",
       image: "/lovable-uploads/1896ee6a-5182-48cf-bab2-dcd33adf89cf.png",
       fullContent: {
         title: "BLK DNM: Connected Fashion on Chromia Appnet",
@@ -44,7 +45,12 @@ const UseCasesSheet = ({
             >
               BLK DNM
             </a>{" "}
-            has launched their 'Connected Fashion' campaign, delivering their first collection of apparel embedded with blockchain-enabled hardware! This exclusive collection features 72 signature leather jackets in 7 styles, merging fashion and technology to deliver handcrafted and timeless designs that exist in both the physical and virtual world.
+            has launched their 'Connected Fashion' campaign, delivering their
+            first collection of apparel embedded with blockchain-enabled
+            hardware! This exclusive collection features 72 signature leather
+            jackets in 7 styles, merging fashion and technology to deliver
+            handcrafted and timeless designs that exist in both the physical and
+            virtual world.
           </>
         ),
         content: [
@@ -144,7 +150,7 @@ const UseCasesSheet = ({
             </SheetBackgroundSection>
 
             <div className="px-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 {cases.map((item, index) => (
                   <div
                     key={index}
@@ -155,7 +161,7 @@ const UseCasesSheet = ({
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="w-full h-48 object-cover rounded-t-lg mb-4"
+                        className="w-full object-cover rounded-t-lg mb-4"
                       />
                     </div>
                     <div className="p-6">
