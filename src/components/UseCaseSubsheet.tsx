@@ -36,24 +36,58 @@ const UseCaseSubsheet = ({
                       className="w-6 h-6"
                     />
                     <span className="text-gray-600">
-                      Written by Traced Systems x{" "}
-                      <a
-                        href="https://chromia.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-600 hover:text-gray-800 underline"
-                      >
-                        Chromia
-                      </a>{" "}
-                      x{" "}
-                      <a
-                        href="https://digital.blkdnm.com/?ref=blog.chromia.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-600 hover:text-gray-800 underline"
-                      >
-                        BLK DNM
-                      </a>
+                      {useCase.title.includes("BLK DNM") ? (
+                        <>
+                          Written by Traced Systems x{" "}
+                          <a
+                            href="https://chromia.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-600 hover:text-gray-800 underline"
+                          >
+                            Chromia
+                          </a>{" "}
+                          x{" "}
+                          <a
+                            href="https://digital.blkdnm.com/?ref=blog.chromia.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-600 hover:text-gray-800 underline"
+                          >
+                            BLK DNM
+                          </a>
+                        </>
+                      ) : (
+                        <>
+                          Written by Traced Systems x{" "}
+                          <a
+                            href="https://www.clingsystems.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-600 hover:text-gray-800 underline"
+                          >
+                            Cling
+                          </a>{" "}
+                          x{" "}
+                          <a
+                            href="https://batteriretur.no/hoyenergibatterier/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-600 hover:text-gray-800 underline"
+                          >
+                            BatteriRetur
+                          </a>{" "}
+                          x{" "}
+                          <a
+                            href="https://instagrid.co/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-600 hover:text-gray-800 underline"
+                          >
+                            Instagrid
+                          </a>
+                        </>
+                      )}
                     </span>
                   </div>
                   <div className="mb-8">
