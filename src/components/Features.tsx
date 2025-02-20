@@ -49,10 +49,7 @@ const Features = () => {
     } else if (id === "batteries-card") {
       setActiveSheet("batteries");
     } else if (id === "espr-card") {
-      const element = document.getElementById('euregulation');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      setActiveSheet("industries");
     }
   };
 
