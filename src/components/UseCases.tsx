@@ -92,6 +92,30 @@ const UseCases = () => {
       description:
         "Ready to innovate and comply with evolving legislation? Let's explore how the DPP framework can enhance customer experiences and drive circularity...",
       image: "/lovable-uploads/1597880486.png",
+      fullContent: {
+        title: "Be Our Next Success Story",
+        authorIcon: "/lovable-uploads/5ce2f433-ac13-4162-97af-4ed813cff152.png",
+        introduction:
+          "Ready to innovate and comply with evolving legislation? Let's explore how the DPP framework can enhance customer experiences and drive circularity...",
+        content: [
+          {
+            heading: "The Challenge",
+            text: "Global supply chains are increasingly complex, regulations are tightening, and consumers expect transparency. Without the right tools, businesses face higher costs, reputational risks, and lost opportunities.",
+          },
+          {
+            heading: "The Solution",
+            text: "Traced Systems' Digital Product Passport (DPP) is sector-agnostic, integrating supplier data, compliance requirements, and consumer insights on a secure blockchain. This provides full traceability, streamlined processes, and sustainability metrics.",
+          },
+          {
+            heading: "The Results",
+            text: "Companies using our DPP reduce compliance headaches, strengthen brand trust, and minimize waste. They gain actionable insights that drive innovation and boost profitability.",
+          },
+          {
+            heading: "Why You Need a DPP",
+            text: "With mounting pressures from regulators and consumers, a reliable DPP is your strategic advantage. Embrace transparency, protect your brand, and lead in sustainability—become our next success story.",
+          },
+        ],
+      },
     },
   ];
 
