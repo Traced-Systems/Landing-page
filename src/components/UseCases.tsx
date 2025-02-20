@@ -91,7 +91,7 @@ const UseCases = () => {
       title: "Be Our Next Use Case",
       description:
         "Ready to innovate and comply with evolving legislation? Let's explore how the DPP framework can enhance customer experiences and drive circularity...",
-      image: "/lovable-uploads/1597880486.png",
+      image: "/lovable-uploads/b3b186f8-bc2a-4d3d-916f-bb04dee5239e.png",
       fullContent: {
         title: "Be Our Next Success Story",
         authorIcon: "/lovable-uploads/5ce2f433-ac13-4162-97af-4ed813cff152.png",
