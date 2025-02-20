@@ -1,12 +1,14 @@
 
+import { ReactNode } from 'react';
+
 export interface BlogPost {
   title: string;
-  description: string;
+  description: string | ReactNode;
   image: string;
   fullContent?: {
     title: string;
-    introduction: string;
-    authorIcon?: string; // Made authorIcon optional
+    introduction: string | ReactNode;
+    authorIcon?: string;
     sections: Array<{
       heading: string;
       content: string;

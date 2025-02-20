@@ -1,17 +1,31 @@
-import React, { useState } from "react";
+
+import React, { useState, ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import UseCasesSheet from "./UseCasesSheet";
 import UseCaseSubsheet from "./UseCaseSubsheet";
 import { ChevronRight } from "lucide-react";
 
+interface UseCase {
+  title: string;
+  description: string | ReactNode;
+  image: string;
+  fullContent?: {
+    title: string;
+    authorIcon: string;
+    introduction: string | ReactNode;
+    content: Array<{
+      heading: string;
+      text: string;
+    }>;
+  };
+}
+
 const UseCases = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
-  const [selectedCase, setSelectedCase] = useState<(typeof cases)[0] | null>(
-    null
-  );
+  const [selectedCase, setSelectedCase] = useState<UseCase | null>(null);
   const [showCaseDirectly, setShowCaseDirectly] = useState(false);
 
-  const cases = [
+  const cases: UseCase[] = [
     {
       title: "BLK DNM: Connected Fashion on Chromia Appnet",
       description: (
@@ -107,8 +121,8 @@ const UseCases = () => {
     },
   ];
 
-  const handleCaseClick = (useCase: (typeof cases)[0], index: number) => {
-    if (index === 2) { // "Be Our Next Use Case" card
+  const handleCaseClick = (useCase: UseCase, index: number) => {
+    if (index === 2) {
       window.dispatchEvent(new CustomEvent('openContact'));
     } else {
       setSelectedCase(useCase);
