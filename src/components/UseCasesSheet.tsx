@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from "./shared/SheetBackButton";
@@ -107,7 +106,7 @@ const UseCasesSheet = ({
       title: "Be Our Next Use Case",
       description:
         "Ready to innovate and comply with evolving legislation? Let's explore how the DPP framework can enhance customer experiences and drive circularity...",
-      image: "/lovable-uploads/1597880486.png",
+      image: "/lovable-uploads/0443aaa4-526c-49de-bc7b-2c6726ceccfc.png",
     },
   ];
 
