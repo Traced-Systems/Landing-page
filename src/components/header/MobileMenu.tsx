@@ -48,7 +48,13 @@ const MobileMenu = ({
       </SheetTrigger>
       <SheetContent 
         side="top" 
-        className="w-full h-[100vh] lg:hidden pt-16 bg-white" 
+        className="w-full h-[100vh] lg:hidden pt-16 bg-transparent" 
+        style={{
+          backgroundImage: "url('/lovable-uploads/f7376385-cde0-40d8-8cc8-ac410742062b.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
         <div className="absolute left-4 top-[18px] z-[999]">
           <img
