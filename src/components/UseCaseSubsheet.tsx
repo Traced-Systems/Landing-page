@@ -3,24 +3,12 @@ import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from "./shared/SheetBackButton";
 import IndustrySheetCTA from "./shared/IndustrySheetCTA";
+import { UseCase } from "@/types/useCase";
 
 interface UseCaseSubsheetProps {
   isOpen: boolean;
   onClose: () => void;
-  useCase: {
-    title: string;
-    description: string;
-    image: string;
-    fullContent?: {
-      title: string;
-      authorIcon: string;
-      introduction: string;
-      content: Array<{
-        heading: string;
-        text: string;
-      }>;
-    };
-  };
+  useCase: UseCase;
 }
 
 const UseCaseSubsheet = ({
