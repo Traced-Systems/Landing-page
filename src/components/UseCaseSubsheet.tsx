@@ -99,12 +99,7 @@ const UseCaseSubsheet = ({
                     <h2 className="text-2xl font-bold text-primary mb-4">
                       The Results
                     </h2>
-                    <p className="text-gray-600 mb-4">
-                      At vero eos et accusamus et iusto odio dignissimos ducimus
-                      qui blanditiis praesentium voluptatum deleniti atque
-                      corrupti quos dolores et quas molestias excepturi sint
-                      occaecati cupiditate non provident.
-                    </p>
+                    <p className="text-gray-600 mb-4">Companies using our DPP reduce compliance headaches, strengthen brand trust, and minimize waste. They gain actionable insights that drive innovation and boost profitability.</p>
                   </div>
                 </>}
             </div>
