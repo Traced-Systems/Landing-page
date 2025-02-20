@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from "./shared/SheetBackButton";
@@ -58,7 +57,7 @@ const UseCaseSubsheet = ({
                     </h1>
                   </div>
                   <div className="flex justify-center">
-                    <img src={useCase.image} alt={useCase.title} className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-8" />
+                    <img src="/lovable-uploads/54d38dd9-d2c4-4d93-b1cb-d3ccd3ea1d11.png" alt={useCase.title} className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-8" />
                   </div>
 
                   <div className="prose max-w-none mb-12">
@@ -83,7 +82,7 @@ const UseCaseSubsheet = ({
                   </div>
 
                   <div className="flex justify-center">
-                    <img src={useCase.image} alt={useCase.title} className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-8" />
+                    <img src="/lovable-uploads/54d38dd9-d2c4-4d93-b1cb-d3ccd3ea1d11.png" alt={useCase.title} className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-8" />
                   </div>
 
                   <div className="prose max-w-none mb-12">
