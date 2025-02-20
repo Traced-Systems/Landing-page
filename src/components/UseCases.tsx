@@ -153,15 +153,9 @@ hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,25
                         : item.description)
                     : item.description}
                 </div>
-                {index === 2 ? (
-                  <button className="bg-[#E1B382] hover:bg-[#E6964F] text-white px-7 py-2 rounded-full transition-colors flex items-center gap-2">
-                    Get in Touch <ChevronRight className="w-4 h-4 mt-0.5" />
-                  </button>
-                ) : (
-                  <button className="transition-colors text-[#E4AC70] hover:text-[#C66600] flex items-center gap-0.5">
-                    Know More <ChevronRight className="w-4 h-4 mt-0.5" />
-                  </button>
-                )}
+                <button className="transition-colors text-[#E4AC70] hover:text-[#C66600] flex items-center gap-0.5">
+                  Know More <ChevronRight className="w-4 h-4 mt-0.5" />
+                </button>
               </div>
             </div>
           ))}
