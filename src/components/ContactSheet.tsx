@@ -7,6 +7,7 @@ import emailjs from "emailjs-com";
 import { FloatingInput } from "./ui/floating-input";
 import { Loader, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import TitleBanner from "@/components/shared/TitleBanner";
 
 interface ContactSheetProps {
   isOpen: boolean;
@@ -73,21 +74,28 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
     <Sheet open={isOpen} onOpenChange={onClose}>
       <SheetContent
         side="right"
-        className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[9999]"
+        className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F7] border-l shadow-xl p-0 z-[9999]"
         id="Ctacontact"
       >
         <SheetBackButton onBack={onClose} />
 
+        <TitleBanner title="Book Demo" />
+
         <div className="h-full flex flex-col pt-16">
-          <div className="text-center mb-16 relative px-4">
-            <h1 className="text-4xl font-bold text-primary mb-4">Contact Us</h1>
-            <h2 className="text-2xl font-semibold mb-8">Book a Demo</h2>
+          <div className="text-center mb-12 relative px-4">
+            <h1 className="text-3xl font-medium text-[#173A44] mb-2">
+              Contact Us
+            </h1>
           </div>
 
           <div className="px-4 sm:px-8 mb-12">
             <form
               onSubmit={handleSubmit}
-              className="space-y-8 max-w-2xl mx-auto bg-[#f1f1f1] p-8 rounded-lg"
+              className="space-y-8 max-w-2xl mx-auto p-8 lg:p-20 rounded-lg shadow-sm"
+              style={{
+                background:
+                  "radial-gradient(circle at 50% 100%, #FFFFFF 0%, #F7F7F5 40%, #E1ECEB 100%)",
+              }}
             >
               <div>
                 <FloatingInput name="from_name" label="Your Name" required />
@@ -138,54 +146,68 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
               </div>
             </form>
           </div>
-
-          <div className="bg-gradient-to-br from-[#FAFAFA] to-[#E8EDEF] p-8 mt-auto">
+          <div className="bg-[#f7f7f7] p-8 lg:p-20 mt-auto">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-center mb-12">
-                Elevate Your Brand, Stay Compliant
-              </h2>
-
-              <div className="grid md:grid-cols-2 gap-12">
-                <div className="text-center">
-                  <a
-                    href="https://www.linkedin.com/in/farhadrasouli/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block"
-                  >
-                    <div className="w-56 h-56 mx-auto mb-6 transition-transform duration-300 hover:scale-105">
-                      <img
-                        src="/lovable-uploads/093c0721-b2bf-4b0e-8bab-76817fdaccb7.png"
-                        alt="Farhad Rasouli"
-                        className="w-full h-full object-contain rounded-lg hover:opacity-90 transition-opacity"
-                      />
-                    </div>
-                    <h3 className="font-bold text-lg">Farhad Rasouli</h3>
-                    <p className="text-gray-600 mb-4">
-                      Executive Lead & Co-Founder
-                    </p>
-                  </a>
+              <div
+                className="pt-12 flex flex-col gap-4 items-center justify-center rounded-lg shadow-sm"
+                style={{
+                  background:
+                    "radial-gradient(circle at 50% 0%, #F7F7F5 0%, #F7F7F5 40%, #E1ECEB 100%)",
+                }}
+              >
+                <div>
+                  <h2 className="text-2xl font-medium text-center text-[#173A44]">
+                    Elevate Your Brand, Stay Compliant
+                  </h2>
                 </div>
 
-                <div className="text-center">
-                  <a
-                    href="https://www.linkedin.com/in/daviddolhomut/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block"
-                  >
-                    <div className="w-56 h-56 mx-auto mb-6 transition-transform duration-300 hover:scale-105">
-                      <img
-                        src="/lovable-uploads/718a19dc-08d6-4a18-9312-d4deaa31be03.png"
-                        alt="David Dolhomut"
-                        className="w-full h-full object-contain rounded-lg hover:opacity-90 transition-opacity"
-                      />
-                    </div>
-                    <h3 className="font-bold text-lg">David Dolhomut</h3>
-                    <p className="text-gray-600 mb-4">
-                      Head of Partnerships & Business Development
-                    </p>
-                  </a>
+                {/* Ensuring proper alignment on mobile screens */}
+                <div className="grid-cols-1 lg:grid-cols-2 lg:gap-[8vw] pb-12 flex flex-col items-center md:grid">
+                  <div className="flex justify-center w-72">
+                    <a
+                      href="https://www.linkedin.com/in/farhadrasouli/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-center"
+                    >
+                      <div className="w-full h-auto lg:w-72  mb-6 transition-transform duration-300 hover:scale-105">
+                        <img
+                          src="/lovable-uploads/093c0721-b2bf-4b0e-8bab-76817fdaccb7.png"
+                          alt="Farhad Rasouli"
+                          className="w-full h-full object-contain rounded-lg hover:opacity-90 transition-opacity"
+                        />
+                      </div>
+                      <div className="h-24">
+                        <h3 className="font-bold text-lg">Farhad Rasouli</h3>
+                        <p className="text-gray-600 mb-4">
+                          Executive Lead & Co-Founder
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div className="flex justify-center w-72">
+                    <a
+                      href="https://www.linkedin.com/in/daviddolhomut/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-center"
+                    >
+                      <div className="w-full h-auto lg:w-72 mb-6 transition-transform duration-300 hover:scale-105">
+                        <img
+                          src="/lovable-uploads/718a19dc-08d6-4a18-9312-d4deaa31be03.png"
+                          alt="David Dolhomut"
+                          className="w-full h-full object-contain rounded-lg hover:opacity-90 transition-opacity"
+                        />
+                      </div>
+                      <div className="h-24">
+                        <h3 className="font-bold text-lg">David Dolhomut</h3>
+                        <p className="text-gray-600 mb-4">
+                          Head of Partnerships & Business Development
+                        </p>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
