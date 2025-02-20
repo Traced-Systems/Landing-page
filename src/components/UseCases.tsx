@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import UseCasesSheet from "./UseCasesSheet";
@@ -129,7 +130,7 @@ const UseCases = () => {
               key={index}
               onClick={() => handleCaseClick(item, index)}
               className="bg-white rounded-xl shadow-[2px_2px_6px_0px_rgba(0,0,0,0.05),-2px_-2px_6px_0px_rgba(255,255,255,0.8)] 
-hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,255,0.85)] transition-all duration-300 cursor-pointer"
+hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,255,0.85)] transition-all duration-300 cursor-pointer flex flex-col h-full"
             >
               <div className="aspect-[430/243] w-full">
                 <img
@@ -139,21 +140,21 @@ hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,25
                 />
               </div>
 
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-xl font-medium mb-2">
                   {item.title.length > 31
                     ? item.title.slice(0, 31) + "..."
                     : item.title}
                 </h3>
 
-                <div className="text-gray-600 mb-4">
+                <div className="text-gray-600 mb-4 flex-1">
                   {typeof item.description === "string"
                     ? (item.description.length > 167
                         ? item.description.slice(0, 167) + "..."
                         : item.description)
                     : item.description}
                 </div>
-                <button className="transition-colors text-[#E4AC70] hover:text-[#C66600] flex items-center gap-0.5">
+                <button className="transition-colors text-[#E4AC70] hover:text-[#C66600] flex items-center gap-0.5 mt-auto">
                   Know More <ChevronRight className="w-4 h-4 mt-0.5" />
                 </button>
               </div>
