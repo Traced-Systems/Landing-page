@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -24,6 +25,16 @@ const App = () => {
   useEffect(() => {
     // ✅ Initialize Google Analytics when the app starts
     initGA(MEASUREMENT_ID);
+
+    // ✅ Add event listener for opening contact sheet
+    const handleOpenContact = () => {
+      setIsContactOpen(true);
+    };
+
+    window.addEventListener('openContact', handleOpenContact);
+    return () => {
+      window.removeEventListener('openContact', handleOpenContact);
+    };
   }, []);
 
   return (
