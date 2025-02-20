@@ -18,14 +18,14 @@ const TabsSection = () => {
             </TabsTrigger>
           ))}
         </TabsList>
-        <div className="relative w-full md:w-[80%] flex-grow">
+        <div className="relative w-full md:w-[80%] flex-grow !mt-0">
           {["mission", "focus", "solution"].map((tab) => (
             <TabsContent
               key={tab}
               value={tab}
-              className="overflow-hidden md:h-full md:absolute md:inset-0"
+              className="overflow-hidden md:h-full md:absolute md:inset-0 !mt-0"
             >
-              <div className="relative h-full">
+              <div className="relative h-full !mt-0">
                 <div className="absolute inset-0 w-full h-full">
                   <img
                     src={
