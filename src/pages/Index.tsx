@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -14,6 +15,7 @@ import DigitalPassport from "@/components/DigitalPassport";
 import Foundation from "@/components/Foundation";
 import CTA from "@/components/CTA";
 import ContactSheet from "@/components/ContactSheet";
+import CookieConsentBanner from "@/components/CookieConsent";
 
 const Index = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -45,6 +47,7 @@ const Index = () => {
       </main>
       <Footer />
       <ContactSheet isOpen={isContactOpen} onClose={handleContactClose} />
+      <CookieConsentBanner />
     </div>
   );
 };
