@@ -1,22 +1,56 @@
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import UseCasesSheet from "./UseCasesSheet";
 import UseCaseSubsheet from "./UseCaseSubsheet";
 import { ChevronRight } from "lucide-react";
+import { UseCase } from "@/types/useCase";
 
 const UseCases = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
-  const [selectedCase, setSelectedCase] = useState<(typeof cases)[0] | null>(
-    null
-  );
+  const [selectedCase, setSelectedCase] = useState<UseCase | null>(null);
   const [showCaseDirectly, setShowCaseDirectly] = useState(false);
 
-  const cases = [
+  const cases: UseCase[] = [
     {
-      title: "BLK DNM: Connected Fashion",
-      description:
-        "BLK DNM has launched their 'Connected Fashion' campaign, delivering the first collection of apparel embedded with...",
-      image: "/lovable-uploads/2320cd7d-0e5e-4635-b26a-2d2eaeb0aa50.png",
+      title: "BLK DNM: Connected Fashion on Chromia Appnet",
+      description: "BLK DNM has launched their 'Connected Fashion' campaign, delivering their first collection of apparel embedded with blockchain-enabled hardware! This exclusive collection features 72 signature leather jackets...",
+      image: "/lovable-uploads/1896ee6a-5182-48cf-bab2-dcd33adf89cf.png",
+      fullContent: {
+        title: "BLK DNM: Connected Fashion on Chromia Appnet",
+        authorIcon: "/lovable-uploads/5ce2f433-ac13-4162-97af-4ed813cff152.png",
+        introduction: (
+          <>
+            <a
+              href="https://digital.blkdnm.com/?ref=blog.chromia.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#E4AC70] hover:text-[#C66600]"
+            >
+              BLK DNM
+            </a>{" "}
+            has launched their 'Connected Fashion' campaign, delivering their first collection of apparel embedded with blockchain-enabled hardware! This exclusive collection features 72 signature leather jackets in 7 styles, merging fashion and technology to deliver handcrafted and timeless designs that exist in both the physical and virtual world.
+          </>
+        ),
+        content: [
+          {
+            heading: "Introduction",
+            text: "The ambitious campaign includes product drops over multiple dates in October and November, with events scheduled in New York City, Stockholm, and Los Angeles. Through collaboration with handpicked influencers and retail partner Bloomingdale's, BLK DNM will turn some heads.\n\nLet's take a closer look at the technical aspects, and explore the role Chromia will play in bringing 'Connected Fashion' to the world.",
+          },
+          {
+            heading: "Embedded NFC Chips and Digital Twins",
+            text: "Every physical garment in the collection is embedded with an NFC chip, and has a 'digital twin' that exists on Chromia Appnet. This allows for several innovations:\n\n• Proof of authenticity: Tap the garment and get immediate proof of authenticity from the blockchain. This feature eliminates counterfeits and fake claims.\n• Product history: Every connected garment's blockchain record can store information about its history, from inception to the present. This can provide insight about the age, material composition, and production of the item.\n• Digital Identity: The product itself has an 'identity' that can change owners and evolve over time. By scanning the item, the owner will be able to see all their active and future capabilities - for example, a record can be added when the garment is present at a special event.\n• 'Forever Refund' program: Since the authenticity and history of these garments can be quickly accessed, BLK DNM will offer a program by which the owner can exchange connected items for a percentage of their original retail value. These items can then be reused, recycled, resold, upcycled, downcycled, etc., depending on their age and condition. This program aligns with the company's commitment to environmental sustainability and responsibility.",
+          },
+          {
+            heading: "Why Chromia x BLK DNM is a Fit",
+            text: "The above features' utility and ease of use are greatly enhanced when anyone can participate, regardless of their technical knowledge about Web3 or blockchain. BLK DNM can offer these features as a 'value-added service', that people interact with through simple interfaces like a web browser or smartphone app.\n\nFrom Chromia's perspective, the project aligns with our vision of impacting 'real world' industries with Web3 technology. We see great potential for blockchain to improve efficiency and sustainability while offering consumers added value through exciting and innovative features.\n\nWe welcome BLK DNM, and encourage our community to check out the collection on their website and follow them on Instagram. And as always, keep an eye on our official channels for more on this project as well as others coming to the Chromia Shared Appnet!",
+          },
+          {
+            heading: "About Chromia",
+            text: "Modern society runs on data and every online service you're using is built upon underlying databases - ranging from your online bank to music streaming and gaming. Chromia is a relational blockchain - a combination of a relational database and a blockchain - making it easy to develop user-friendly decentralized apps for almost any industry, including DeFi, NFTs, gaming, and more.",
+          },
+        ],
+      },
     },
     {
       title: "Battery Lifecycle Innovation",
@@ -58,12 +92,40 @@ const UseCases = () => {
       description:
         "Ready to innovate and comply with evolving legislation? Let's explore how the DPP framework can enhance customer experiences and drive circularity...",
       image: "/lovable-uploads/1597880486.png",
+      fullContent: {
+        title: "Be Our Next Success Story",
+        authorIcon: "/lovable-uploads/5ce2f433-ac13-4162-97af-4ed813cff152.png",
+        introduction:
+          "Ready to innovate and comply with evolving legislation? Let's explore how the DPP framework can enhance customer experiences and drive circularity...",
+        content: [
+          {
+            heading: "The Challenge",
+            text: "Global supply chains are increasingly complex, regulations are tightening, and consumers expect transparency. Without the right tools, businesses face higher costs, reputational risks, and lost opportunities.",
+          },
+          {
+            heading: "The Solution",
+            text: "Traced Systems' Digital Product Passport (DPP) is sector-agnostic, integrating supplier data, compliance requirements, and consumer insights on a secure blockchain. This provides full traceability, streamlined processes, and sustainability metrics.",
+          },
+          {
+            heading: "The Results",
+            text: "Companies using our DPP reduce compliance headaches, strengthen brand trust, and minimize waste. They gain actionable insights that drive innovation and boost profitability.",
+          },
+          {
+            heading: "Why You Need a DPP",
+            text: "With mounting pressures from regulators and consumers, a reliable DPP is your strategic advantage. Embrace transparency, protect your brand, and lead in sustainability—become our next success story.",
+          },
+        ],
+      },
     },
   ];
 
-  const handleCaseClick = (useCase: (typeof cases)[0]) => {
-    setSelectedCase(useCase);
-    setShowCaseDirectly(true);
+  const handleCaseClick = (useCase: UseCase, index: number) => {
+    if (index === 2) {
+      window.dispatchEvent(new CustomEvent('openContact'));
+    } else {
+      setSelectedCase(useCase);
+      setShowCaseDirectly(true);
+    }
   };
 
   const handleClose = () => {
@@ -90,9 +152,9 @@ const UseCases = () => {
           {cases.map((item, index) => (
             <div
               key={index}
-              onClick={() => handleCaseClick(item)}
+              onClick={() => handleCaseClick(item, index)}
               className="bg-white rounded-xl shadow-[2px_2px_6px_0px_rgba(0,0,0,0.05),-2px_-2px_6px_0px_rgba(255,255,255,0.8)] 
-hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,255,0.85)] transition-all duration-300 cursor-pointer"
+hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,255,0.85)] transition-all duration-300 cursor-pointer flex flex-col h-full"
             >
               <div className="aspect-[430/243] w-full">
                 <img
@@ -102,20 +164,21 @@ hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,25
                 />
               </div>
 
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-xl font-medium mb-2">
                   {item.title.length > 31
                     ? item.title.slice(0, 31) + "..."
                     : item.title}
                 </h3>
 
-                <p className="text-gray-600 mb-4">
-                  {" "}
-                  {item.description.length > 167
-                    ? item.description.slice(0, 167) + "..."
+                <div className="text-gray-600 mb-4 flex-1">
+                  {typeof item.description === "string"
+                    ? (item.description.length > 167
+                        ? item.description.slice(0, 167) + "..."
+                        : item.description)
                     : item.description}
-                </p>
-                <button className="transition-colors text-[#E4AC70] hover:text-[#C66600] flex items-center gap-0.5">
+                </div>
+                <button className="transition-colors text-[#E4AC70] hover:text-[#C66600] flex items-center gap-0.5 mt-auto">
                   Know More <ChevronRight className="w-4 h-4 mt-0.5" />
                 </button>
               </div>
