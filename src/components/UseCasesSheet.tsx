@@ -161,7 +161,7 @@ const UseCasesSheet = ({
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="w-full object-cover rounded-t-lg mb-4"
+                        className="w-full h-48 object-cover rounded-t-lg mb-4"
                       />
                     </div>
                     <div className="p-6">
