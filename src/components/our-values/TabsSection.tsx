@@ -3,7 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const TabsSection = () => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden h-auto">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden h-auto md:h-[420px] lg:h-[270px] xl:h-[240px]">
       <Tabs defaultValue="mission" className="flex flex-col md:flex-row h-full">
         <TabsList className="flex md:flex-col h-auto md:h-full w-full md:w-[40%] space-y-0 bg-[#F5F5F5] md:bg-[#f3f3f3] rounded-none p-0">
           {["mission", "focus", "solution"].map((tab) => (

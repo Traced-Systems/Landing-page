@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import TextilesSheet from "./TextilesSheet";
 import BatteriesSheet from "./BatteriesSheet";
@@ -43,13 +42,18 @@ const Features = () => {
     },
   ];
 
+  const [scrollToEU, setScrollToEU] = useState(false);
+
   const handleCardClick = (id: string) => {
     if (id === "textile-card") {
       setActiveSheet("textiles");
+      setScrollToEU(false);
     } else if (id === "batteries-card") {
       setActiveSheet("batteries");
+      setScrollToEU(false);
     } else if (id === "espr-card") {
       setActiveSheet("industries");
+      setScrollToEU(true); // Ensure scrolling happens when opening IndustriesSheet
     }
   };
 
@@ -64,7 +68,7 @@ const Features = () => {
 
   return (
     <>
-      <section className="py-20 bg-white">
+      <section className="py-20 px-8 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex justify-center">
             <h2 className="text-3xl md:text-3xl font-medium text-[#173A44] text-center mb-6">
@@ -78,7 +82,9 @@ const Features = () => {
                 key={feature.id}
                 id={feature.id}
                 className="group relative h-[340px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-in-out hover:scale-[1.02] hover:shadow-lg md:order-none"
-                style={{ order: window.innerWidth < 768 ? feature.mobileOrder : 0 }}
+                style={{
+                  order: window.innerWidth < 768 ? feature.mobileOrder : 0,
+                }}
                 onClick={() => handleCardClick(feature.id)}
               >
                 <div className="relative w-full h-full transition-all duration-700 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
@@ -157,7 +163,7 @@ const Features = () => {
         isOpen={activeSheet === "industries"}
         onClose={handleSheetClose}
         onBack={handleSheetClose}
-        scrollToEU={true}
+        scrollToEU={scrollToEU} // Pass the state
       />
     </>
   );

@@ -9,7 +9,7 @@ const About = () => {
 
   return (
     <section className="py-20" style={{ backgroundColor: "#F2F1EE" }}>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto pl-12 lg:pl-8 pr-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block">

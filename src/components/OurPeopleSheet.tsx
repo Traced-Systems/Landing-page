@@ -79,6 +79,13 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
       linkedin: "https://www.linkedin.com/in/kostiantyn-s-nikolaiev/",
     },
     {
+      name: "Cristina Stoica",
+      role: "Head of Design",
+      image: "/lovable-uploads/1597880531.png",
+      active: true,
+      linkedin: "#",
+    },
+    {
       name: "Milas Heeris",
       role: "UI/UX Design",
       image: "/lovable-uploads/5e890080-10d5-4bf4-bed6-513a0fc10da5.png",
@@ -110,7 +117,9 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
           <div className="max-w-4xl mx-auto w-full px-6 mb-16">
             <div className="space-y-16">
               <section>
-                <h2 className="text-2xl font-semibold mb-8">Advisory Board</h2>
+                <h2 className="text-2xl font-medium text-[#173A44] mb-8">
+                  Advisory Board
+                </h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                   {advisoryBoard.map((member, index) => (
                     <div key={index} className="relative aspect-square">
@@ -131,7 +140,9 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold mb-8">Traced Team</h2>
+                <h2 className="text-2xl font-medium text-[#173A44] mb-4">
+                  Traced Team
+                </h2>
                 <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                   {tracedTeam.map((member, index) => (
                     <div key={index} className="relative aspect-square">

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from "./shared/SheetBackButton";
@@ -26,8 +25,8 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
           <TitleBanner title="Our Vision" />
         </div>
 
-        <div className="h-full flex flex-col">
-          <div className="px-4 md:px-8 space-y-8 md:space-y-16">
+        <div className="h-full flex flex-col ">
+          <div className="px-4 md:px-8 space-y-8 md:space-y-16 mx-12">
             <VisionHeader />
 
             {/* Mobile-optimized Vision Content */}
