@@ -53,7 +53,7 @@ const Benefits = () => {
       className="pt-36 pb-8 bg-[#f7f7f7]"
     >
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-start justify-between gap-0 md:gap-20 pb-32">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-0 pb-32">
           <div className="w-full md:w-5/12">
             <img
               src="/lovable-uploads/629ceb73-5cc3-4030-a3e2-c9a81e634fc3.png"

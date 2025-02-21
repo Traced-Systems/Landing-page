@@ -3,7 +3,7 @@ import React from "react";
 
 const EURegulationsSection = () => {
   return (
-    <div className="bg-white px-4 sm:px-20 py-12 sm:py-20 mb-12">
+    <div id="euregulation" className="bg-white px-4 sm:px-20 py-12 sm:py-20 mb-12">
       <h2 className="text-2xl font-medium text-center mb-8 text-[#173A44]">
         Meet Today's EU Regulations, Stay Ready for Tomorrow's
       </h2>
