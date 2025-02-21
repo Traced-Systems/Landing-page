@@ -1,7 +1,12 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const handleContactClick = () => {
+    window.dispatchEvent(new CustomEvent('openContact'));
+  };
+
   return (
     <section className="pt-32 pb-16 relative overflow-hidden">
       {/* Gradient background */}
@@ -15,7 +20,7 @@ const Hero = () => {
         />
         {/* Background Image */}
         <img
-          src="/lovable-uploads/herobg.png" // Replace with actual image
+          src="/lovable-uploads/herobg.png"
           alt="Background Overlay"
           className="absolute inset-0 w-full h-full object-cover hidden md:block"
         />
@@ -41,7 +46,10 @@ const Hero = () => {
             </div>
 
             <div className="flex gap-4">
-              <Button className="bg-[#E4AC70] hover:bg-[#E6964F] text-white rounded-full px-8 border-none shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.5)]">
+              <Button 
+                className="bg-[#E4AC70] hover:bg-[#E6964F] text-white rounded-full px-8 border-none shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.5)]"
+                onClick={handleContactClick}
+              >
                 Get in Touch
               </Button>
             </div>
