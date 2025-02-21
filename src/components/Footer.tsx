@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Twitter, Linkedin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -11,7 +10,7 @@ const Footer = () => {
     <footer
       className="relative text-[#f2f1ee] pt-28 w-full border-none m-0 
              bg-[#173A44] md:bg-[#173A44] lg:bg-[#F2F1EE] lg:pt-[11
-             %] px-12 md:px-16 lg:px-[220px]"
+             %] px-12 md:px-16 lg:px-32"
     >
       {/* Background Image - Only Visible on Large Screens */}
       <div
@@ -73,7 +72,7 @@ const Footer = () => {
             </div>
 
             <div className="self-start md:self-auto md:flex md:justify-center">
-              <button 
+              <button
                 onClick={() => setIsPrivacyPolicyOpen(true)}
                 className="text-sm hover:text-[#FDFCF9] whitespace-nowrap ml-auto"
               >
@@ -89,9 +88,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <PrivacyPolicySheet 
-        isOpen={isPrivacyPolicyOpen} 
-        onClose={() => setIsPrivacyPolicyOpen(false)} 
+      <PrivacyPolicySheet
+        isOpen={isPrivacyPolicyOpen}
+        onClose={() => setIsPrivacyPolicyOpen(false)}
       />
     </footer>
   );

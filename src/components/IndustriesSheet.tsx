@@ -6,7 +6,8 @@ import CTASection from "./CTASection";
 import TextilesSheet from "./TextilesSheet";
 import BatteriesSheet from "./BatteriesSheet";
 import SheetBackButton from "./shared/SheetBackButton";
-import Button1 from "./ui/button-1";
+// import Button1 from "./ui/button-1";
+import AboutCTA from "./shared/AboutCTA";
 import TitleBanner from "@/components/shared/TitleBanner";
 import ExpandableImage from "./shared/ExpandableImage";
 
@@ -27,6 +28,19 @@ const IndustriesSheet = ({
     "industries" | "textiles" | "batteries" | null
   >(null);
   const euSectionRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (isOpen && scrollToEU) {
+      setTimeout(() => {
+        if (euSectionRef.current) {
+          euSectionRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start", // Changed from 'center' to 'start' for better visibility
+          });
+        }
+      }, 500); // Increased delay to 500ms for better results
+    }
+  }, [isOpen, scrollToEU]);
 
   useEffect(() => {
     if (isOpen && scrollToEU && euSectionRef.current) {
@@ -154,13 +168,12 @@ const IndustriesSheet = ({
                     alt="Unified Traceability Platform"
                   />
                 </div>
-                <div className="flex justify-center mt-8">
+                {/* <div className="flex justify-center mt-8">
                   <Button1 className="px-8">Get in touch</Button1>
-                </div>
+                </div> */}
               </div>
             </CTASection>
-
-            <div className="pb-[100px]"></div>
+            <AboutCTA onClose={onClose} />
           </div>
         </SheetContent>
       </Sheet>

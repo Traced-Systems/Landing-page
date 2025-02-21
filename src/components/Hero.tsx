@@ -1,7 +1,21 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import Button1 from "./ui/button-1";
 
-const Hero = () => {
+interface Button1HeroProps {
+  onContactClick?: () => void;
+}
+
+// const CTA = ({ onContactClick }: Button1HeroProps) => {
+//   const handleContactClick = () => {
+//     window.dispatchEvent(new CustomEvent('openContact'));
+//   };
+
+const Hero = ({ onContactClick }: Button1HeroProps) => {
+  const handleContactClick = () => {
+    window.dispatchEvent(new CustomEvent("openContact"));
+  };
+
   return (
     <section className="pt-32 pb-16 relative overflow-hidden">
       {/* Gradient background */}
@@ -13,11 +27,18 @@ const Hero = () => {
               "radial-gradient(circle at 50% 0%, #F0E6D2 0%, #F7F7F5 40%, #E1ECEB 100%)",
           }}
         />
-        {/* Background Image */}
+        {/* Background Image for md and larger screens */}
         <img
-          src="/lovable-uploads/herobg.png" // Replace with actual image
+          src="/lovable-uploads/herobg.png"
           alt="Background Overlay"
-          className="absolute inset-0 w-full h-full object-cover hidden md:block"
+          className="absolute inset-0 w-full h-full object-cover hidden sm:block"
+        />
+
+        {/* Background Image for small (sm) and smaller screens */}
+        <img
+          src="/lovable-uploads/Phone_pipes_background.png" // Replace with the actual mobile image
+          alt="Mobile Background Overlay"
+          className="absolute inset-0 w-full h-auto object-cover block sm:hidden "
         />
       </div>
 
@@ -29,7 +50,7 @@ const Hero = () => {
                 <img
                   src="/lovable-uploads/BigTitleTracedSystem.png"
                   alt="Traced Systems"
-                  className="h-16 md:h-30 lg:h-28 w-auto object-contain -ml-6 md:-ml-6 lg:-ml-11"
+                  className="h-24 lg:h-28 w-auto object-contain -ml-8 md:-ml-6 lg:-ml-8 xl:-ml-12"
                 />
               </div>
               <h2 className="text-xl md:text-2xl text-[#173A44]">
@@ -41,18 +62,21 @@ const Hero = () => {
             </div>
 
             <div className="flex gap-4">
-              <Button className="bg-[#E4AC70] hover:bg-[#E6964F] text-white rounded-full px-8 border-none shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.5)]">
+              <Button1
+                onClick={handleContactClick}
+                className="bg-[#E4AC70] hover:bg-[#E6964F] text-white rounded-full px-8 border-none shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.5)] h-10"
+              >
                 Get in Touch
-              </Button>
+              </Button1>
             </div>
           </div>
 
-          <div className="relative h-[500px]">
+          <div className="relative h-[350px] md:h-[500px]">
             <div className="absolute inset-0 flex items-center justify-center">
               <img
                 src="/lovable-uploads/f13aac64-15e3-4a2a-9838-a7f474b842e5.png"
                 alt="Product Mockup"
-                className="w-full h-auto max-w-[500px] "
+                className="w-full h-auto max-w-[500px] -mt-40 md:mt-0"
               />
             </div>
           </div>

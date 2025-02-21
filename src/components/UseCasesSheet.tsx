@@ -150,7 +150,7 @@ const UseCasesSheet = ({
             </SheetBackgroundSection>
 
             <div className="px-8">
-              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 {cases.map((item, index) => (
                   <div
                     key={index}
@@ -165,10 +165,8 @@ const UseCasesSheet = ({
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-medium text-[#173A44] mb-2">
-                        {item.title.length > 28
-                          ? item.title.slice(0, 26) + "..."
-                          : item.title}
+                      <h3 className="text-lg font-medium text-[#173A44] mb-2">
+                        {item.title}
                       </h3>
                       <p className="text-gray-600 mb-4">{item.description}</p>
                       <button className="transition-colors text-[#E4AC70] hover:text-[#C66600] flex items-center gap-0.5">
