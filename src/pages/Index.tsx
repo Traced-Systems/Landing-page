@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -45,11 +44,6 @@ const Index = () => {
         <About />
         <Benefits />
         <Process />
-        <div id="euregulation" onClick={handleEURegulationsClick}>
-          <h2 className="text-2xl font-medium text-center mb-8 text-[#173A44] cursor-pointer">
-            Meet Today's EU Regulations, Stay Ready for Tomorrow's
-          </h2>
-        </div>
         <UseCases />
         <Blog />
         <Technologies />
@@ -58,8 +52,8 @@ const Index = () => {
       </main>
       <Footer />
       <ContactSheet isOpen={isContactOpen} onClose={handleContactClose} />
-      <IndustriesSheet 
-        isOpen={isIndustriesOpen} 
+      <IndustriesSheet
+        isOpen={isIndustriesOpen}
         onClose={() => setIsIndustriesOpen(false)}
         scrollToEU={true}
       />
