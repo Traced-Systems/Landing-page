@@ -43,7 +43,7 @@ const Hero = ({ onContactClick }: Button1HeroProps) => {
       </div>
 
       <div className="container mx-auto relative z-10 flex justify-center">
-        <div className="grid md:grid-cols-2 gap-[16vw] items-center max-w-[77vw] xl:max-w-[80vw] mx-auto">
+        <div className="grid md:grid-cols-2 gap-[8vw] items-center max-w-[77vw] xl:max-w-[80vw] mx-auto">
           <div className="space-y-8">
             <div className="space-y-4 flex flex-col  items-start">
               <div>
@@ -71,7 +71,7 @@ const Hero = ({ onContactClick }: Button1HeroProps) => {
             </div>
           </div>
 
-          <div className="relative h-[350px] md:h-[500px]">
+          <div className="relative h-[350px] md:h-[480px] md:mr-8 ">
             <div className="absolute inset-0 flex items-center justify-center">
               <img
                 src="/lovable-uploads/f13aac64-15e3-4a2a-9838-a7f474b842e5.png"
