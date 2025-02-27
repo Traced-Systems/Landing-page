@@ -45,7 +45,7 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
 
     emailjs
       .send(
-        "service_z7y8ym8",
+        "service_41y0plf",
         "template_utkz4px",
         emailParams,
         "N8xBUF-xOQnWEdxCb"
