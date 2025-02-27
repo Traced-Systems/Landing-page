@@ -37,7 +37,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
 
     emailjs
       .send(
-        "service_z7y8ym8",
+        "service_41y0plf",
         "template_uvaie1r",
         emailParams,
         "N8xBUF-xOQnWEdxCb"
