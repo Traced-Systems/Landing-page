@@ -73,7 +73,7 @@ const LogoMarquee = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-16 w-auto object-cover transition-opacity hover:opacity-75"
+                  className="h-12 md:h-16 w-auto object-cover transition-opacity hover:opacity-75"
                 />
               </a>
             ))}

@@ -14,9 +14,12 @@ import DigitalPassport from "@/components/DigitalPassport";
 import Foundation from "@/components/Foundation";
 import CTA from "@/components/CTA";
 import ContactSheet from "@/components/ContactSheet";
+import CookieConsentBanner from "@/components/CookieConsent";
+import IndustriesSheet from "@/components/IndustriesSheet";
 
 const Index = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
 
   const handleContactOpen = () => {
     setIsContactOpen(true);
@@ -24,6 +27,10 @@ const Index = () => {
 
   const handleContactClose = () => {
     setIsContactOpen(false);
+  };
+
+  const handleEURegulationsClick = () => {
+    setIsIndustriesOpen(true);
   };
 
   return (
@@ -45,6 +52,12 @@ const Index = () => {
       </main>
       <Footer />
       <ContactSheet isOpen={isContactOpen} onClose={handleContactClose} />
+      <IndustriesSheet
+        isOpen={isIndustriesOpen}
+        onClose={() => setIsIndustriesOpen(false)}
+        scrollToEU={true}
+      />
+      <CookieConsentBanner />
     </div>
   );
 };

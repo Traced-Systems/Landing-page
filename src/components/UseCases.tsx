@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import UseCasesSheet from "./UseCasesSheet";
@@ -14,7 +13,8 @@ const UseCases = () => {
   const cases: UseCase[] = [
     {
       title: "BLK DNM: Connected Fashion on Chromia Appnet",
-      description: "BLK DNM has launched their 'Connected Fashion' campaign, delivering their first collection of apparel embedded with blockchain-enabled hardware! This exclusive collection features 72 signature leather jackets...",
+      description:
+        "BLK DNM has launched their 'Connected Fashion' campaign, delivering their first collection of apparel embedded with blockchain-enabled hardware! This exclusive collection features 72 signature leather jackets...",
       image: "/lovable-uploads/1896ee6a-5182-48cf-bab2-dcd33adf89cf.png",
       fullContent: {
         title: "BLK DNM: Connected Fashion on Chromia Appnet",
@@ -29,7 +29,12 @@ const UseCases = () => {
             >
               BLK DNM
             </a>{" "}
-            has launched their 'Connected Fashion' campaign, delivering their first collection of apparel embedded with blockchain-enabled hardware! This exclusive collection features 72 signature leather jackets in 7 styles, merging fashion and technology to deliver handcrafted and timeless designs that exist in both the physical and virtual world.
+            has launched their 'Connected Fashion' campaign, delivering their
+            first collection of apparel embedded with blockchain-enabled
+            hardware! This exclusive collection features 72 signature leather
+            jackets in 7 styles, merging fashion and technology to deliver
+            handcrafted and timeless designs that exist in both the physical and
+            virtual world.
           </>
         ),
         content: [
@@ -91,7 +96,7 @@ const UseCases = () => {
       title: "Be Our Next Use Case",
       description:
         "Ready to innovate and comply with evolving legislation? Let's explore how the DPP framework can enhance customer experiences and drive circularity...",
-      image: "/lovable-uploads/1597880486.png",
+      image: "/lovable-uploads/b3b186f8-bc2a-4d3d-916f-bb04dee5239e.png",
       fullContent: {
         title: "Be Our Next Success Story",
         authorIcon: "/lovable-uploads/5ce2f433-ac13-4162-97af-4ed813cff152.png",
@@ -121,7 +126,7 @@ const UseCases = () => {
 
   const handleCaseClick = (useCase: UseCase, index: number) => {
     if (index === 2) {
-      window.dispatchEvent(new CustomEvent('openContact'));
+      window.dispatchEvent(new CustomEvent("openContact"));
     } else {
       setSelectedCase(useCase);
       setShowCaseDirectly(true);
@@ -141,7 +146,7 @@ const UseCases = () => {
 
   return (
     <section className="pt-32 pb-28 bg-[#f7f7f7]">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-12 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-medium text-[#002A38] mb-2">
             Use Cases
@@ -173,9 +178,9 @@ hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,25
 
                 <div className="text-gray-600 mb-4 flex-1">
                   {typeof item.description === "string"
-                    ? (item.description.length > 167
-                        ? item.description.slice(0, 167) + "..."
-                        : item.description)
+                    ? item.description.length > 167
+                      ? item.description.slice(0, 167) + "..."
+                      : item.description
                     : item.description}
                 </div>
                 <button className="transition-colors text-[#E4AC70] hover:text-[#C66600] flex items-center gap-0.5 mt-auto">
