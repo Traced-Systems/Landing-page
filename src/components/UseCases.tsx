@@ -148,7 +148,7 @@ const UseCases = () => {
     <section className="pt-32 pb-28 bg-[#f7f7f7]">
       <div className="container mx-auto px-12 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-medium text-[#002A38] mb-2">
+          <h2 className="text-3xl md:text-4xl font-medium text-[#002A38] mb-4">
             Use Cases
           </h2>
         </div>

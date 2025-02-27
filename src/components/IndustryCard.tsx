@@ -1,4 +1,3 @@
-
 import React from "react";
 
 interface IndustryCardProps {
@@ -31,7 +30,9 @@ const IndustryCard = ({
       </div>
       <div className="p-4 sm:p-6 min-h-[180px] sm:min-h-[200px] flex flex-col">
         <h3 className="text-xl font-semibold mb-2 text-[#173A44]">{title}</h3>
-        <p className="text-gray-600 flex-1 text-sm sm:text-base">{description}</p>
+        <p className="text-gray-600 flex-1 text-sm sm:text-base">
+          {description}
+        </p>
       </div>
     </div>
   );

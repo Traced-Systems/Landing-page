@@ -8,6 +8,7 @@ import Benefits from "@/components/Benefits";
 import Process from "@/components/Process";
 import UseCases from "@/components/UseCases";
 import Blog from "@/components/Blog";
+import OurTech from "@/components/OurTech";
 import Technologies from "@/components/Technologies";
 import Footer from "@/components/Footer";
 import DigitalPassport from "@/components/DigitalPassport";
@@ -46,6 +47,7 @@ const Index = () => {
         <Process />
         <UseCases />
         <Blog />
+        <OurTech />
         <Technologies />
         <Foundation />
         <CTA onContactClick={handleContactOpen} />
