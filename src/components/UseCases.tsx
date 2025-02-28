@@ -151,6 +151,7 @@ const UseCases = () => {
           <h2 className="text-3xl md:text-4xl font-medium text-[#002A38] mb-4">
             Use Cases
           </h2>
+          <p className="text-gray-700">See Our Impact</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-12 mb-12">
