@@ -31,7 +31,8 @@ const Hero = ({ onContactClick }: Button1HeroProps) => {
         <img
           src="/lovable-uploads/herobg.png"
           alt="Background Overlay"
-          className="absolute inset-0 w-full h-full object-cover hidden sm:block"
+          className="absolute inset-0 h-[800px] object-cover hidden sm:block"
+          style={{ top: "-84px", left: "50%", transform: "translateX(-50%)" }}
         />
 
         {/* Background Image for small (sm) and smaller screens */}
