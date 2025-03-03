@@ -56,12 +56,12 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
                         <span className="text-gray-600">
                           Written by Traced Systems x{" "}
                           <a
-                            href="https://trace4value.se/"
+                            href="https://doors3.io/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-blue-500 hover:text-blue-600"
                           >
-                            TRACE4VALUE + SwePass
+                            DOORS3
                           </a>
                         </span>
                       </>
