@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
@@ -69,6 +70,7 @@ const BlogSection = ({
             <Button
               variant="outline"
               className="rounded-full border-2 border-[#E4AC70] bg-[#Ffffff] text-[#143A44] flex items-center gap-2 pl-7 pr-6 hover:bg-[#F2F1EE]"
+              onClick={onShowMore}
             >
               Know More <ChevronRight className="w-5 h-5 text-[#143A44]" />
             </Button>
