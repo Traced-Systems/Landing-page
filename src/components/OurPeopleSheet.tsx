@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import AboutCTA from "./shared/AboutCTA";
@@ -132,7 +133,7 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-opacity duration-300 rounded-lg"
+                        className="absolute inset-0 rounded-lg"
                       />
                     </div>
                   ))}
@@ -155,7 +156,7 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-opacity duration-300 rounded-lg"
+                        className="absolute inset-0 rounded-lg"
                       />
                     </div>
                   ))}
