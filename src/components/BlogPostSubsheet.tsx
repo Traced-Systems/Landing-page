@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from "./shared/SheetBackButton";
@@ -73,11 +74,19 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
                     </h1>
                   </div>
                   <div className="flex justify-center">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-8"
-                    />
+                    {post.title === "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports" ? (
+                      <img
+                        src="/lovable-uploads/bef43ea2-5eea-4e47-867d-5dd43437a0fb.png"
+                        alt={post.title}
+                        className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-8"
+                      />
+                    ) : (
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-8"
+                      />
+                    )}
                   </div>
 
                   <div className="prose max-w-none mb-12">
