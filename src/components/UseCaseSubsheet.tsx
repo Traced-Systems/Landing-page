@@ -19,7 +19,7 @@ const UseCaseSubsheet = ({
     if (useCase.title.includes("BLK DNM")) {
       return "/lovable-uploads/9db7c859-32c0-401e-b88a-1dbeb280f592.png";
     } else if (useCase.title.includes("Battery") || useCase.fullContent?.title.includes("DPP pilot")) {
-      return "/lovable-uploads/455ee019-a81c-4318-b9c9-b8238118d40b.png";
+      return "/lovable-uploads/e2ba693f-4ec8-408e-9145-4fe6fc1bd629.png";
     }
     return "/lovable-uploads/455ee019-a81c-4318-b9c9-b8238118d40b.png"; // Default image
   };
