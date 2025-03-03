@@ -36,7 +36,7 @@ const Footer = () => {
               <span className="text-sm text-[#EBE6D5]">Follow us</span>
 
               <a
-                href="https://twitter.com"
+                href="https://x.com/TracedSystems"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -56,6 +56,18 @@ const Footer = () => {
                   src="/lovable-uploads/LindkinLogo.svg"
                   alt="LinkedIn Logo"
                   className="w-6 h-6 cursor-pointer"
+                />
+              </a>
+
+              <a
+                href="https://bsky.app/profile/tracedsystems.bsky.social"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/lovable-uploads/BlueskyLogo.svg"
+                  alt="Twitter Logo"
+                  className="w-5 h-5 cursor-pointer"
                 />
               </a>
             </div>
