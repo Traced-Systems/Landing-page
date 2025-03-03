@@ -14,6 +14,16 @@ const UseCaseSubsheet = ({
   onClose,
   useCase
 }: UseCaseSubsheetProps) => {
+  // Determine which image to show based on the use case title
+  const getUseCaseImage = () => {
+    if (useCase.title.includes("BLK DNM")) {
+      return "/lovable-uploads/9db7c859-32c0-401e-b88a-1dbeb280f592.png";
+    } else if (useCase.title.includes("Battery") || useCase.fullContent?.title.includes("DPP pilot")) {
+      return "/lovable-uploads/455ee019-a81c-4318-b9c9-b8238118d40b.png";
+    }
+    return "/lovable-uploads/455ee019-a81c-4318-b9c9-b8238118d40b.png"; // Default image
+  };
+
   return <Sheet open={isOpen} onOpenChange={onClose}>
       <SheetContent side="right" className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0 z-[995]">
         <SheetBackButton onBack={onClose} />
@@ -56,7 +66,7 @@ const UseCaseSubsheet = ({
                     </h1>
                   </div>
                   <div className="flex justify-center">
-                    <img alt={useCase.title} className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-8" src="/lovable-uploads/9db7c859-32c0-401e-b88a-1dbeb280f592.png" />
+                    <img alt={useCase.title} className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-8" src={getUseCaseImage()} />
                   </div>
 
                   <div className="prose max-w-none mb-12">
