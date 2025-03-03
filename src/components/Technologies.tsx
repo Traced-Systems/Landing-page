@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
@@ -29,7 +30,7 @@ const Technologies = () => {
           </div>
 
           <div className="relative">
-            <img alt="Chromia Technology" className="w-full rounded-2xl shadow-xl lg:ml-4" src="/lovable-uploads/50d4b111-a2eb-4905-af22-f250b8eda2aa.png" />
+            <img alt="Chromia Technology" className="w-full rounded-2xl shadow-xl lg:ml-4" src="/lovable-uploads/937e51d8-dc00-440e-958c-b1d22c96289e.png" />
           </div>
         </div>
       </div>
