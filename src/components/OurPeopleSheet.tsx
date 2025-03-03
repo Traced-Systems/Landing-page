@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import AboutCTA from "./shared/AboutCTA";
@@ -76,7 +77,7 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
       role: "Head of Design",
       image: "/lovable-uploads/1597880531.png",
       active: true,
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/cristina-stoica-74313258/",
     },
     {
       name: "Milas Heeris",
