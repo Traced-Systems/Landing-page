@@ -88,10 +88,10 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
             </h1>
           </div>
 
-          <div className="px-4 sm:px-8 mb-12">
+          <div className="px-8 lg:px-24 mb-12">
             <form
               onSubmit={handleSubmit}
-              className="space-y-8 max-w-2xl mx-auto p-8 lg:p-20 rounded-lg shadow-sm"
+              className="space-y-8 mx-auto p-8 lg:p-20 rounded-lg shadow-sm"
               style={{
                 background:
                   "radial-gradient(circle at 50% 100%, #FFFFFF 0%, #F7F7F5 40%, #E1ECEB 100%)",
@@ -146,7 +146,7 @@ const ContactSheet = ({ isOpen, onClose }: ContactSheetProps) => {
               </div>
             </form>
           </div>
-          <div className="bg-[#f7f7f7] p-8 lg:p-20 mt-auto">
+          <div className="bg-[#f7f7f7] p-8 lg:p-24 mt-auto">
             <div className="max-w-4xl mx-auto">
               <div
                 className="pt-12 flex flex-col gap-4 items-center justify-center rounded-lg shadow-sm"
