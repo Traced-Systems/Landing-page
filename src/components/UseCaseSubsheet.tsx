@@ -55,7 +55,7 @@ const UseCaseSubsheet = ({
                     </h1>
                   </div>
                   <div className="flex justify-center">
-                    <img alt={useCase.title} className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-8" src="/lovable-uploads/81b6c07e-a6de-40c6-a715-79d1470942bc.jpg" />
+                    <img alt={useCase.title} className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-8" src="/lovable-uploads/dae8e850-89d4-4594-9487-a26f9d6a400a.jpg" />
                   </div>
 
                   <div className="prose max-w-none mb-12">
