@@ -72,18 +72,11 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
         "https://www.linkedin.com/in/petra-josephine-bosnjak-56b33a220/",
     },
     {
-      name: "Kostiantyn Nikolaiev",
-      role: "Tech Lead",
-      image: "/lovable-uploads/b580da07-90b5-432e-a1b9-5edaeed20f2b.png",
-      active: true,
-      linkedin: "https://www.linkedin.com/in/kostiantyn-s-nikolaiev/",
-    },
-    {
       name: "Cristina Stoica",
       role: "Head of Design",
       image: "/lovable-uploads/1597880531.png",
       active: true,
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/cristina-stoica-74313258/",
     },
     {
       name: "Milas Heeris",

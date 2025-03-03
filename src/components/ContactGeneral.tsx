@@ -88,11 +88,11 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
 
         <TitleBanner title="Contact Us" />
 
-        <div className="h-full flex flex-col pt-16">
-          <div className="px-4 sm:px-8 mb-12">
+        <div className="h-full w-full flex flex-col">
+          <div className="px-8 lg:px-24 mb-12">
             <form
               onSubmit={handleSubmit}
-              className="space-y-8 max-w-2xl mx-auto p-8 lg:p-20 rounded-lg shadow-sm"
+              className="space-y-8 w-full mx-auto p-8 lg:p-20 rounded-lg shadow-sm"
               style={{
                 background:
                   "radial-gradient(circle at 50% 100%, #FFFFFF 0%, #F7F7F5 40%, #E1ECEB 100%)",
@@ -149,7 +149,7 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
                 <Button1
                   type="submit"
                   disabled={isSubmitting}
-                  className="relative"
+                  className="relative px-8"
                 >
                   {isSubmitting ? (
                     <Loader className="w-5 h-5 animate-spin" />
@@ -161,13 +161,14 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
             </form>
           </div>
 
-          <div className="bg-[#f7f7f7] p-8 lg:p-20 mt-auto">
+          {/* Card with Contacters */}
+          <div className="bg-[#f7f7f7] p-8 lg:p-24 mt-auto">
             <div className="max-w-4xl mx-auto">
               <div
                 className="pt-12 flex flex-col gap-4 items-center justify-center rounded-lg shadow-sm"
                 style={{
                   background:
-                    "radial-gradient(circle at 50% 0%, #F7F7F5 0%, #F7F7F5 40%, #E1ECEB 100%)",
+                    "radial-gradient(circle at 50% 0%, #FFFFFF 0%, #F7F7F5 40%, #E1ECEB 100%)",
                 }}
               >
                 <div>
@@ -177,7 +178,7 @@ const ContactGeneral = ({ isOpen, onClose }: ContactGeneralProps) => {
                 </div>
 
                 {/* Ensuring proper alignment on mobile screens */}
-                <div className="grid-cols-1 lg:grid-cols-2 lg:gap-[8vw]  pb-12 flex flex-col items-center md:grid">
+                <div className="grid-cols-1 lg:grid-cols-2 lg:gap-[8vw] pb-12 flex flex-col items-center md:grid">
                   <div className="flex justify-center w-72">
                     <a
                       href="https://www.linkedin.com/in/farhadrasouli/"

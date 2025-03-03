@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BlogPost } from "@/types/blog";
 import { ChevronRight } from "lucide-react";
@@ -8,6 +9,12 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ post, onClick }: BlogCardProps) => {
+  // Special handling for Doors3 blog post
+  const imageToDisplay = 
+    post.title === "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports"
+      ? "/lovable-uploads/bef43ea2-5eea-4e47-867d-5dd43437a0fb.png"
+      : post.image;
+      
   return (
     <div
       onClick={() => onClick(post)}
@@ -15,7 +22,7 @@ const BlogCard = ({ post, onClick }: BlogCardProps) => {
     >
       <div className="aspect-[430/243] w-full">
         <img
-          src={post.image}
+          src={imageToDisplay}
           alt={post.title}
           className="w-full object-cover rounded-t-lg mb-4"
         />

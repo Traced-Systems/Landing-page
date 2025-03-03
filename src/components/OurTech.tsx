@@ -32,7 +32,7 @@ const OurTech = () => {
                 {
                   title: "Data Security and Manipulation Risks",
                   description:
-                    "Increased user activity can slow down transaction processing times in decentralized systems, challenging scalability.",
+                    "Centralized systems face higher cyber attack risks and potentional censorship due to concentrated control.",
                 },
                 {
                   title: "No Web 3.0 Integration",
@@ -69,7 +69,7 @@ const OurTech = () => {
                 {
                   title: "Superior Scalability",
                   description:
-                    "Leverages RBN’s infrastructure for efficient handling of high transaction volumes without incurring gas fees, enhancing cost-effectiveness.",
+                    "Leverages Chromia’s infrastructure for efficient handling of high transaction volumes without incurring gas fees, enhancing cost-effectiveness.",
                 },
                 {
                   title: "Security & Privacy",
