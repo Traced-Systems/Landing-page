@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import UseCasesSheet from "./UseCasesSheet";
 import UseCaseSubsheet from "./UseCaseSubsheet";
+import BeOurNextUseCaseSheet from "./BeOurNextUseCaseSheet";
 import { ChevronRight } from "lucide-react";
 import { UseCase } from "@/types/useCase";
 
@@ -9,6 +10,7 @@ const UseCases = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const [selectedCase, setSelectedCase] = useState<UseCase | null>(null);
   const [showCaseDirectly, setShowCaseDirectly] = useState(false);
+  const [isNextCaseSheetOpen, setIsNextCaseSheetOpen] = useState(false);
 
   const cases: UseCase[] = [
     {
@@ -126,7 +128,7 @@ const UseCases = () => {
 
   const handleCaseClick = (useCase: UseCase, index: number) => {
     if (index === 2) {
-      window.dispatchEvent(new CustomEvent("openContact"));
+      setIsNextCaseSheetOpen(true);
     } else {
       setSelectedCase(useCase);
       setShowCaseDirectly(true);
@@ -137,6 +139,10 @@ const UseCases = () => {
     setIsSheetOpen(false);
     setSelectedCase(null);
     setShowCaseDirectly(false);
+  };
+
+  const handleNextCaseClose = () => {
+    setIsNextCaseSheetOpen(false);
   };
 
   const handleShowMoreClick = () => {
@@ -216,6 +222,11 @@ hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,25
           useCase={selectedCase}
         />
       )}
+
+      <BeOurNextUseCaseSheet 
+        isOpen={isNextCaseSheetOpen}
+        onClose={handleNextCaseClose}
+      />
     </section>
   );
 };
