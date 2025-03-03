@@ -1,16 +1,13 @@
-
 import React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from "./shared/SheetBackButton";
 import IndustrySheetCTA from "./shared/IndustrySheetCTA";
 import { UseCase } from "@/types/useCase";
-
 interface UseCaseSubsheetProps {
   isOpen: boolean;
   onClose: () => void;
   useCase: UseCase;
 }
-
 const UseCaseSubsheet = ({
   isOpen,
   onClose,
@@ -58,7 +55,7 @@ const UseCaseSubsheet = ({
                     </h1>
                   </div>
                   <div className="flex justify-center">
-                    <img src="/lovable-uploads/455ee019-a81c-4318-b9c9-b8238118d40b.png" alt={useCase.title} className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-8" />
+                    <img alt={useCase.title} className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-8" src="/lovable-uploads/ca9ea53c-288f-4260-966d-4b1affab7e37.jpg" />
                   </div>
 
                   <div className="prose max-w-none mb-12">
@@ -120,5 +117,4 @@ const UseCaseSubsheet = ({
       </SheetContent>
     </Sheet>;
 };
-
 export default UseCaseSubsheet;
