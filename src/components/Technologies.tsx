@@ -5,13 +5,9 @@ const Technologies = () => {
   const handleKnowMoreClick = () => {
     window.open("https://chromia.com/", "_blank");
   };
-  return (
-    <section
-      className="py-20"
-      style={{
-        backgroundColor: "#f2f1ee",
-      }}
-    >
+  return <section className="py-20" style={{
+    backgroundColor: "#f2f1ee"
+  }}>
       <div className="container mx-auto px-12">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -26,26 +22,17 @@ const Technologies = () => {
               for decentralized applications making it an ideal engine behind
               DPPs.
             </p>
-            <Button
-              variant="secondary"
-              className="rounded-full border-2 border-[#E4AC70] bg-[#F2F1EE] text-[#143A44] flex items-center gap-2 pl-7 pr-6 hover:bg-[#EEEADF]"
-              onClick={handleKnowMoreClick}
-            >
+            <Button variant="secondary" className="rounded-full border-2 border-[#E4AC70] bg-[#F2F1EE] text-[#143A44] flex items-center gap-2 pl-7 pr-6 hover:bg-[#EEEADF]" onClick={handleKnowMoreClick}>
               Know More
               <ChevronRight className="w-5 h-5 text-[#143A44]" />
             </Button>
           </div>
 
           <div className="relative">
-            <img
-              alt="Chromia Technology"
-              className="w-full rounded-2xl shadow-xl lg:ml-4"
-              src="/lovable-uploads/47796c49-bc30-4c24-8d60-1df973fdee9d.png"
-            />
+            <img alt="Chromia Technology" className="w-full rounded-2xl shadow-xl lg:ml-4" src="/lovable-uploads/50d4b111-a2eb-4905-af22-f250b8eda2aa.png" />
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default Technologies;
