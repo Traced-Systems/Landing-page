@@ -60,12 +60,12 @@ const BlogPostAuthor = ({ postTitle }: BlogPostAuthorProps) => {
         <span className="text-gray-600">
           Written by Traced Systems x{" "}
           <a
-            href="https://doors3.io/"
+            href="https://trace4value.se/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:text-blue-600"
           >
-            DOORS3
+            TRACE 4 VALUE Swepass
           </a>
         </span>
       </div>
