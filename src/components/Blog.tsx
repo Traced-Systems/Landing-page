@@ -57,6 +57,7 @@ const Blog = () => {
         showMoreButton={true}
         onShowMore={handleShowMoreClick}
         onPostClick={handlePostClick}
+        carouselView={true}
       />
 
       <BlogSheet 

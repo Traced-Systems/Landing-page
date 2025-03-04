@@ -1,4 +1,3 @@
-
 import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
@@ -67,8 +66,8 @@ export const blogPosts: BlogPost[] = [
     title:
       "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports",
     description:
-      "Traced Systems is thrilled to announce a partnership with Doors3, a leading innovator in decentralization solutions for businesses...",
-    image: "/lovable-uploads/14465f50-ded9-4af6-a527-819be3a69783.png",
+      "Sustainability, transparency, and innovation are becoming essential in today's interconnected world. At Traced Systems, we are committed to driving change through blockchain-powered solutions that promote trust and accountability.",
+    image: "/lovable-uploads/ecdba3ef-2ae6-4fa3-96d6-e01f4e951b66.png",
     fullContent: {
       title:
         "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports",
@@ -210,4 +209,69 @@ export const blogPosts: BlogPost[] = [
       },
     },
   },
+  {
+    title: "Transforming Supply Chain Transparency with Digital Product Passports",
+    description:
+      "Digital Product Passports (DPPs) are revolutionizing supply chain management by providing unprecedented transparency and traceability. Learn how Traced Systems is implementing DPP solutions that empower businesses to meet regulatory requirements while building consumer trust through verified sustainability claims.",
+    image: "/lovable-uploads/e2ba693f-4ec8-408e-9145-4fe6fc1bd629.png",
+    fullContent: {
+      title: "Transforming Supply Chain Transparency with Digital Product Passports",
+      introduction:
+        "Digital Product Passports (DPPs) are revolutionizing supply chain management by providing unprecedented transparency and traceability. Learn how Traced Systems is implementing DPP solutions that empower businesses to meet regulatory requirements while building consumer trust through verified sustainability claims.",
+      sections: [
+        {
+          heading: "The Digital Product Passport Revolution",
+          content:
+            "With the European Union's Ecodesign for Sustainable Products Regulation (ESPR) introducing mandatory Digital Product Passports, businesses across industries are preparing for a new era of supply chain transparency. These digital identities track products from raw materials to end-of-life, creating a comprehensive record that's accessible to manufacturers, retailers, consumers, and recyclers.\n\nAt Traced Systems, we're at the forefront of this revolution, providing blockchain-powered DPP solutions that ensure data integrity and verification throughout the product lifecycle."
+        },
+        {
+          heading: "Beyond Compliance: Strategic Advantages",
+          content:
+            "While regulatory compliance is driving DPP adoption, forward-thinking businesses recognize the strategic advantages of implementing comprehensive product tracking systems. Our research shows that companies implementing Digital Product Passport solutions experience:\n\n• 27% reduction in supply chain inefficiencies\n• 34% improvement in product authenticity verification\n• 42% increase in consumer trust metrics\n• 23% enhanced resource recovery in circular economy initiatives",
+          quote: "Digital Product Passports transform compliance challenges into opportunities for innovation and brand differentiation. By providing verified sustainability data, companies can build consumer trust while optimizing their operations and environmental impact."
+        },
+        {
+          heading: "Implementation Across Industries",
+          content:
+            "Traced Systems has successfully deployed DPP solutions across diverse sectors:\n\n• Textiles: Tracking garments from fiber to consumer, verifying sustainability claims and facilitating recycling\n• Batteries: Documenting material origins, manufacturing conditions, and enabling second-life applications\n• Electronics: Creating circular economy pathways through component tracking and repair facilitation\n• Furniture: Verifying sustainable wood sourcing and providing assembly/disassembly information for extended product life"
+        },
+        {
+          heading: "Case Study: Scaling DPP Adoption",
+          content:
+            "Our recent collaboration with a major European manufacturer demonstrated how Digital Product Passports can scale efficiently across complex supply chains. By implementing a phased approach, we onboarded 37 suppliers across 12 countries, creating a seamless data flow that tracked 17 critical sustainability metrics.\n\nThe result was a 43% improvement in data accuracy, 29% reduction in compliance reporting time, and new marketing opportunities based on verified sustainability achievements."
+        },
+        {
+          heading: "The Future of Digital Product Passports",
+          content:
+            "As DPP technology evolves, we're enhancing our solutions with advanced features like:\n\n• AI-powered impact assessment tools\n• Consumer-facing sustainability scores\n• Automated regulatory compliance updates\n• Interoperability across global standards frameworks\n\nThese innovations will further empower businesses to transform regulatory requirements into competitive advantages while contributing to a more sustainable future."
+        }
+      ],
+      faq: {
+        title: "Frequently Asked Questions",
+        subtitle: "DPP Implementation",
+        questions: [
+          {
+            question: "When do Digital Product Passports become mandatory?",
+            answer: "The EU's ESPR implementation timeline varies by product category, with the first mandatory DPPs for batteries taking effect in 2027, followed by textiles, furniture, and electronics."
+          },
+          {
+            question: "What information is included in a Digital Product Passport?",
+            answer: "DPPs typically include material composition, manufacturing details, repair instructions, sustainability metrics, and end-of-life handling information. Specific requirements vary by product category and regulatory framework."
+          },
+          {
+            question: "How are DPPs accessed by consumers and regulators?",
+            answer: "Digital Product Passports are typically accessed via QR codes or NFC tags on products, linking to secure online platforms where information is displayed according to user permissions."
+          },
+          {
+            question: "What technology ensures DPP data integrity?",
+            answer: "Blockchain technology provides immutable records of product data, while verification mechanisms ensure that information entered into the system is accurate and trustworthy."
+          },
+          {
+            question: "How can companies prepare for DPP implementation?",
+            answer: "Companies should start by mapping their supply chains, identifying data gaps, assessing existing systems, and developing a phased implementation strategy with key stakeholders."
+          }
+        ]
+      }
+    }
+  }
 ];
