@@ -11,15 +11,9 @@ const Blog = () => {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
   const [showPostDirectly, setShowPostDirectly] = useState(false);
   
-  // Use only the first three blog posts for the homepage
-  const blogPosts = allBlogPosts.slice(0, 3).map(post => ({
-    title: post.title,
-    description: post.description,
-    image: post.image
-  }));
-
   const handlePostClick = (index: number) => {
-    const clickedPost = allBlogPosts.find(post => post.title === blogPosts[index].title);
+    // Use the direct post reference from allBlogPosts instead of trying to find by title
+    const clickedPost = allBlogPosts[index];
     if (clickedPost) {
       setSelectedPost(clickedPost);
       setShowPostDirectly(true);
