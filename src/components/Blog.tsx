@@ -42,7 +42,7 @@ const Blog = () => {
       <BlogSection
         title="Explore Our Blog"
         subtitle="Explore expert ideas and stories from our team."
-        posts={blogPosts}
+        posts={allBlogPosts}
         showMoreButton={true}
         onShowMore={handleShowMoreClick}
         onPostClick={handlePostClick}
