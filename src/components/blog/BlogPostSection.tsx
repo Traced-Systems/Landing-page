@@ -28,11 +28,25 @@ const BlogPostSection = ({ heading, content, quote }: SectionProps) => {
     return processedLines.join('\n');
   };
 
+  // Check if this is the Battery Passport section to display the special image
+  const shouldShowBatteryPassportImage = heading === "Which information Battery passport should include?";
+
   return (
     <section className="mb-6">
       <h2 className="text-2xl font-bold text-primary mb-3">
         {heading}
       </h2>
+      
+      {shouldShowBatteryPassportImage && (
+        <div className="flex justify-center mb-4">
+          <img 
+            src="/lovable-uploads/17143c74-f2cc-4d50-93db-58dbbe723777.png" 
+            alt="Battery Passport Mobile Interface" 
+            className="rounded-lg shadow-md max-w-full md:max-w-[70%] h-auto"
+          />
+        </div>
+      )}
+      
       <div 
         className="text-gray-600 leading-relaxed whitespace-pre-line space-y-3"
         dangerouslySetInnerHTML={{ __html: formatContent(content) }}
