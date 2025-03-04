@@ -89,16 +89,16 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
         <SheetBackButton onBack={onClose} />
 
         <div className="h-full flex flex-col">
-          <div className="pt-24 px-8">
+          <div className="pt-20 px-8">
             <div className="max-w-4xl mx-auto">
               {post.fullContent ? (
                 <>
-                  <div className="flex items-center gap-2 mb-6">
+                  <div className="flex items-center gap-2 mb-4">
                     {getAuthorInfo()}
                   </div>
 
-                  <div className="mb-6">
-                    <h1 className="text-4xl font-bold text-primary mb-4">
+                  <div className="mb-4">
+                    <h1 className="text-4xl font-bold text-primary mb-3">
                       {post.fullContent.title}
                     </h1>
                   </div>
@@ -107,32 +107,32 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
                       <img
                         src="/lovable-uploads/bef43ea2-5eea-4e47-867d-5dd43437a0fb.png"
                         alt={post.title}
-                        className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-6"
+                        className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-5"
                       />
                     ) : (
                       <img
                         src={post.image}
                         alt={post.title}
-                        className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-6"
+                        className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-5"
                       />
                     )}
                   </div>
 
-                  <div className="prose max-w-none mb-10">
-                    <p className="text-gray-600 mb-5 text-lg leading-relaxed">
+                  <div className="prose max-w-none mb-8">
+                    <p className="text-gray-600 mb-4 text-lg leading-relaxed">
                       {post.fullContent.introduction}
                     </p>
 
                     {post.fullContent.sections.map((section, index) => (
-                      <section key={index} className="mb-8">
-                        <h2 className="text-2xl font-bold text-primary mb-4">
+                      <section key={index} className="mb-6">
+                        <h2 className="text-2xl font-bold text-primary mb-3">
                           {section.heading}
                         </h2>
-                        <div className="text-gray-600 leading-relaxed whitespace-pre-line space-y-4">
+                        <div className="text-gray-600 leading-relaxed whitespace-pre-line space-y-3">
                           {section.content}
                         </div>
                         {section.quote && (
-                          <blockquote className="border-l-4 border-blue-500 pl-4 my-5 italic text-gray-700">
+                          <blockquote className="border-l-4 border-blue-500 pl-4 my-4 italic text-gray-700">
                             {section.quote}
                           </blockquote>
                         )}
@@ -140,20 +140,20 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
                     ))}
 
                     {post.fullContent.faq && (
-                      <section className="bg-gray-50 rounded-lg p-6 mb-10">
+                      <section className="bg-gray-50 rounded-lg p-5 mb-8">
                         <h2 className="text-2xl font-bold text-primary mb-2">
                           {post.fullContent.faq.title}
                         </h2>
-                        <p className="text-gray-600 mb-6">
+                        <p className="text-gray-600 mb-4">
                           {post.fullContent.faq.subtitle}
                         </p>
-                        <div className="space-y-4">
+                        <div className="space-y-3">
                           {post.fullContent.faq.questions.map((faq, index) => (
                             <div
                               key={index}
-                              className="bg-white p-5 rounded-lg shadow-sm"
+                              className="bg-white p-4 rounded-lg shadow-sm"
                             >
-                              <h3 className="font-semibold text-lg mb-2 text-primary">
+                              <h3 className="font-semibold text-lg mb-1.5 text-primary">
                                 {faq.question}
                               </h3>
                               <p className="text-gray-600">{faq.answer}</p>
@@ -166,8 +166,8 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
                 </>
               ) : (
                 <>
-                  <div className="mb-6">
-                    <h1 className="text-4xl font-bold text-primary mb-4">
+                  <div className="mb-4">
+                    <h1 className="text-4xl font-bold text-primary mb-3">
                       {post.title}
                     </h1>
                   </div>
@@ -175,11 +175,11 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-[400px] object-cover rounded-lg mb-6"
+                    className="w-full h-[400px] object-cover rounded-lg mb-5"
                   />
 
-                  <div className="prose max-w-none mb-10">
-                    <p className="text-gray-600 mb-4">{post.description}</p>
+                  <div className="prose max-w-none mb-8">
+                    <p className="text-gray-600 mb-3">{post.description}</p>
                   </div>
                 </>
               )}
