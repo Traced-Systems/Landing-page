@@ -12,6 +12,74 @@ interface BlogPostSubsheetProps {
 }
 
 const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
+  // Helper function to determine which author info to display
+  const getAuthorInfo = () => {
+    if (post.title === "The Blueprint for a Successful Blockchain Partner Ecosystem") {
+      return (
+        <>
+          <img
+            src="/lovable-uploads/0d25c486-df3a-4a98-b070-691da893d470.png"
+            alt="Kiflo"
+            className="h-8"
+          />
+          <span className="text-gray-600">
+            Written by{" "}
+            <a
+              href="https://www.kiflo.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-600"
+            >
+              Kiflo
+            </a>
+          </span>
+        </>
+      );
+    } else if (post.title === "Battery Passport – Circular economy in a QR Code") {
+      return (
+        <>
+          <img
+            src="/lovable-uploads/a163e1df-6783-427e-940a-22d1f8c80d11.png"
+            alt="Traced Systems"
+            className="w-12 h-12"
+          />
+          <span className="text-gray-600">
+            Written by Traced Systems x{" "}
+            <a
+              href="https://www.bonsaitechnology.it/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-600"
+            >
+              Bonsai Technology
+            </a>
+          </span>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <img
+            src="/lovable-uploads/a163e1df-6783-427e-940a-22d1f8c80d11.png"
+            alt="Traced Systems"
+            className="w-12 h-12"
+          />
+          <span className="text-gray-600">
+            Written by Traced Systems x{" "}
+            <a
+              href="https://doors3.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-600"
+            >
+              DOORS3
+            </a>
+          </span>
+        </>
+      );
+    }
+  };
+
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
       <SheetContent
@@ -26,46 +94,7 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
               {post.fullContent ? (
                 <>
                   <div className="flex items-center gap-2 mb-6">
-                    {post.title ===
-                    "The Blueprint for a Successful Blockchain Partner Ecosystem" ? (
-                      <>
-                        <img
-                          src="/lovable-uploads/0d25c486-df3a-4a98-b070-691da893d470.png"
-                          alt="Kiflo"
-                          className="h-8"
-                        />
-                        <span className="text-gray-600">
-                          Written by{" "}
-                          <a
-                            href="https://www.kiflo.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-500 hover:text-blue-600"
-                          >
-                            Kiflo
-                          </a>
-                        </span>
-                      </>
-                    ) : (
-                      <>
-                        <img
-                          src="/lovable-uploads/a163e1df-6783-427e-940a-22d1f8c80d11.png"
-                          alt="Traced Systems"
-                          className="w-12 h-12"
-                        />
-                        <span className="text-gray-600">
-                          Written by Traced Systems x{" "}
-                          <a
-                            href="https://doors3.io/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-500 hover:text-blue-600"
-                          >
-                            DOORS3
-                          </a>
-                        </span>
-                      </>
-                    )}
+                    {getAuthorInfo()}
                   </div>
 
                   <div className="mb-8">

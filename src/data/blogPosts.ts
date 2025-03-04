@@ -273,5 +273,69 @@ export const blogPosts: BlogPost[] = [
         ]
       }
     }
+  },
+  {
+    title: "Battery Passport – Circular economy in a QR Code",
+    description:
+      "Manufacturing process and supply chain digitalizations are the key steps towards digital battery passport policy applications: a EU strategy for circular economy.",
+    image: "/lovable-uploads/bdfeaffa-ccb2-478e-b427-e939a8e93031.png",
+    fullContent: {
+      title: "Battery Passport – Circular economy in a QR Code",
+      introduction:
+        "The battery passport establishes a digital twin of the physical battery that conveys information about all applicable sustainability and lifecycle requirements based on a comprehensive definition of a sustainable battery. It aims to bring new levels of transparency to the global battery value chain by collecting, exchanging, collating, and reporting trusted data among all lifecycle stakeholders on the material provenance, the battery's chemical make-up and manufacturing history, and its sustainability performance.",
+      sections: [
+        {
+          heading: "The concept of Battery Passport",
+          content:
+            "The battery passport represent a digital ID for batteries containing data and descriptions about the ESG performance, manufacturing history, and provenance as well as advancing battery life extension and enabling recycling."
+        },
+        {
+          heading: "Application",
+          content:
+            "A recent update to the Battery Directive introduces the concept of a Battery Passport, mandatory by 2027 for all electric vehicles, light means of transport, and industrial batteries (> 2 kWh).\nThe party placing the battery on the market holds the responsibility to ensure that all the required data is entered into the digital record and that the information is correct and up to date.\n\nBattery passports will require input from\n\n    Mining and refining companies\n    Cell producers\n    Module producers\n    Battery producers\n    Automotive OEMs\n    Battery service, refurbishing, and repurposing companies"
+        },
+        {
+          heading: "Which information Battery passport should include?",
+          content:
+            "\"SCAN THE QR CODE\"\n\nIdentification: Under ESPR and the EU Batteries Regulation, batteries must have a unique identifier (e.g., serial, batch, or model). From February 2027, QR codes linked to a digital battery passport will provide robust identification and information access.\n\n\nEssential characteristics: Under the EU Battery Regulation, batteries must be accompanied by information such as production date, battery type and model, chemical composition, and the name and address of the manufacturer or importer, with this data accessible through the Battery Passport.\n\n\nPerformance and worlking life: Under the ESPR legislation, parties conducting the repair or repurposing of batteries are expected to update technical information over the battery lifecycle, including details on how this data was obtained.\n\n\n\nThe Battery Regulation requires many other criteria to be met to sell batteries in the EU, including that all batteries must be recycled in an approved manner. Here are some of the main requirements that must be met:\n\nFacilitate repair and end-of-life processing: Information must be made electronically available to all parties conducting any repair or end-of-life processing, as well as end users to facilitate collection schemes for end-of-life batteries.\n\n\nIncrease recycled content: Batteries must contain a minimum of 16% cobalt, 85% lead, 6% lithium, and 6% nickel from non-virgin sources by 2031.\n\n\nCalculate carbon footprint and greenhouse gas (GHG) emissions: Battery producers will be obligated to report the carbon footprint associated with the overall life cycle (excluding the use phase) of the specific manufacturing batch of batteries\n\n\nBattery health data: Must be made available to the battery owner in order to determine the potential for further use, repurposing, or remanufacturing.\n\n\nConformity declarations: Before a battery can be placed on the EU market, it must have a conformity assessment conducted by a notified body.\n\n\nSafety and hazardous materials: Must include evidence that they are safe during their normal operation. All batteries cannot contain materials which present a hazard to humans or the environment during all stages of the battery life cycle.\n\n\nBattery supply chain due diligence requirements: As of 12 months after the proposed Battery Regulation update is implemented, companies selling EV and industrial batteries on the EU market must conduct supply chain due diligence to mitigate social and environmental risks. All information must be made available to the public, to authorities upon request, and to downstream customers."
+        },
+        {
+          heading: "When will Battery Passports be required in the EU?",
+          content:
+            "Feb 2025: The carbon footprint specific to the manufacturing site and batch of batteries must be verified by a third party and made publicly accessible online.\n\n\nFeb 2027: all EV and industrial batteries over 2kWh on the EU market will require a unique battery passport. Information on the battery is to be retrieved using a QR code, and must include performance classification for carbon impact, electrochemical performance, and durability requirements.\n\n\nAugust 2028: deadline for industrial batteries over 2kWh, EV batteries and SLI batteries containing cobalt, lead, lithium or nickel to include documentation detailing the percentage of recycled content."
+        },
+        {
+          heading: "Process digitalization as Battery Passport enabler",
+          content:
+            "Requirement definition: Under the EU Battery Regulation, a battery passport requires comprehensive lifecycle data collection, including carbon footprint, materials, and performance metrics, which involves strategic planning and investment in digital systems to ensure compliance and traceability across the supply chain.\n\n\nData collection: The first step toward digitalization is to gather essential data by installing the necessary hardware on the production floor and throughout the facility. Collecting information on energy and utility consumption, production metrics, and quality control is crucial for bringing the battery passport concept to life.\n\n\nData management: Implementing a digital system at the manufacturing plant level involves deploying smart software solutions to collect and integrate data from hardware, linking it to a unique product ID, thereby creating a comprehensive product history and identikit throughout its lifecycle."
+        }
+      ],
+      faq: {
+        title: "Frequently Asked Questions",
+        subtitle: "Battery Passport Implementation",
+        questions: [
+          {
+            question: "What is a battery passport?",
+            answer: "A battery passport is a digital identity for batteries containing comprehensive information about its materials, manufacturing, performance metrics, and sustainability data, enabling traceability throughout the battery's entire lifecycle."
+          },
+          {
+            question: "When will battery passports become mandatory in the EU?",
+            answer: "Battery passports will be mandatory by February 2027 for all electric vehicle batteries, light means of transport batteries, and industrial batteries with capacity over 2kWh in the European Union."
+          },
+          {
+            question: "What information must be included in a battery passport?",
+            answer: "Battery passports must include identification information, essential characteristics (production date, type, composition), performance metrics, recycled content information, carbon footprint data, and information to facilitate repair and end-of-life processing."
+          },
+          {
+            question: "Who is responsible for creating and maintaining battery passports?",
+            answer: "The party placing the battery on the EU market (manufacturer or importer) is responsible for ensuring all required data is correctly entered into the digital record and kept up to date throughout the battery's lifecycle."
+          },
+          {
+            question: "How can manufacturers prepare for battery passport implementation?",
+            answer: "Manufacturers should invest in digital infrastructure for data collection and management, establish processes to track battery lifecycle data, engage with supply chain partners, and develop strategies for compliance with EU Battery Regulation requirements."
+          }
+        ]
+      }
+    }
   }
 ];
