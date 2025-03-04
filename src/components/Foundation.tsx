@@ -22,7 +22,7 @@ const Foundation = () => {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="/lovable-uploads/1000002907.svg"
+                    src="/lovable-uploads/111000002907.png"
                     alt="ChromaWay"
                     className="h-12 xl:h-16"
                   />
