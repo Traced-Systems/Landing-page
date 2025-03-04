@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Twitter, Linkedin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -5,6 +6,8 @@ import PrivacyPolicySheet from "./PrivacyPolicySheet";
 
 const Footer = () => {
   const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false);
+  const [isCookiePolicyOpen, setIsCookiePolicyOpen] = useState(false);
+  const [isTermsOfServiceOpen, setIsTermsOfServiceOpen] = useState(false);
 
   return (
     <footer
@@ -84,12 +87,26 @@ const Footer = () => {
             </div>
 
             <div className="self-start md:self-auto md:flex md:justify-center">
-              <button
-                onClick={() => setIsPrivacyPolicyOpen(true)}
-                className="text-sm hover:text-[#FDFCF9] whitespace-nowrap ml-auto"
-              >
-                Privacy policy
-              </button>
+              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+                <button
+                  onClick={() => setIsPrivacyPolicyOpen(true)}
+                  className="text-sm hover:text-[#FDFCF9] whitespace-nowrap text-right md:text-left"
+                >
+                  Privacy policy
+                </button>
+                <button
+                  onClick={() => setIsCookiePolicyOpen(true)}
+                  className="text-sm hover:text-[#FDFCF9] whitespace-nowrap text-right md:text-left"
+                >
+                  Cookie policy
+                </button>
+                <button
+                  onClick={() => setIsTermsOfServiceOpen(true)}
+                  className="text-sm hover:text-[#FDFCF9] whitespace-nowrap text-right md:text-left"
+                >
+                  Terms of service
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -103,6 +120,15 @@ const Footer = () => {
       <PrivacyPolicySheet
         isOpen={isPrivacyPolicyOpen}
         onClose={() => setIsPrivacyPolicyOpen(false)}
+      />
+      {/* We'll reuse the PrivacyPolicySheet component for now but it should be replaced with proper components */}
+      <PrivacyPolicySheet
+        isOpen={isCookiePolicyOpen}
+        onClose={() => setIsCookiePolicyOpen(false)}
+      />
+      <PrivacyPolicySheet
+        isOpen={isTermsOfServiceOpen}
+        onClose={() => setIsTermsOfServiceOpen(false)}
       />
     </footer>
   );
