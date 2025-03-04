@@ -227,7 +227,7 @@ export const blogPosts: BlogPost[] = [
         {
           heading: "Application",
           content:
-            "A recent update to the Battery Directive introduces the concept of a Battery Passport, mandatory by 2027 for all electric vehicles, light means of transport, and industrial batteries (> 2 kWh).\nThe party placing the battery on the market holds the responsibility to ensure that all the required data is entered into the digital record and that the information is correct and up to date.\n\nBattery passports will require input from\n\n    Mining and refining companies\n    Cell producers\n    Module producers\n    Battery producers\n    Automotive OEMs\n    Battery service, refurbishing, and repurposing companies"
+            "A recent update to the Battery Directive introduces the concept of a Battery Passport, mandatory by 2027 for all electric vehicles, light means of transport, and industrial batteries (> 2 kWh).\nThe party placing the battery on the market holds the responsibility to ensure that all the required data is entered into the digital record and that the information is correct and up to date.\n\nBattery passports will require input from:\n\n• Mining and refining companies\n• Cell producers\n• Module producers\n• Battery producers\n• Automotive OEMs\n• Battery service, refurbishing, and repurposing companies"
         },
         {
           heading: "Which information Battery passport should include?",
