@@ -13,10 +13,10 @@ import ContactSheet from "./components/ContactSheet";
 import { initGA } from "./utils/analytics";
 
 const queryClient = new QueryClient();
-const MEASUREMENT_ID = "G-KR2Y0BMJ61"; // Replace with your actual ID
+const MEASUREMENT_ID = "G-LV7DPTYYFV"; // Replace with your actual ID
 
 // Initialize GA4 with your measurement ID
-ReactGA.initialize("G-KR2Y0BMJ61"); // Replace with your actual GA4 measurement ID
+ReactGA.initialize("G-LV7DPTYYFV"); // Replace with your actual GA4 measurement ID
 
 const App = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
