@@ -1,7 +1,7 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 
 interface BlogPost {
   title: string;
@@ -18,6 +18,7 @@ interface BlogSectionProps {
   onPostClick?: (index: number) => void;
   showMoreButton?: boolean;
   onShowMore?: () => void;
+  carouselView?: boolean;
 }
 
 const BlogSection = ({
@@ -27,7 +28,25 @@ const BlogSection = ({
   onPostClick,
   showMoreButton = false,
   onShowMore,
+  carouselView = false,
 }: BlogSectionProps) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  // For carousel view, we only show 3 posts at a time
+  const visiblePosts = carouselView 
+    ? posts.slice(currentSlide, currentSlide + 3)
+    : posts;
+    
+  const totalSlides = Math.max(0, posts.length - 3 + 1);
+  
+  const nextSlide = () => {
+    setCurrentSlide((prev) => Math.min(prev + 1, posts.length - 3));
+  };
+  
+  const prevSlide = () => {
+    setCurrentSlide((prev) => Math.max(prev - 1, 0));
+  };
+
   return (
     <section className="pt-32 pb-28 bg-white">
       <div className="container mx-auto px-12 lg:px-8">
@@ -36,12 +55,33 @@ const BlogSection = ({
           <p className="text-gray-700">{subtitle}</p>
         </div>
 
+        {carouselView && posts.length > 3 && (
+          <div className="flex justify-end gap-2 mb-6">
+            <button 
+              onClick={prevSlide} 
+              disabled={currentSlide === 0}
+              className="p-2 rounded-full border border-gray-300 disabled:opacity-50"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="w-5 h-5 text-[#173A44]" />
+            </button>
+            <button 
+              onClick={nextSlide} 
+              disabled={currentSlide >= totalSlides - 1}
+              className="p-2 rounded-full border border-gray-300 disabled:opacity-50"
+              aria-label="Next slide"
+            >
+              <ChevronRight className="w-5 h-5 text-[#173A44]" />
+            </button>
+          </div>
+        )}
+
         <div className="grid md:grid-cols-3 gap-12 mb-12">
-          {posts.map((post, index) => (
+          {visiblePosts.map((post, index) => (
             <div
               key={index}
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-              onClick={() => onPostClick?.(index)}
+              onClick={() => onPostClick?.(carouselView ? index + currentSlide : index)}
             >
               <div className="aspect-[430/243] w-full">
                 <img
