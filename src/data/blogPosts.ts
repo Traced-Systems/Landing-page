@@ -199,35 +199,32 @@ export const blogPosts: BlogPost[] = [
       ],
       faq: {
         title: "Frequently Asked Questions",
-        subtitle: "Battery Passport Implementation",
+        subtitle: "Your right to know",
         questions: [
           {
-            question: "What is a battery passport?",
+            question: "How does blockchain improve product tracking?",
             answer:
-              "A battery passport is a digital identity for batteries containing comprehensive information about its materials, manufacturing, performance metrics, and sustainability data, enabling traceability throughout the battery's entire lifecycle.",
+              "Blockchain technology creates an immutable, transparent record of product movements and transformations throughout the supply chain, ensuring data integrity and real-time visibility.",
           },
           {
-            question: "When will battery passports become mandatory in the EU?",
+            question: "What is a Digital Product Passport?",
             answer:
-              "Battery passports will be mandatory by February 2027 for all electric vehicle batteries, light means of transport batteries, and industrial batteries with capacity over 2kWh in the European Union.",
+              "A Digital Product Passport is a digital identity that contains key information about a product's lifecycle, including origin, manufacturing details, sustainability metrics, and compliance certifications.",
           },
           {
-            question:
-              "What information must be included in a battery passport?",
+            question: "Which industries can benefit from this solution?",
             answer:
-              "Battery passports must include identification information, essential characteristics (production date, type, composition), performance metrics, recycled content information, carbon footprint data, and information to facilitate repair and end-of-life processing.",
+              "The solution is applicable across various sectors including manufacturing, retail, agriculture, and electronics, helping organizations improve traceability and sustainability reporting.",
           },
           {
-            question:
-              "Who is responsible for creating and maintaining battery passports?",
+            question: "How does this support sustainability goals?",
             answer:
-              "The party placing the battery on the EU market (manufacturer or importer) is responsible for ensuring all required data is correctly entered into the digital record and kept up to date throughout the battery's lifecycle.",
+              "By providing transparent tracking and verification of sustainability metrics, the solution helps organizations demonstrate their environmental commitment and comply with regulations.",
           },
           {
-            question:
-              "How can manufacturers prepare for battery passport implementation?",
+            question: "What role does the Trace4Value+SwePass project play?",
             answer:
-              "Manufacturers should invest in digital infrastructure for data collection and management, establish processes to track battery lifecycle data, engage with supply chain partners, and develop strategies for compliance with EU Battery Regulation requirements.",
+              "The Trace4Value+SwePass project provides a framework for implementing blockchain-based tracking solutions and Digital Product Passports across different industries.",
           },
         ],
       },
