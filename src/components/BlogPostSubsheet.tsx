@@ -97,7 +97,7 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
                     {getAuthorInfo()}
                   </div>
 
-                  <div className="mb-8">
+                  <div className="mb-6">
                     <h1 className="text-4xl font-bold text-primary mb-4">
                       {post.fullContent.title}
                     </h1>
@@ -107,32 +107,32 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
                       <img
                         src="/lovable-uploads/bef43ea2-5eea-4e47-867d-5dd43437a0fb.png"
                         alt={post.title}
-                        className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-8"
+                        className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-6"
                       />
                     ) : (
                       <img
                         src={post.image}
                         alt={post.title}
-                        className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-8"
+                        className="w-[70vw] lg:w-[45vw] object-cover rounded-lg mb-6"
                       />
                     )}
                   </div>
 
-                  <div className="prose max-w-none mb-12">
-                    <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+                  <div className="prose max-w-none mb-10">
+                    <p className="text-gray-600 mb-5 text-lg leading-relaxed">
                       {post.fullContent.introduction}
                     </p>
 
                     {post.fullContent.sections.map((section, index) => (
-                      <section key={index} className="mb-12">
-                        <h2 className="text-2xl font-bold text-primary mb-6">
+                      <section key={index} className="mb-8">
+                        <h2 className="text-2xl font-bold text-primary mb-4">
                           {section.heading}
                         </h2>
-                        <div className="text-gray-600 leading-relaxed whitespace-pre-line">
+                        <div className="text-gray-600 leading-relaxed whitespace-pre-line space-y-4">
                           {section.content}
                         </div>
                         {section.quote && (
-                          <blockquote className="border-l-4 border-blue-500 pl-4 my-6 italic text-gray-700">
+                          <blockquote className="border-l-4 border-blue-500 pl-4 my-5 italic text-gray-700">
                             {section.quote}
                           </blockquote>
                         )}
@@ -140,18 +140,18 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
                     ))}
 
                     {post.fullContent.faq && (
-                      <section className="bg-gray-50 rounded-lg p-8 mb-12">
+                      <section className="bg-gray-50 rounded-lg p-6 mb-10">
                         <h2 className="text-2xl font-bold text-primary mb-2">
                           {post.fullContent.faq.title}
                         </h2>
-                        <p className="text-gray-600 mb-8">
+                        <p className="text-gray-600 mb-6">
                           {post.fullContent.faq.subtitle}
                         </p>
-                        <div className="space-y-6">
+                        <div className="space-y-4">
                           {post.fullContent.faq.questions.map((faq, index) => (
                             <div
                               key={index}
-                              className="bg-white p-6 rounded-lg shadow-sm"
+                              className="bg-white p-5 rounded-lg shadow-sm"
                             >
                               <h3 className="font-semibold text-lg mb-2 text-primary">
                                 {faq.question}
@@ -166,7 +166,7 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
                 </>
               ) : (
                 <>
-                  <div className="mb-8">
+                  <div className="mb-6">
                     <h1 className="text-4xl font-bold text-primary mb-4">
                       {post.title}
                     </h1>
@@ -175,10 +175,10 @@ const BlogPostSubsheet = ({ isOpen, onClose, post }: BlogPostSubsheetProps) => {
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-[400px] object-cover rounded-lg mb-8"
+                    className="w-full h-[400px] object-cover rounded-lg mb-6"
                   />
 
-                  <div className="prose max-w-none mb-12">
+                  <div className="prose max-w-none mb-10">
                     <p className="text-gray-600 mb-4">{post.description}</p>
                   </div>
                 </>
