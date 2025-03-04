@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const LogoMarquee = () => {
@@ -42,6 +41,11 @@ const LogoMarquee = () => {
       src: "/lovable-uploads/LOGO-instagrid-red-black-RGB.png",
       alt: "Instagrid",
       link: "https://instagrid.co/",
+    },
+    {
+      src: "/lovable-uploads/Trace4Logo.png",
+      alt: "trace4value",
+      link: "https://trace4value.se/",
     },
     {
       src: "/lovable-uploads/1000002907.png",
@@ -108,7 +112,7 @@ const LogoMarquee = () => {
           }
           .animate-infinite-scroll {
             display: flex;
-            animation: scroll 50s linear infinite;
+            animation: scroll 80s linear infinite;
           }
         `}
       </style>
