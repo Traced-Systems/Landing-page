@@ -1,4 +1,3 @@
-
 import React from "react";
 import { BlogPost } from "@/types/blog";
 import BlogPostAuthor from "./BlogPostAuthor";
@@ -23,8 +22,8 @@ const BlogPostContent = ({ post }: BlogPostContentProps) => {
             {post.fullContent.title}
           </h1>
         </div>
-        
-        <div className="flex justify-center">
+
+        <div className="flex justify-center mt-12 mb-6">
           <BlogPostImage title={post.title} image={post.image} />
         </div>
 
@@ -34,11 +33,11 @@ const BlogPostContent = ({ post }: BlogPostContentProps) => {
           </p>
 
           {post.fullContent.sections.map((section, index) => (
-            <BlogPostSection 
-              key={index} 
-              heading={section.heading} 
-              content={section.content} 
-              quote={section.quote} 
+            <BlogPostSection
+              key={index}
+              heading={section.heading}
+              content={section.content}
+              quote={section.quote}
             />
           ))}
 
@@ -56,9 +55,7 @@ const BlogPostContent = ({ post }: BlogPostContentProps) => {
     return (
       <>
         <div className="mb-4">
-          <h1 className="text-4xl font-bold text-primary mb-3">
-            {post.title}
-          </h1>
+          <h1 className="text-4xl font-bold text-primary mb-3">{post.title}</h1>
         </div>
 
         <img
