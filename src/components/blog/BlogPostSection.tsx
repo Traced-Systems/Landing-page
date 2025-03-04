@@ -15,6 +15,11 @@ const BlogPostSection = ({ heading, content, quote }: SectionProps) => {
     
     // Process each line to make text before colon bold
     const processedLines = lines.map(line => {
+      // Special case for the "SCAN THE QR CODE" text
+      if (line.trim() === '"SCAN THE QR CODE"') {
+        return '<div class="text-center font-bold my-3">"SCAN THE QR CODE"</div>';
+      }
+      
       const colonIndex = line.indexOf(':');
       if (colonIndex > 0) {
         const beforeColon = line.substring(0, colonIndex);
