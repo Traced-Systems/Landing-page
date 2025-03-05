@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const LogoMarquee = () => {
@@ -53,7 +54,7 @@ const LogoMarquee = () => {
       link: "https://chromaway.com/",
     },
     {
-      src: "/lovable-uploads/8efc7792-2c07-415e-9ab8-cac82841e51a.png",
+      src: "/lovable-uploads/f746cf57-f418-4b27-9369-e3395c75cfea.png",
       alt: "Chromia Logo",
       link: "https://chromia.com/",
     },
