@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Twitter, Linkedin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -86,23 +85,23 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="self-start md:self-auto md:flex md:justify-center">
-              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+            <div className="self-start md:self-auto md:flex justify-end sm:justify-end w-full md:w-[150px]">
+              <div className="flex flex-col md:flex-col space-y-1 md:space-y-1 md:space-y-0 md:space-x-4 mt-3 md:mt-0">
                 <button
                   onClick={() => setIsPrivacyPolicyOpen(true)}
-                  className="text-sm hover:text-[#FDFCF9] whitespace-nowrap text-right md:text-left"
+                  className="text-sm hover:text-[#FDFCF9] whitespace-nowrap text-center md:text-right"
                 >
                   Privacy policy
                 </button>
                 <button
                   onClick={() => setIsCookiePolicyOpen(true)}
-                  className="text-sm hover:text-[#FDFCF9] whitespace-nowrap text-right md:text-left"
+                  className="text-sm hover:text-[#FDFCF9] whitespace-nowrap text-center md:text-right"
                 >
                   Cookie policy
                 </button>
                 <button
                   onClick={() => setIsTermsOfServiceOpen(true)}
-                  className="text-sm hover:text-[#FDFCF9] whitespace-nowrap text-right md:text-left"
+                  className="text-sm hover:text-[#FDFCF9] whitespace-nowrap text-center md:text-right"
                 >
                   Terms of service
                 </button>
