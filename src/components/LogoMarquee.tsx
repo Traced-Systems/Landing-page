@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const LogoMarquee = () => {
@@ -54,7 +53,7 @@ const LogoMarquee = () => {
       link: "https://chromaway.com/",
     },
     {
-      src: "/lovable-uploads/66d938d1-3fd5-4b75-8289-6883a65cdba3.png",
+      src: "/lovable-uploads/8efc7792-2c07-415e-9ab8-cac82841e51a.png",
       alt: "Chromia Logo",
       link: "https://chromia.com/",
     },
@@ -92,7 +91,7 @@ const LogoMarquee = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-12 md:h-16 w-auto max-h-12 md:max-h-16 object-contain transition-opacity hover:opacity-75"
+                  className="h-12 md:h-16 w-auto object-cover transition-opacity hover:opacity-75"
                 />
               </a>
             ))}
