@@ -63,7 +63,7 @@ const LogoMarquee = () => {
   return (
     <div
       className="relative w-full overflow-hidden"
-      style={{ paddingTop: "16.8%" }}
+      style={{ paddingTop: "20%" }}  // Increased from 16.8% to 20%
     >
       {/* Background Image */}
       <div
@@ -78,7 +78,7 @@ const LogoMarquee = () => {
             className="flex whitespace-nowrap animate-infinite-scroll"
             style={{
               gap: "4rem",
-              minWidth: `calc(${logos.length} * 8rem * 3)`, // Adjusted for better mobile display
+              minWidth: `calc(${logos.length} * 8rem * 3)`,
             }}
           >
             {[...logos, ...logos, ...logos].map((logo, index) => (
@@ -87,12 +87,12 @@ const LogoMarquee = () => {
                 href={logo.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center flex-shrink-0 w-auto h-12 sm:h-20"
+                className="flex items-center justify-center flex-shrink-0 w-auto h-16 sm:h-20" // Increased from h-12 to h-16
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-8 sm:h-12 md:h-16 w-auto object-cover transition-opacity hover:opacity-75"
+                  className="h-10 sm:h-12 md:h-16 w-auto object-cover transition-opacity hover:opacity-75" // Increased from h-8 to h-10
                 />
               </a>
             ))}
