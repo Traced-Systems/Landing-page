@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Button1 from "./ui/button-1";
@@ -18,7 +17,7 @@ const Hero = ({ onContactClick }: Button1HeroProps) => {
   };
 
   return (
-    <section className="pt-32 pb-16 relative overflow-hidden">
+    <section className="pt-32 pb-16 relative overflow-hidden z-[5]">
       {/* Gradient background */}
       <div className="absolute inset-0 z-0">
         <div
@@ -40,11 +39,12 @@ const Hero = ({ onContactClick }: Button1HeroProps) => {
         <img
           src="/lovable-uploads/Phone_pipes_background.png" // Replace with the actual mobile image
           alt="Mobile Background Overlay"
-          className="absolute inset-0 w-full h-auto object-cover block sm:hidden "
+          className="absolute inset-0 w-full h-[560px] object-cover block sm:hidden "
+          style={{ top: "2px", left: "50%", transform: "translateX(-50%)" }}
         />
       </div>
 
-      <div className="container mx-auto relative z-10 flex justify-center">
+      <div className="container mx-auto relative z-[10] flex justify-center">
         <div className="grid md:grid-cols-2 gap-[8vw] items-center max-w-[77vw] xl:max-w-[80vw] mx-auto">
           <div className="space-y-8">
             <div className="space-y-4 flex flex-col  items-start">

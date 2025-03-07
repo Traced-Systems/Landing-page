@@ -60,18 +60,15 @@ const LogoMarquee = () => {
   ];
 
   return (
-    <div
-      className="relative w-full overflow-hidden"
-      style={{ paddingTop: "16.8%" }}
-    >
+    <div className="relative w-full  z-[50] pointer-events-none pt-[16.8%]">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-[url('/lovable-uploads/BGforBrands.png')] bg-cover bg-center"
-        style={{ height: "100%", width: "auto" }}
+        style={{ height: "auto", width: "100vw" }}
       ></div>
 
       {/* Content Layer */}
-      <div className="absolute inset-0 flex items-center justify-center pb-12">
+      <div className="absolute inset-0 flex items-center justify-center pb-[5vw] md:pb-[4vw] z-[50]">
         <div className="flex overflow-hidden mb-14 bg-[rgba(242,241,238,0.9)]">
           <div
             className="flex whitespace-nowrap animate-infinite-scroll"
@@ -86,7 +83,7 @@ const LogoMarquee = () => {
                 href={logo.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center flex-shrink-0 w-auto h-20"
+                className="flex items-center justify-center flex-shrink-0 w-auto h-16 md:h-20"
               >
                 <img
                   src={logo.src}

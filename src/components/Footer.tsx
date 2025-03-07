@@ -35,7 +35,9 @@ const Footer = () => {
             />
 
             <div className="flex items-center justify-center space-x-4 self-end h-2">
-              <span className="text-sm text-[#EBE6D5]">Follow us</span>
+              <span className="text-sm text-[#EBE6D5] hidden sm:block">
+                Follow us
+              </span>
 
               <a
                 href="https://x.com/TracedSystems"
