@@ -63,7 +63,7 @@ const LogoMarquee = () => {
   return (
     <div
       className="relative w-full overflow-hidden"
-      style={{ paddingTop: "20%" }}  // Increased from 16.8% to 20%
+      style={{ paddingTop: "30%" }}  // Increased from 20% to 30% as requested
     >
       {/* Background Image */}
       <div
@@ -79,6 +79,7 @@ const LogoMarquee = () => {
             style={{
               gap: "4rem",
               minWidth: `calc(${logos.length} * 8rem * 3)`,
+              padding: "1rem 0", // Added padding for mobile to prevent logo cutoff
             }}
           >
             {[...logos, ...logos, ...logos].map((logo, index) => (
@@ -87,12 +88,12 @@ const LogoMarquee = () => {
                 href={logo.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center flex-shrink-0 w-auto h-16 sm:h-20" // Increased from h-12 to h-16
+                className="flex items-center justify-center flex-shrink-0 w-auto h-20 sm:h-20" // Increased from h-16 to h-20 on mobile
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-10 sm:h-12 md:h-16 w-auto object-cover transition-opacity hover:opacity-75" // Increased from h-8 to h-10
+                  className="h-12 sm:h-12 md:h-16 w-auto object-contain mx-2 transition-opacity hover:opacity-75" // Changed from h-10 to h-12 and object-cover to object-contain, added mx-2 for spacing
                 />
               </a>
             ))}
