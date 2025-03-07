@@ -75,7 +75,7 @@ const LogoMarquee = () => {
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="flex overflow-hidden mb-14 sm:mb-14 bg-[rgba(242,241,238,0.9)] w-full">
           <div
-            className="flex whitespace-nowrap animate-infinite-scroll"
+            className="flex whitespace-nowrap animate-infinite-scroll justify-center sm:justify-start mx-auto sm:mx-0"
             style={{
               gap: "4rem",
               minWidth: `calc(${logos.length} * 8rem * 3)`,
