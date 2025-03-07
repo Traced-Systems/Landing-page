@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const LogoMarquee = () => {
@@ -67,17 +68,17 @@ const LogoMarquee = () => {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-[url('/lovable-uploads/BGforBrands.png')] bg-cover bg-center"
-        style={{ height: "100%", width: "auto" }}
+        style={{ height: "100%", width: "100%" }}
       ></div>
 
       {/* Content Layer */}
-      <div className="absolute inset-0 flex items-center justify-center pb-12">
-        <div className="flex overflow-hidden mb-14 bg-[rgba(242,241,238,0.9)]">
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="flex overflow-hidden mb-14 sm:mb-14 bg-[rgba(242,241,238,0.9)] w-full">
           <div
             className="flex whitespace-nowrap animate-infinite-scroll"
             style={{
-              gap: "7rem",
-              minWidth: `calc(${logos.length} * 10rem * 3)`, // Adjusts width to ensure proper animation
+              gap: "4rem",
+              minWidth: `calc(${logos.length} * 8rem * 3)`, // Adjusted for better mobile display
             }}
           >
             {[...logos, ...logos, ...logos].map((logo, index) => (
@@ -86,12 +87,12 @@ const LogoMarquee = () => {
                 href={logo.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center flex-shrink-0 w-auto h-20"
+                className="flex items-center justify-center flex-shrink-0 w-auto h-12 sm:h-20"
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-12 md:h-16 w-auto object-cover transition-opacity hover:opacity-75"
+                  className="h-8 sm:h-12 md:h-16 w-auto object-cover transition-opacity hover:opacity-75"
                 />
               </a>
             ))}
