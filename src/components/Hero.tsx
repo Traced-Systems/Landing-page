@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Button1 from "./ui/button-1";
@@ -77,7 +78,7 @@ const Hero = ({ onContactClick }: Button1HeroProps) => {
               <img
                 src="/lovable-uploads/f13aac64-15e3-4a2a-9838-a7f474b842e5.png"
                 alt="Product Mockup"
-                className="w-full h-auto max-w-[500px] -mt-40 md:mt-0"
+                className="w-full h-auto max-w-[500px] -mt-25 md:mt-15"
               />
             </div>
           </div>
