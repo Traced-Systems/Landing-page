@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -60,6 +61,8 @@ const accordionItems = [
 ];
 
 const AccordionSection = () => {
+  const [openItem, setOpenItem] = useState<string | null>(null);
+
   return (
     <div className="grid md:grid-cols-2 gap-8 items-start">
       {accordionItems.map((item, index) => (
@@ -67,11 +70,16 @@ const AccordionSection = () => {
           key={index}
           className="bg-white rounded-lg shadow-sm md:min-h-20 flex flex-col justify-center"
         >
-          {" "}
-          {/* Ensures equal height & centers content */}
-          <Accordion type="single" collapsible>
+          <Accordion
+            type="single"
+            collapsible
+            value={openItem}
+            onValueChange={
+              (value) => setOpenItem(value === openItem ? null : value) // Toggle open/close
+            }
+          >
             <AccordionItem value={`item-${index}`} className="border-none">
-              <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-50  md:min-h-20">
+              <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-50 md:min-h-20">
                 <div className="flex items-center gap-3">
                   <img
                     src="/lovable-uploads/574a5f59-dcd7-416e-b43f-7b13cad071fb.svg"
@@ -82,7 +90,7 @@ const AccordionSection = () => {
                 </div>
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4 pt-0">
-                <div className="pl-8 text-gray-600">{item.content}</div>
+                <div className="pl-1 text-gray-700">{item.content}</div>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
