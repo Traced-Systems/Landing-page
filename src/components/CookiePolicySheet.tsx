@@ -281,13 +281,6 @@ const CookiePolicySheet = ({ isOpen, onClose }: CookiePolicySheetProps) => {
                 <br />
                 Denmark
                 <br />
-                Email:{" "}
-                <a
-                  href="mailto:farhad.rasouli@chromaway.com"
-                  className="text-[#E4AC70] hover:text-[#C66600]"
-                >
-                  farhad.rasouli@chromaway.com
-                </a>
               </p>
             </div>
           </div>
