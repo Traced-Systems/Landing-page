@@ -50,17 +50,6 @@ const TermsOfServiceSheet = ({ isOpen, onClose }: TermsOfServiceSheetProps) => {
                 compliance information, ensuring authenticity and
                 accountability.
               </p>
-              <p className="mb-6">
-                You can contact us by email at{" "}
-                <a
-                  href="mailto:farhad.rasouli@chromaway.com"
-                  className="text-[#E4AC70] hover:text-[#C66600]"
-                >
-                  farhad.rasouli@chromaway.com
-                </a>{" "}
-                or by mail at Njalsgade 76, 4th floor, Copenhagen, Denmark 2300,
-                Denmark.
-              </p>
               <p className="mb-6 font-bold">
                 IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE
                 EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST
@@ -953,9 +942,6 @@ const TermsOfServiceSheet = ({ isOpen, onClose }: TermsOfServiceSheetProps) => {
                 Copenhagen, Denmark 2300
                 <br />
                 Denmark
-              </p>
-              <p className="mb-6">
-                <strong>Email:</strong> farhad.rasouli@chromaway.com
               </p>
             </div>
           </div>
