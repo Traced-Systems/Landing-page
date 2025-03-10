@@ -1,11 +1,21 @@
-
-import React, { useState, useEffect } from 'react';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
+import React, { useState, useEffect } from "react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
-import { getCookieConsent, saveCookieConsent, defaultConsent, type CookieConsent } from '@/utils/cookieConsent';
+import {
+  getCookieConsent,
+  saveCookieConsent,
+  defaultConsent,
+  type CookieConsent,
+} from "@/utils/cookieConsent";
 
 const CookieConsentBanner = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,11 +53,13 @@ const CookieConsentBanner = () => {
     setIsOpen(false);
   };
 
-  const togglePreference = (category: keyof Omit<CookieConsent, 'timestamp'>) => {
-    if (category === 'necessary') return; // Cannot toggle necessary cookies
-    setPreferences(prev => ({
+  const togglePreference = (
+    category: keyof Omit<CookieConsent, "timestamp">
+  ) => {
+    if (category === "necessary") return; // Cannot toggle necessary cookies
+    setPreferences((prev) => ({
       ...prev,
-      [category]: !prev[category]
+      [category]: !prev[category],
     }));
   };
 
@@ -57,15 +69,16 @@ const CookieConsentBanner = () => {
     setIsOpen(true);
   };
 
-  if (!showBanner && !isOpen) return (
-    <Button
-      onClick={openPreferences}
-      className="fixed bottom-4 right-4 z-50 bg-white/80 hover:bg-white text-gray-600 text-sm py-2 px-3 rounded-md shadow-sm border border-gray-200 backdrop-blur-sm transition-all duration-200 hover:shadow-md"
-      variant="ghost"
-    >
-      Cookie Preferences
-    </Button>
-  );
+  if (!showBanner && !isOpen)
+    return (
+      <Button
+        onClick={openPreferences}
+        className="fixed bottom-4 right-4 z-50 bg-white/80 hover:bg-white text-gray-600 text-sm py-2 px-3 rounded-md shadow-sm border border-gray-200 backdrop-blur-sm transition-all duration-200 hover:shadow-md"
+        variant="ghost"
+      >
+        Cookie Preferences
+      </Button>
+    );
 
   return (
     <>
@@ -75,10 +88,13 @@ const CookieConsentBanner = () => {
           <div className="container mx-auto max-w-7xl">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div className="flex-1">
-                <h2 className="text-lg font-semibold text-[#173A44] mb-2">We value your privacy</h2>
+                <h2 className="text-lg font-semibold text-[#173A44] mb-2">
+                  We value your privacy
+                </h2>
                 <p className="text-sm text-gray-600 mb-4">
-                  We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
-                  You can choose which cookies you want to allow.
+                  We use cookies to enhance your browsing experience, serve
+                  personalized content, and analyze our traffic. You can choose
+                  which cookies you want to allow.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -114,7 +130,8 @@ const CookieConsentBanner = () => {
           <SheetHeader>
             <SheetTitle>Cookie Preferences</SheetTitle>
             <SheetDescription>
-              Manage your cookie preferences. You can enable or disable different types of cookies below.
+              Manage your cookie preferences. You can enable or disable
+              different types of cookies below.
             </SheetDescription>
           </SheetHeader>
 
@@ -126,7 +143,8 @@ const CookieConsentBanner = () => {
                 <Switch checked={true} disabled />
               </div>
               <p className="text-sm text-gray-500">
-                These cookies are essential for the website to function properly.
+                These cookies are essential for the website to function
+                properly.
               </p>
             </div>
 
@@ -136,9 +154,9 @@ const CookieConsentBanner = () => {
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <Label className="font-semibold">Functional Cookies</Label>
-                <Switch 
+                <Switch
                   checked={preferences.functional}
-                  onCheckedChange={() => togglePreference('functional')}
+                  onCheckedChange={() => togglePreference("functional")}
                 />
               </div>
               <p className="text-sm text-gray-500">
@@ -152,13 +170,14 @@ const CookieConsentBanner = () => {
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <Label className="font-semibold">Statistical Cookies</Label>
-                <Switch 
+                <Switch
                   checked={preferences.statistical}
-                  onCheckedChange={() => togglePreference('statistical')}
+                  onCheckedChange={() => togglePreference("statistical")}
                 />
               </div>
               <p className="text-sm text-gray-500">
-                These cookies help us understand how visitors interact with the website.
+                These cookies help us understand how visitors interact with the
+                website.
               </p>
             </div>
 
@@ -168,9 +187,9 @@ const CookieConsentBanner = () => {
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <Label className="font-semibold">Marketing Cookies</Label>
-                <Switch 
+                <Switch
                   checked={preferences.marketing}
-                  onCheckedChange={() => togglePreference('marketing')}
+                  onCheckedChange={() => togglePreference("marketing")}
                 />
               </div>
               <p className="text-sm text-gray-500">
@@ -182,7 +201,7 @@ const CookieConsentBanner = () => {
               <Button variant="outline" onClick={handleRejectAll}>
                 Reject All
               </Button>
-              <Button 
+              <Button
                 onClick={handleSavePreferences}
                 className="bg-[#173A44] hover:bg-[#0D2328]"
               >

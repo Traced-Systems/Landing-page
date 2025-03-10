@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Twitter, Linkedin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import PrivacyPolicySheet from "./PrivacyPolicySheet";
+import CookiePolicySheet from "./CookiePolicySheet";
+import TermsOfServiceSheet from "./TermsOfServiceSheet";
 
 const Footer = () => {
   const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false);
@@ -122,12 +123,11 @@ const Footer = () => {
         isOpen={isPrivacyPolicyOpen}
         onClose={() => setIsPrivacyPolicyOpen(false)}
       />
-      {/* We'll reuse the PrivacyPolicySheet component for now but it should be replaced with proper components */}
-      <PrivacyPolicySheet
+      <CookiePolicySheet
         isOpen={isCookiePolicyOpen}
         onClose={() => setIsCookiePolicyOpen(false)}
       />
-      <PrivacyPolicySheet
+      <TermsOfServiceSheet
         isOpen={isTermsOfServiceOpen}
         onClose={() => setIsTermsOfServiceOpen(false)}
       />
