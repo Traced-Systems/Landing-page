@@ -335,10 +335,6 @@ const TermsOfServiceSheet = ({ isOpen, onClose }: TermsOfServiceSheetProps) => {
                 Your cancellation takes effect at the end of the current paid
                 term.
               </p>
-              <p className="mb-6">
-                If you have any questions or concerns about your subscription,
-                contact us at farhad.rasouli@chromaway.com.
-              </p>
               <h3 className="text-xl font-semibold mb-2 text-[#002A38]">
                 Fee Changes
               </h3>
