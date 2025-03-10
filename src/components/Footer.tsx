@@ -113,8 +113,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <p className="text-xs text-right text-[#EBE6D5] mb-2 ">
-            © 2025 Traced Systems. All rights reserved.
+          <p className="text-xs text-right text-[#EBE6D5] mb-2">
+            © {new Date().getFullYear()} Traced Systems. All rights reserved.
           </p>
         </div>
       </div>
