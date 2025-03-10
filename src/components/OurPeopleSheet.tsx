@@ -113,7 +113,7 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
                 <h2 className="text-2xl font-medium text-[#173A44] mb-8">
                   Advisory Board
                 </h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                   {advisoryBoard.map((member, index) => (
                     <div key={index} className="relative aspect-square">
                       <img
