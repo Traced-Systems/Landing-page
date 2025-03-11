@@ -68,8 +68,7 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
       role: "Head of Marketing",
       image: "/lovable-uploads/1aeb695e-eb6e-4312-92a8-af399dd5768b.png",
       active: true,
-      linkedin:
-        "https://www.linkedin.com/in/petra-josephine-bosnjak-56b33a220/",
+      linkedin: "https://www.linkedin.com/in/petra-josipa-bosnjak-56b33a220/",
     },
     {
       name: "Cristina Stoica",
