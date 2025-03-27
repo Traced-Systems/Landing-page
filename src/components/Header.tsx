@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import IndustriesSheet from './IndustriesSheet';
 import UseCasesSheet from './UseCasesSheet';
-import ContactSheet from './ContactSheet';
+import ContactGeneral from './ContactGeneral';
 import OurValuesSheet from './OurValuesSheet';
 import OurVisionSheet from './OurVisionSheet';
 import OurPeopleSheet from './OurPeopleSheet';
@@ -49,7 +49,7 @@ const Header = () => {
         onClose={handleSheetClose}
         initialCase={null}
       />
-      <ContactSheet 
+      <ContactGeneral 
         isOpen={activeSheet === 'contact'} 
         onClose={handleSheetClose} 
       />

@@ -1,15 +1,14 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
-
 const Technologies = () => {
   const handleKnowMoreClick = () => {
     window.open("https://chromia.com/", "_blank");
   };
-
-  return (
-    <section className="py-20" style={{ backgroundColor: "#f2f1ee" }}>
-      <div className="container mx-auto px-4">
+  return <section className="py-20" style={{
+    backgroundColor: "#f2f1ee"
+  }}>
+      <div className="container mx-auto px-12">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-medium text-primary">
@@ -23,27 +22,17 @@ const Technologies = () => {
               for decentralized applications making it an ideal engine behind
               DPPs.
             </p>
-            <Button
-              variant="secondary"
-              className="rounded-full border-2 border-[#E4AC70] bg-[#F2F1EE] text-[#143A44] flex items-center gap-2 pl-7 pr-6 hover:bg-[#EEEADF]"
-              onClick={handleKnowMoreClick}
-            >
+            <Button variant="secondary" className="rounded-full border-2 border-[#E4AC70] bg-[#F2F1EE] text-[#143A44] flex items-center gap-2 pl-7 pr-6 hover:bg-[#EEEADF]" onClick={handleKnowMoreClick}>
               Know More
               <ChevronRight className="w-5 h-5 text-[#143A44]" />
             </Button>
           </div>
 
           <div className="relative">
-            <img
-              src="/lovable-uploads/3a4a0905-b1c8-426c-9e11-9192f1bc54da.png"
-              alt="Chromia Technology"
-              className="w-full rounded-2xl shadow-xl"
-            />
+            <img alt="Chromia Technology" className="w-full rounded-2xl shadow-xl lg:ml-4" src="/lovable-uploads/5ec4f0b5-74f8-4444-a169-aa7de1c93cab.png" />
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Technologies;

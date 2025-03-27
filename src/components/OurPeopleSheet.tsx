@@ -68,15 +68,14 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
       role: "Head of Marketing",
       image: "/lovable-uploads/1aeb695e-eb6e-4312-92a8-af399dd5768b.png",
       active: true,
-      linkedin:
-        "https://www.linkedin.com/in/petra-josephine-bosnjak-56b33a220/",
+      linkedin: "https://www.linkedin.com/in/petra-josipa-bosnjak-56b33a220/",
     },
     {
-      name: "Kostiantyn Nikolaiev",
-      role: "Tech Lead",
-      image: "/lovable-uploads/b580da07-90b5-432e-a1b9-5edaeed20f2b.png",
+      name: "Cristina Stoica",
+      role: "Head of Design",
+      image: "/lovable-uploads/1597880531.png",
       active: true,
-      linkedin: "https://www.linkedin.com/in/kostiantyn-s-nikolaiev/",
+      linkedin: "https://www.linkedin.com/in/cristina-stoica-74313258/",
     },
     {
       name: "Milas Heeris",
@@ -110,8 +109,10 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
           <div className="max-w-4xl mx-auto w-full px-6 mb-16">
             <div className="space-y-16">
               <section>
-                <h2 className="text-2xl font-semibold mb-8">Advisory Board</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <h2 className="text-2xl font-medium text-[#173A44] mb-8">
+                  Advisory Board
+                </h2>
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                   {advisoryBoard.map((member, index) => (
                     <div key={index} className="relative aspect-square">
                       <img
@@ -131,7 +132,9 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold mb-8">Traced Team</h2>
+                <h2 className="text-2xl font-medium text-[#173A44] mb-4">
+                  Traced Team
+                </h2>
                 <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                   {tracedTeam.map((member, index) => (
                     <div key={index} className="relative aspect-square">

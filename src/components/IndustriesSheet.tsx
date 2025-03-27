@@ -6,29 +6,42 @@ import CTASection from "./CTASection";
 import TextilesSheet from "./TextilesSheet";
 import BatteriesSheet from "./BatteriesSheet";
 import SheetBackButton from "./shared/SheetBackButton";
-import Button1 from "./ui/button-1";
+// import Button1 from "./ui/button-1";
+import AboutCTA from "./shared/AboutCTA";
 import TitleBanner from "@/components/shared/TitleBanner";
+import ExpandableImage from "./shared/ExpandableImage";
 
 interface IndustriesSheetProps {
   isOpen: boolean;
   onClose: () => void;
   onBack?: () => void;
-  scrollToEU?: boolean; // 🔥 New prop to control scrolling
+  scrollToEU?: boolean;
 }
 
 const IndustriesSheet = ({
   isOpen,
   onClose,
   onBack = onClose,
-  scrollToEU = false, // Default is false to prevent unwanted scrolling
+  scrollToEU = false,
 }: IndustriesSheetProps) => {
   const [activeSheet, setActiveSheet] = useState<
     "industries" | "textiles" | "batteries" | null
   >(null);
-
   const euSectionRef = useRef<HTMLDivElement | null>(null);
 
-  // 🔥 Scroll to EURegulationsSection when opening from Features
+  useEffect(() => {
+    if (isOpen && scrollToEU) {
+      setTimeout(() => {
+        if (euSectionRef.current) {
+          euSectionRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start", // Changed from 'center' to 'start' for better visibility
+          });
+        }
+      }, 500); // Increased delay to 500ms for better results
+    }
+  }, [isOpen, scrollToEU]);
+
   useEffect(() => {
     if (isOpen && scrollToEU && euSectionRef.current) {
       euSectionRef.current.scrollIntoView({
@@ -45,6 +58,18 @@ const IndustriesSheet = ({
       setActiveSheet(null);
     }
   }, [isOpen]);
+
+  React.useEffect(() => {
+    const handleCloseSheets = () => {
+      onClose();
+      setActiveSheet(null);
+    };
+
+    window.addEventListener("closeIndustrySheets", handleCloseSheets);
+    return () => {
+      window.removeEventListener("closeIndustrySheets", handleCloseSheets);
+    };
+  }, [onClose]);
 
   const handleTextilesClick = () => {
     setActiveSheet("textiles");
@@ -80,13 +105,23 @@ const IndustriesSheet = ({
 
             <TitleBanner title="Industries" />
 
-            <div className="text-center mb-12 pt-20">
-              <h2 className="text-2xl text-[#173A44] font-medium ">
+            {/* Mobile Header */}
+            <div className="sm:hidden px-6 py-8">
+              <h1 className="text-2xl font-semibold text-[#2D545E] mb-2">
+                Industries
+              </h1>
+              <p className="text-sm text-gray-600">
+                Discover how our solutions transform different sectors
+              </p>
+            </div>
+
+            <div className="text-center mb-8 sm:mb-12 pt-8 sm:pt-20">
+              <h2 className="text-xl sm:text-2xl text-[#173A44] font-medium px-6">
                 Key Industries We Serve
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-20 mb-24 px-20 xs:px-16">
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-20 mb-16 sm:mb-24 px-6 sm:px-20">
               <div className="space-y-4">
                 <IndustryCard
                   title="Textiles"
@@ -108,38 +143,37 @@ const IndustriesSheet = ({
               </div>
             </div>
 
-            {/* 🔥 Scroll to this only when `scrollToEU === true` */}
             <div ref={euSectionRef}>
               <EURegulationsSection />
             </div>
 
             <CTASection>
-              <div className="text-center mt-6 px-8">
+              <div className="text-center mt-6 px-4 sm:px-8">
                 <div>
-                  <h2 className="text-2xl font-medium text-center mb-2 text-[#173A44]">
+                  <h2 className="text-xl sm:text-2xl font-medium text-center mb-2 text-[#173A44]">
                     A Unified Traceability Platform
                   </h2>
-                  <h3 className="text-xl text-center mb-6 text-[#173A44]">
+                  <h3 className="text-lg sm:text-xl text-center mb-4 sm:mb-6 text-[#173A44]">
                     From Source to Sustainability
                   </h3>
                 </div>
-                <p className="text-gray-600 mb-6">
+                <p className="text-sm sm:text-base text-gray-600 mb-6">
                   Our comprehensive platform integrates seamlessly across your
                   entire value chain, providing real-time visibility and control
                   over your product lifecycle.
                 </p>
-                <img
-                  src="/lovable-uploads/c0da0885-a0e1-4ac0-b309-a464bcd66b53.png"
-                  alt="Unified Platform"
-                  className="w-full max-w-4xl mx-auto pt-4 mb-12 rounded-lg"
-                />
-                <div className="flex justify-center">
-                  <Button1 className="px-8">Get in touch</Button1>
+                <div className="w-[95%] sm:w-full max-w-4xl mx-auto">
+                  <ExpandableImage
+                    src="/lovable-uploads/c0da0885-a0e1-4ac0-b309-a464bcd66b53.png"
+                    alt="Unified Traceability Platform"
+                  />
                 </div>
+                {/* <div className="flex justify-center mt-8">
+                  <Button1 className="px-8">Get in touch</Button1>
+                </div> */}
               </div>
             </CTASection>
-
-            <div className="pb-[100px]"></div>
+            <AboutCTA onClose={onClose} />
           </div>
         </SheetContent>
       </Sheet>

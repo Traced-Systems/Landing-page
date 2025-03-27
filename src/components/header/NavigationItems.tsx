@@ -1,4 +1,6 @@
-import React from "react";
+
+import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -21,6 +23,8 @@ interface NavigationItemsProps {
 }
 
 const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+
   return (
     <nav className="hidden lg:flex items-center space-x-10 relative z-[1001]">
       <a href="#" className="text-base text-[#173A44] hover:text-[#066985]">
@@ -34,15 +38,22 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
       </button>
       <button
         onClick={() => handleSheetOpen("useCases")}
-        className="text-base text-[#173A44]  hover:text-[#066985]"
+        className="text-base text-[#173A44] hover:text-[#066985]"
       >
         Use Cases
       </button>
-      <NavigationMenu>
+      <NavigationMenu onValueChange={(value) => setIsAboutOpen(!!value)}>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-base text-[#173A44] font-normal hover:text-primary transition-colors bg-transparent hover:text-[#066985] [&>svg]:hidden">
-              About Us
+            <NavigationMenuTrigger className="text-base text-[#173A44] font-normal hover:text-[#066985] transition-colors bg-transparent data-[state=open]:bg-transparent px-0 h-auto">
+              <span className="flex items-center gap-1">
+                About Us
+                <ChevronDown 
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    isAboutOpen ? 'rotate-180' : ''
+                  }`}
+                />
+              </span>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="w-48 py-1 bg-[#f7f7f7]">
@@ -77,7 +88,7 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
       </button>
       <button
         onClick={() => handleSheetOpen("contact")}
-        className="text-base font-normal text-[#173A44] hover:text-[#066985] "
+        className="text-base font-normal text-[#173A44] hover:text-[#066985]"
       >
         Contact Us
       </button>

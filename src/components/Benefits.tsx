@@ -50,10 +50,10 @@ const Benefits = () => {
   return (
     <section
       id="section-elevating-product-lifestyle"
-      className="py-20 bg-[#f7f7f7]"
+      className="pt-36 pb-8 bg-[#f7f7f7]"
     >
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-start justify-between gap-16">
+      <div className="container mx-auto px-12 lg:px-4">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-0 md:gap-20 pb-4">
           <div className="w-full md:w-5/12">
             <img
               src="/lovable-uploads/629ceb73-5cc3-4030-a3e2-c9a81e634fc3.png"

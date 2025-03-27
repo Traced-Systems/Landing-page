@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 
@@ -7,7 +8,7 @@ interface CTASectionProps {
 
 const CTASection: React.FC<CTASectionProps> = ({ children }) => {
   if (children) {
-    return <div className="px-12">{children}</div>;
+    return <div className="px-12 sm:px-12 -mx-6 sm:mx-0">{children}</div>;
   }
 
   return (

@@ -1,14 +1,15 @@
+
 import React from "react";
 
 const EURegulationsSection = () => {
   return (
-    <div className="bg-white px-20 py-20 mb-12 ">
+    <div id="euregulation" className="bg-white px-4 sm:px-20 py-12 sm:py-20 mb-12">
       <h2 className="text-2xl font-medium text-center mb-8 text-[#173A44]">
         Meet Today's EU Regulations, Stay Ready for Tomorrow's
       </h2>
       <div className="flex flex-col md:flex-row gap-8 items-center">
         <div className="flex-1">
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-600 mb-4 text-sm sm:text-base">
             Our Digital Product Passport (DPP) streamlines compliance for a wide
             range of industries, ensuring seamless adaptation to evolving EU
             regulations. From the Ecodesign for Sustainable Products Regulation
@@ -16,7 +17,7 @@ const EURegulationsSection = () => {
             Legislation, we help businesses enhance transparency, improve
             sustainability, and stay ahead of legislative demands.
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-sm sm:text-base">
             Powered by secure, tamper-proof technology, our DPP empowers you to
             monitor and update product data so you can adjust quickly to new or
             revised regulations. This future-proof approach not only meets

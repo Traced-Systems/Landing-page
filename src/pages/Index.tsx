@@ -8,15 +8,19 @@ import Benefits from "@/components/Benefits";
 import Process from "@/components/Process";
 import UseCases from "@/components/UseCases";
 import Blog from "@/components/Blog";
+import OurTech from "@/components/OurTech";
 import Technologies from "@/components/Technologies";
 import Footer from "@/components/Footer";
 import DigitalPassport from "@/components/DigitalPassport";
 import Foundation from "@/components/Foundation";
 import CTA from "@/components/CTA";
 import ContactSheet from "@/components/ContactSheet";
+import CookieConsentBanner from "@/components/CookieConsent";
+import IndustriesSheet from "@/components/IndustriesSheet";
 
 const Index = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
 
   const handleContactOpen = () => {
     setIsContactOpen(true);
@@ -24,6 +28,10 @@ const Index = () => {
 
   const handleContactClose = () => {
     setIsContactOpen(false);
+  };
+
+  const handleEURegulationsClick = () => {
+    setIsIndustriesOpen(true);
   };
 
   return (
@@ -39,12 +47,19 @@ const Index = () => {
         <Process />
         <UseCases />
         <Blog />
+        <OurTech />
         <Technologies />
         <Foundation />
         <CTA onContactClick={handleContactOpen} />
       </main>
       <Footer />
       <ContactSheet isOpen={isContactOpen} onClose={handleContactClose} />
+      <IndustriesSheet
+        isOpen={isIndustriesOpen}
+        onClose={() => setIsIndustriesOpen(false)}
+        scrollToEU={true}
+      />
+      <CookieConsentBanner />
     </div>
   );
 };

@@ -25,14 +25,14 @@ const OurVisionSheet = ({ isOpen, onClose }: OurVisionSheetProps) => {
           <TitleBanner title="Our Vision" />
         </div>
 
-        <div className="h-full flex flex-col pt-20">
-          <div className="px-4 md:px-8 space-y-8 md:space-y-16 mb-16">
+        <div className="h-full flex flex-col ">
+          <div className="px-4 md:px-8 space-y-8 md:space-y-16 mx-12">
             <VisionHeader />
 
             {/* Mobile-optimized Vision Content */}
             <div className="space-y-8 md:space-y-16">
               {/* Transparency Section */}
-              <div className="md:relative  md:h-[330px] flex flex-col space-y-4 md:space-y-0 ">
+              <div className="md:relative md:h-[330px] flex flex-col space-y-4 md:space-y-0 ">
                 <img
                   src="/lovable-uploads/3b2f9435-b454-4680-aa2b-e440791a0138.png"
                   alt="Factory"
