@@ -60,7 +60,7 @@ const LogoMarquee = () => {
   ];
 
   return (
-    <div className="relative w-full  z-[50] pointer-events-none pt-[16.8%]">
+    <div className="relative w-full z-[50] pointer-events-none pt-[16.8%]">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-[url('/lovable-uploads/BGforBrands.png')] bg-cover bg-center"
@@ -74,7 +74,7 @@ const LogoMarquee = () => {
             className="flex whitespace-nowrap animate-infinite-scroll"
             style={{
               gap: "7rem",
-              minWidth: `calc(${logos.length} * 10rem * 3)`, // Adjusts width to ensure proper animation
+              minWidth: `calc(${logos.length} * 10rem * 3)`, // Adjusts width for proper animation
             }}
           >
             {[...logos, ...logos, ...logos].map((logo, index) => (
@@ -83,7 +83,7 @@ const LogoMarquee = () => {
                 href={logo.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center flex-shrink-0 w-auto h-16 md:h-20"
+                className="pointer-events-auto flex items-center justify-center flex-shrink-0 w-auto h-16 md:h-20"
               >
                 <img
                   src={logo.src}

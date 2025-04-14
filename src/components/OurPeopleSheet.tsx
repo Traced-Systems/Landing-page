@@ -84,13 +84,7 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
       active: true,
       linkedin: "https://www.linkedin.com/in/milasheeris/",
     },
-    {
-      name: "Ziwei Chen",
-      role: "Creative Designer",
-      image: "/lovable-uploads/fc0992f1-05d7-48a0-add2-309803a7f7b0.png",
-      active: true,
-      linkedin: "https://www.linkedin.com/in/ziwei-chen-b64971208/",
-    },
+   
   ];
 
   return (
