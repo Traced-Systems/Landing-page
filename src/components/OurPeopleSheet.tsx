@@ -20,8 +20,8 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
     },
     {
       name: "Johan Toll",
-      role: "CIO & Senior Business Advisor",
-      image: "/lovable-uploads/d52e78c5-39a3-467e-a9f3-7a3405fb7fba.png",
+      role: "CIO & Co-Founder",
+      image: "/lovable-uploads/johan.png",
       active: true,
       linkedin: "https://www.linkedin.com/in/johantoll/",
     },
