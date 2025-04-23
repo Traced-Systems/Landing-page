@@ -4,7 +4,7 @@ import BlogPostAuthor from "./BlogPostAuthor";
 import BlogPostImage from "./BlogPostImage";
 import BlogPostSection from "./BlogPostSection";
 import BlogPostFAQ from "./BlogPostFAQ";
-
+import ReactMarkdown from "react-markdown";
 interface BlogPostContentProps {
   post: BlogPost;
 }

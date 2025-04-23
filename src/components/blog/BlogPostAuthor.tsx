@@ -1,4 +1,3 @@
-
 import React from "react";
 
 interface BlogPostAuthorProps {
@@ -6,8 +5,33 @@ interface BlogPostAuthorProps {
 }
 
 const BlogPostAuthor = ({ postTitle }: BlogPostAuthorProps) => {
-  // Helper function to determine which author info to display
-  if (postTitle === "The Blueprint for a Successful Blockchain Partner Ecosystem") {
+  if (
+    postTitle ===
+    "European Blockchain Sandbox Selects Web3 Companies for Third Cohort, Including Privado ID"
+  ) {
+    return (
+      <div className="flex items-center gap-2">
+        <img
+          src="/lovable-uploads/cryptonews.jpg"
+          alt="Cryptonews.com"
+          className="w-12 h-12 rounded-full"
+        />
+        <span className="text-gray-600">
+          Written by{" "}
+          <a
+            href="https://cryptonews.com/news/eu-blockchain-sandbox-selects-web3-companies-for-third-cohort-including-privado-id/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:text-blue-600"
+          >
+            Cryptonews.com
+          </a>
+        </span>
+      </div>
+    );
+  } else if (
+    postTitle === "The Blueprint for a Successful Blockchain Partner Ecosystem"
+  ) {
     return (
       <div className="flex items-center gap-2">
         <img
@@ -28,7 +52,9 @@ const BlogPostAuthor = ({ postTitle }: BlogPostAuthorProps) => {
         </span>
       </div>
     );
-  } else if (postTitle === "Battery Passport – Circular economy in a QR Code") {
+  } else if (
+    postTitle === "Battery Passport – Circular economy in a QR Code"
+  ) {
     return (
       <div className="flex items-center gap-2">
         <img
@@ -49,7 +75,9 @@ const BlogPostAuthor = ({ postTitle }: BlogPostAuthorProps) => {
         </span>
       </div>
     );
-  } else if (postTitle === "Efficient product tracking with blockchain in supply chains") {
+  } else if (
+    postTitle === "Efficient product tracking with blockchain in supply chains"
+  ) {
     return (
       <div className="flex items-center gap-2">
         <img
@@ -70,7 +98,10 @@ const BlogPostAuthor = ({ postTitle }: BlogPostAuthorProps) => {
         </span>
       </div>
     );
-  } else if (postTitle === "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports") {
+  } else if (
+    postTitle ===
+    "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports"
+  ) {
     return (
       <div className="flex items-center gap-2">
         <img

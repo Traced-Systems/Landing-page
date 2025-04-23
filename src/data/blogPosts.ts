@@ -1,5 +1,6 @@
 import { BlogPost } from "@/types/blog";
 
+
 export const blogPosts: BlogPost[] = [
   {
     title: "Efficient product tracking with blockchain in supply chains",
@@ -302,4 +303,44 @@ export const blogPosts: BlogPost[] = [
       },
     },
   },
+  
+  {
+    title: "European Blockchain Sandbox Selects Web3 Companies for Third Cohort, Including Privado ID",
+    description:
+      "The European Blockchain Sandbox has announced the third cohort of its dialogues, including Web3, tokenization, decentralization, RWAs, and other blockchain-related projects.",
+    image: "/lovable-uploads/cryptonews.jpg",
+    fullContent: {
+      title: "European Blockchain Sandbox Selects Web3 Companies for Third Cohort, Including Privado ID",
+      introduction:
+        "The European Blockchain Sandbox has announced the third cohort of its dialogues, including Web3, tokenization, decentralization, RWAs, and other blockchain-related projects. According to the announcement, the selection team was led by blockchain experts from strategy consultancy Warren Brandeis." ,
+      sections: [
+        {
+          heading: "",
+          content:
+            "In total, the initiative has chosen twenty participants. These include Privado ID and Privately, a digital, privacy-preserving age verification and online child safety solution with their Blockchain Age Estimation.\n\nPrivado ID, formerly known as PolygonID, allows individuals to prove their age, qualifications, and other data without revealing sensitive personal information. They use cryptography and zero-knowledge proofs (ZKPs) to protect this data. The product competes with World ID. World Network is the digital identity and cryptocurrency project founded by OpenAI CEO Sam Altman.\n\nPrivado ID and Privately’s collaboration focuses on self-sovereign identity (SSI) age verification. “A critical challenge in 2025 and beyond,” the Sandbox says—using ZKPs and verifiable credentials (VCs) to eliminate the risks of sharing personal data.",
+          tweet: "https://twitter.com/EuropeanSandbox/status/1778409647866231082"
+        },
+        {
+          heading: "",
+          content:
+            "Another chosen project is digital-assets infrastructure company Parfin, which has developed the privacy-focused Rayls blockchain. It enables financial institutions—including central banks—to issue digital currencies and assets, tokenize real-world assets (RWAs), and conduct cross-border transactions.\n\nThe list also includes digital inheritance platform CHARONIUM, Web3 tokenization infrastructure Blocksquare, Web3/4 compliance platform PixelPai, decentralized knowledge-graph protocol Tree, and TECNALIA’s EMERALD trust-system.\n\nFrictionless Markets merges TradFi systems with on-chain tech, while 31Third provides blockchain-native institutional asset management. A Chromaway-incubated group (Traced Systems, Instagrid, Batteriretur, Cling Systems) built a battery Digital Product Passport (DPP) for end-of-life management."
+        },
+        {
+          heading: "Blockchain Sandbox ‘Enhancing Knowledge of Cutting-Edge Tech’",
+          content:
+            "“The selected use cases span all EU/EEA regions and represent a wide range of industry sectors and regulatory topics,” the announcement says. The full participant list is available on the website.\n\nThe European Blockchain Regulatory Sandbox for DLT is an initiative of the European Commission, announced in February 2023. Its goal is to provide a framework for regulators, supervisors, and innovators to engage in dialogue and identify legal or regulatory obstacles."
+        },
+        {
+          heading: "",
+          content:
+            "Subsequently, this will “increase legal certainty for innovative decentralized technology solutions, including blockchain,” it says. “The sandbox will allow regulators and supervisors to enhance their knowledge of cutting-edge blockchain technologies.”\n\nThe sandbox held two discussions over the past two years, selecting projects, regulators, authorities, and financial entities across the Union to refine EU regulatory strategies.\n\nIn April 2024, the United Kingdom launched a digital-securities sandbox consultation for DLT testing. The Bank of England and the UK’s Financial Conduct Authority held a draft-guidance consultation for the Digital Securities Sandbox (DSS).",
+          tweet: "https://twitter.com/EuropeanSandbox/status/1776233450599696773"
+        }
+      ]
+    }
+  }
+  
+  
+
 ];
+  
