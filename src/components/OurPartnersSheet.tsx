@@ -38,10 +38,10 @@ const OurPartnersSheet = ({ isOpen, onClose }: OurPartnersSheetProps) => {
       description: "Secondary battery marketplace"
     },
     {
-      name: "trace4value",
-      logo: "/lovable-uploads/Trace4Logo.png",
-      website: "https://trace4value.se",
-      description: "Traceability & sustainability platform"
+      name: "Evolium",
+      logo: "/lovable-uploads/evolium.png",
+      website: "https://www.evolium.ch/en/",
+      description: "Sustainable Batteries"
     }
   ];
 
@@ -51,6 +51,13 @@ const OurPartnersSheet = ({ isOpen, onClose }: OurPartnersSheetProps) => {
       logo: "/lovable-uploads/881ea4c3-7aff-4713-bd29-b03558bda2e3.png",
       website: "https://www.blkdnm.com",
       description: "Connected garments / blockchain authentication"
+    },
+
+        {
+      name: "trace4value",
+      logo: "/lovable-uploads/Trace4Logo.png",
+      website: "https://trace4value.se",
+      description: "Traceability & sustainability platform"
     }
   ];
 
@@ -60,6 +67,13 @@ const OurPartnersSheet = ({ isOpen, onClose }: OurPartnersSheetProps) => {
       logo: "/lovable-uploads/0e6c68d8-82ba-4692-8608-c3d42da9ad9a.png",
       website: "https://www.mastercardlighthouse.com",
       description: "Impact & partnership program – Fall 2025 cohort"
+    },
+
+        {
+      name: "European Blockchain Sandbox",
+      logo: "/lovable-uploads/European Blockchain Sandbox.png",
+      website: "https://blockchain-observatory.ec.europa.eu/european-blockchain-sandbox_en",
+      description: "European blockchain regulatory sandbox"
     }
   ];
 

@@ -18,13 +18,7 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
       active: true,
       linkedin: "https://www.linkedin.com/in/henrikhjelte/",
     },
-    {
-      name: "Johan Toll",
-      role: "CIO & Co-Founder",
-      image: "/lovable-uploads/johan.png",
-      active: true,
-      linkedin: "https://www.linkedin.com/in/johantoll/",
-    },
+
     {
       name: "Niclas Tordhag",
       role: "Senior Legal Advisor",
@@ -38,9 +32,17 @@ const OurPeopleSheet = ({ isOpen, onClose }: OurPeopleSheetProps) => {
     {
       name: "Farhad Rasouli",
       role: "Executive Lead & Co-Founder",
-      image: "/lovable-uploads/f554ce90-b2c8-4975-ba67-386d73243903.png",
+      image: "/lovable-uploads/farhadimg.png",
       active: true,
       linkedin: "https://www.linkedin.com/in/farhadrasouli/",
+    },
+
+        {
+      name: "Johan Toll",
+      role: "CIO & Co-Founder",
+      image: "/lovable-uploads/johan.png",
+      active: true,
+      linkedin: "https://www.linkedin.com/in/johantoll/",
     },
     {
       name: "David Dolhomut",

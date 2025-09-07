@@ -64,6 +64,13 @@ const LogoMarquee = () => {
       link: "https://mclighthouse.com/MASSIV/",
     },
 
+        {
+      src: "/lovable-uploads/European Blockchain Sandbox.png",
+      alt: "Eu Blockchain Logo",
+      link: "https://blockchain-observatory.ec.europa.eu/european-blockchain-sandbox_en",
+    },
+
+
 
     {
       src: "/lovable-uploads/evolium.png",
