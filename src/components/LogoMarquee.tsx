@@ -56,6 +56,19 @@ const LogoMarquee = () => {
       src: "/lovable-uploads/8efc7792-2c07-415e-9ab8-cac82841e51a.png",
       alt: "Chromia Logo",
       link: "https://chromia.com/",
+
+    }, 
+    {
+      src: "/lovable-uploads/mc_symbol 1.png",
+      alt: "Mastercard Logo",
+      link: "https://mclighthouse.com/MASSIV/",
+    },
+
+
+    {
+      src: "/lovable-uploads/evolium.png",
+      alt: "evolium logo",
+      link: "https://www.evolium.ch/en/",
     },
   ];
 

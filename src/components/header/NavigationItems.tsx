@@ -19,6 +19,7 @@ interface NavigationItemsProps {
       | "vision"
       | "people"
       | "blog"
+      | "partners"
   ) => void;
 }
 
@@ -75,6 +76,16 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
                 >
                   Our People
                 </button>
+
+                <button
+  onClick={() => handleSheetOpen("partners")}
+  className="w-full text-left text-[#173A44] px-3 py-2 text-sm rounded hover:bg-gray-100"
+>
+  Our Partners
+</button>
+
+
+
               </div>
             </NavigationMenuContent>
           </NavigationMenuItem>

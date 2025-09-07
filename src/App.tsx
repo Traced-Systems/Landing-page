@@ -8,6 +8,7 @@ import ReactGA from "react-ga4";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ContactSheet from "./components/ContactSheet";
+import OurPartners from "./pages/OurPartners";
 
 // ✅ Import Google Analytics helper
 import { initGA } from "./utils/analytics";

@@ -122,6 +122,37 @@ const BlogPostAuthor = ({ postTitle }: BlogPostAuthorProps) => {
         </span>
       </div>
     );
+  } else if (
+    postTitle === "Evolium, Cling and Traced join forces for battery circularity"
+  ) {
+    return (
+      <div className="flex items-center gap-2">
+        <img
+          src="/lovable-uploads/a163e1df-6783-427e-940a-22d1f8c80d11.png"
+          alt="Evolium, Cling & Traced"
+          className="w-12 h-12 rounded-full"
+        />
+        <span className="text-gray-600">
+          Written by Evolium, Cling Systems & Traced Systems
+        </span>
+      </div>
+    );
+  } else if (
+    postTitle ===
+    "Five high-potential sustainability and social impact companies across Nordics & Baltics join the Mastercard Lighthouse MASSIV fall 2025 partnership program"
+  ) {
+    return (
+      <div className="flex items-center gap-2">
+        <img
+          src="/lovable-uploads/mc_symbol 1.png"
+          alt="Mastercard Lighthouse"
+          className="w-12 h-12 rounded-full"
+        />
+        <span className="text-gray-600">
+          Written by Mastercard Lighthouse MASSIV
+        </span>
+      </div>
+    );
   } else {
     return (
       <div className="flex items-center gap-2">
@@ -130,9 +161,7 @@ const BlogPostAuthor = ({ postTitle }: BlogPostAuthorProps) => {
           alt="Traced Systems"
           className="w-12 h-12"
         />
-        <span className="text-gray-600">
-          Written by Traced Systems
-        </span>
+        <span className="text-gray-600">Written by Traced Systems</span>
       </div>
     );
   }
