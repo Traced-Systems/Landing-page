@@ -23,6 +23,11 @@ const LogoMarquee = () => {
       link: "https://commission.europa.eu/index_en",
     },
     {
+      src: "/lovable-uploads/GS1_Denmark_logo_orange_300x.png",
+      alt: "GS1 ",
+      link: "https://www.gs1.org/",
+    },
+    {
       src: "/lovable-uploads/bonsai-technology_logo_rev-20230126-07.png",
       alt: "Bonsai Technology",
       link: "https://www.bonsaitechnology.it/",
