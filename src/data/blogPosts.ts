@@ -1,6 +1,80 @@
 import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
+    {
+      title: "Traced Systems wins Mastercard Lighthouse MASSIV Fall 2025",
+      description: `Traced Systems has been named Overall Winner of the Mastercard Lighthouse MASSIV Fall 2025 program, 
+                    at Slush in Helsinki.`,
+      image: "/lovable-uploads/MasterCardLigtHouseWinner.png", // upload image to public/lovable-uploads first
+      date: "2026-01-20",
+      fullContent: {
+        title: "Traced Systems wins Mastercard Lighthouse MASSIV Fall 2025",
+        introduction: "MASSIV is Mastercard’s impact-tech track within the Lighthouse partnership program, focused on scaling Nordic and Baltic startups that combine commercial potential with measurable sustainability impact.\nFor us, this recognition is a clear signal that Digital Product Passports (DPPs) are moving from regulatory concept to core financial infrastructure – connecting supply-chain data, circularity, and green finance.",
+        sections: [
+          {
+            heading:"Turning product data into financial-grade trust",
+            content: 
+            `Traced Systems transforms fragmented supply-chain data into Digital Product Passports that brands can use to:
+            
+              - Prove product authenticity
+              - Demonstrate compliance with EU regulations
+              - Enable circular business models such as reuse, repair, and recycling
+            
+            Our platform is built in collaboration with ChromaWay on the <strong>Chromia</strong> relational blockchain, giving enterprises a scalable, queryable and verifiable data layer for lifecycle and sustainability information.
+            
+            As DPP requirements roll out across batteries, textiles and other sectors in the coming years, brands and manufacturers need infrastructure that is <strong>credible enough for auditors and banks</strong>, not just marketing.(<a href=\"https://www.mastercard.com/news/europe/en/newsroom/press-releases/en/2025/two-nordic-startups-announced-as-winners-of-mastercard-lighthouse-2025-fall-program/?utm_source=chatgpt.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary underline hover:text-primary/80\">Mastercard</a>)
+            
+            That is the role Traced Systems is designed to play. `
+          },
+          {
+            heading: "What we achieved in the MASSIV program",
+            content: 
+            `During the MASSIV Fall 2025 program, we set out to connect DPPs more tightly with the financial system. Concretely, the journey included:
+              - <strong>Pilots around payments and rewards</strong> – exploring how verified lifecycle events (e.g. reuse, return, recycling) can trigger payments, incentives or loyalty mechanisms.
+              - <strong>New relationships with Mastercard teams and Nordic banks</strong> – opening a path to link Digital Product Passports with green loans, supply-chain finance and impact-linked products.
+              - <strong>Commercial traction</strong> – signing our first paying client during the program, engaging with battery manufacturers, and exploring collaboration with Lighthouse alumni.
+              - <strong>Impact and legal robustness</strong> – refining our impact framework with support from UNDP, and receiving legal guidance from Synch on cross-border DPP and data-sharing models.
+            
+            The jury highlighted Traced Systems’ <strong>consistent progress and accountability</strong> throughout the program – from pilots and partnerships to investor traction and impact reporting – when selecting us as overall winner.
+            
+            You can read Mastercard’s official announcement here:
+            <a href=\"https://www.mastercard.com/news/europe/en/newsroom/press-releases/en/2025/two-nordic-startups-announced-as-winners-of-mastercard-lighthouse-2025-fall-program/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary underline hover:text-primary/80\">➡️ Two Nordic startups announced as winners of Mastercard Lighthouse 2025 fall program</a> 
+            
+            And watch our Mastercard Lighthouse moment here:(link)
+            <a href=\"https://www.instagram.com/reel/DQLx7R4EbNm/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary underline hover:text-primary/80\">🎥 Instagram: Traced Systems at Slush – Lighthouse MASSIV Winner</a> 
+
+            ` 
+            
+          },
+          {
+            heading: "Why this matters – and what comes next",
+            content: 
+            `Regulation is now locking in Digital Product Passports as a core requirement in Europe. Financial institutions, brands and recyclers will all depend on <strong>trusted, verifiable product data</strong>c to operate, finance and differentiate circular value chains.
+            
+            Winning Mastercard Lighthouse MASSIV accelerates three priorities for Traced Systems:
+            1. <strong>Scaling pilots into production</strong> with leading manufacturers in batteries, textiles and other regulated sectors.
+            2. <strong>Embedding DPPs into financial products</strong>, working with Mastercard and banks to link payments, rewards and green finance to verified lifecycle events.
+            3. <strong>Deepening our impact reporting</strong>, so every scan and every transaction contributes to measurable climate and resource outcomes.
+
+            `           
+          },
+          {
+            heading: "Let’s build the Digital Product Passport era together",
+            content: `If you are:
+            - A <strong>brand or manufacturer</strong> preparing for EU DPP rules
+            - A <strong>recycler or circular operator</strong> needing better data to optimise processes
+            - A <strong>bank or financial institution</strong> exploring how to tie capital to real-world product and material data
+            
+            We are ready to explore concrete pilots and partnerships.
+            
+            👉 Contact us to discuss how we can work together.
+          
+            `
+          },
+        ]
+      },
+      
+    },
   {
     title:
       "Five high-potential sustainability and social impact companies across Nordics & Baltics join the Mastercard Lighthouse MASSIV fall 2025 partnership program",

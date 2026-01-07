@@ -65,7 +65,7 @@ const OurPartnersSheet = ({ isOpen, onClose }: OurPartnersSheetProps) => {
     {
       name: "Mastercard Lighthouse MASSIV",
       logo: "/lovable-uploads/0e6c68d8-82ba-4692-8608-c3d42da9ad9a.png",
-      website: "https://www.mastercardlighthouse.com",
+      website: "https://mclighthouse.com/MASSIV/",
       description: "Impact & partnership program – Fall 2025 cohort"
     },
 
