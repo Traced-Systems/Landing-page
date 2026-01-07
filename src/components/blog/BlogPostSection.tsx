@@ -20,12 +20,12 @@ const BlogPostSection = ({ heading, content, quote }: SectionProps) => {
         return '<div class="text-center font-bold my-3">"SCAN THE QR CODE"</div>';
       }
       
-      const colonIndex = line.indexOf(':');
-      if (colonIndex > 0) {
-        const beforeColon = line.substring(0, colonIndex);
-        const afterColon = line.substring(colonIndex);
-        return `<strong>${beforeColon}</strong>${afterColon}`;
-      }
+      // const colonIndex = line.indexOf(':');
+      // if (colonIndex > 0) {
+      //   const beforeColon = line.substring(0, colonIndex);
+      //   const afterColon = line.substring(colonIndex);
+      //   return `<strong>${beforeColon}</strong>${afterColon}`;
+      // }
       return line;
     });
     
