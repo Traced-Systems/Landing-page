@@ -14,10 +14,10 @@ import OurPartners from "./pages/OurPartners";
 import { initGA } from "./utils/analytics";
 
 const queryClient = new QueryClient();
-const MEASUREMENT_ID = "G-LV7DPTYYFV"; // Replace with your actual ID
+const MEASUREMENT_ID =  "G-QGJHBK4WXN"; // Replace with your actual ID
 
 // Initialize GA4 with your measurement ID
-ReactGA.initialize("G-LV7DPTYYFV"); // Replace with your actual GA4 measurement ID
+ReactGA.initialize("G-QGJHBK4WXN"); // Replace with your actual GA4 measurement ID
 
 const App = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
