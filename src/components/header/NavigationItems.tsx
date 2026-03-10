@@ -20,6 +20,7 @@ interface NavigationItemsProps {
       | "people"
       | "blog"
       | "partners"
+      | "career"
   ) => void;
 }
 
@@ -49,10 +50,9 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
             <NavigationMenuTrigger className="text-base text-[#173A44] font-normal hover:text-[#066985] transition-colors bg-transparent data-[state=open]:bg-transparent px-0 h-auto">
               <span className="flex items-center gap-1">
                 About Us
-                <ChevronDown 
-                  className={`w-4 h-4 transition-transform duration-200 ${
-                    isAboutOpen ? 'rotate-180' : ''
-                  }`}
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${isAboutOpen ? 'rotate-180' : ''
+                    }`}
                 />
               </span>
             </NavigationMenuTrigger>
@@ -78,19 +78,22 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
                 </button>
 
                 <button
-  onClick={() => handleSheetOpen("partners")}
-  className="w-full text-left text-[#173A44] px-3 py-2 text-sm rounded hover:bg-gray-100"
->
-  Our Partners
-</button>
-
-
-
+                  onClick={() => handleSheetOpen("partners")}
+                  className="w-full text-left text-[#173A44] px-3 py-2 text-sm rounded hover:bg-gray-100"
+                >
+                  Our Partners
+                </button>
               </div>
             </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      <button
+        onClick={() => handleSheetOpen("career")}
+        className="text-base text-[#173A44] hover:text-[#066985]"
+      >
+        Carrer
+      </button>
       <button
         onClick={() => handleSheetOpen("blog")}
         className="text-base text-[#173A44] hover:text-[#066985]"

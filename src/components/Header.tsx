@@ -9,10 +9,11 @@ import OurPeopleSheet from './OurPeopleSheet';
 import OurPartnersSheet from './OurPartnersSheet';
 import BlogSheet from './BlogSheet';
 import MainHeader from './header/MainHeader';
+import CareerSheet from './CareerSheet';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSheet, setActiveSheet] = useState<'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog' |  'partners' | null>(null);
+  const [activeSheet, setActiveSheet] = useState<'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog' | 'partners' | 'career' | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +26,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSheetOpen = (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog' |  'partners' ) => {
+  const handleSheetOpen = (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog' | 'partners' | 'career') => {
     setActiveSheet(sheet);
   };
 
@@ -35,24 +36,24 @@ const Header = () => {
 
   return (
     <>
-      <MainHeader 
-        isScrolled={isScrolled} 
-        handleSheetOpen={handleSheetOpen} 
+      <MainHeader
+        isScrolled={isScrolled}
+        handleSheetOpen={handleSheetOpen}
         className={activeSheet ? 'hidden' : ''}
       />
 
-      <IndustriesSheet 
-        isOpen={activeSheet === 'industries'} 
-        onClose={handleSheetClose} 
+      <IndustriesSheet
+        isOpen={activeSheet === 'industries'}
+        onClose={handleSheetClose}
       />
-      <UseCasesSheet 
-        isOpen={activeSheet === 'useCases'} 
+      <UseCasesSheet
+        isOpen={activeSheet === 'useCases'}
         onClose={handleSheetClose}
         initialCase={null}
       />
-      <ContactGeneral 
-        isOpen={activeSheet === 'contact'} 
-        onClose={handleSheetClose} 
+      <ContactGeneral
+        isOpen={activeSheet === 'contact'}
+        onClose={handleSheetClose}
       />
       <OurValuesSheet
         isOpen={activeSheet === 'values'}
@@ -67,12 +68,17 @@ const Header = () => {
         onClose={handleSheetClose}
       />
 
-<OurPartnersSheet
-  isOpen={activeSheet === 'partners'}
-  onClose={handleSheetClose}
-/>
+      <OurPartnersSheet
+        isOpen={activeSheet === 'partners'}
+        onClose={handleSheetClose}
+      />
       <BlogSheet
         isOpen={activeSheet === 'blog'}
+        onClose={handleSheetClose}
+        initialPost={null}
+      />
+      <CareerSheet
+        isOpen={activeSheet === 'career'}
         onClose={handleSheetClose}
         initialPost={null}
       />
