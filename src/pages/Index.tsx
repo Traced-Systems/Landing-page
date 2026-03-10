@@ -24,6 +24,7 @@ import OurVisionSheet from "@/components/OurVisionSheet";
 import OurPeopleSheet from "@/components/OurPeopleSheet";
 import OurPartnersSheet from "@/components/OurPartnersSheet"; // 👈 VIGTIG
 import BlogSheet from "@/components/BlogSheet";
+import CareerSheet from "@/components/CareerSheet";
 
 type SheetType =
   | "industries"
@@ -34,6 +35,7 @@ type SheetType =
   | "people"
   | "blog"
   | "partners"
+  | "career"
   | null;
 
 const Index = () => {
@@ -93,6 +95,9 @@ const Index = () => {
       )}
       {activeSheet === "blog" && (
         <BlogSheet isOpen={true} onClose={handleSheetClose} />
+      )}
+      {activeSheet === "career" && (
+        <CareerSheet isOpen={true} onClose={handleSheetClose} />
       )}
 
       <CookieConsentBanner />

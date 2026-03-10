@@ -6,7 +6,7 @@ import { Menu, ArrowLeft, ChevronDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 interface MobileMenuProps {
-  handleSheetOpen: (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog') => void;
+  handleSheetOpen: (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog' | 'career' ) => void;
 }
 
 const MobileMenu = ({
@@ -16,7 +16,7 @@ const MobileMenu = ({
   const [isAboutUsOpen, setIsAboutUsOpen] = useState(false);
   const navigate = useNavigate();
 
-  const handleMenuItemClick = (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog') => {
+  const handleMenuItemClick = (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog' | 'career' ) => {
     setIsOpen(false);
     handleSheetOpen(sheet);
   };
@@ -101,6 +101,9 @@ const MobileMenu = ({
               </button>
             </div>
           </div>
+          <button onClick={() => handleMenuItemClick('career')} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
+            Career
+          </button>
           <button onClick={() => handleMenuItemClick('blog')} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
             Blog
           </button>
