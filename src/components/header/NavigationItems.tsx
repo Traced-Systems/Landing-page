@@ -92,7 +92,7 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
         onClick={() => handleSheetOpen("career")}
         className="text-base text-[#173A44] hover:text-[#066985]"
       >
-        Carrer
+        Career
       </button>
       <button
         onClick={() => handleSheetOpen("blog")}
