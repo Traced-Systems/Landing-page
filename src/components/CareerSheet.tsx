@@ -7,7 +7,7 @@ import CareerPostSubSheet from "./CareerPostSubSheet";
 import BlogCard from "./blog/BlogCard";
 import { jobPosts } from "@/data/jobPosts";
 import { BlogPost } from "@/types/blog";
-import nojobs   from "/public/lovable-uploads/nojobs.png"
+import nojobs   from "/lovable-uploads/nojobs.png"
 
 interface CareerSheetProps {
   isOpen: boolean;
