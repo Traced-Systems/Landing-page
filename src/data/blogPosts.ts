@@ -1,20 +1,20 @@
 import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
-    {
-      title: "Traced Systems wins Mastercard Lighthouse MASSIV Fall 2025",
-      description: `Traced Systems has been named Overall Winner of the Mastercard Lighthouse MASSIV Fall 2025 program, 
+  {
+    title: "Traced Systems wins Mastercard Lighthouse MASSIV Fall 2025",
+    description: `Traced Systems has been named Overall Winner of the Mastercard Lighthouse MASSIV Fall 2025 program, 
                     at Slush in Helsinki.`,
-      image: "/lovable-uploads/MasterCardLigtHouseWinner.png", // upload image to public/lovable-uploads first
-      date: "2026-01-20",
-      fullContent: {
-        title: "Traced Systems wins Mastercard Lighthouse MASSIV Fall 2025",
-        introduction: "MASSIV is Mastercard’s impact-tech track within the Lighthouse partnership program, focused on scaling Nordic and Baltic startups that combine commercial potential with measurable sustainability impact.\nFor us, this recognition is a clear signal that Digital Product Passports (DPPs) are moving from regulatory concept to core financial infrastructure – connecting supply-chain data, circularity, and green finance.",
-        sections: [
-          {
-            heading:"Turning product data into financial-grade trust",
-            content: 
-            `Traced Systems transforms fragmented supply-chain data into Digital Product Passports that brands can use to:
+    image: "/lovable-uploads/MasterCardLigtHouseWinner.png", // upload image to public/lovable-uploads first
+    date: "2026-01-20",
+    fullContent: {
+      title: "Traced Systems wins Mastercard Lighthouse MASSIV Fall 2025",
+      introduction:
+        "MASSIV is Mastercard’s impact-tech track within the Lighthouse partnership program, focused on scaling Nordic and Baltic startups that combine commercial potential with measurable sustainability impact.\nFor us, this recognition is a clear signal that Digital Product Passports (DPPs) are moving from regulatory concept to core financial infrastructure – connecting supply-chain data, circularity, and green finance.",
+      sections: [
+        {
+          heading: "Turning product data into financial-grade trust",
+          content: `Traced Systems transforms fragmented supply-chain data into Digital Product Passports that brands can use to:
             
               - Prove product authenticity
               - Demonstrate compliance with EU regulations
@@ -24,12 +24,11 @@ export const blogPosts: BlogPost[] = [
             
             As DPP requirements roll out across batteries, textiles and other sectors in the coming years, brands and manufacturers need infrastructure that is <strong>credible enough for auditors and banks</strong>, not just marketing.(<a href=\"https://www.mastercard.com/news/europe/en/newsroom/press-releases/en/2025/two-nordic-startups-announced-as-winners-of-mastercard-lighthouse-2025-fall-program/?utm_source=chatgpt.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary underline hover:text-primary/80\">Mastercard</a>)
             
-            That is the role Traced Systems is designed to play. `
-          },
-          {
-            heading: "What we achieved in the MASSIV program",
-            content: 
-            `During the MASSIV Fall 2025 program, we set out to connect DPPs more tightly with the financial system. Concretely, the journey included:
+            That is the role Traced Systems is designed to play. `,
+        },
+        {
+          heading: "What we achieved in the MASSIV program",
+          content: `During the MASSIV Fall 2025 program, we set out to connect DPPs more tightly with the financial system. Concretely, the journey included:
               - <strong>Pilots around payments and rewards</strong> – exploring how verified lifecycle events (e.g. reuse, return, recycling) can trigger payments, incentives or loyalty mechanisms.
               - <strong>New relationships with Mastercard teams and Nordic banks</strong> – opening a path to link Digital Product Passports with green loans, supply-chain finance and impact-linked products.
               - <strong>Commercial traction</strong> – signing our first paying client during the program, engaging with battery manufacturers, and exploring collaboration with Lighthouse alumni.
@@ -43,24 +42,22 @@ export const blogPosts: BlogPost[] = [
             And watch our Mastercard Lighthouse moment here:(link)
             <a href=\"https://www.instagram.com/reel/DQLx7R4EbNm/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary underline hover:text-primary/80\">🎥 Instagram: Traced Systems at Slush – Lighthouse MASSIV Winner</a> 
 
-            ` 
-            
-          },
-          {
-            heading: "Why this matters – and what comes next",
-            content: 
-            `Regulation is now locking in Digital Product Passports as a core requirement in Europe. Financial institutions, brands and recyclers will all depend on <strong>trusted, verifiable product data</strong>c to operate, finance and differentiate circular value chains.
+            `,
+        },
+        {
+          heading: "Why this matters – and what comes next",
+          content: `Regulation is now locking in Digital Product Passports as a core requirement in Europe. Financial institutions, brands and recyclers will all depend on <strong>trusted, verifiable product data</strong>c to operate, finance and differentiate circular value chains.
             
             Winning Mastercard Lighthouse MASSIV accelerates three priorities for Traced Systems:
             1. <strong>Scaling pilots into production</strong> with leading manufacturers in batteries, textiles and other regulated sectors.
             2. <strong>Embedding DPPs into financial products</strong>, working with Mastercard and banks to link payments, rewards and green finance to verified lifecycle events.
             3. <strong>Deepening our impact reporting</strong>, so every scan and every transaction contributes to measurable climate and resource outcomes.
 
-            `           
-          },
-          {
-            heading: "Let’s build the Digital Product Passport era together",
-            content: `If you are:
+            `,
+        },
+        {
+          heading: "Let’s build the Digital Product Passport era together",
+          content: `If you are:
             - A <strong>brand or manufacturer</strong> preparing for EU DPP rules
             - A <strong>recycler or circular operator</strong> needing better data to optimise processes
             - A <strong>bank or financial institution</strong> exploring how to tie capital to real-world product and material data
@@ -69,12 +66,11 @@ export const blogPosts: BlogPost[] = [
             
             👉 Contact us to discuss how we can work together.
           
-            `
-          },
-        ]
-      },
-      
+            `,
+        },
+      ],
     },
+  },
   {
     title:
       "Five high-potential sustainability and social impact companies across Nordics & Baltics join the Mastercard Lighthouse MASSIV fall 2025 partnership program",
@@ -273,7 +269,8 @@ export const blogPosts: BlogPost[] = [
           heading: "",
           content:
             "In total, the initiative has chosen twenty participants. These include Privado ID and Privately, a digital, privacy-preserving age verification and online child safety solution with their Blockchain Age Estimation.\n\nPrivado ID, formerly known as PolygonID, allows individuals to prove their age, qualifications, and other data without revealing sensitive personal information. They use cryptography and zero-knowledge proofs (ZKPs) to protect this data. The product competes with World ID. World Network is the digital identity and cryptocurrency project founded by OpenAI CEO Sam Altman.\n\nPrivado ID and Privately’s collaboration focuses on self-sovereign identity (SSI) age verification. “A critical challenge in 2025 and beyond,” the Sandbox says—using ZKPs and verifiable credentials (VCs) to eliminate the risks of sharing personal data.",
-          tweet: "https://twitter.com/EuropeanSandbox/status/1778409647866231082",
+          tweet:
+            "https://twitter.com/EuropeanSandbox/status/1778409647866231082",
         },
         {
           heading: "",
@@ -281,7 +278,8 @@ export const blogPosts: BlogPost[] = [
             "Another chosen project is digital-assets infrastructure company Parfin, which has developed the privacy-focused Rayls blockchain. It enables financial institutions—including central banks—to issue digital currencies and assets, tokenize real-world assets (RWAs), and conduct cross-border transactions.\n\nThe list also includes digital inheritance platform CHARONIUM, Web3 tokenization infrastructure Blocksquare, Web3/4 compliance platform PixelPai, decentralized knowledge-graph protocol Tree, and TECNALIA’s EMERALD trust-system.\n\nFrictionless Markets merges TradFi systems with on-chain tech, while 31Third provides blockchain-native institutional asset management. A Chromaway-incubated group (Traced Systems, Instagrid, Batteriretur, Cling Systems) built a battery Digital Product Passport (DPP) for end-of-life management.",
         },
         {
-          heading: "Blockchain Sandbox ‘Enhancing Knowledge of Cutting-Edge Tech’",
+          heading:
+            "Blockchain Sandbox ‘Enhancing Knowledge of Cutting-Edge Tech’",
           content:
             "“The selected use cases span all EU/EEA regions and represent a wide range of industry sectors and regulatory topics,” the announcement says. The full participant list is available on the website.\n\nThe European Blockchain Regulatory Sandbox for DLT is an initiative of the European Commission, announced in February 2023. Its goal is to provide a framework for regulators, supervisors, and innovators to engage in dialogue and identify legal or regulatory obstacles.",
         },
@@ -289,7 +287,8 @@ export const blogPosts: BlogPost[] = [
           heading: "",
           content:
             "Subsequently, this will “increase legal certainty for innovative decentralized technology solutions, including blockchain,” it says. “The sandbox will allow regulators and supervisors to enhance their knowledge of cutting-edge blockchain technologies.”\n\nThe sandbox held two discussions over the past two years, selecting projects, regulators, authorities, and financial entities across the Union to refine EU regulatory strategies.\n\nIn April 2024, the United Kingdom launched a digital-securities sandbox consultation for DLT testing. The Bank of England and the UK’s Financial Conduct Authority held a draft-guidance consultation for the Digital Securities Sandbox (DSS).",
-          tweet: "https://twitter.com/EuropeanSandbox/status/1776233450599696773",
+          tweet:
+            "https://twitter.com/EuropeanSandbox/status/1776233450599696773",
         },
       ],
     },
@@ -300,7 +299,7 @@ export const blogPosts: BlogPost[] = [
       "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports",
     description:
       "Sustainability, transparency, and innovation are becoming essential in today's interconnected world. At Traced Systems, we are committed to driving change through blockchain-powered solutions that promote trust and accountability.",
-    image: "/lovable-uploads/ecdba3ef-2ae6-4fa3-96d6-e01f4e951b66.png",
+    image: "/lovable-uploads/bef43ea2-5eea-4e47-867d-5dd43437a0fb.png",
     date: "2025-03-10",
     fullContent: {
       title:
@@ -450,15 +449,13 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
-    title:
-      "Efficient product tracking with blockchain in supply chains",
+    title: "Efficient product tracking with blockchain in supply chains",
     description:
       "Many sectors face significant challenges in maintaining transparent and sustainable product tracking. Traced Systems, a blockchain-powered solution from ChromaWay, is improving product traceability across industries as part of the Trace4Value+SwePass project. By leveraging Digital Product Passports, Traced Systems fosters greater transparency and sustainability throughout the entire product lifecycle across sectors.",
     image: "/lovable-uploads/dd922267-04dd-42fd-bfc5-31dfb191dbcc.png",
     date: "2025-01-15",
     fullContent: {
-      title:
-        "Efficient product tracking with blockchain in supply chains",
+      title: "Efficient product tracking with blockchain in supply chains",
       introduction:
         "Many sectors face significant challenges in maintaining transparent and sustainable product tracking. Traced Systems, a blockchain-powered solution from ChromaWay, is improving product traceability across industries as part of the Trace4Value+SwePass project. By leveraging Digital Product Passports, Traced Systems fosters greater transparency and sustainability throughout the entire product lifecycle across sectors.",
       sections: [
