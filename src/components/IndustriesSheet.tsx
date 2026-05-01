@@ -27,29 +27,6 @@ const IndustriesSheet = ({
   const [activeSheet, setActiveSheet] = useState<
     "industries" | "textiles" | "batteries" | null
   >(null);
-  const euSectionRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    if (isOpen && scrollToEU) {
-      setTimeout(() => {
-        if (euSectionRef.current) {
-          euSectionRef.current.scrollIntoView({
-            behavior: "smooth",
-            block: "start", // Changed from 'center' to 'start' for better visibility
-          });
-        }
-      }, 500); // Increased delay to 500ms for better results
-    }
-  }, [isOpen, scrollToEU]);
-
-  useEffect(() => {
-    if (isOpen && scrollToEU && euSectionRef.current) {
-      euSectionRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }
-  }, [isOpen, scrollToEU]);
 
   React.useEffect(() => {
     if (isOpen) {
@@ -143,9 +120,7 @@ const IndustriesSheet = ({
               </div>
             </div>
 
-            <div ref={euSectionRef}>
-              <EURegulationsSection />
-            </div>
+            <EURegulationsSection />
 
             <CTASection>
               <div className="text-center mt-6 px-4 sm:px-8">
@@ -168,7 +143,7 @@ const IndustriesSheet = ({
                     alt="Unified Traceability Platform"
                   />
                 </div>
-                </div>
+              </div>
             </CTASection>
             <AboutCTA onClose={onClose} />
           </div>
