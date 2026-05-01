@@ -168,10 +168,7 @@ const IndustriesSheet = ({
                     alt="Unified Traceability Platform"
                   />
                 </div>
-                {/* <div className="flex justify-center mt-8">
-                  <Button1 className="px-8">Get in touch</Button1>
-                </div> */}
-              </div>
+                </div>
             </CTASection>
             <AboutCTA onClose={onClose} />
           </div>
