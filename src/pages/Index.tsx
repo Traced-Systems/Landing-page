@@ -67,8 +67,8 @@ const Index = () => {
         {/* CTA-knap åbner contact-sheet via samme mekanisme */}
         <CTA onContactClick={() => handleSheetOpen("contact")} />
       </main>
-
-      <Footer />
+    
+    
 
       {/* 🧩 Rendre dét sheet der er aktivt */}
       {activeSheet === "contact" && (
