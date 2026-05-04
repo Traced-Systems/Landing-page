@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import {Link, NavLink} from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -29,12 +30,12 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
 
   return (
     <nav className="hidden lg:flex items-center space-x-10 relative z-[1001]">
-      <a href="#" className="text-base text-[#173A44] hover:text-[#066985]">
+      <Link to="/" className="text-base text-[#173A44] hover:text-[#066985]">
         Home
-      </a>
-      <a href="/industries" className="text-base text-[#173A44] hover:text-[#066985]">
+      </Link>
+      <Link to="/industries" className="text-base text-[#173A44] hover:text-[#066985]">
         Industries
-      </a>
+      </Link>
      
       <button
         onClick={() => handleSheetOpen("useCases")}
