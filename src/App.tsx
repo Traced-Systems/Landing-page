@@ -8,7 +8,7 @@ import ReactGA from "react-ga4";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ContactSheet from "./components/ContactSheet";
-import Industries from "./pages/IndustriesPage";
+import IndustriesPage from "./pages/IndustriesPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Textiles from "./pages/Textiles";
@@ -53,7 +53,7 @@ const App = () => {
 
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/industries" element={<Industries />} />
+            <Route path="/industries" element={<IndustriesPage />} />
             <Route path="/industries/textiles" element={<Textiles />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
