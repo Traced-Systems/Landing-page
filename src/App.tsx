@@ -15,6 +15,7 @@ import Textiles from "./pages/Textiles";
 
 //Import Google Analytics helper
 import { initGA } from "./utils/analytics";
+import Batteries from "./pages/Batteries";
 
 const queryClient = new QueryClient();
 const MEASUREMENT_ID = "G-QGJHBK4WXN"; // Replace with your actual ID
@@ -55,6 +56,7 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/industries" element={<IndustriesPage />} />
             <Route path="/industries/textiles" element={<Textiles />} />
+            <Route path="/industries/batteries" element={<Batteries />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
 
