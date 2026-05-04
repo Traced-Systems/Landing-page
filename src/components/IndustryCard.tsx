@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface IndustryCardProps {
   title: string;
@@ -16,12 +17,13 @@ const IndustryCard = ({
   url
   }: IndustryCardProps) => {
   return (
-    <div
+    <Link
+      to={url}
       className="bg-white rounded-xl min-w-[150px] shadow-[2px_2px_6px_0px_rgba(0,0,0,0.05),-2px_-2px_6px_0px_rgba(255,255,255,0.8)] 
       hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,255,0.85)] 
       transition-all duration-300 transform hover:scale-[1.01] cursor-pointer"
-      onClick={url ? () => window.open(url, "_blank") : undefined}
-    >
+         >
+
       <div className="w-full" style={{ aspectRatio: "430 / 270" }}>
         <img
           src={imageSrc}
@@ -35,7 +37,7 @@ const IndustryCard = ({
           {description}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 
