@@ -8,12 +8,16 @@ import ReactGA from "react-ga4";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ContactSheet from "./components/ContactSheet";
+import Industries from "./pages/IndustriesPage";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Textiles from "./pages/Textiles";
 
 //Import Google Analytics helper
 import { initGA } from "./utils/analytics";
 
 const queryClient = new QueryClient();
-const MEASUREMENT_ID =  "G-QGJHBK4WXN"; // Replace with your actual ID
+const MEASUREMENT_ID = "G-QGJHBK4WXN"; // Replace with your actual ID
 
 // Initialize GA4 with your measurement ID
 ReactGA.initialize("G-QGJHBK4WXN"); // Replace with your actual GA4 measurement ID
@@ -44,10 +48,17 @@ const App = () => {
         <BrowserRouter>
           {/* ✅ Track page views when route changes */}
           <TrackPageView />
+
+          <Header />
+
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/industries" element={<Industries />} />
+            <Route path="/industries/textiles" element={<Textiles />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+
+          <Footer />
         </BrowserRouter>
         <ContactSheet
           isOpen={isContactOpen}

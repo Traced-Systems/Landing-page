@@ -32,12 +32,10 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
       <a href="#" className="text-base text-[#173A44] hover:text-[#066985]">
         Home
       </a>
-      <button
-        onClick={() => handleSheetOpen("industries")}
-        className="text-base text-[#173A44] hover:text-[#066985]"
-      >
+      <a href="/industries" className="text-base text-[#173A44] hover:text-[#066985]">
         Industries
-      </button>
+      </a>
+     
       <button
         onClick={() => handleSheetOpen("useCases")}
         className="text-base text-[#173A44] hover:text-[#066985]"
@@ -51,8 +49,9 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
               <span className="flex items-center gap-1">
                 About Us
                 <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-200 ${isAboutOpen ? 'rotate-180' : ''
-                    }`}
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    isAboutOpen ? "rotate-180" : ""
+                  }`}
                 />
               </span>
             </NavigationMenuTrigger>
