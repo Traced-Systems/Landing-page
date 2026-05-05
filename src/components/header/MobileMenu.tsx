@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu, ArrowLeft, ChevronDown } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface MobileMenuProps {
   handleSheetOpen: (sheet: 'industries' | 'useCases' | 'contact' | 'values' | 'vision' | 'people' | 'blog' | 'career' ) => void;
@@ -35,6 +35,10 @@ const MobileMenu = ({
     navigate('/');
   };
 
+  const handleMenuClose = () => {
+    setIsOpen(false);
+  }
+
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
@@ -64,23 +68,15 @@ const MobileMenu = ({
           />
         </div>
         
-        <Button 
-          variant="ghost" 
-          size="icon" 
-          onClick={() => setIsOpen(false)} 
-          className="absolute right-4 top-4 hover:bg-gray-100 bg-white shadow-md flex items-center gap-2 px-[42px] py-[18px]"
-        >
-          <ArrowLeft className="h-5 w-5" />
-          <span>Back</span>
-        </Button>
+        
 
         <nav className="flex flex-col space-y-4 p-4">
           <button onClick={handleHomeClick} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
             Home
           </button>
-          <button onClick={() => handleMenuItemClick('industries')} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
+          <Link to="/industries" onClick={handleMenuClose} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
             Industries
-          </button>
+          </Link>
           <button onClick={() => handleMenuItemClick('useCases')} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
             Use Cases
           </button>
@@ -104,9 +100,9 @@ const MobileMenu = ({
           <button onClick={() => handleMenuItemClick('career')} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
             Career
           </button>
-          <button onClick={() => handleMenuItemClick('blog')} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
+          <Link to="/blog" onClick={handleMenuClose} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
             Blog
-          </button>
+          </Link>
           <button onClick={() => handleMenuItemClick('contact')} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
             Contact Us
           </button>

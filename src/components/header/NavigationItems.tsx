@@ -19,7 +19,6 @@ interface NavigationItemsProps {
       | "values"
       | "vision"
       | "people"
-      | "blog"
       | "partners"
       | "career"
   ) => void;
@@ -94,12 +93,12 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
       >
         Career
       </button>
-      <button
-        onClick={() => handleSheetOpen("blog")}
+      <Link to="/blog"
+        
         className="text-base text-[#173A44] hover:text-[#066985]"
       >
         Blog
-      </button>
+      </Link>
       <button
         onClick={() => handleSheetOpen("contact")}
         className="text-base font-normal text-[#173A44] hover:text-[#066985]"
