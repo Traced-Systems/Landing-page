@@ -7,6 +7,7 @@ export const blogPosts: BlogPost[] = [
     description: `Digital Product Passports are moving from concept to implementation.
 For many companies, the challenge is no longer awareness. It is execution.`,
     image: "/lovable-uploads/bluestone-tracedsystems.jpg", // upload image to public/lovable-uploads first
+    slug: "bluestone-pim-and-traced-systems-connecting-productdata-to-digital-product-passports",
     date: "2026-05-05",
     fullContent: {
       title:
@@ -65,6 +66,7 @@ Together, this creates a practical path from product information management to t
                     at Slush in Helsinki.`,
     image: "/lovable-uploads/MasterCardLigtHouseWinner.png", // upload image to public/lovable-uploads first
     date: "2026-01-20",
+    slug: "traced-systems-wins-mastercard-lighthouse-massiv-fall-2025",
     fullContent: {
       title: "Traced Systems wins Mastercard Lighthouse MASSIV Fall 2025",
       introduction:
@@ -136,6 +138,7 @@ Together, this creates a practical path from product information management to t
       "Five high-potential sustainability and social impact companies across Nordics & Baltics join the Mastercard Lighthouse MASSIV fall 2025 partnership program.",
     image: "/lovable-uploads/mastercardxtraced (2).jpg",
     date: "2025-09-07",
+    slug: "five-high-potential-sustainability-and-social-impact-companies-across-nordics-and-baltics-join-the-mastercard-lighthouse-massiv-fall-2025-partnership-program",
     fullContent: {
       title:
         "Five high-potential sustainability and social impact companies across Nordics & Baltics join the Mastercard Lighthouse MASSIV fall 2025 partnership program",
@@ -192,6 +195,7 @@ Together, this creates a practical path from product information management to t
       "Evolium Technologies, Cling Systems and Traced Systems form a partnership to rethink the circularity of lithium-based batteries.",
     image: "/lovable-uploads/tracedxclingxevo.jpg",
     date: "2025-09-07",
+    slug: "evolium-cling-and-traced-join-forces-for-battery-circularity",
     fullContent: {
       title: "Evolium, Cling and Traced join forces for battery circularity",
       introduction:
@@ -232,6 +236,7 @@ Together, this creates a practical path from product information management to t
       "In this edition of the Greatest Minds in Partnerships series, David Dolhomut, Head of Partnerships & Business Development at Traced Systems, shares his insights on building a thriving blockchain partner ecosystem. From overcoming industry challenges and onboarding the right partners to balancing traditional enterprises with Web3-native collaborations, David provides a blueprint for successful blockchain partnerships...",
     image: "/lovable-uploads/c0e03054-5e46-4abd-ab45-c5a523b99799.png",
     date: "2025-04-22",
+    slug: "the-blueprint-for-a-successful-blockchain-partner-ecosystem",
     fullContent: {
       title: "The Blueprint for a Successful Blockchain Partner Ecosystem",
       introduction:
@@ -359,6 +364,7 @@ Together, this creates a practical path from product information management to t
       "Sustainability, transparency, and innovation are becoming essential in today's interconnected world. At Traced Systems, we are committed to driving change through blockchain-powered solutions that promote trust and accountability.",
     image: "/lovable-uploads/bef43ea2-5eea-4e47-867d-5dd43437a0fb.png",
     date: "2025-03-10",
+    slug: "traced-systems-and-doors3-pioneering-the-future-of-digital-product-passports",
     fullContent: {
       title:
         "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports",
@@ -438,6 +444,7 @@ Together, this creates a practical path from product information management to t
       "Manufacturing process and supply chain digitalizations are the key steps towards digital battery passport policy applications: a EU strategy for circular economy.",
     image: "/lovable-uploads/bdfeaffa-ccb2-478e-b427-e939a8e93031.png",
     date: "2025-02-03",
+    slug: "battery-passport-circular-economy-in-a-qr-code",
     fullContent: {
       title: "Battery Passport – Circular economy in a QR Code",
       introduction:
@@ -512,6 +519,7 @@ Together, this creates a practical path from product information management to t
       "Many sectors face significant challenges in maintaining transparent and sustainable product tracking. Traced Systems, a blockchain-powered solution from ChromaWay, is improving product traceability across industries as part of the Trace4Value+SwePass project. By leveraging Digital Product Passports, Traced Systems fosters greater transparency and sustainability throughout the entire product lifecycle across sectors.",
     image: "/lovable-uploads/dd922267-04dd-42fd-bfc5-31dfb191dbcc.png",
     date: "2025-01-15",
+    slug: "efficient-product-tracking-with-blockchain-in-supply-chains",
     fullContent: {
       title: "Efficient product tracking with blockchain in supply chains",
       introduction:
