@@ -4,6 +4,7 @@ export interface BlogPost {
   description: string;
   image: string;
   date: string;
+  slug: string;
   fullContent?: {
     title: string;
     introduction: string;
