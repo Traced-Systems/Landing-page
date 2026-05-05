@@ -25,7 +25,10 @@ For many companies, the challenge is no longer awareness. It is execution.`,
         {
           heading:
             "How do you extend existing product data into traceability, compliance, and trusted collaboration?",
-          content: `Bluestone PIM provides a strong foundation for managing structured product information, including attributes, materials, specifications, and market-facing content. For companies with complex product portfolios, this foundation is critical to maintaining consistent, governed product data across channels and markets.
+          content: `
+          Traced Systems is pleased to highlight Bluestone PIM as an ecosystem partner supporting this transition.
+          
+          Bluestone PIM provides a strong foundation for managing structured product information, including attributes, materials, specifications, and market-facing content. For companies with complex product portfolios, this foundation is critical to maintaining consistent, governed product data across channels and markets.
 
 Traced Systems builds on this foundation by extending product data into Digital Product Passport workflows. Our platform connects product data with lifecycle traceability, role-based access, secure data-sharing, and verification across suppliers, manufacturers, logistics partners, regulators, and downstream stakeholders.
 
@@ -44,13 +47,13 @@ Together, this creates a practical path from product information management to t
             
            Rather than creating parallel compliance systems or duplicating data flows, this approach builds on infrastructure that companies already use and trust—reducing complexity and maintaining data consistency.
             
-            Bluestone helps companies structure and govern product data. Traced Systems helps turn that data into trusted, traceable, and compliance-oriented Digital Product Passport workflows
+            Bluestone helps companies structure and govern product data. Traced Systems helps turn that data into trusted, traceable, and compliance-oriented Digital Product Passport workflows.
             
-            This is particularly relevant for sectors such as textiles, batteries, furniture, and other product categories where traceability, sustainability, authenticity, and regulatory transparency are becoming increasingly important 
+            This is particularly relevant for sectors such as textiles, batteries, furniture, and other product categories where traceability, sustainability, authenticity, and regulatory transparency are becoming increasingly important. 
 
-            Most companies already hold much of the data they need. The challenge is making that data usable across systems, stakeholders, and regulatory contexts
+            Most companies already hold much of the data they need. The challenge is making that data usable across systems, stakeholders, and regulatory contexts.
 
-            Through this ecosystem collaboration, Bluestone PIM and Traced Systems provide a scalable path for companies preparing to move from product data management to Digital Product Passport execution
+            Through this ecosystem collaboration, Bluestone PIM and Traced Systems provide a scalable path for companies preparing to move from product data management to Digital Product Passport execution.
 
             We are currently engaging companies exploring DPP pilots in textiles, batteries, furniture, and adjacent sectors.        
 
