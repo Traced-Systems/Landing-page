@@ -2,9 +2,10 @@ import React from "react";
 
 interface TitleBannerProps {
   title: string;
+  description?: string;
 }
 
-const TitleBanner: React.FC<TitleBannerProps> = ({ title }) => {
+const TitleBanner: React.FC<TitleBannerProps> = ({ title, description }) => {
   return (
     <div
       className="relative w-full mb-12 mb:mb-0"
@@ -17,8 +18,9 @@ const TitleBanner: React.FC<TitleBannerProps> = ({ title }) => {
       />
 
       {/* Title Section */}
-      <div className="-mb-20  absolute inset-0 flex items-center justify-center text-center md:pl-20 md:pt-12 md:-mb-0 md:justify-start md:text-left">
-        <h1 className="text-2xl font-semibold text-[#2D545E]">{title}</h1>
+      <div className="-mb-20  absolute inset-0 flex flex-col items-start justify-center text-center md:pl-20 md:pt-12 md:-mb-0 md:justify-start md:text-left">
+        <h1 className="text-4xl font-semibold text-[#2D545E]">{title}</h1>
+        {description && <p className="text-gray-600 mt-4 text-lg">{description}</p>}
       </div>
     </div>
   );
