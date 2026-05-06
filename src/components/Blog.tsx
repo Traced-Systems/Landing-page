@@ -1,14 +1,10 @@
-import React, { useState } from 'react';
-import BlogSheet from './BlogSheet';
-import BlogPostSubsheet from './BlogPostSubsheet';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import BlogSection from './shared/BlogSection';
 import { blogPosts as allBlogPosts } from '@/data/blogPosts';
-import { BlogPost } from '@/types/blog';
 
 const Blog = () => {
-  const [isSheetOpen, setIsSheetOpen] = useState(false);
-  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
-  const [showPostDirectly, setShowPostDirectly] = useState(false);
+  const navigate = useNavigate();
 
   // ✅ Robust sort: skub poster uden (gyldig) dato nederst
   const posts = [...allBlogPosts].sort((a, b) => {
@@ -22,23 +18,10 @@ const Blog = () => {
   });
 
   const handlePostClick = (index: number) => {
-    // Brug de sorterede poster for korrekt mapping
     const clickedPost = posts[index];
-    if (clickedPost) {
-      setSelectedPost(clickedPost);
-      setShowPostDirectly(true);
+    if (clickedPost && clickedPost.slug) {
+      navigate(`/blog/${clickedPost.slug}`);
     }
-  };
-
-  const handleClose = () => {
-    setIsSheetOpen(false);
-    setSelectedPost(null);
-    setShowPostDirectly(false);
-  };
-
-  const handleShowMoreClick = () => {
-    setShowPostDirectly(false);
-    setIsSheetOpen(true);
   };
 
   return (
@@ -46,26 +29,10 @@ const Blog = () => {
       <BlogSection
         title="Explore Our Blog"
         subtitle="Explore expert ideas and stories from our team."
-        posts={posts}                // 👈 passer de sorterede posts
-        showMoreButton={true}
-        onShowMore={handleShowMoreClick}
-        onPostClick={handlePostClick} // 👈 index matcher nu de sorterede posts
+        posts={posts}
+        onPostClick={handlePostClick}
         carouselView={true}
       />
-
-      <BlogSheet 
-        isOpen={isSheetOpen}
-        onClose={handleClose}
-        initialPost={null}
-      />
-
-      {showPostDirectly && selectedPost && (
-        <BlogPostSubsheet 
-          isOpen={true}
-          onClose={handleClose}
-          post={selectedPost}
-        />
-      )}
     </>
   );
 };

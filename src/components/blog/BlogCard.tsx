@@ -13,7 +13,6 @@ const BlogCard = ({ post }: BlogCardProps) => {
 
   const handleClick = () => {
     navigate(`/blog/${post.slug}`);
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

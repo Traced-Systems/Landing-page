@@ -19,9 +19,11 @@ const BlogPostPage = () => {
 
     // Scroll to top whenever the slug changes
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        // Use a short timeout to ensure it runs after the page transition/render
+        setTimeout(() => {
+            window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
+        }, 10);
     }, [slug]);
-
 
     // 404 State 
     if (!blogPost) {
