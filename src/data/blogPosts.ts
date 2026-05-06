@@ -6,7 +6,7 @@ export const blogPosts: BlogPost[] = [
       "Bluestone PIM and Traced Systems: Connecting ProductData to Digital Product Passports",
     description: `Digital Product Passports are moving from concept to implementation.
 For many companies, the challenge is no longer awareness. It is execution.`,
-    image: "/lovable-uploads/bluestone-tracedsystems.jpg", // upload image to public/lovable-uploads first
+    image: "/lovable-uploads/bluestone-tracedsystem.png", // upload image to public/lovable-uploads first
     slug: "bluestone-pim-and-traced-systems-connecting-productdata-to-digital-product-passports",
     date: "2026-05-05",
     fullContent: {
