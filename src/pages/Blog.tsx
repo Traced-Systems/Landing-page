@@ -13,7 +13,7 @@ const Blog = () => {
       />
       <div
 
-        className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto bg-[#F7F7F5] shadow-xl p-0"
+        className="flex flex-col items-center justify-center overflow-y-auto shadow-sm p-0 "
       >
 
         <div className="h-full flex flex-col">
