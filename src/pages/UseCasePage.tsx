@@ -10,12 +10,7 @@ const UseCasePage = () => {
 
     const useCase = useCases.find((c) => c.slug === slug);
 
-    // Scroll to top whenever the slug changes
-    useEffect(() => {
-        setTimeout(() => {
-            window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
-        }, 10);
-    }, [slug]);
+
 
     // Determine which hero image to show based on the use case
     const getUseCaseImage = () => {
@@ -31,28 +26,7 @@ const UseCasePage = () => {
         return "/lovable-uploads/455ee019-a81c-4318-b9c9-b8238118d40b.png";
     };
 
-    // Get other use cases for the "More Use Cases" section
-    const relatedCases = useCases.filter((c) => c.slug && c.slug !== slug);
 
-    // ── 404 ──
-    if (!useCase) {
-        return (
-            <div className="min-h-screen bg-[#F7F7F5] flex flex-col items-center justify-center px-6 py-24">
-                <h1 className="text-4xl font-bold text-gray-800 mb-4">
-                    Use case not found
-                </h1>
-                <p className="text-gray-500 mb-8 text-center max-w-md">
-                    The use case you're looking for doesn't exist or may have been moved.
-                </p>
-                <button
-                    onClick={() => navigate("/use-cases")}
-                    className="inline-flex items-center gap-2 bg-[#E4AC70] hover:bg-[#C66600] text-white font-medium px-6 py-3 rounded-lg transition-colors"
-                >
-                    <ArrowLeft className="w-4 h-4" /> Back to Use Cases
-                </button>
-            </div>
-        );
-    }
 
     // ── Author line ──
     const renderAuthorLine = () => {
@@ -131,12 +105,7 @@ const UseCasePage = () => {
                     <ChevronRight className="w-3.5 h-3.5 shrink-0" />
                     <Link to="/use-cases" className="hover:text-[#C66600] transition-colors">
                         Use Cases
-                    </Link>
-                    <ChevronRight className="w-3.5 h-3.5 shrink-0" />
-                    <span className="text-gray-700 truncate max-w-[200px] sm:max-w-xs">
-                        {useCase.title}
-                    </span>
-                </nav>
+                    </Link>                </nav>
             </div>
 
             {/* ── Article ── */}

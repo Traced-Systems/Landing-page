@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import AboutCTA from "@/components/shared/AboutCTA";
 import { ChevronRight } from "lucide-react";
 import { useCases } from "@/data/useCases";
+import TitleBanner from "@/components/shared/TitleBanner";
 
 const UseCase = () => {
     return (
-        <div className="container mx-auto flex items-center justify-center mt-20">
-            <div className="!w-full sm:!w-[75vw] 2xl:!w-[66vw] sm:!max-w-[75vw] 2xl:!max-w-[66vw] overflow-y-auto shadow-sm p-0">
+        <div className="container mx-auto flex-col items-center justify-center mt-20">
+             <div className="flex flex-col items-center justify-center overflow-y-auto shadow-sm p-0 ">
                 <div className="h-full flex flex-col">
                     <div>
                         <div className="pt-24 px-8">
