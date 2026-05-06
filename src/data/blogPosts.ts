@@ -2,11 +2,74 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    title:
+      "Bluestone PIM and Traced Systems: Connecting ProductData to Digital Product Passports",
+    description: `Digital Product Passports are moving from concept to implementation.
+For many companies, the challenge is no longer awareness. It is execution.`,
+    image: "/lovable-uploads/bluestone-tracedsystem.png", // upload image to public/lovable-uploads first
+    slug: "bluestone-pim-and-traced-systems-connecting-productdata-to-digital-product-passports",
+    date: "2026-05-05",
+    fullContent: {
+      title:
+        "Bluestone PIM and Traced Systems: Connecting ProductData to Digital Product Passports",
+      introduction: `Digital Product Passports are moving from concept to implementation. For many companies, the challenge is no longer awareness. It is execution.
+
+        
+        Some organisations still approach Digital Product Passports as a documentation requirement. Others recognise that DPPs require integrating data and workflows across the value chain.
+
+
+        
+        In both cases, the underlying question is the same:`,
+
+      sections: [
+        {
+          heading:
+            "How do you extend existing product data into traceability, compliance, and trusted collaboration?",
+          content: `
+          Traced Systems is pleased to highlight Bluestone PIM as an ecosystem partner supporting this transition.
+          
+          Bluestone PIM provides a strong foundation for managing structured product information, including attributes, materials, specifications, and market-facing content. For companies with complex product portfolios, this foundation is critical to maintaining consistent, governed product data across channels and markets.
+
+Traced Systems builds on this foundation by extending product data into Digital Product Passport workflows. Our platform connects product data with lifecycle traceability, role-based access, secure data-sharing, and verification across suppliers, manufacturers, logistics partners, regulators, and downstream stakeholders.
+
+
+Together, this creates a practical path from product information management to the operational deployment of DPP.`,
+        },
+        {
+          heading: "The combined approach supports companies in areas such as:",
+          content: `
+              - lifecycle event tracking.
+              - traceability across the value chain.
+              - controlled, role-based access to sensitive data.
+              - secure verification of product information.
+              - preparation for emerging DPP and sustainability-related requirements
+              - improved transparency across partners and downstream stakeholders.
+            
+           Rather than creating parallel compliance systems or duplicating data flows, this approach builds on infrastructure that companies already use and trust—reducing complexity and maintaining data consistency.
+            
+            Bluestone helps companies structure and govern product data. Traced Systems helps turn that data into trusted, traceable, and compliance-oriented Digital Product Passport workflows.
+            
+            This is particularly relevant for sectors such as textiles, batteries, furniture, and other product categories where traceability, sustainability, authenticity, and regulatory transparency are becoming increasingly important. 
+
+            Most companies already hold much of the data they need. The challenge is making that data usable across systems, stakeholders, and regulatory contexts.
+
+            Through this ecosystem collaboration, Bluestone PIM and Traced Systems provide a scalable path for companies preparing to move from product data management to Digital Product Passport execution.
+
+            We are currently engaging companies exploring DPP pilots in textiles, batteries, furniture, and adjacent sectors.        
+
+            `,
+        },
+      ],
+    },
+  },
+
+  {
     title: "Traced Systems wins Mastercard Lighthouse MASSIV Fall 2025",
     description: `Traced Systems has been named Overall Winner of the Mastercard Lighthouse MASSIV Fall 2025 program, 
                     at Slush in Helsinki.`,
     image: "/lovable-uploads/MasterCardLigtHouseWinner.png", // upload image to public/lovable-uploads first
     date: "2026-01-20",
+    slug: "traced-systems-wins-mastercard-lighthouse-massiv-fall-2025",
     fullContent: {
       title: "Traced Systems wins Mastercard Lighthouse MASSIV Fall 2025",
       introduction:
@@ -78,6 +141,7 @@ export const blogPosts: BlogPost[] = [
       "Five high-potential sustainability and social impact companies across Nordics & Baltics join the Mastercard Lighthouse MASSIV fall 2025 partnership program.",
     image: "/lovable-uploads/mastercardxtraced (2).jpg",
     date: "2025-09-07",
+    slug: "five-high-potential-sustainability-and-social-impact-companies-across-nordics-and-baltics-join-the-mastercard-lighthouse-massiv-fall-2025-partnership-program",
     fullContent: {
       title:
         "Five high-potential sustainability and social impact companies across Nordics & Baltics join the Mastercard Lighthouse MASSIV fall 2025 partnership program",
@@ -134,6 +198,7 @@ export const blogPosts: BlogPost[] = [
       "Evolium Technologies, Cling Systems and Traced Systems form a partnership to rethink the circularity of lithium-based batteries.",
     image: "/lovable-uploads/tracedxclingxevo.jpg",
     date: "2025-09-07",
+    slug: "evolium-cling-and-traced-join-forces-for-battery-circularity",
     fullContent: {
       title: "Evolium, Cling and Traced join forces for battery circularity",
       introduction:
@@ -174,6 +239,7 @@ export const blogPosts: BlogPost[] = [
       "In this edition of the Greatest Minds in Partnerships series, David Dolhomut, Head of Partnerships & Business Development at Traced Systems, shares his insights on building a thriving blockchain partner ecosystem. From overcoming industry challenges and onboarding the right partners to balancing traditional enterprises with Web3-native collaborations, David provides a blueprint for successful blockchain partnerships...",
     image: "/lovable-uploads/c0e03054-5e46-4abd-ab45-c5a523b99799.png",
     date: "2025-04-22",
+    slug: "the-blueprint-for-a-successful-blockchain-partner-ecosystem",
     fullContent: {
       title: "The Blueprint for a Successful Blockchain Partner Ecosystem",
       introduction:
@@ -301,6 +367,7 @@ export const blogPosts: BlogPost[] = [
       "Sustainability, transparency, and innovation are becoming essential in today's interconnected world. At Traced Systems, we are committed to driving change through blockchain-powered solutions that promote trust and accountability.",
     image: "/lovable-uploads/bef43ea2-5eea-4e47-867d-5dd43437a0fb.png",
     date: "2025-03-10",
+    slug: "traced-systems-and-doors3-pioneering-the-future-of-digital-product-passports",
     fullContent: {
       title:
         "Traced Systems and Doors3: Pioneering the Future of Digital Product Passports",
@@ -380,6 +447,7 @@ export const blogPosts: BlogPost[] = [
       "Manufacturing process and supply chain digitalizations are the key steps towards digital battery passport policy applications: a EU strategy for circular economy.",
     image: "/lovable-uploads/bdfeaffa-ccb2-478e-b427-e939a8e93031.png",
     date: "2025-02-03",
+    slug: "battery-passport-circular-economy-in-a-qr-code",
     fullContent: {
       title: "Battery Passport – Circular economy in a QR Code",
       introduction:
@@ -454,6 +522,7 @@ export const blogPosts: BlogPost[] = [
       "Many sectors face significant challenges in maintaining transparent and sustainable product tracking. Traced Systems, a blockchain-powered solution from ChromaWay, is improving product traceability across industries as part of the Trace4Value+SwePass project. By leveraging Digital Product Passports, Traced Systems fosters greater transparency and sustainability throughout the entire product lifecycle across sectors.",
     image: "/lovable-uploads/dd922267-04dd-42fd-bfc5-31dfb191dbcc.png",
     date: "2025-01-15",
+    slug: "efficient-product-tracking-with-blockchain-in-supply-chains",
     fullContent: {
       title: "Efficient product tracking with blockchain in supply chains",
       introduction:
