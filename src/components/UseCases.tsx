@@ -5,6 +5,7 @@ import UseCaseSubsheet from "./UseCaseSubsheet";
 import BeOurNextUseCaseSheet from "./BeOurNextUseCaseSheet";
 import { ChevronRight } from "lucide-react";
 import { UseCase } from "@/types/useCase";
+import { Link } from "react-router-dom";
 
 const UseCases = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
@@ -18,6 +19,7 @@ const UseCases = () => {
       description:
         "BLK DNM has launched their 'Connected Fashion' campaign, delivering their first collection of apparel embedded with blockchain-enabled hardware! This exclusive collection features 72 signature leather jackets...",
       image: "/lovable-uploads/1896ee6a-5182-48cf-bab2-dcd33adf89cf.png",
+      slug: "blk-dnm-connected-fashion-on-chromia-appnet",
       fullContent: {
         title: "BLK DNM: Connected Fashion on Chromia Appnet",
         authorIcon: "/lovable-uploads/5ce2f433-ac13-4162-97af-4ed813cff152.png",
@@ -64,6 +66,7 @@ const UseCases = () => {
       description:
         "What if a battery's lifecycle routing left a verifiable trail? This pilot project, powered by a blockchain-based Digital Product Passport...",
       image: "/lovable-uploads/0d128533-7eb5-4de9-9aa6-43943eb3a716.png",
+      slug: "battery-lifecycle-innovation",
       fullContent: {
         title:
           "Completed DPP pilot project between Cling Systems, Traced Systems, Instagrid & Batteriretur",
@@ -99,6 +102,7 @@ const UseCases = () => {
       description:
         "Ready to innovate and comply with evolving legislation? Let's explore how the DPP framework can enhance customer experiences and drive circularity...",
       image: "/lovable-uploads/b3b186f8-bc2a-4d3d-916f-bb04dee5239e.png",
+      slug: "be-our-next-use-case",
       fullContent: {
         title: "Be Our Next Success Story",
         authorIcon: "/lovable-uploads/5ce2f433-ac13-4162-97af-4ed813cff152.png",
@@ -162,11 +166,11 @@ const UseCases = () => {
 
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {cases.map((item, index) => (
-            <div
+            <Link
               key={index}
-              onClick={() => handleCaseClick(item, index)}
+              to={`/use-case/${item.slug}`}
               className="bg-white rounded-xl shadow-[2px_2px_6px_0px_rgba(0,0,0,0.05),-2px_-2px_6px_0px_rgba(255,255,255,0.8)] 
-hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,255,0.85)] transition-all duration-300 cursor-pointer flex flex-col h-full"
+hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,255,0.85)] transition-all duration-300 cursor-pointer flex flex-col h-full block"
             >
               <div className="aspect-[430/243] w-full">
                 <img
@@ -191,42 +195,25 @@ hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,25
                     : item.description}
                 </div>
                 <button className="transition-colors text-[#E4AC70] hover:text-[#C66600] flex items-center gap-0.5 mt-auto">
-                  Know More <ChevronRight className="w-4 h-4 mt-0.5" />
+                 Read More <ChevronRight className="w-4 h-4 mt-0.5" />
                 </button>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         <div className="flex justify-center">
-          <Button
-            variant="outline"
-            className="rounded-full border-2 border-[#E4AC70] bg-[#F7F7F7] text-[#143A44] flex items-center gap-2 pl-7 pr-6 hover:bg-[#E6E5E0]"
-            onClick={handleShowMoreClick}
+          <Link
+            to="/use-cases" target="_top"
+            className="rounded-full border-2 border-[#E4AC70] bg-[#F7F7F7] text-[#143A44] flex items-center gap-2 px-7 py-3 hover:bg-[#E6E5E0]"
+            
           >
-            Know More <ChevronRight className="w-5 h-5 text-[#143A44]" />
-          </Button>
+            Learn More <ChevronRight className="w-5 h-5 text-[#143A44]" />
+          </Link>
         </div>
       </div>
 
-      <UseCasesSheet
-        isOpen={isSheetOpen}
-        onClose={handleClose}
-        initialCase={null}
-      />
-
-      {showCaseDirectly && selectedCase && (
-        <UseCaseSubsheet
-          isOpen={true}
-          onClose={handleClose}
-          useCase={selectedCase}
-        />
-      )}
-
-      <BeOurNextUseCaseSheet 
-        isOpen={isNextCaseSheetOpen}
-        onClose={handleNextCaseClose}
-      />
+   
     </section>
   );
 };
