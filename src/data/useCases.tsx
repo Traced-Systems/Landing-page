@@ -90,5 +90,6 @@ export const useCases: UseCase[] = [
         description:
             "Ready to innovate and comply with evolving legislation? Let's explore how the DPP framework can enhance customer experiences and drive circularity...",
         image: "/lovable-uploads/0443aaa4-526c-49de-bc7b-2c6726ceccfc.png",
+        slug: "be-our-next-use-case",
     },
 ];
