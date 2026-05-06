@@ -77,9 +77,9 @@ const MobileMenu = ({
           <Link to="/industries" onClick={handleMenuClose} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
             Industries
           </Link>
-          <button onClick={() => handleMenuItemClick('useCases')} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
+          <Link to="/use-cases" onClick={handleMenuClose} className="text-left text-lg text-[#173A44] hover:text-[#066985] py-2">
             Use Cases
-          </button>
+          </Link>
           <div className="flex flex-col space-y-2">
             <button onClick={toggleAboutUs} className="flex items-center justify-between w-full text-lg text-[#173A44] font-medium py-2">
               <span>About Us</span>
