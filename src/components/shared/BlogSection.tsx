@@ -1,7 +1,6 @@
-
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { ChevronRight, ChevronLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface BlogPost {
   title: string;
@@ -9,6 +8,8 @@ interface BlogPost {
   image: string;
   date?: string;
   author?: string;
+  post?: string;
+  slug?: string;
 }
 
 interface BlogSectionProps {
@@ -16,8 +17,6 @@ interface BlogSectionProps {
   subtitle: string;
   posts: BlogPost[];
   onPostClick?: (index: number) => void;
-  showMoreButton?: boolean;
-  onShowMore?: () => void;
   carouselView?: boolean;
 }
 
@@ -26,26 +25,26 @@ const BlogSection = ({
   subtitle,
   posts,
   onPostClick,
-  showMoreButton = false,
-  onShowMore,
   carouselView = false,
 }: BlogSectionProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   // For carousel view, we only show 3 posts at a time
-  const visiblePosts = carouselView 
+  const visiblePosts = carouselView
     ? posts.slice(currentSlide, currentSlide + 3)
     : posts;
-    
+
   const totalSlides = Math.max(0, posts.length - 3 + 1);
-  
+
   const nextSlide = () => {
     setCurrentSlide((prev) => Math.min(prev + 1, posts.length - 3));
   };
-  
+
   const prevSlide = () => {
     setCurrentSlide((prev) => Math.max(prev - 1, 0));
   };
+
+
 
   return (
     <section className="pt-32 pb-28 bg-white">
@@ -57,16 +56,16 @@ const BlogSection = ({
 
         {carouselView && posts.length > 3 && (
           <div className="flex justify-end gap-2 mb-6">
-            <button 
-              onClick={prevSlide} 
+            <button
+              onClick={prevSlide}
               disabled={currentSlide === 0}
               className="p-2 rounded-full border border-gray-300 disabled:opacity-50"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-5 h-5 text-[#173A44]" />
             </button>
-            <button 
-              onClick={nextSlide} 
+            <button
+              onClick={nextSlide}
               disabled={currentSlide >= totalSlides - 1}
               className="p-2 rounded-full border border-gray-300 disabled:opacity-50"
               aria-label="Next slide"
@@ -87,10 +86,21 @@ const BlogSection = ({
                 <img
                   src={post.image}
                   alt={post.title}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
+                {post.date && (
+                  <p className="text-xs text-gray-400 mb-2 flex items-center gap-1">
+
+                    {new Date(post.date).toLocaleDateString("en-GB", {
+                      day: "numeric",
+                      month: "short",
+                      year: "numeric",
+                    })}
+                  </p>
+                )}
                 <h3 className="text-xl font-semibold mb-3 text-[#173A44]">
                   {post.title}
                 </h3>
@@ -98,24 +108,25 @@ const BlogSection = ({
                   {post.description}
                 </p>
                 <button className="transition-colors text-[#E4AC70] hover:text-[#C66600] flex items-center gap-0.5">
-                  Know More <ChevronRight className="w-4 h-4 mt-0.5" />
+                  Read more <ChevronRight className="w-4 h-4 mt-0.5" />
                 </button>
               </div>
             </div>
           ))}
         </div>
 
-        {showMoreButton && (
-          <div className="flex justify-center">
-            <Button
-              variant="outline"
-              className="rounded-full border-2 border-[#E4AC70] bg-[#Ffffff] text-[#143A44] flex items-center gap-2 pl-7 pr-6 hover:bg-[#F2F1EE]"
-              onClick={onShowMore}
-            >
-              Know More <ChevronRight className="w-5 h-5 text-[#143A44]" />
-            </Button>
-          </div>
-        )}
+
+        <div className="flex justify-center">
+          <Link
+            to="/blog" target="_top"
+
+            className="rounded-full border-2 border-[#E4AC70] bg-[#Ffffff] text-[#143A44] flex items-center gap-2 px-7 py-4 hover:bg-[#F2F1EE]"
+
+          >
+            See all posts <ChevronRight className="w-5 h-5 text-[#143A44]" />
+          </Link>
+        </div>
+
       </div>
     </section>
   );
