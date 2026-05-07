@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import React from "react";
 import { Separator } from "@/components/ui/separator";
-import OurValuesSheet from "./OurValuesSheet";
 import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 const About = () => {
-  const [isValuesOpen, setIsValuesOpen] = useState(false);
 
   return (
     <section className="py-20" style={{ backgroundColor: "#F2F1EE" }}>
@@ -34,14 +33,13 @@ const About = () => {
               technology, and a commitment to sustainability and compliance by
               leveraging the power of Chromia technology.
             </p>
-            <Button
-              variant="secondary"
-              className="rounded-full border-2 border-[#E4AC70] bg-[#F2F1EE] text-[#143A44] flex items-center gap-2 pl-7 pr-6 hover:bg-[#EEEADF]"
-              onClick={() => setIsValuesOpen(true)}
+            <Link
+              to="/about/our-values" target="_top"
+              className="rounded-full border-2 border-[#E4AC70] bg-[#F2F1EE] text-[#143A44] w-fit flex items-center gap-2 py-3 px-7 hover:bg-[#EEEADF]"
             >
-              Know More
+              Learn more
               <ChevronRight className="w-5 h-5 text-[#143A44]" />
-            </Button>
+            </Link>
           </div>
 
           <div className="relative">
@@ -53,11 +51,6 @@ const About = () => {
           </div>
         </div>
       </div>
-
-      <OurValuesSheet
-        isOpen={isValuesOpen}
-        onClose={() => setIsValuesOpen(false)}
-      />
     </section>
   );
 };
