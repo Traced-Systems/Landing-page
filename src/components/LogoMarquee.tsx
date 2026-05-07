@@ -3,6 +3,11 @@ import React from "react";
 const LogoMarquee = () => {
   const logos = [
     {
+      src: "/lovable-uploads/bluestone.png",
+      alt: "bluestone Logo",
+      link: "https://www.bluestonepim.com/",
+    },
+    {
       src: "/lovable-uploads/872f4e62-69fe-401b-9c71-a0c2074f0690.png",
       alt: "BLK DNM",
       link: "https://www.blkdnm.com/",
@@ -62,14 +67,14 @@ const LogoMarquee = () => {
       alt: "Chromia Logo",
       link: "https://chromia.com/",
 
-    }, 
+    },
     {
       src: "/lovable-uploads/mc_symbol 1.png",
       alt: "Mastercard Logo",
       link: "https://mclighthouse.com/MASSIV/",
     },
 
-        {
+    {
       src: "/lovable-uploads/European Blockchain Sandbox.png",
       alt: "Eu Blockchain Logo",
       link: "https://blockchain-observatory.ec.europa.eu/european-blockchain-sandbox_en",
@@ -83,14 +88,10 @@ const LogoMarquee = () => {
       link: "https://www.evolium.ch/en/",
     },
 
-    {
-      src: "/lovable-uploads/bluestone.png",
-      alt: "bluestone Logo",
-      link: "https://www.bluestonepim.com/",
-    },
 
 
-    
+
+
   ];
 
   return (
