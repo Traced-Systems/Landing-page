@@ -18,6 +18,8 @@ import { initGA } from "./utils/analytics";
 import Batteries from "./pages/Batteries";
 import Blog from "./pages/Blog";
 import BlogPostPage from "./pages/BlogPostPage";
+import UseCase from "./pages/UseCase";
+import UseCasePage from "./pages/UseCasePage";
 
 const queryClient = new QueryClient();
 const MEASUREMENT_ID = "G-QGJHBK4WXN"; // Replace with your actual ID
@@ -61,6 +63,8 @@ const App = () => {
             <Route path="/industries/batteries" element={<Batteries />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/use-cases" element={<UseCase />} />
+            <Route path="/use-case/:slug" element={<UseCasePage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
 

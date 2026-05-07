@@ -13,8 +13,6 @@ import {
 interface NavigationItemsProps {
   handleSheetOpen: (
     sheet:
-      | "industries"
-      | "useCases"
       | "contact"
       | "values"
       | "vision"
@@ -36,12 +34,12 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
         Industries
       </Link>
      
-      <button
-        onClick={() => handleSheetOpen("useCases")}
+      <Link 
+        to="/use-cases" 
         className="text-base text-[#173A44] hover:text-[#066985]"
       >
         Use Cases
-      </button>
+      </Link>
       <NavigationMenu onValueChange={(value) => setIsAboutOpen(!!value)}>
         <NavigationMenuList>
           <NavigationMenuItem>

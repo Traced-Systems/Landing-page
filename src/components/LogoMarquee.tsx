@@ -82,6 +82,15 @@ const LogoMarquee = () => {
       alt: "evolium logo",
       link: "https://www.evolium.ch/en/",
     },
+
+    {
+      src: "/lovable-uploads/bluestone.png",
+      alt: "bluestone Logo",
+      link: "https://www.bluestonepim.com/",
+    },
+
+
+    
   ];
 
   return (

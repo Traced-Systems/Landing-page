@@ -5,6 +5,7 @@ export interface UseCase {
   title: string;
   description: string | ReactNode;
   image: string;
+  slug?: string;
   fullContent?: {
     title: string;
     authorIcon: string;
