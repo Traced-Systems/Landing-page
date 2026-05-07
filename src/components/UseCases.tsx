@@ -168,7 +168,7 @@ const UseCases = () => {
           {cases.map((item, index) => (
             <Link
               key={index}
-              to={`/use-case/${item.slug}`}
+              to={`/use-case/${item.slug}`} target="_top"
               className="bg-white rounded-xl shadow-[2px_2px_6px_0px_rgba(0,0,0,0.05),-2px_-2px_6px_0px_rgba(255,255,255,0.8)] 
 hover:shadow-[3px_3px_8px_0px_rgba(0,0,0,0.08),-3px_-3px_8px_0px_rgba(255,255,255,0.85)] transition-all duration-300 cursor-pointer flex flex-col h-full block"
             >
