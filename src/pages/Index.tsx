@@ -10,7 +10,6 @@ import UseCases from "@/components/UseCases";
 import Blog from "@/components/Blog";
 import OurTech from "@/components/OurTech";
 import Technologies from "@/components/Technologies";
-import Footer from "@/components/Footer";
 import DigitalPassport from "@/components/DigitalPassport";
 import Foundation from "@/components/Foundation";
 import CTA from "@/components/CTA";
