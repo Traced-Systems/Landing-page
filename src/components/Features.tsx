@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import TextilesSheet from "./TextilesSheet";
-import BatteriesSheet from "./BatteriesSheet";
-import IndustriesSheet from "./IndustriesSheet";
+
 import { ChevronRight } from "lucide-react";
 
 const Features = () => {
-  const [activeSheet, setActiveSheet] = useState<
-    "textiles" | "batteries" | "industries" | null
-  >(null);
+
 
   const features = [
     {
       id: "textile-card",
+      url:"/industries/textiles",
       title: "Textiles",
       description: "Sustainable Fashion",
       image: "/lovable-uploads/7db51ad9-4f3d-4085-b9e9-2004e66476b4.png",
@@ -22,6 +19,7 @@ const Features = () => {
     },
     {
       id: "batteries-card",
+      url:"/industries/batteries",
       title: "Batteries",
       description: "Electric Vehicle Solutions",
       image: "/lovable-uploads/973d7c66-1d01-4e1e-89ce-2dee7a7c3dae.png",
@@ -32,6 +30,7 @@ const Features = () => {
     },
     {
       id: "espr-card",
+      url: "/industries/",
       title: "Supporting Sectors",
       description: "Across EU Regulations",
       image: "/lovable-uploads/a4205a69-444a-4317-be96-d4751706d608.png",
@@ -42,24 +41,7 @@ const Features = () => {
     },
   ];
 
-  const [scrollToEU, setScrollToEU] = useState(false);
 
-  const handleCardClick = (id: string) => {
-    if (id === "textile-card") {
-      setActiveSheet("textiles");
-      setScrollToEU(false);
-    } else if (id === "batteries-card") {
-      setActiveSheet("batteries");
-      setScrollToEU(false);
-    } else if (id === "espr-card") {
-      setActiveSheet("industries");
-      setScrollToEU(true); // Ensure scrolling happens when opening IndustriesSheet
-    }
-  };
-
-  const handleSheetClose = () => {
-    setActiveSheet(null);
-  };
 
   // Sort features for mobile view
   const sortedFeatures = [...features].sort((a, b) => {
@@ -85,7 +67,7 @@ const Features = () => {
                 style={{
                   order: window.innerWidth < 768 ? feature.mobileOrder : 0,
                 }}
-                onClick={() => handleCardClick(feature.id)}
+                onClick={() => window.open(feature.url, "_self")}
               >
                 <div className="relative w-full h-full transition-all duration-700 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   <div className="absolute inset-0 [backface-visibility:hidden]">
@@ -147,24 +129,7 @@ const Features = () => {
         </div>
       </section>
 
-      <TextilesSheet
-        isOpen={activeSheet === "textiles"}
-        onClose={handleSheetClose}
-        onBack={handleSheetClose}
-      />
-
-      <BatteriesSheet
-        isOpen={activeSheet === "batteries"}
-        onClose={handleSheetClose}
-        onBack={handleSheetClose}
-      />
-
-      <IndustriesSheet
-        isOpen={activeSheet === "industries"}
-        onClose={handleSheetClose}
-        onBack={handleSheetClose}
-        scrollToEU={scrollToEU} // Pass the state
-      />
+     
     </>
   );
 };
