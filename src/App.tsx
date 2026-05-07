@@ -20,6 +20,10 @@ import Blog from "./pages/Blog";
 import BlogPostPage from "./pages/BlogPostPage";
 import UseCase from "./pages/UseCase";
 import UseCasePage from "./pages/UseCasePage";
+import OurValues from "./pages/OurValues";
+import OurVision from "./pages/OurVision";
+import OurPeople from "./pages/OurPeople";
+import OurPartners from "./pages/OurPartners";
 
 const queryClient = new QueryClient();
 const MEASUREMENT_ID = "G-QGJHBK4WXN"; // Replace with your actual ID
@@ -65,6 +69,10 @@ const App = () => {
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/use-cases" element={<UseCase />} />
             <Route path="/use-case/:slug" element={<UseCasePage />} />
+            <Route path="/about/our-values" element={<OurValues />} />
+            <Route path="/about/our-vision" element={<OurVision />} />
+            <Route path="/about/our-people" element={<OurPeople />} />
+            <Route path="/about/our-partners" element={<OurPartners />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
 
