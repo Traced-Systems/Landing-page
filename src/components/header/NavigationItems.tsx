@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import {Link, NavLink} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -33,9 +33,9 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
       <Link to="/industries" className="text-base text-[#173A44] hover:text-[#066985]">
         Industries
       </Link>
-     
-      <Link 
-        to="/use-cases" 
+
+      <Link
+        to="/use-cases"
         className="text-base text-[#173A44] hover:text-[#066985]"
       >
         Use Cases
@@ -47,39 +47,38 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
               <span className="flex items-center gap-1">
                 About Us
                 <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-200 ${
-                    isAboutOpen ? "rotate-180" : ""
-                  }`}
+                  className={`w-4 h-4 transition-transform duration-200 ${isAboutOpen ? "rotate-180" : ""
+                    }`}
                 />
               </span>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className="w-48 py-1 bg-[#f7f7f7]">
-                <button
-                  onClick={() => handleSheetOpen("values")}
+              <div className="w-48 py-1 bg-[#f7f7f7] flex flex-col">
+                <Link
+                  to="/about/our-values"
                   className="w-full text-left text-[#173A44] px-3 py-2 text-sm rounded hover:bg-gray-100"
                 >
                   Our Values
-                </button>
-                <button
-                  onClick={() => handleSheetOpen("vision")}
+                </Link>
+                <Link
+                  to="/about/our-vision"
                   className="w-full text-left text-[#173A44] px-3 py-2 text-sm rounded hover:bg-gray-100"
                 >
                   Our Vision
-                </button>
-                <button
-                  onClick={() => handleSheetOpen("people")}
+                </Link>
+                <Link
+                  to="/about/our-people"
                   className="w-full text-left text-[#173A44] px-3 py-2 text-sm rounded hover:bg-gray-100"
                 >
                   Our People
-                </button>
+                </Link>
 
-                <button
-                  onClick={() => handleSheetOpen("partners")}
+                <Link
+                  to="/about/our-partners"
                   className="w-full text-left text-[#173A44] px-3 py-2 text-sm rounded hover:bg-gray-100"
                 >
                   Our Partners
-                </button>
+                </Link>
               </div>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -92,7 +91,7 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
         Career
       </button>
       <Link to="/blog"
-        
+
         className="text-base text-[#173A44] hover:text-[#066985]"
       >
         Blog
