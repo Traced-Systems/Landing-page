@@ -1,16 +1,11 @@
 
 import React from "react";
 import Button1 from "./ui/button-1";
+import { useNavigate } from "react-router-dom";
 
-interface CTAProps {
-  onContactClick?: () => void;
-}
 
-const CTA = ({ onContactClick }: CTAProps) => {
-  const handleContactClick = () => {
-    window.dispatchEvent(new CustomEvent('openContact'));
-  };
-
+const CTA = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative bg-[#f2f1ee] pt-20 pb-12 xl:pb-2 lg:pb-2 md:pb-20 sm:pb-12">
       <div className="container mx-auto px-4">
@@ -20,7 +15,7 @@ const CTA = ({ onContactClick }: CTAProps) => {
           </h3>
           <Button1
             className="rounded-full border-2 border-[#E4AC70] bg-[#F2F1EE] text-[#143A44] flex items-center gap-2 px-9 hover:bg-[#EEEADF]"
-            onClick={handleContactClick}
+            onClick={() => navigate("/book-a-demo")}
           >
             Get in touch
           </Button1>
@@ -28,6 +23,6 @@ const CTA = ({ onContactClick }: CTAProps) => {
       </div>
     </section>
   );
-};
+}  
 
 export default CTA;

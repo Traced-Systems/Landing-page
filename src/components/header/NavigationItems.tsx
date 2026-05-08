@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -10,20 +11,10 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
-interface NavigationItemsProps {
-  handleSheetOpen: (
-    sheet:
-      | "contact"
-      | "values"
-      | "vision"
-      | "people"
-      | "partners"
-      | "career"
-  ) => void;
-}
 
-const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
+const NavigationItems = () => {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="hidden lg:flex items-center space-x-10 relative z-[1001]">
@@ -96,7 +87,7 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
         Blog
       </Link>
       <button
-        onClick={() => handleSheetOpen("contact")}
+        onClick={() => navigate("/book-a-demo")}
         className="text-base font-normal text-[#173A44] hover:text-[#066985]"
       >
         Contact Us
