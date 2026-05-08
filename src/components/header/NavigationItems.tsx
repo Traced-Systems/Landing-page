@@ -84,12 +84,11 @@ const NavigationItems = ({ handleSheetOpen }: NavigationItemsProps) => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <button
-        onClick={() => handleSheetOpen("career")}
+      <Link to="/career"
         className="text-base text-[#173A44] hover:text-[#066985]"
       >
         Career
-      </button>
+      </Link>
       <Link to="/blog"
 
         className="text-base text-[#173A44] hover:text-[#066985]"
