@@ -26,6 +26,7 @@ import OurPeople from "./pages/OurPeople";
 import OurPartners from "./pages/OurPartners";
 import Career from "./pages/Career";
 import JobPage from "./pages/JobPage";
+import ContactUs from "./pages/ContactUs"
 
 const queryClient = new QueryClient();
 const MEASUREMENT_ID = "G-QGJHBK4WXN"; // Replace with your actual ID
@@ -77,6 +78,7 @@ const App = () => {
             <Route path="/about/our-partners" element={<OurPartners />} />
             <Route path="/career" element={<Career />} />
             <Route path="/career/:slug" element={<JobPage />} />
+            <Route path="/book-a-demo" element={<ContactUs/>}/>
             <Route path="*" element={<NotFound />} />
           </Routes>
 
