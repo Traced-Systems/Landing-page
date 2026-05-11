@@ -66,13 +66,7 @@ const BookDemoPage = () => {
       >
         <TitleBanner title="Book a demo" />
         <div className="h-full flex flex-col pt-16">
-          <div className="text-center mb-12 relative px-4">
-            <h1 className="text-3xl font-medium text-[#173A44] mb-2">
-              Book a demo
-            </h1>
-          </div>
-
-          <div className="px-8 lg:px-24 mb-12">
+         <div className="px-8 lg:px-24 mb-12">
             <form
               onSubmit={handleSubmit}
               className="space-y-8 mx-auto p-8 lg:p-20 rounded-lg shadow-sm"
