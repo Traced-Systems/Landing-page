@@ -25,8 +25,11 @@ import OurPeople from "./pages/OurPeople";
 import OurPartners from "./pages/OurPartners";
 import Career from "./pages/Career";
 import JobPage from "./pages/JobPage";
-import BookDemoPage from "./pages/BookDemoPage"
+import BookDemoPage from "./pages/BookDemoPage";
 import ContactUsPage from "./pages/ContactUsPage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import CookiesPage from "./pages/CookiesPage";
+import TermsOfServiceSheet from "./pages/TermsOfServicePage";
 
 const queryClient = new QueryClient();
 const MEASUREMENT_ID = "G-QGJHBK4WXN"; // Replace with your actual ID
@@ -35,11 +38,9 @@ const MEASUREMENT_ID = "G-QGJHBK4WXN"; // Replace with your actual ID
 ReactGA.initialize("G-QGJHBK4WXN"); // Replace with your actual GA4 measurement ID
 
 const App = () => {
-
   useEffect(() => {
     // ✅ Initialize Google Analytics when the app starts
     initGA(MEASUREMENT_ID);
-
   }, []);
 
   return (
@@ -68,8 +69,11 @@ const App = () => {
             <Route path="/about/our-partners" element={<OurPartners />} />
             <Route path="/career" element={<Career />} />
             <Route path="/career/:slug" element={<JobPage />} />
-            <Route path="/book-a-demo" element={<BookDemoPage/>}/>
-            <Route path="/contact-us" element={<ContactUsPage/>}/>
+            <Route path="/book-a-demo" element={<BookDemoPage />} />
+            <Route path="/contact-us" element={<ContactUsPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/cookie-policy" element={<CookiesPage />} />
+            <Route path="/terms-of-service" element={<TermsOfServiceSheet />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
 

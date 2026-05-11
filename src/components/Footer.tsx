@@ -1,14 +1,8 @@
 import React, { useState } from "react";
 import { Separator } from "@/components/ui/separator";
-import PrivacyPolicySheet from "./PrivacyPolicySheet";
-import CookiePolicySheet from "./CookiePolicySheet";
-import TermsOfServiceSheet from "./TermsOfServiceSheet";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false);
-  const [isCookiePolicyOpen, setIsCookiePolicyOpen] = useState(false);
-  const [isTermsOfServiceOpen, setIsTermsOfServiceOpen] = useState(false);
-
   return (
     <footer
       className="relative text-[#f2f1ee] pt-28 w-full border-none m-0 
@@ -89,25 +83,28 @@ const Footer = () => {
             </div>
 
             <div className="self-start md:self-auto md:flex justify-end sm:justify-end w-full md:w-[150px]">
-              <div className="flex flex-col md:flex-col space-y-1 md:space-y-1 md:space-y-0 md:space-x-4 mt-3 md:mt-0">
-                <button
-                  onClick={() => setIsPrivacyPolicyOpen(true)}
+              <div className="flex flex-col md:flex-col space-y-1 md:space-y-0 md:space-x-4 mt-3 md:mt-0">
+                <Link
+                  to="/privacy-policy"
+                  target="_top"
                   className="text-sm hover:text-[#FDFCF9] whitespace-nowrap text-center md:text-right"
                 >
                   Privacy policy
-                </button>
-                <button
-                  onClick={() => setIsCookiePolicyOpen(true)}
+                </Link>
+                <Link
+                  to="/cookie-policy"
+                  target="_top"
                   className="text-sm hover:text-[#FDFCF9] whitespace-nowrap text-center md:text-right"
                 >
                   Cookie policy
-                </button>
-                <button
-                  onClick={() => setIsTermsOfServiceOpen(true)}
+                </Link>
+                <Link
+                  to="/terms-of-service"
+                  target="_top"
                   className="text-sm hover:text-[#FDFCF9] whitespace-nowrap text-center md:text-right"
                 >
                   Terms of service
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -118,19 +115,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-
-      <PrivacyPolicySheet
-        isOpen={isPrivacyPolicyOpen}
-        onClose={() => setIsPrivacyPolicyOpen(false)}
-      />
-      <CookiePolicySheet
-        isOpen={isCookiePolicyOpen}
-        onClose={() => setIsCookiePolicyOpen(false)}
-      />
-      <TermsOfServiceSheet
-        isOpen={isTermsOfServiceOpen}
-        onClose={() => setIsTermsOfServiceOpen(false)}
-      />
     </footer>
   );
 };
