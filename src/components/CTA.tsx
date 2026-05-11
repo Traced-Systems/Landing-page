@@ -1,7 +1,9 @@
 
 import React from "react";
 import Button1 from "./ui/button-1";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+
+
 
 
 const CTA = () => {
@@ -13,12 +15,12 @@ const CTA = () => {
           <h3 className="text-3xl font-medium text-[#1E293B]">
             Trace Your Impact, Reward Your Actions, Sustain Our Planet.
           </h3>
-          <Button1
-            className="rounded-full border-2 border-[#E4AC70] bg-[#F2F1EE] text-[#143A44] flex items-center gap-2 px-9 hover:bg-[#EEEADF]"
-            onClick={() => navigate("/book-a-demo")}
+          <Link
+            to="/contact-us" target="_top"
+            className="rounded-full border-2 border-[#E4AC70] bg-[#F2F1EE] text-[#143A44] flex items-center gap-2 px-9 py-4 hover:bg-[#EEEADF]"
           >
             Get in touch
-          </Button1>
+          </Link> 
         </div>
       </div>
     </section>
