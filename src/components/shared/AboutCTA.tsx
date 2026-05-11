@@ -1,11 +1,12 @@
 import React from "react";
 
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 
 
 const AboutCTA = () => {
-
+const navigate = useNavigate()
 
   return (
     <section className="bg-[#173A44] w-full p-12 text-center my-[84px] py-[64px] container mx-auto">
@@ -13,9 +14,9 @@ const AboutCTA = () => {
         Do you want to know more?
       </h3>
       <Button
+        onClick={() => navigate("/book-a-demo")}
         variant="secondary"
         className="bg-[#E4AC70] hover:bg-[#E6964F] text-white px-8 py-2 rounded-full border-none shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.3)]"
-       
       >
         Get in Touch
       </Button>
