@@ -87,7 +87,7 @@ const NavigationItems = () => {
         Blog
       </Link>
       <button
-        onClick={() => navigate("/book-a-demo")}
+        onClick={() => navigate("/contact-us")}
         className="text-base font-normal text-[#173A44] hover:text-[#066985]"
       >
         Contact Us

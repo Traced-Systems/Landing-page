@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import ReactGA from "react-ga4";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import ContactSheet from "./components/ContactSheet";
 import IndustriesPage from "./pages/IndustriesPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -26,7 +25,8 @@ import OurPeople from "./pages/OurPeople";
 import OurPartners from "./pages/OurPartners";
 import Career from "./pages/Career";
 import JobPage from "./pages/JobPage";
-import ContactUs from "./pages/ContactUs"
+import BookDemoPage from "./pages/BookDemoPage"
+import ContactUsPage from "./pages/ContactUsPage";
 
 const queryClient = new QueryClient();
 const MEASUREMENT_ID = "G-QGJHBK4WXN"; // Replace with your actual ID
@@ -35,21 +35,11 @@ const MEASUREMENT_ID = "G-QGJHBK4WXN"; // Replace with your actual ID
 ReactGA.initialize("G-QGJHBK4WXN"); // Replace with your actual GA4 measurement ID
 
 const App = () => {
-  const [isContactOpen, setIsContactOpen] = useState(false);
 
   useEffect(() => {
     // ✅ Initialize Google Analytics when the app starts
     initGA(MEASUREMENT_ID);
 
-    // ✅ Add event listener for opening contact sheet
-    const handleOpenContact = () => {
-      setIsContactOpen(true);
-    };
-
-    window.addEventListener("openContact", handleOpenContact);
-    return () => {
-      window.removeEventListener("openContact", handleOpenContact);
-    };
   }, []);
 
   return (
@@ -78,16 +68,13 @@ const App = () => {
             <Route path="/about/our-partners" element={<OurPartners />} />
             <Route path="/career" element={<Career />} />
             <Route path="/career/:slug" element={<JobPage />} />
-            <Route path="/book-a-demo" element={<ContactUs/>}/>
+            <Route path="/book-a-demo" element={<BookDemoPage/>}/>
+            <Route path="/contact-us" element={<ContactUsPage/>}/>
             <Route path="*" element={<NotFound />} />
           </Routes>
 
           <Footer />
         </BrowserRouter>
-        <ContactSheet
-          isOpen={isContactOpen}
-          onClose={() => setIsContactOpen(false)}
-        />
       </TooltipProvider>
     </QueryClientProvider>
   );
