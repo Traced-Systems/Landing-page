@@ -152,8 +152,8 @@ const PrivacyPolicyPage = () => {
                   "WHAT ARE YOUR PRIVACY RIGHTS?",
                   "CONTROLS FOR DO-NOT-TRACK FEATURES",
                   "DO WE MAKE UPDATES TO THIS NOTICE?",
-                  "HOW CAN YOU CONTACT US ABOUT THIS NOTICE?",
                   "HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?",
+                  "HOW CAN YOU CONTACT US ABOUT THIS NOTICE?",
                 ].map((item, index) => (
                   <li key={index} className="mb-2">
                     <button
@@ -553,25 +553,7 @@ const PrivacyPolicyPage = () => {
 
               <div id="section-11">
                 <h2 className="text-2xl font-semibold mb-4 text-[#002A38]">
-                  11. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
-                </h2>
-                <p className="mb-6">
-                  If you have questions or comments about this notice, you may
-                  email us at farhad.rasouli@chromaway.com or contact us by post
-                  at:
-                </p>
-                <p className="mb-4 font-semibold">
-                  Traced Systems
-                  <br />
-                  Business Center Winghouse, Ørestads Blvd. 73,
-                  <br />
-                  2300 Copenhagen, Denmark.
-                </p>
-              </div>
-
-              <div id="section-12">
-                <h2 className="text-2xl font-semibold mb-4 text-[#002A38]">
-                  12. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT
+                  11. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT
                   FROM YOU?
                 </h2>
                 <p className="mb-6">
@@ -584,6 +566,23 @@ const PrivacyPolicyPage = () => {
                   To request to review, update, or delete your personal
                   information, please fill out and submit a data subject access
                   request.
+                </p>
+              </div>
+              <div id="section-12">
+                <h2 className="text-2xl font-semibold mb-4 text-[#002A38]">
+                  12. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
+                </h2>
+                <p className="mb-6">
+                  If you have questions or comments about this notice, you may
+                  email us at farhad.rasouli@chromaway.com or contact us by post
+                  at:
+                </p>
+                <p className="mb-4 font-semibold">
+                  Traced Systems
+                  <br />
+                  Business Center Winghouse, Ørestads Blvd. 73,
+                  <br />
+                  2300 Copenhagen, Denmark.
                 </p>
               </div>
             </div>
