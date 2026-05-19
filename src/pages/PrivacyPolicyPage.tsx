@@ -551,7 +551,7 @@ const PrivacyPolicyPage = () => {
                 </p>
               </div>
 
-              <div id="section-11">
+              <div id="section-11" className="mb-8">
                 <h2 className="text-2xl font-semibold mb-4 text-[#002A38]">
                   11. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT
                   FROM YOU?
