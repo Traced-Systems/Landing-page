@@ -3,17 +3,14 @@ import React from "react";
 
 const TermsOfServiceSheet = () => {
   return (
-    <div className="container mx-auto mt-20" >
-      <div
-        
-        className="flex flex-col justify-start align-start overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0"
-      >
+    <div className="container mx-auto mt-20">
+      <div className="flex flex-col justify-start align-start overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0">
         <div className="h-full pt-24 px-8">
           <div className="max-w-4xl mx-auto pb-20">
             <h1 className="text-4xl font-bold mb-8 text-[#002A38]">
               TERMS AND CONDITIONS
             </h1>
-            <p className="text-gray-600 mb-6">Last updated: March 03, 2025</p>
+            <p className="text-gray-600 mb-6">Last updated: May 19, 2026</p>
             <div className="prose max-w-none text-gray-600">
               <h2 className="text-2xl font-semibold mb-4 text-[#002A38]">
                 AGREEMENT TO OUR LEGAL TERMS
@@ -928,13 +925,13 @@ const TermsOfServiceSheet = () => {
                 require further information about using the Services, please
                 contact us at:
               </p>
-              <p className="mb-6 font-semibold">Traced Systems</p>
-              <p className="mb-6">
-                Njalsgade 76, 4th floor
+              <p className="mb-6 font-semibold">
+              
+                Traced Systems
                 <br />
-                Copenhagen, Denmark 2300
+                Business Center Winghouse, Ørestads Blvd. 73,
                 <br />
-                Denmark
+                2300 Copenhagen, Denmark.
               </p>
             </div>
           </div>

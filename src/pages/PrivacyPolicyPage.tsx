@@ -2,8 +2,6 @@ import React, { useRef } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import SheetBackButton from "../components/shared/SheetBackButton";
 
-
-
 const PrivacyPolicyPage = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -14,17 +12,13 @@ const PrivacyPolicyPage = () => {
 
   return (
     <div className="container mx-auto mt-20">
-      <div
-        
-        className="flex flex-col justify-start align-start overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0"
-      >
-        
+      <div className="flex flex-col justify-start align-start overflow-y-auto bg-[#F7F7F5] border-l shadow-xl p-0">
         <div className="h-full pt-24 px-8">
           <div className="max-w-4xl mx-auto pb-20">
             <h1 className="text-4xl font-bold mb-8 text-[#002A38]">
               PRIVACY POLICY
             </h1>
-            <p className="text-gray-600 mb-6">Last updated February 18, 2025</p>
+            <p className="text-gray-600 mb-6">Last updated May 19, 2026</p>
             <div className="prose max-w-none text-gray-600">
               <p className="mb-6">
                 This Privacy Notice for Traced Systems ("we," "us," or "our")
@@ -566,14 +560,12 @@ const PrivacyPolicyPage = () => {
                   email us at farhad.rasouli@chromaway.com or contact us by post
                   at:
                 </p>
-                <p className="mb-6">
+                <p className="mb-4 font-semibold">
                   Traced Systems
                   <br />
-                  Njalsgade 76, 4th floor
+                  Business Center Winghouse, Ørestads Blvd. 73,
                   <br />
-                  Copenhagen, Denmark 2300
-                  <br />
-                  Denmark
+                  2300 Copenhagen, Denmark.
                 </p>
               </div>
 
